@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3</title>
+  <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+  <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+  <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+</head>
+<body>
+  {{ 'become-partner.css' | asset_url | stylesheet_tag }}
+
+<section class="become-partner" id="become-partner">
+  <div class="form-container mt-5">
+    <div class="head">
+      <h1>U-tec Reseller Registration Form</h1>
+      <p class="required">* is a required item</p>
+    </div>
+    <div class="con-int mt-3">
+        <label for="company_name">Company Name <span class="required">*</span> </label>
+        <input type="text" id="company_name" name="company_name" required>
+      </div>
+      <div class="con-int">
+        <label for="Contact_name">Contact Name <span class="required">*</span></label>
+        <input type="text" id="Contact_name" name="Contact_name" required>
+      </div>
+    <div class="con-int">
+      <label for="title" class="question">Title<span class="required">*</span></label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    <div class="con-int">
+      <label for="Email" class="question">Email<span class="required">*</span></label>
+      <input type="text" id="Email" name="Email" required>
+    </div>
+    <div class="con-int">
+      <label for="phone" class="question"> Phone # <span class="required">*</span></label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="con-int">
+      <label for="website" class="question">Website</label>
+      <input type="url" id="website" name="website">
+    </div>
+    <div class="question">
+    {% section 'partner-country' %}
+    </div>
+    <div class="con-int">
+      <label for="city" class="question">City<span class="required">*</span></label>
+      <input type="url" id="city" name="city" required>
+    </div>
+    <!-- New question: How many employees are there in one location? -->
+    <div class="question mt-5">
+      <label for="years_in_business"> Years in Business </label>
+    </div>
+    <div class="radio-container mt-5">
+      <label> <input type="radio" name="Years_in_Business" value="0-1"> 0-1 </label>
+      <label> <input type="radio" name="Years_in_Business" value="2-5"> 2-5 </label>
+      <label> <input type="radio" name="Years_in_Business" value="6-10"> 6-10 </label>
+      <label> <input type="radio" name="Years_in_Business" value=">10"> >10 </label>
+    </div>
+    <div class="con-int">
+      <label for="Total Annual Revenue" class="question">Total Annual Revenue</label>
+      <input type="text" id="Total" name="Total Annual Revenue" placeholder="Default currency USD">
+      <!-- <span class="usd">USD</span> -->
+    </div>
+    <div class="con-int">
+      <label for="Address" class="question">Address<span class="required">*</span></label>
+      <input type="text" id="Address" name="Address" required>
+    </div>
+    <div class="con-int">
+      <label for="Zip" class="question">Zip Code<span class="required">*</span></label>
+      <input type="text" id="Zip" name="Zip" required>
+    </div>
+    <div class="con-int">
+      <label for="Saless"># Sales Employees</label>
+      <input type="text" id="Sales" name="Sales">
+    </div>
+    <div class="con-int">
+      <label for="Technicals" class="question"># Technical Employees</label>
+      <input type="text" id="Technical" name="Technical">
+    </div>
+    <!-- New question: How many employees are there in one location? -->
+    <div class="question mt-5">
+      <label for="type_of_business" class="type_of_businessquestion">
+        Type of Business
+        <span class="required business">*</span>
+      </label>
+    </div>
+    <div class="radio-container radio-container-business mt-5">
+      <label> <input type="radio" name="Business" value="Distributor"> Distributor </label>
+      <label> <input type="radio" name="Business" value="Retailer"> Retailer </label>
+      <label> <input type="radio" name="Business" value="Installer"> Installer </label>
+      <label> <input type="radio" name="Business" value="System Integrator">System Integrator </label>
+      <label> <input type="radio" name="Business" value="Web reseller"> Web reseller </label>
+    </div>
+
+    <!-- Major Brand Sold -->
+    <div class="con-int">
+      <label for="Major" class="question">Major Brand Sold:</label>
+      <input type="text" id="Major" name="Major">
+    </div>
+    <!-- Products -->
+    <div class="question mt-5">
+      <label for="Products" class="question">Products</label>
+    </div>
+    <div class="checkbox-container clearfix">
+      <label> <input type="checkbox" name="Products" value="ULTRALOQ U-Bolt Series">ULTRALOQ U-Bolt Series </label>
+      <label>
+        <input type="checkbox" name="Products" value="ULTRALOQ U-Bolt Pro Series"> ULTRALOQ U-Bolt Pro Series
+      </label>
+      <label>
+        <input type="checkbox" name="Products" value="ULTRALOQ Latch 5 Fingerprint"> ULTRALOQ Latch 5 Fingerprint
+      </label>
+      <label> <input type="checkbox" name="Products" value="ULTRALOQ Latch 5 NFC"> ULTRALOQ Latch 5 NFC </label>
+      <label>
+        <input type="checkbox" name="Products" value=" ULTRALOQ U-Bolt Pro + Handle Push Pull Bundle">
+        ULTRALOQ U-Bolt Pro + Handle Push Pull Bundle
+      </label>
+      <label>
+        <input type="checkbox" name="Products" value=" ULTRALOQ U-Bolt + Handle Push Pull Bundle"> ULTRALOQ U-Bolt +
+        Handle Push Pull Bundle
+      </label>
+    </div>
+    <!-- Submit button -->
+    <button id="submitBtn">Submit</button>
+  </div>
+</section>
+</body>
+<script>
+    function validateForm() {
+      var isValid = true;
+      var errorMessage = "Please fill in all required fields and check for errors:\n";
+
+      // var requiredFields = document.querySelectorAll("input[required], select[required]");
+      var requiredFields = document.querySelectorAll(".become-partner input[required], .become-partner select[required]");
+
+      requiredFields.forEach(function (field) {
+        if (field.value.trim() === "") {
+          isValid = false;
+          field.style.border = "1px solid red";
+          showError(field, "This field is required.");
+        } else {
+          field.style.border = "1px solid #ccc";
+          showError(field, null);
+        }
+      });
+
+      var emailField = document.getElementById("Email");
+      var emailValue = emailField.value.trim();
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailPattern.test(emailValue)) {
+        isValid = false;
+        emailField.style.border = "1px solid red";
+        showError(emailField, "Invalid email format.");
+      } else {
+        emailField.style.border = "1px solid #ccc";
+        showError(emailField, null);
+      }
+
+      var businessType = document.querySelector("input[name='Business']:checked");
+      var typeOfBusinessFieldset = document.querySelector(".radio-container-business");
+      var typeOfBusinessError = typeOfBusinessFieldset.querySelector(".error-message");
+      var required = document.querySelector(".business");
+      if (!businessType) {
+        isValid = false;
+        typeOfBusinessFieldset.style.border = "1px solid red";
+        typeOfBusinessFieldset.style.color = "red";
+        showError(required, "Please select a type of business.");
+      } else {
+        typeOfBusinessFieldset.style.border = "0px solid #fff";
+        showError(required, null);
+      }
+
+
+      if (!isValid) {
+        alert(errorMessage); // Show a pop-up alert for errors
+      }
+
+      return isValid;
+    }
+
+    function showError(field, message) {
+      var errorElement = field.nextElementSibling;
+      if (errorElement && errorElement.classList.contains("error-message")) {
+        errorElement.textContent = message;
+      } else if (message) {
+        var errorMessage = document.createElement("span");
+        errorMessage.classList.add("error-message");
+        errorMessage.textContent = message;
+        field.parentNode.appendChild(errorMessage);
+      } else if (errorElement) {
+        errorElement.remove(); // Remove any existing error message
+      }
+    }
+
+    $(document).ready(function () {
+      var isSubmitting = false;
+
+      $("#submitBtn").click(function (event) {
+        event.preventDefault();
+        if (isSubmitting) {
+            console.log(data, "data111");
+          return;
+        }
+
+        if (!validateForm()) {
+            console.log(data, "data222");
+          return;
+        }
+
+        var formData = {
+          company_name: $("#company_name").val(),
+          contact_name: $("#Contact_name").val(),
+          title: $("#title").val(),
+          email: $("#Email").val(),
+          phone: $("#phone").val(),
+          website: $("#website").val(),
+          years_in_business: $("input[name='Years_in_Business']:checked").val(),
+          annual_revenue: 1000.00,
+          address: $("#Address").val(),
+          state: $("#states").val(),
+          country: $("#country").val(),
+          city: $("#city").val(),
+          zip: $("#Zip").val(),
+          Total_Annual_Revenue: $("#Total").val(),
+          sales_employees: $("#Sales").val(),
+          technical_employees: $("#Technical").val(),
+          type_of_business: $("input[name='Business']:checked").val(),
+          major_brand: $("#Major").val(),
+          product_of_interest: $("input[name='Products']:checked").map(function () {
+            return $(this).val();
+          }).get(),
+        };
+        console.log(formData);
+
+        $("#submitBtn").prop("disabled", true);
+        $.ajax({
+          url: "https://erp-test.anvizsys.com:6062/api/shopify/crm",
+          type: "POST",
+          data: JSON.stringify(formData),
+          contentType: "application/json", // 指定请求的数据类型为 JSON
+          dataType: "json",
+          beforeSend: function () {
+            isSubmitting = true; // 标记为正在提交
+          },
+          success: function (data) {
+            console.log(data, "data成功");
+            if (data.message === "Success") {
+              alert("submit success");
+              $("input[type='text']").val("");
+              $("input[type='email']").val("");
+              $("input[type='tel']").val("");
+              $("input[type='url']").val("");
+              $("input[type='radio']").prop("checked", false);
+              $("input[type='checkbox']").prop("checked", false);
+              $("select").val("");
+            } else {
+              alert("FAiled to submit");
+            }
+          },
+          error: function (data) {
+            console.log(data, "data失败");
+
+            alert("FAiled to submit");
+          },
+          complete: function () {
+            isSubmitting = false;
+            $("#submitBtn").prop("disabled", false);
+          }
+        });
+      });
+    });
+</script>
+</html>

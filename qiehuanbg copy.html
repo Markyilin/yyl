@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+</head>
+<style>
+    li {
+        list-style: none;
+    }
+
+    .tab-main {
+        width: 100%;
+        height:880px;
+        margin: 5em auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .tab-main .tab-header {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+
+    .tab-main .tab-header .tab-top {
+        width: 100%;
+        height: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tab-main .tab-header .tab-top h4 {
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #eee;
+    }
+
+    .tab-main .tab-header .tab-top .h4-active {
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+    }
+
+    .tab-main .tab-header .tab-header-main {
+        width: 100%;
+        height: 10%;
+    }
+
+    .tab-main .tab-header .tab-header-main ul {
+        width: 100%;
+        height: 100%;
+        padding: 0 10%;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tab-main .tab-header .tab-header-main ul:nth-of-type(1) {
+        display: flex;
+    }
+
+    .tab-main .tab-header .tab-header-main li {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        background-color: #9FA0A0;
+        border-radius: 50%;
+    }
+
+    .tab-main .tab-header .tab-header-main img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .tab-main .tab-header .tab-header-main .top-active {
+        background-color: #00A0E9;
+    }
+
+    .tab-main .tab-content {
+        width: 80%;
+        height: auto;
+
+    }
+
+    .tab-main .tab-header .tab-title {
+        width: 80%;
+        display: none;
+        height: 100%;
+    }
+
+    .tab-main .tab-header .tab-title:nth-of-type(1) {
+        display: block;
+    }
+
+    .tab-main .tab-header a img {
+        width: 100%;
+
+    }
+
+    .tab-main .tab-content {
+        width: 80%;
+        height: 100%;
+    }
+
+    .box {
+        display: none;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .box:nth-of-type(1) {
+        display: flex;
+    }
+
+    .box li {
+        float: left;
+        margin: 0 1px;
+        cursor: pointer;
+
+    }
+
+    .box img {
+        width: 100%;
+        opacity: .5;
+        transition: all .2s;
+        border: 2px solid transparent;
+    }
+
+    .box .bg-active2,
+    .box .bg-active {
+        opacity: 1;
+        border: 2px solid #FFD800;
+    }
+
+    .qiehuan {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .show-img,
+    .list-show {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .list-show:nth-of-type(1) {
+        display: block;
+    }
+
+    .bgimg {
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        transition: background-image .5s;
+        background-repeat: no-repeat;
+    }
+
+    .list-show:nth-of-type(1) .bgimg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346);
+        background-size: 100%;
+        transition: background-image .5s;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+    .tab-bottom {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 80%;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .tab-main .tab-main>div {
+        display: none;
+        min-height: 300px;
+    }
+
+    .tab-main .tab-main>.list2:nth-of-type(1) {
+        display: block;
+    }
+
+    .tab-main .tab-main>.list2:nth-of-type(2) {
+        /* display: block; */
+    }
+
+    #bgimg2 {
+        position: absolute;
+        top: 0;
+    }
+
+    #bgimg3 {
+        position: absolute;
+        top: 0;
+    }
+
+    #bgimg4 {
+        position: absolute;
+        top: 0;
+    }
+
+    #box3 li {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+
+    #box3 li:nth-of-type(2) {
+        background-color: blue;
+    }
+
+    #box3 li:nth-of-type(3) {
+        background-color: rgb(221, 255, 0);
+    }
+
+    #box3 li:nth-of-type(4) {
+        background-color: rgb(255, 0, 0);
+    }
+</style>
+
+<body>
+    <div class="tab-main max-1440">
+        <div class="tab-content" id="tab-content">
+            <div class="list-show" id="list-show1">
+                <div class="bgimg show-img" id="bgimg1"
+                    style="background-image:url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346);">
+                </div>
+                <div class="bgimg show-img" id="bgimg2"
+                    style="background-image:url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-white.png?v=1672997011);">
+                </div>
+                <div class="bgimg show-img" id="bgimg3"
+                    style="background-image:url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-black.png?v=1672997011);">
+                </div>
+            </div>
+            <div class="list-show" id="list-show2">
+                <div class="bgimg show-img" id="bgimg1"
+                    style="background-image:url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-265807.jpg?v=1676604645);">
+                </div>
+                <div class="bgimg show-img" id="bgimg2"
+                    style="background-image:url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-white.png?v=1672997011);">
+                </div>
+                <div class="bgimg show-img" id="bgimg3"
+                    style="background-image:url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-white.png?v=1672997011);">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-header" id="tab-header">
+            <div class="tab-top" id="tab-top">
+                <h4 class="tab-h4-one h4-active">Outdoor</h4>
+                <h4 class="tab-h4-two">Indoor</h4>
+            </div>
+            <div class="tab-header-main" id="tab-header-main">
+                <ul class="Outdoor-one main-one">
+                    <li class="top-active">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/44641052ec087246a15e8551df3adfac.png?v=1695100093"
+                            alt="">
+                    </li>
+                    <li>
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/c66a342a6a630f339350510b3d8189f4.png?v=1695100093"
+                            alt="">
+                    </li>
+                    <li>
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/cd1e2fbd0b3964d23c0990e179c6c0d2.png?v=1695100093"
+                            alt="">
+                    </li>
+                </ul>
+                <ul class="Indoor-one main-one">
+                    <li class="top-active">
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/44641052ec087246a15e8551df3adfac.png?v=1695100093"
+                            alt="">
+                    </li>
+                    <li>
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/c66a342a6a630f339350510b3d8189f4.png?v=1695100093"
+                            alt="">
+                    </li>
+                    <li>
+                        <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/cd1e2fbd0b3964d23c0990e179c6c0d2.png?v=1695100093"
+                            alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-bottom" id="tab-bottom">
+                <div class="tab-title tab-title1" id="tab-title1">
+                    <ul id="box1" class="box Outdoor-box-one">
+                        <li><img class="bg-active"
+                                src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor2.webp?v=1684199451"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor3.webp?v=1684199483"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor4.webp?v=1684199504"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor5.webp?v=1684199617"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor10.webp?v=1684199771"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor13.webp?v=1684202195"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195"
+                                alt=""></li>
+                    </ul>
+                    <ul id="box2" class="box Outdoor-box-two">
+                        <li><img class="bg-active"
+                                src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-white.png?v=1672997011"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door2-white.png?v=1672997012"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door3-white.png?v=1672997011"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door4-white.png?v=1672997011"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door5-white.png?v=1672997011"
+                                alt=""></li>
+                    </ul>
+                    <ul id="box3" class="box Outdoor-box-three">
+                        <li class="bg-active">
+                            <!-- <a href="">black</a> -->
+                        </li>
+                        <li>
+                            <!-- <a href="">blue</a> -->
+                        </li>
+                        <li>
+                            <!-- <a href="">yellow</a> -->
+                        </li>
+                        <li>
+                            <!-- <a href="">red</a> -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-title tab-title2" id="tab-title2">
+                    <ul id="box1" class="box Indoor-box-one">
+                        <li><img class="bg-active2"
+                                src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp.jpg?v=1676604645"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-270140.jpg?v=1676604645"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-298946.jpg?v=1676604645"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-265807.jpg?v=1676604645"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-356827.jpg?v=1676604645"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Which-product-suits-you-best.jpg?v=1676534077"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Which-product-suits-you-best1.jpg?v=1676534077"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195"
+                                alt=""></li>
+                    </ul>
+                    <ul id="box2" class="box Indoor-box-two">
+                        <li><img class="bg-active2"
+                                src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-white.png?v=1672997011"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door2-white.png?v=1672997012"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door3-white.png?v=1672997011"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door4-white.png?v=1672997011"
+                                alt=""></li>
+                        <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door5-white.png?v=1672997011"
+                                alt=""></li>
+                    </ul>
+                    <ul id="box3" class="box Indoor-box-three">
+                        <li class="bg-active2">
+                            <!-- <a href="">black</a> -->
+                        </li>
+                        <li>
+                            <!-- <a href="">blue</a> -->
+                        </li>
+                        <li>
+                            <!-- <a href="">yellow</a> -->
+                        </li>
+                        <li>
+                            <!-- <a href="">red</a> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var imgUrl;
+        var images1 = [
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-black.png?v=1672997011', alt: 'Door1-black' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-blue.png?v=1672997011', alt: 'Door1-blue' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-yellow.png?v=1672997011', alt: 'Door1-yellow' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door1-red.png?v=1672997011', alt: 'Door1-red' },
+        ];
+        var images2 = [
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door2-black.png?v=1672997011', alt: 'Door2-black' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door2-blue.png?v=1672997011', alt: 'Door2-blue.png' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door2-yellow.png?v=1672997011', alt: 'Door2-yellow' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door2-red.png?v=1672997011', alt: 'Door2-red' },
+        ];
+        var images3 = [
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door3-black.png?v=1672997011', alt: 'Door3-black' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door3-blue.png?v=1672997011', alt: 'Door3-blue' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door3-yellow.png?v=1672997011', alt: 'Door3-yellow' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door3-red.png?v=1672997011', alt: 'Door3-red' },
+        ];
+        var images4 = [
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door4-black.png?v=1672997011', alt: 'Door4-black' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door4-blue.png?v=1672997011', alt: 'Door4-blue' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door4-yellow.png?v=1672997011', alt: 'Door4-yellow' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door4-red.png?v=1672997011', alt: 'Door4-red' },
+        ];
+        var images5 = [
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door5-black.png?v=1672997011', alt: 'Door5-black' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door5-blue.png?v=1672997011', alt: 'Door5-blue' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door5-yellow.png?v=1672997011', alt: 'Door5-yellow' },
+            { src: 'https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Door5-red.png?v=1672997011', alt: 'Door5-red' }
+        ];
+        // 默认第一个带样式
+        $('#tab-top h4').first().addClass('h4-active');
+        $('#tab-header-main .Outdoor-one li').first().addClass('top-active');
+        $('#tab-header-main .Indoor-one li').first().addClass('top-active');
+        // 1点击第一层切换公共
+        $('#tab-top h4').click(function () {
+            // 移除所有a标签的"on"类
+            $('#tab-top h4').removeClass('h4-active');
+            // 给被点击的a标签添加"on"类
+            $(this).addClass('h4-active');
+        });
+        // 点击outdoor
+        $('#tab-top .tab-h4-one').click(function () {
+            // 隐藏所有div
+            $('#tab-header-main ul').hide();
+            // 显示与被点击a标签相对应的div,
+            $('#tab-header-main .Outdoor-one').css('display', 'flex');
+            // 隐藏所有div
+            $('#tab-bottom .tab-title').hide();
+            // 显示与被点击a标签相对应的div,
+            $('#tab-bottom .tab-title1').css('display', 'flex');
+            $('#tab-content #list-show2').css('display', 'none');
+            // // 显示与被点击a标签相对应的div,
+            $('#tab-content #list-show1').css('display', 'block');
+            $('#list-show1 .show-img').css('display', 'block');
+        });
+        // 点击indoor
+        $('#tab-top .tab-h4-two').click(function () {
+            $('#tab-header-main ul').hide();
+            $('#tab-header-main .Indoor-one').css('display', 'flex');
+            $('#tab-bottom .tab-title').hide();
+            $('#tab-bottom .tab-title2').css('display', 'flex');
+            $('#tab-content #list-show1').css('display', 'none');
+            $('#tab-content #list-show2').css('display', 'block');
+            $('#list-show2 .show-img').css('display', 'block');
+        });
+
+        // 1点击三个按钮切换下方背景,门,颜色
+        $('#tab-header-main .Outdoor-one li').click(function () {
+
+            $('#tab-header-main .Outdoor-one li').removeClass('top-active');
+            $(this).addClass('top-active');
+            $('#tab-bottom .tab-title1 .box').hide();
+            $('#tab-bottom .tab-title1 .box').eq($(this).index()).css('display', 'flex');
+            $('#list-show .show-img').eq($(this).index()).css('display', 'flex');
+
+        });
+        // 2点击三个按钮切换下方背景,门,颜色
+        $('#tab-header-main .Indoor-one li').click(function () {
+            $('#tab-header-main .Indoor-one li').removeClass('top-active');
+            $(this).addClass('top-active');
+            $('#tab-bottom .tab-title2 .box').hide();
+            $('#tab-bottom .tab-title2 .box').eq($(this).index()).css('display', 'flex');
+            $('.list-show .show-img').eq($(this).index()).css('display', 'flex');
+        });
+
+        // 图片切换
+        // 点击第一个tab-title1 #box1 img时，将图片渲染到第二个#list-show1 #bgimg1中
+        $('#tab-title1 #box1 li img').on('click', function () {
+            imgUrl = $(this).attr('src');
+            // var imgUrl = $(#tab-title1 #box1 li img).attr('src');
+            $('#tab-title1 #box1 li img').removeClass('bg-active')
+            $(this).addClass('bg-active')
+            $('#list-show1 #bgimg1').css('background-image', 'url(' + imgUrl + ')');
+        });
+
+        // 点击第二个tab-title1 #box2 img时，将图片渲染到第二个#list-show1 #bgimg2中
+        $('#tab-title1 #box2 li img').on('click', function () {
+            var imgUrl = $(this).attr('src');
+            $('#tab-title1 #box2 li img').removeClass('bg-active')
+            $(this).addClass('bg-active')
+            $('#list-show1 #bgimg2').css('background-image', 'url(' + imgUrl + ')');
+            $('#list-show1 #bgimg2').css('display', 'block');
+            $('#list-show1 #bgimg3').css('display', 'none');
+        });
+
+
+        // 点击#tab-title1 #box3 li时，将h图片渲染到第三个#list-show1 #bgimg3中
+        $('#tab-title1 #box3 li').on('click', function () {
+            // 获取当前选中的#tab-title1 #box2 .bg-active的src属性
+            var doorSrc = $('#tab-title1 #box2 .bg-active').attr("src");
+            // 获取门的类型（例如：Door1，Door2）
+            var doorType = doorSrc.match(/(Door\d+)/)[1];
+            // 根据门的类型和点击的颜色选项索引，获取对应的图片URL
+            var imgUrl;
+            switch (doorType) {
+                case 'Door1': imgUrl = images1[$(this).index()].src; break;
+                case 'Door2': imgUrl = images2[$(this).index()].src; break;
+                case 'Door3': imgUrl = images3[$(this).index()].src; break;
+                case 'Door4': imgUrl = images4[$(this).index()].src; break;
+                case 'Door5': imgUrl = images5[$(this).index()].src; break;
+            }
+            // 移除其他li元素的bg-active类，并给当前li元素添加bg-active类
+            $('#tab-title1 #box3 li').removeClass('bg-active');
+            $(this).addClass('bg-active');
+            // 改变#list-show1 #bgimg3的背景图片
+            $('#list-show1 #bgimg3').css('background-image', 'url(' + imgUrl + ')');
+            $('#list-show1 #bgimg3').css('display', 'block');
+            $('#list-show1 #bgimg2').css('display', 'none');
+        });
+        // 点击第一个tab-title2 #box1 img时，将图片渲染到第三个#list-show2 #bgimg1中
+        $('#tab-title2 #box1 li img').on('click', function () {
+            imgUrl = $(this).attr('src');
+            // var imgUrl = $(#tab-title1 #box1 li img).attr('src');
+            $('#box1 li img').removeClass('bg-active2')
+            $(this).addClass('bg-active2')
+            $('#list-show2 #bgimg1').css('background-image', 'url(' + imgUrl + ')');
+        });
+
+        // 点击第二个tab-title2 #box2 img时，将图片渲染到第三个#list-show2 #bgimg2中
+        $('#tab-title2 #box2 li img').on('click', function () {
+            var imgUrl = $(this).attr('src');
+            $('#tab-title2 #box2 li img').removeClass('bg-active2')
+            $(this).addClass('bg-active2')
+            $('#list-show2 #bgimg2').css('background-image', 'url(' + imgUrl + ')');
+            $('#list-show2 #bgimg2').css('display', 'block');
+            $('#list-show2 #bgimg3').css('display', 'none');
+        });
+
+        // 点击第三个tab-title2 #box3 img时，将图片渲染到第三个#list-show2 #bgimg3中
+        $('#tab-title2 #box3 li').on('click', function () {
+            // 获取当前选中的#tab-title1 #box2 .bg-active的src属性
+            var doorSrc = $('#tab-title2 #box2 .bg-active2').attr("src");
+            // 获取门的类型（例如：Door1，Door2）
+            var doorType = doorSrc.match(/(Door\d+)/)[1];
+            // 根据门的类型和点击的颜色选项索引，获取对应的图片URL
+            var imgUrl;
+            switch (doorType) {
+                case 'Door1': imgUrl = images1[$(this).index()].src; break;
+                case 'Door2': imgUrl = images2[$(this).index()].src; break;
+                case 'Door3': imgUrl = images3[$(this).index()].src; break;
+                case 'Door4': imgUrl = images4[$(this).index()].src; break;
+                case 'Door5': imgUrl = images5[$(this).index()].src; break;
+            }
+            // 移除其他li元素的bg-active类，并给当前li元素添加bg-active类
+            $('#tab-title2 #box3 li').removeClass('bg-active2');
+            $(this).addClass('bg-active2');
+            // 改变#list-show1 #bgimg3的背景图片
+            $('#list-show2 #bgimg3').css('background-image', 'url(' + imgUrl + ')');
+            $('#list-show2 #bgimg3').css('display', 'block');
+            $('#list-show2 #bgimg2').css('display', 'none');
+        });
+    });
+</script>
+
+</html>

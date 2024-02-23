@@ -1,0 +1,1928 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ededed;
+    color: #4a4a4a;
+} 
+.bolt-nfc .mt {
+    max-width: 1420px;
+    margin: auto;
+} 
+.bolt-nfc li {
+    text-align: center;
+    margin: 0;
+} 
+.bolt-nfc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+} 
+.bolt-nfc .bolt-nfc-main{
+  margin:2em 0;
+}
+.bolt-nfc .w-90 {
+    width: 90%!important;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+/*header  */
+.bolt-nfc{
+    background-color:#fff;
+} 
+.bolt-nfc.max-w1440 {
+    margin-top: 120px;
+}
+.bolt-nfc .header-bg{
+    display: block;
+    height: 55.8vw;
+    /* min-height: 700px; */
+    overflow: hidden;
+    position: relative;
+} 
+.bolt-nfc .phone {
+    display: none;
+} 
+
+.bolt-nfc .header-bg img {
+    position: relative;
+    width: 100%;
+} 
+.bolt-nfc .header-bg .header-main {
+    position: absolute;
+    width: 100%;
+    top: 95px;
+    left: 10%;
+} 
+.bolt-nfc h5{
+    margin:0;
+}
+.bolt-nfc h1{
+  margin:0;
+} 
+.bolt-nfc .icon-ultralog:before {
+    color: #000;
+}
+.bolt-nfc .header-bg .header-main .header-btn{
+  width: 40%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.bolt-nfc .header-bg .header-main .header-btn-a{
+      padding:1px 2em;
+      background-color:rgba(255,255,255,.5);
+      border:1px solid #555;
+      border-radius:20px;
+}
+.bolt-nfc .header-bg .header-main .header-btn i.icon {
+    font-size: 5rem;
+    cursor: pointer;
+    opacity: .8;
+}
+.bolt-nfc .header-bg .header-main .header-btn i.icon:before {
+    color: #fff;
+  font-size: 5rem;
+    cursor: pointer;
+    opacity: .8;
+}   
+
+  .bolt-nfc .gray-bg-item .bg-img2,
+  .bolt-nfc .bolt-nfc-main .item-banner .left .bg-img2,
+  .bolt-nfc .bolt-nfc-main .item-banner .right .bg-img2,
+  .bolt-nfc .bolt-nfc-main .item-banner .left.video .bg-img2,
+  .bolt-nfc .bolt-nfc-main .item-banner .right.video .bg-img2{
+        display:none;
+    } 
+@media(max-width:1260px){
+  .bolt-nfc .header-bg .header-main {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 10%;
+}
+}
+@media(max-width:1024px){
+  .ubolt-pro-warp .item-banner {
+    height: auto;
+} 
+  .bolt-nfc .header-bg .header-main {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 10%;
+}
+}
+
+@media (max-width: 850px){
+    .bolt-nfc .protect .desktop {
+        display: none;
+    } 
+    .bolt-nfc .header-bg .phone {
+        display: block;
+    } 
+  .bolt-nfc .header-bg .header-main {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left:0;
+    text-align: center;
+} 
+  .bolt-nfc h5, .bolt-nfc h1 {
+    margin: 0;
+    color: #fff;
+} 
+
+  .bolt-nfc .header-bg .header-main .header-btn {
+    width: 80%;
+    justify-content: center;
+} 
+  /* .ubolt-pro-warp .item-banner{
+    height:auto;
+  } */
+} 
+/*main  */ 
+.bolt-nfc .gray-bg {
+    width: 100%;
+    text-align: center;
+    background-color: #efefef;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+.bolt-nfc .gray-bg-item{
+      position:relative;
+  }
+.bolt-nfc .gray-bg .gray-bg-left {
+    width: 30%;
+    z-index: 2;
+    position: absolute;
+    left: 5%;
+    top: 8%;
+    margin: auto;
+}
+
+.bolt-nfc .gray-bg .gray-bg-right {
+    width: 100%;
+    position: relative;
+    left: 0;
+} 
+.bolt-nfc .gray-data{
+  background-color:#fff;
+}
+.bolt-nfc-main .title {
+    font-size: 45px;
+    color: #333;
+    font-weight: 400;
+}
+
+.bolt-nfc-main .product-destails {
+    font-size: 36px;
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 2em
+}
+
+.bolt-nfc-main .product-destails img {
+    width: 70%;
+    display: block;
+    margin: 0 auto
+}
+
+.bolt-nfc-main .line {
+    border-top: 1px #777 solid;
+    width: 500px;
+    margin: 50px auto 0 auto;
+    color: #000;
+    padding: 25px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    font-weight: bold
+}
+
+.bolt-nfc-main .module-box ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 100%;
+    margin: 2em auto 4em
+}
+
+@media (max-width: 850px) {
+    .bolt-nfc-main .module-box ul {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px 10px;
+        margin: 0 15px
+    }
+}
+
+.bolt-nfc-main .module-box ul li {
+    width: 100%;
+    color: #333
+}
+
+.bolt-nfc-main .module-box ul li span {
+    font-size: 100px
+}
+
+.bolt-nfc-main .module-box ul li span::before {
+    color: #333
+}
+
+.bolt-nfc-main .module-box ul li div.s-title {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 5px
+}
+
+.bolt-nfc-main .brand {
+    padding: 50px 0
+}
+
+.bolt-nfc-main .brand .title {
+    text-align: center;
+    margin-top: 30px
+}
+
+.bolt-nfc-main .brand .swiper {
+    width: 90%;
+    border-bottom: 1px solid #3b3b3b;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.bolt-nfc-main .brand .swiper .swiper-wrapper {
+    align-items: center
+}
+
+.bolt-nfc-main .brand .swiper .swiper-wrapper .swiper-slide {
+    border-bottom: 2px solid transparent;
+    height: 100%;
+    padding: 0 20px
+}
+
+.bolt-nfc-main .brand .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+    border-bottom: 2px solid #00a0e8
+}
+
+.bolt-nfc-main .brand .swiper .swiper-wrapper .swiper-slide.swiper-slide-active img {
+    display: none
+}
+
+.bolt-nfc-main .brand .swiper .swiper-wrapper .swiper-slide.swiper-slide-active img.active {
+    display: block
+}
+
+.bolt-nfc-main .brand .swiper .swiper-wrapper .swiper-slide .active {
+    display: none
+}
+
+.bolt-nfc-main .brand .swiper .swiper-wrapper .swiper-slide img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 60px;
+    object-fit: contain
+}
+
+.bolt-nfc-main .video-box {
+    padding: 20px 0 0 0;
+    font-size: 0;
+    border-radius: 30px;
+    overflow: hidden
+}
+
+.bolt-nfc-main .video-box .title {
+    text-align: center;
+    margin: 28px 0
+}
+
+.bolt-nfc-main .video-box ul.video-nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 17%;
+    padding: 20px;
+    line-height: 55px;
+    cursor: pointer;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
+}
+
+.bolt-nfc-main .video-box ul.video-nav li span {
+    font-size: 28px
+}
+
+.bolt-nfc-main .video-box ul.video-nav li a {
+    color: #4a4a4a
+}
+
+.bolt-nfc-main .video-box ul.video-nav li.active {
+    background-color: #00a0e8
+}
+
+.bolt-nfc-main .video-box ul.video-nav li.active a {
+    color: #fff !important
+}
+
+.bolt-nfc-main .video-box ul.video-nav li.active span::before {
+    color: #fff
+}
+
+.bolt-nfc-main .video-box .tab-name {
+    display: none
+}
+
+.bolt-nfc-main .video-box .video {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden
+}
+
+.bolt-nfc-main .video-box .video:first-child {
+    display: block
+}
+
+.bolt-nfc-main .video-box .video video,
+.bolt-nfc-main .video-box .video img {
+    width: 100%
+}
+
+.bolt-nfc-main .video-box .video .hot-area {
+    position: absolute;
+    background-color: transparent;
+    z-index: 9;
+    cursor: pointer
+}
+
+.bolt-nfc-main .video-box .video.smartphone .hot-area {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    left: 17.5%;
+    top: 46%
+}
+
+.bolt-nfc-main .video-box .video.fingerprint .hot-area {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    left: 52%;
+    top: 41%
+}
+
+.bolt-nfc-main .video-box .video.smartwatch .hot-area {
+    width: 12rem;
+    height: 3.5rem
+}
+
+.bolt-nfc-main .video-box .video.smartwatch .hot-area.unlock {
+    left: 16%;
+    top: 44%
+}
+
+.bolt-nfc-main .video-box .video.smartwatch .hot-area.lock {
+    left: 16%;
+    top: 51%
+}
+
+.bolt-nfc-main .video-box .video .tip {
+    position: relative;
+    background-color: #d80000;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    -webkit-animation: shake 6s infinite ease-in-out;
+    -webkit-animation: shake 6s infinite ease-in-out;
+    animation: shake 6s infinite ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    width: 115px;
+    pointer-events: none
+}
+
+.bolt-nfc-main .video-box .video .tip.desktop {
+    display: block
+}
+
+.bolt-nfc-main .video-box .video .tip::before {
+    content: "";
+    display: block;
+    border-color: transparent;
+    border-right-color: #d80000;
+    border-width: 10px;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 25%;
+    right: 100%
+}
+
+.bolt-nfc-main .video-box .video.smartphone .tip {
+    top: 35%;
+    left: 11rem
+}
+
+.bolt-nfc-main .video-box .video.fingerprint .tip {
+    left: 9rem;
+    top: 35%
+}
+
+.bolt-nfc-main .video-box .video.smartwatch .tip {
+    top: 20%;
+    left: 13rem
+}
+
+.bolt-nfc-main .video-box .video.code .box {
+    position: absolute;
+    font-size: 1.125rem;
+    z-index: 9;
+    border: 3px #979797 dashed;
+    padding: 25px 20px 40px 20px;
+    box-sizing: border-box;
+    top: 10%;
+    left: 10%;
+    background: rgba(255, 255, 255, 0.8)
+}
+
+.bolt-nfc-main .video-box .video.code .box .inner-box {
+    border: 2px #979797 dashed;
+    border-top: none;
+    text-align: center;
+    padding: 0 15px;
+    box-sizing: border-box
+}
+
+.bolt-nfc-main .video-box .video.code .box .inner-box .password {
+    position: relative;
+    color: #8a8a8a;
+    top: -12px;
+    text-align: center;
+    font-size: 1.5rem
+}
+
+.bolt-nfc-main .video-box .video.code .box .inner-box .password b {
+    color: #393A3A;
+    border-bottom: 3px #00A0E8 solid
+}
+
+.bolt-nfc-main .video-box .video.code .box .inner-box .s-title {
+    color: #00A0E8;
+    font-weight: bold
+}
+
+.bolt-nfc-main .video-box .video.code .box .inner-box .random {
+    background-color: #cacaca;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    bottom: -27px
+}
+
+.bolt-nfc-main .item-banner {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px
+}
+
+.bolt-nfc-main .item-banner .text {
+    font-size: 30px;
+    width: 35%;
+    margin: 0 auto;
+    color: #58585a
+}
+
+.bolt-nfc-main .item-banner .text .title {
+    font-size: 30px
+}
+
+.bolt-nfc-main .item-banner .text p {
+    font-size: 18px
+}
+
+.bolt-nfc-main .item-banner img {
+    width: 100%
+}
+
+.bolt-nfc-main .item-banner .left,
+.bolt-nfc-main .item-banner .right {
+    overflow: hidden;
+    width: 100%
+}
+
+.bolt-nfc-main .item-banner .left.video,
+.bolt-nfc-main .item-banner .right.video {
+    width: 100%;
+    position: relative;
+}
+
+.bolt-nfc-main .item-banner .left.text,
+.bolt-nfc-main .item-banner .right.text {
+    font-size: 30px;
+    width: 50%;
+    margin: 0 auto;
+    color: #58585a;
+    padding:0 2em;
+}
+.bolt-nfc-main .item-banner .right.text {
+   position: absolute;
+   right: 0;
+   z-index: 2;
+} 
+.bolt-nfc-main .item-banner .left.text{
+  position: absolute;
+   left: 0;
+   z-index: 2;
+}
+.bolt-nfc-main .item-banner .left.text p,
+.bolt-nfc-main .item-banner .right.text p {
+    font-size: 18px
+}
+
+.bolt-nfc-main .item-banner .video {
+    display: flex !important;
+    position: unset
+}
+
+.bolt-nfc-main .item-banner video {
+    width: 100%
+}
+
+.bolt-nfc-main .item-banner.keypad .text img {
+    width: 80%;
+    border-radius: 0
+}
+
+.bolt-nfc-main .more-way {
+    position: relative
+}
+
+.bolt-nfc-main .more-way .title {
+    position: absolute;
+    left: 10%;
+    top: 9%
+}
+
+.bolt-nfc-main .more-way img.more-way-bg {
+    width: 100%
+}
+
+.bolt-nfc-main .more-way .balloon {
+    position: absolute;
+    background-color: #d9edf7;
+    line-height: 44px;
+    border-radius: 22px;
+    padding: 0 22px
+}
+
+.bolt-nfc-main .more-way .balloon.left {
+    top: 40%;
+    right: 40%
+}
+
+.bolt-nfc-main .more-way .balloon.left::before {
+    content: "";
+    display: block;
+    border-color: transparent;
+    border-right-color: #d9edf7;
+    border-width: 15px;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    right: 3px
+}
+
+.bolt-nfc-main .more-way .balloon.right {
+    top: 15%;
+    right: 15%
+}
+
+.bolt-nfc-main .more-way .balloon.right::before {
+    content: "";
+    display: block;
+    border-color: transparent;
+    border-left-color: #d9edf7;
+    border-width: 15px;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -15px;
+    right: 18px
+}
+
+.bolt-nfc-main .more-way img.item-img {
+    position: absolute;
+    left: 160px;
+    bottom: 9%
+}
+
+.bolt-nfc-main .security {
+    text-align: center;
+    padding: 30px 0 0 0px;
+    overflow: hidden;
+    border-radius: 30px
+}
+
+.bolt-nfc-main .security .text {
+    font-size: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 50px
+}
+
+.bolt-nfc-main .security video {
+    width: 100%
+}
+
+.bolt-nfc-main .share-access,
+.bolt-nfc-main .protect {
+    width: 100%;
+    text-align: center;
+}
+.bolt-nfc-main .share-access{
+   background-color: #efefef;
+}
+.bolt-nfc-main .share-access .share-access-top,
+.bolt-nfc-main .protect .share-access-top {
+    width: 60%;
+    margin: 0 auto
+}
+
+.bolt-nfc-main .share-access .share-access-top p,
+.bolt-nfc-main .protect .share-access-top p {
+    font-size: 20px;
+    margin-bottom: 17px
+}
+
+.bolt-nfc-main .share-access ul>li,
+.bolt-nfc-main .protect ul>li {
+    width: 31%;
+    background-color: #efefef
+}
+
+.bolt-nfc-main .share-access ul>li img,
+.bolt-nfc-main .protect ul>li img {
+    width: 100%;
+    border-radius: 30px
+}
+
+.bolt-nfc-main .share-access ul>li .list-bottom,
+.bolt-nfc-main .protect ul>li .list-bottom {
+}
+
+.bolt-nfc-main .share-access ul>li .list-bottom .title,
+.bolt-nfc-main .protect ul>li .list-bottom .title {
+    font-size: 24px;
+}
+
+.bolt-nfc-main .share-access ul>li .list-bottom .text,
+.bolt-nfc-main .protect ul>li .list-bottom .text {
+    font-size: 20px
+}
+
+.bolt-nfc-main .protect>.title {
+    margin: 50px 0
+}
+
+.bolt-nfc-main .protect ul {
+    justify-content: space-evenly
+}
+
+.bolt-nfc-main .protect ul li {
+    width: 25%;
+    background-color: transparent;
+}
+.bolt-nfc-main .gray-data .protect ul li {
+    width: 24%;
+    background-color: transparent;
+}
+.bolt-nfc-main .gray-data .protect ul li tltle{
+  font-size:20px;
+}
+.bolt-nfc-main .protect ul>li .list-bottom .text{
+  font-size:18px;
+}
+.bolt-nfc-main .protect ul li p {
+    color: #333
+}
+
+.bolt-nfc-main .product-app-phone {
+    display: none
+}
+
+.bolt-nfc-main .product-app {
+    background-color: #efefef;
+    position: relative;
+    display: flex;
+    justify-content: flex-end
+}
+
+.bolt-nfc-main .product-app .mask-slider__images-list {
+    top: 0%;
+    left: 0%;
+    width: 50%
+}
+
+.bolt-nfc-main .product-app .mask-slider__images-list .mask-slider__images-list-item {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none
+}
+
+.bolt-nfc-main .product-app .mask-slider__images-list .mask-slider__images-list-item img {
+    max-width: 400px
+}
+
+.bolt-nfc-main .product-app .mask-slider__images-list .mask-slider__images-list-item.mask-slider__images-list-item--active {
+    display: block
+}
+
+.bolt-nfc-main .product-app .mask-slider__images-list .mask-slider__images-list-item.transition-off {
+    z-index: 1;
+    display: block
+}
+
+.bolt-nfc-main .product-app .mask-slider__images-list .mask-slider__images-list-item.transition-on {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    left: -50%
+}
+
+.bolt-nfc-main .product-app .mask-slider__images-list .mask-slider__images-list-item.transition-on img {
+    -webkit-animation: reveal_slide .5s ease-in-out;
+    animation: reveal_slide .5s ease-in-out
+}
+
+.bolt-nfc-main .product-app .app-main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.bolt-nfc-main .product-app .app-main .app-text p.text {
+    height: 50px;
+    width: 70%
+}
+.bolt-nfc-main .product-app .app-main .app-text .title{
+  text-align:left;
+} 
+.bolt-nfc-main .product-app .app-main ul {
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.bolt-nfc-main .product-app .app-main ul li {
+    padding: 10px 0;
+    margin-top: 15px;
+    display: flex;
+    text-align: left;
+    align-items: center
+}
+
+.bolt-nfc-main .product-app .app-main ul li span.icon {
+    font-size: 32px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #d8d8d8;
+    margin-right: 10px;
+    display: flex
+}
+
+.bolt-nfc-main .product-app .app-main ul li span.icon::before {
+    color: #fff
+}
+
+.bolt-nfc-main .product-app .app-main ul li .icon_name {
+    display: block;
+    font-size: 18px
+}
+
+.bolt-nfc-main .product-app-phone ul li.active span.icon,
+.bolt-nfc-main .product-app ul li.active span.icon {
+    background-color: #00A0E8
+}
+
+.bolt-nfc-main .notifications {
+    margin-top: 100px;
+    padding: 40px 40px;
+    overflow: hidden
+}
+
+.bolt-nfc-main .notifications .title {
+    text-align: center
+}
+
+.bolt-nfc-main .notifications .notification-image-list {
+    margin-top: 80px;
+    position: relative;
+    height: 400px
+}
+
+.bolt-nfc-main .notifications .notification-image-list img {
+    position: absolute
+}
+
+.bolt-nfc-main .notifications .notification-image-list img:nth-child(1) {
+    left: 60px;
+    top: 40px
+}
+
+.bolt-nfc-main .notifications .notification-image-list img:nth-child(2) {
+    left: 50%;
+    margin-left: -190px;
+    z-index: 9
+}
+
+.bolt-nfc-main .notifications .notification-image-list img:nth-child(3) {
+    right: 0;
+    bottom: -25px
+}
+
+.bolt-nfc-main .pro-max-diy {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 0;
+    height: unset;
+    padding-left: 0;
+    position: relative
+}
+
+.bolt-nfc-main .pro-max-diy .left {
+    width: 100%
+}
+
+.bolt-nfc-main .pro-max-diy .right {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: center;
+    width: 60% !important
+}
+
+.bolt-nfc-main .pro-max-diy .right .title {
+    font-size: 45px;
+  color:#fff;
+}
+.bolt-nfc-main .pro-max-diy .right p {
+  color:#fff;
+}
+.bolt-nfc-main .pro-max-diy p {
+    font-size: 20px
+}
+
+.bolt-nfc-main .ansi {
+    position: relative
+}
+
+.bolt-nfc-main .ansi .left {
+    position: absolute;
+    top: 15%;
+    left: 15%
+}
+
+.bolt-nfc-main .ansi .right {
+    width: 100%
+}
+
+.bolt-nfc-main .ansi .text .title img {
+    width: 45%
+}
+
+.bolt-nfc-main .g-gray-bg {
+    background: #d8d8d8
+}
+
+.bolt-nfc-main .gray2-bg .right {
+    width: 35%
+}
+
+.bolt-nfc-main .times-access {
+    padding-top: 0
+}
+
+.bolt-nfc-main .home-style {
+    text-align: center
+}
+
+.bolt-nfc-main .home-style .item-banner {
+    justify-content: space-evenly;
+    padding: 50px;
+    height: unset
+}
+
+.bolt-nfc-main .home-style .item-banner span {
+    font-size: 24px;
+    color: #5f5f5f
+}
+
+.bolt-nfc-main .temperature .title {
+    text-align: center
+}
+
+.bolt-nfc-main .temperature .box {
+    position: relative
+}
+
+.bolt-nfc-main .temperature img {
+    position: relative;
+    width: 100%
+}
+
+.bolt-nfc-main .temperature .temp {
+    position: absolute;
+    display: flex;
+    align-items: center
+}
+
+.bolt-nfc-main .temperature .temp span {
+    font-size: 150px
+}
+
+.bolt-nfc-main .temperature .temp.low {
+    left: 8%;
+    top: 5%
+}
+
+.bolt-nfc-main .temperature .temp.low span::before {
+    color: #fff
+}
+
+.bolt-nfc-main .temperature .temp.low a {
+    color: #fff;
+    font-size: 28px;
+    margin: -30px
+}
+
+.bolt-nfc-main .temperature .temp.high {
+    right: 8%;
+    bottom: 5%
+}
+
+.bolt-nfc-main .temperature .temp.high span::before {
+    color: #444
+}
+
+.bolt-nfc-main .temperature .temp.high a {
+    color: #444;
+    font-size: 28px;
+    margin: -30px
+}
+
+.bolt-nfc-main .icon_list {
+    padding: 50px
+}
+
+.bolt-nfc-main .icon_list .title {
+    text-align: center
+}
+
+.bolt-nfc-main .icon_list ul {
+    font-size: 16px;
+    flex-wrap: wrap
+}
+
+.bolt-nfc-main .icon_list ul li {
+    width: 14%;
+    margin-top: 40px
+}
+
+.bolt-nfc-main .icon_list ul li span.icon {
+    font-size: 60px;
+    display: block
+}
+
+.bolt-nfc-main .icon_list ul li span.icon::before {
+    color: #00a0e8
+}
+
+.bolt-nfc-main .icon_list ul li a {
+    color: #5f5f5f;
+    margin-top: 10px;
+    display: block
+}
+
+.bolt-nfc-main .table .title {
+    text-align: center
+}
+
+.bolt-nfc-main .img-list {
+    padding: 10px 10px;
+    text-align: center
+}
+
+.bolt-nfc-main .img-list ul {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px
+}
+
+.bolt-nfc-main .img-list ul li {
+    width: 100%
+}
+
+.bolt-nfc-main .img-list ul li img {
+    width: 100%
+}
+
+.bolt-nfc-main .img-list ul li.hide {
+    display: none
+}
+
+.bolt-nfc-main .img-list ul li.show {
+    display: grid
+}
+
+.bolt-nfc-main .img-list a.btn-more {
+    border: #00a0e8 2px solid;
+    padding: 8px 15px;
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #58585a
+}
+
+.bolt-nfc-main .in-the-box {
+    padding: 50px 200px
+}
+
+.bolt-nfc-main .in-the-box .title {
+    text-align: center
+}
+
+.bolt-nfc-main .in-the-box ul {
+    flex-wrap: wrap;
+    list-style: disc;
+    margin-top: 50px
+}
+
+.bolt-nfc-main .in-the-box ul li {
+    width: 35%;
+    text-align: left;
+    font-size: 24px;
+    color: #9c9c9c;
+    line-height: 36px
+}
+
+.bolt-nfc-main .specifications .title {
+    text-align: center;
+    line-height: 100px
+}
+
+.bolt-nfc-main .specifications .collapse {
+    padding: 0 100px
+}
+
+.bolt-nfc-main .specifications .collapse .item .down-title {
+    border-top: 1px #d8d8d8 solid;
+    line-height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer
+}
+
+.bolt-nfc-main .specifications .collapse .item .down-contant {
+    padding: 0 80px 20px 260px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    display: none
+}
+
+.bolt-nfc-main .specifications .collapse .item .down-contant.img {
+    justify-content: space-between
+}
+
+.bolt-nfc-main .specifications .collapse .item .down-contant.info .info-block {
+    margin-top: 20px;
+    padding: 8px 12px;
+    margin-right: 50px;
+    border: 1px #727275 solid;
+    border-radius: 6px;
+    min-width: 180px
+}
+
+.bolt-nfc-main .specifications .collapse .item .down-contant.info .info-block span {
+    font-size: 16px;
+    line-height: 24px;
+    line-height: 30px
+}
+
+.bolt-nfc-main .specifications .collapse .item .down-contant.info .info-block span.type {
+    color: #1a1a1a
+}
+
+.bolt-nfc-main .specifications .collapse .item .down-contant.info .info-block span.info {
+    color: #757575
+}
+
+.bolt-nfc-main .specifications.FAQ .collapse .item .down-contant {
+    padding: 0 30px 20px 0px;
+    color: #757575
+}
+
+.bolt-nfc-main .tips {
+    padding: 0 100px;
+    font-size: 14px;
+    margin: 30px 0
+} 
+.bolt-nfc-main .item-banner .text.diy-title{
+  text-align:left;
+  padding:0 0 0 8em;
+}
+/*兼容  */
+@media (max-width: 850px) {
+    /* .desktop {
+        display: none
+    } */
+  .ubolt-pro-warp .js-banner .uhead_location_w #header_wrap2{
+    display:none;
+  }
+.bolt-nfc-main .item-banner .left.text,
+.bolt-nfc-main .item-banner .right.text {
+    padding: 0;
+    position: inherit;
+}
+.bolt-nfc .phone{
+  display: block;
+}
+    .phone {
+        display: block
+    }
+
+    .phone .product-single__title {
+        text-align: center
+    }
+
+    .phone .how-to-choose {
+        margin-bottom: 1em
+    }
+
+    .phone .how-to-choose span {
+        width: 100%;
+        justify-content: center
+    }
+
+    .bolt-nfc .page-width {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .bolt-nfc.max-w1440 {
+        max-width: 100%;
+        margin-top: 0
+    }
+
+    .bolt-nfc .pd-lr {
+        padding: 0 20px
+    }
+
+    .bolt-nfc .title {
+        font-size: 24px;
+        padding: 20px 10px;
+    }
+
+    .bolt-nfc .header-bg img {
+        width: 125%;
+        left: -25%;
+        max-width: unset
+    }
+
+    .bolt-nfc .header-bg .header-main {
+        top: -6px
+    }
+
+    .bolt-nfc .header-bg .header-main .header-title span::before {
+        font-size: 3.8rem
+    }
+
+    .bolt-nfc .header-bg .header-main .header-title h1 {
+        font-size: 28px;
+        margin-top: 10px
+    }
+
+    .bolt-nfc .header-bg .header-main .header-title p.text {
+        font-size: 18px
+    }
+
+    .bolt-nfc .header-bg .header-main .header-title span {
+        display: block
+    }
+
+    .bolt-nfc .header-bg .header-main .header-btn {
+        margin-top: 10px
+    }
+
+    .bolt-nfc .header-bg .header-main .header-btn .notify-btn {
+        font-size: 16px
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-destails {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left
+    }
+
+    /* .bolt-nfc .bolt-nfc-main .product-destails img {
+        width: 100%
+    } */
+
+    .bolt-nfc .bolt-nfc-main .module-box ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 5px 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .module-box ul li {
+        width: 70%;
+        margin: 10px auto
+    }
+
+    .bolt-nfc .bolt-nfc-main .module-box ul li h4 {
+        margin: 5px 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .module-box ul li div.s-title {
+        font-size: 16px
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .title {
+        font-size: 30px;
+        margin: 20px 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box ul.video-nav {
+        border: none
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box ul.video-nav li {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px !important
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box ul.video-nav li a {
+        display: none
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .tab-name {
+        display: block;
+        text-align: center;
+        color: #00a0e8;
+        line-height: 60px;
+        font-size: 18px
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video {
+        padding: 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video .tip {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 5px 5px;
+        width: 80px
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video .tip::before {
+        top: 16%;
+        right: 98%
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video.smartphone .hot-area {
+        width: 21.2vw;
+        height: 21.2vw;
+        left: 37%;
+        top: 47%
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video.smartphone .hot-area .tip {
+        left: 24.2vw;
+        top: 15%
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video.fingerprint .tip {
+        left: -90px;
+        top: 13%
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video.fingerprint .tip::before {
+        border-color: transparent;
+        border-left-color: #d80000;
+        left: 98%
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video.fingerprint .hot-area {
+        width: 12.2vw;
+        height: 12.2vw
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video.smartwatch .tip {
+        left: 36vw;
+        top: 27%
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video.smartwatch .hot-area {
+        width: 30vw;
+        height: 18vw
+    }
+
+    .bolt-nfc .bolt-nfc-main .video-box .video.smartwatch .hot-area.lock,
+    .bolt-nfc .bolt-nfc-main .video-box .video.smartwatch .hot-area.unlock {
+        top: 44%;
+        left: 31.8%
+    } 
+  .bolt-nfc .header-bg{
+    height:auto;
+    min-height:auto;
+  }
+.bolt-nfc .header-bg .header-main .header-btn-a {
+    padding: 1px 2em;
+    background-color: #00000080;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+}
+    .bolt-nfc .bolt-nfc-main .item-banner {
+        flex-direction: column;
+        padding: 0 0 0px 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .item-banner.reverse {
+        flex-direction: column-reverse
+    }
+
+    .bolt-nfc .bolt-nfc-main .item-banner .left,
+    .bolt-nfc .bolt-nfc-main .item-banner .right {
+        width: 100%
+    }
+
+    .bolt-nfc .bolt-nfc-main .item-banner .left.text,
+    .bolt-nfc .bolt-nfc-main .item-banner .right.text {
+        font-size: 24px;
+        text-align: center;
+        margin: 20px 0;
+        width: unset
+    }
+
+    .bolt-nfc .bolt-nfc-main .item-banner .left.text p,
+    .bolt-nfc .bolt-nfc-main .item-banner .right.text p {
+        font-size: 18px;
+        padding: 0 10px
+    } 
+  .bolt-nfc .gray-bg-item .bg-img,
+  .bolt-nfc .bolt-nfc-main .item-banner .left .bg-img,
+  .bolt-nfc .bolt-nfc-main .item-banner .right .bg-img,
+  .bolt-nfc .bolt-nfc-main .item-banner .left.video .bg-img,
+  .bolt-nfc .bolt-nfc-main .item-banner .right.video .bg-img{
+        display:none;
+    }  
+  .bolt-nfc .gray-bg-item .bg-img2,
+  .bolt-nfc .bolt-nfc-main .item-banner .left .bg-img2,
+  .bolt-nfc .bolt-nfc-main .item-banner .right .bg-img2,
+  .bolt-nfc .bolt-nfc-main .item-banner .left.video .bg-img2,
+    .bolt-nfc .bolt-nfc-main .item-banner .right.video .bg-img2{
+        display:block;
+    } 
+  .bolt-nfc-main .item-banner {
+    justify-content: center;
+} 
+  .bolt-nfc-main .item-banner .left.text,
+  .bolt-nfc-main .item-banner .right.text {
+    padding:0 1em;
+}
+    .bolt-nfc .bolt-nfc-main .item-banner .left.video,
+    .bolt-nfc .bolt-nfc-main .item-banner .right.video {
+        width: 100%
+    }
+
+    .bolt-nfc .bolt-nfc-main .item-banner .left.video video,
+    .bolt-nfc .bolt-nfc-main .item-banner .right.video video {
+        width: 100%;
+        margin: 0;
+        border-radius: 30px
+    }
+
+    .bolt-nfc .bolt-nfc-main .item-banner .left img,
+    .bolt-nfc .bolt-nfc-main .item-banner .right img {
+        width: 100%;
+        border-radius: 30px
+    }
+
+    .bolt-nfc .bolt-nfc-main .more-way .title {
+        position: unset;
+        text-align: center;
+        margin: 20px 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .more-way .img {
+        height: 250px;
+        background-image: linear-gradient(to right, #e7e8ec, #dcdddf)
+    }
+
+    .bolt-nfc .bolt-nfc-main .more-way .img img.more-way-bg {
+        position: absolute;
+        bottom: 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .more-way img.item-img {
+        width: 226px;
+        left: 50%;
+        margin-left: -113px;
+        bottom: 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .more-way .balloon {
+        line-height: unset;
+        padding: 8px 15px
+    }
+
+    .bolt-nfc .bolt-nfc-main .more-way .balloon.left {
+        top: 62%
+    }
+
+    .bolt-nfc .bolt-nfc-main .more-way .balloon.right {
+        right: 8%;
+        top: 32%
+    }
+
+    .bolt-nfc .bolt-nfc-main .security {
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse
+    }
+
+    .bolt-nfc .bolt-nfc-main .security .title {
+        font-size: 30px
+    }
+
+    .bolt-nfc .bolt-nfc-main .security .text {
+        width: 90%;
+        margin-top: 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .security video {
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access .share-access-top,
+    .bolt-nfc .bolt-nfc-main .protect .share-access-top {
+        width: 95%
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access .share-access-top p,
+    .bolt-nfc .bolt-nfc-main .protect .share-access-top p {
+        font-size: 18px
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access ul,
+    .bolt-nfc .bolt-nfc-main .protect ul {
+        /* display: none */
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access ul li,
+    .bolt-nfc .bolt-nfc-main .protect ul li {
+        width: 100%;
+        margin-top: 10px
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access ul li img,
+    .bolt-nfc .bolt-nfc-main .protect ul li img {
+        width: 100%
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access ul li .list-bottom,
+    .bolt-nfc .bolt-nfc-main .protect ul li .list-bottom {
+        padding: 20px 10px
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect li {
+        margin: 0 !important
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect li img {
+        width: 100%
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app-phone {
+        display: block;
+        margin-top: 20px;
+        background: #efefef;
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app-phone ul {
+        display: flex;
+        border-bottom: 1px #d8d8d8 solid;
+        line-height: 40px
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app-phone ul li span.icon {
+        font-size: 25px;
+        border-radius: 50%;
+        background-color: #d8d8d8;
+        padding: 5px;
+        display: flex;
+        margin-bottom: 10px
+    }
+      .bolt-nfc-main .product-app-phone ul li.active span.icon,
+      .bolt-nfc-main .product-app ul li.active span.icon {
+          background-color: #00A0E8
+      } 
+
+    .bolt-nfc .bolt-nfc-main .product-app-phone ul li span.icon::before {
+        color: #fff
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app-phone .title {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 28px
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app {
+        margin-top: 40px
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .mask-slider__images-list {
+        width: 40%;
+        /* height: 77.9vw; */
+        left: 7%
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .mask-slider__images-list .mask-slider__images-list-item.transition-on {
+        left: -40%
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .mask-slider__images-list img {
+        width: auto;
+        height: 330px
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .app-main {
+        display: flex;
+        padding: 0;
+        flex-flow: row-reverse;
+        height: auto;
+        justify-content: space-between;
+        padding-left: 10px
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .app-main ul {
+        display: none
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .app-main .app-text {
+        width: 90%;
+        margin: 8% 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .app-main .app-text .title {
+        font-size: 20px;
+        color: #00a0e8;
+        padding: 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .app-main .app-text p {
+        font-size: 16px
+    }
+
+    .bolt-nfc .bolt-nfc-main .product-app .app-main .app-text p.text {
+        width: 90%
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access {
+        padding: 30px 0;
+        border-radius: 30px;
+        margin-top: 1rem
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access .title {
+        font-size: 30px
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access .shareSwiper {
+        overflow: hidden;
+        margin-top: 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access .shareSwiper .swiper-slide {
+        padding: 0 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access .shareSwiper .swiper-slide img {
+        border-radius: 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access .shareSwiper .swiper-slide .s-title {
+        font-size: 20px;
+        color: #404040;
+        line-height: normal;
+        margin: 8px 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .share-access .shareSwiper .swiper-slide p.text {
+        color: #383838;
+        margin-bottom: 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .ansi .text {
+        position: unset
+    }
+
+    .bolt-nfc .bolt-nfc-main .ansi .text .title img {
+        border-radius: 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect {
+        background: transparent
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect .title {
+        font-size: 30px;
+        margin: 0 20px 0 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect .productSwiper {
+        margin-bottom: 30px
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect .productSwiper .swiper-slide {
+        padding: 0 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect .productSwiper .swiper-slide img {
+        border-radius: 30px
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect .productSwiper .swiper-slide .list-bottom {
+        margin-bottom: 20px;
+      padding:1em;
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect .productSwiper .swiper-slide .list-bottom .title {
+        font-size: 20px;
+        color: #404040;
+        margin: 10px 0 5px 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .protect .productSwiper .swiper-slide .list-bottom p.text {
+        color: #383838
+    }
+
+    .bolt-nfc .bolt-nfc-main .pro-max-diy .text {
+        width: 100% !important;
+        position: unset
+    }
+
+    .bolt-nfc .bolt-nfc-main .pro-max-diy .text .title {
+        font-size: 30px;
+        color:#000;
+    }
+
+    .bolt-nfc .bolt-nfc-main .pro-max-diy .text p {
+        font-size: 16px;
+      color:#000;
+    }
+
+    .bolt-nfc .bolt-nfc-main .notifications {
+        background-color: #fff;
+        padding: 0;
+        margin-top: 40px
+    }
+
+    .bolt-nfc .bolt-nfc-main .notifications .title {
+        line-height: 80px
+    }
+
+    .bolt-nfc .bolt-nfc-main .notifications .notification-image-list {
+        margin: 0;
+        height: 165px
+    }
+
+    .bolt-nfc .bolt-nfc-main .notifications .notification-image-list img {
+        width: 40%
+    }
+
+    .bolt-nfc .bolt-nfc-main .notifications .notification-image-list img:nth-child(1) {
+        left: 0;
+        top: 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .notifications .notification-image-list img:nth-child(2) {
+        left: 80%;
+        position: relative
+    }
+
+    .bolt-nfc .bolt-nfc-main .notifications .notification-image-list img:nth-child(3) {
+        right: 0;
+        bottom: 5px
+    }
+
+    .bolt-nfc .bolt-nfc-main .diy {
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column-reverse;
+    }
+
+    .bolt-nfc .bolt-nfc-main .diy .left,
+    .bolt-nfc .bolt-nfc-main .diy .right {
+        width: 100%;
+      position: inherit;
+    }
+
+    .bolt-nfc .bolt-nfc-main .diy .left {
+        background-color: #efefef
+    }
+
+    .bolt-nfc .bolt-nfc-main .diy .left img {
+        width: 75%
+    }
+
+    .bolt-nfc .bolt-nfc-main .times-access .right {
+        background-color: #d5dee4;
+        text-align: center
+    }
+
+    .bolt-nfc .bolt-nfc-main .times-access .right img {
+        width: 50%;
+        margin-bottom: 30px
+    }
+
+    .bolt-nfc .bolt-nfc-main .home-style .item-banner {
+        padding: 10px;
+        display: flex;
+        align-items: baseline
+    }
+
+    .bolt-nfc .bolt-nfc-main .home-style .item-banner div img {
+        width: 100%
+    }
+
+    .bolt-nfc .bolt-nfc-main .home-style .item-banner div span {
+        display: block;
+        font-size: 16px;
+        margin-top: 10px
+    }
+
+    .bolt-nfc .bolt-nfc-main .temperature {
+        width: 100%;
+        height: 200px;
+        display: table
+    }
+
+    .bolt-nfc .bolt-nfc-main .temperature img {
+        width: 100%
+    }
+
+    .bolt-nfc .bolt-nfc-main .temperature .temp span {
+        font-size: 50px
+    }
+
+    .bolt-nfc .bolt-nfc-main .temperature .temp.low a,
+    .bolt-nfc .bolt-nfc-main .temperature .temp.high a {
+        font-size: 18px;
+        margin: 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .icon_list {
+        padding: 0;
+        background-color: #fff
+    }
+
+    .bolt-nfc .bolt-nfc-main .icon_list .title {
+        line-height: 50px
+    }
+
+    .bolt-nfc .bolt-nfc-main .icon_list ul {
+        background: #efefef;
+        padding: 0 10px 10px 10px
+    }
+
+    .bolt-nfc .bolt-nfc-main .icon_list ul li {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        margin-top: 25px
+    }
+
+    .bolt-nfc .bolt-nfc-main .icon_list ul li span.icon {
+        font-size: 35px
+    }
+
+    .bolt-nfc .bolt-nfc-main .icon_list ul li a {
+        font-size: 14px;
+        text-align: left
+    }
+
+    .bolt-nfc .bolt-nfc-main .brand {
+        height: 280px
+    }
+
+    .bolt-nfc .bolt-nfc-main .brand .title {
+        font-size: 22px
+    }
+
+    .bolt-nfc .bolt-nfc-main .brand ul {
+        display: block
+    }
+
+    .bolt-nfc .bolt-nfc-main .brand ul li {
+        margin-top: 10px;
+        width: 70% !important;
+        margin: 0 auto
+    }
+
+    .bolt-nfc .bolt-nfc-main .img-list ul {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-column-gap: 5px !important;
+        grid-row-gap: 5px !important
+    }
+
+    .bolt-nfc .bolt-nfc-main .in-the-box {
+        padding: 0;
+        background-color: #fff
+    }
+
+    .bolt-nfc .bolt-nfc-main .in-the-box .title {
+        line-height: 50px
+    }
+
+    .bolt-nfc .bolt-nfc-main .in-the-box ul {
+        display: block;
+        padding-left: 50px;
+        margin-top: 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .in-the-box ul li {
+        width: 100%;
+        font-size: 18px
+    }
+
+    .bolt-nfc .bolt-nfc-main .specifications .collapse {
+        padding: 0 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .specifications .collapse .item .down-contant {
+        width: 100%;
+        padding: 0;
+        padding: 0 20px 20px 20px
+    }
+
+    .bolt-nfc .bolt-nfc-main .specifications .collapse .item .down-contant.img img {
+        width: 100%
+    }
+
+    .bolt-nfc .bolt-nfc-main .specifications .collapse .item .down-contant.info .info-block {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%
+    }
+
+    .bolt-nfc .bolt-nfc-main .specifications .collapse .item .down-contant.info .info-block span {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .bolt-nfc .bolt-nfc-main .specifications .collapse .item .down-title {
+        font-size: 18px
+    }
+
+    .bolt-nfc .bolt-nfc-main .specifications.FAQ .collapse .item .down-title {
+        line-height: unset;
+        font-weight: 600;
+        color: #000;
+        padding: 5px 0
+    }
+
+    .bolt-nfc .bolt-nfc-main .specifications.FAQ .collapse .item .down-contant {
+        padding: 10px 30px 10px 0
+    } 
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal>.swiper-pagination-bullets{
+    bottom:0;
+  }
+} 

@@ -1,0 +1,665 @@
+@media (min-width: 1260px) {
+  .wisdom .container {
+    width: 1260px;
+    padding:0 2em;
+  }
+}
+.wisdom h2{
+  text-align: center;
+}
+.wisdom .banner {
+  height: 42.7vw;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 850px) {
+  .wisdom .banner {
+    height: auto;
+  }
+}
+
+.wisdom .banner .mobile-banner {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .wisdom .banner .mobile-banner {
+    display: block;
+  }
+}
+
+.wisdom .banner .pc-banner {
+  position: relative;
+  margin-bottom: 0;
+}
+
+@media (max-width: 850px) {
+  .wisdom .banner .pc-banner {
+    display: none;
+  }
+}
+
+.wisdom .banner .banner-info {
+  width: 40vw;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: calc((100% - 1260px)/2);
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (min-width: 1920px) {
+  .wisdom .banner .banner-info {
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 1350px) {
+  .wisdom .banner .banner-info {
+    left: 10%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wisdom .banner .banner-info h1 {
+    font-size: 38px;
+    margin: 0 auto;
+  }
+  .wisdom .banner .banner-info h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 850px) {
+  .wisdom .banner .banner-info {
+    position: relative;
+    height: auto;
+    top: 0;
+    transform: initial;
+    width: 100%;
+    left: 0;
+    padding:0 1em;
+    text-align: center;
+  }
+  .wisdom .banner .banner-info .anviz-primary-btn {
+    margin: 1em auto;
+  }
+}
+.wisdom .nav-bar .nav-bar-item{
+  border-bottom: 1px solid #ddd;
+}
+.wisdom .nav-bar .nav-bar-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wisdom .nav-bar ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+}
+.wisdom .nav-bar .share_con{
+  justify-content: flex-end;
+  width: 30%;
+}
+.wisdom .nav-bar .nav{
+  width:90%;
+}
+.wisdom .nav-bar ul li {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.wisdom .nav-bar ul li .product-title {
+  margin-right: 1em;
+  font-weight: 500;
+}
+.wisdom .nav-bar .links{
+  display:flex;
+  }
+.wisdom .nav-bar ul li .links a {
+  padding: 0 15px;
+}
+
+.wisdom .nav-bar.xq_hover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(241, 241, 241, 0.87);
+}
+
+@media (max-width: 720px) {
+  .wisdom .nav-bar {
+    display: none;
+  }
+  .wisdom h2, .wisdom p, .wisdom h6 {
+    text-align: center !important;
+  }
+}
+
+.wisdom .overviews {
+  background: url(https://www.anviz.com/file/files/4159) center center no-repeat;
+  background-size: contain;
+  margin: 2em 0;
+}
+.wisdom .overviews .container{
+  /* background: url(https://www.anviz.com/file/files/4159) no-repeat;
+  background-size: contain; */
+}
+@media (max-width: 850px) {
+  .wisdom .overviews {
+    padding: 2em 0;
+  }
+}
+
+.wisdom section {
+  padding: 4em 0;
+}
+
+@media (max-width: 850px) {
+  .wisdom section {
+    padding: 2em 0;
+  }
+
+}
+
+.wisdom section.box.gray {
+  background-color: #F9F9F9;
+}
+
+
+
+.wisdom section.box .img-box {
+  display: flex;
+}
+
+@media (max-width: 850px) {
+  .wisdom section.box .img-box {
+    flex-direction: column;
+  }
+}
+
+.wisdom section.box .img-box .first-item {
+  flex-basis: 70%;
+  position: relative;
+}
+
+.wisdom section.box .img-box .first-item img {
+  object-fit: cover;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.wisdom section.box .img-box .first-item .num {
+  position: absolute;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0068B7;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.wisdom section.box .img-box .first-item .num.one {
+  right: 20px;
+  top: 20px;
+}
+
+.wisdom section.box .img-box .img-sub-box {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+@media (max-width: 850px) {
+  .wisdom section.box .img-box .img-sub-box {
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+}
+
+.wisdom section.box .img-box .img-sub-box .item {
+  position: relative;
+}
+
+.wisdom section.box .img-box .img-sub-box img {
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+.wisdom section.box .img-box .img-sub-box .num {
+  position: absolute;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0068B7;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.wisdom section.box .img-box .img-sub-box .num.two, .wisdom section.box .img-box .img-sub-box .num.three {
+  right: 20px;
+  top: 20px;
+}
+
+.wisdom section.box .img-box.cloud-box {
+  align-items: flex-end;
+}
+
+.wisdom section.box .img-box.cloud-box .img-item:last-child {
+  position: relative;
+  top: 38px;
+}
+
+.wisdom section.box .list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+@media (max-width: 850px) {
+  .wisdom section.box .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .wisdom section.box .list:nth-child(2n) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.wisdom section.box .list h2 {
+  text-align: left;
+}
+
+.wisdom section.box .list .text {
+  padding: 2em;
+}
+
+@media (max-width: 850px) {
+  .wisdom section.box .list .text {
+    padding: 0;
+    text-align: center;
+  }
+  .wisdom section.box .list .text h2 {
+    padding-left: 0;
+  }
+}
+.wisdom section .item {
+  padding:0;
+}
+.wisdom section .item img {
+  display: block;
+  margin: 0 auto;
+}
+.wisdom section.box .img-box .img-item{
+  width: 30%;
+  height: 300px;
+  /* height: auto; */
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;  
+  border-radius: 20px;
+  padding:2em;
+}
+.wisdom section.box .img-box .img-item img{
+width: 20%;
+/* padding: 2em 1em 0 1em; */
+}
+.wisdom section.box .img-box .img-item span{
+  color:#0068B7;
+  font-weight: 600;
+  padding-bottom: 1em;
+}
+.wisdom section.box .img-box .img-item div{
+  width: 80%;
+  border-top:2px solid #eee;
+  padding: 0.5em;
+}
+.wisdom section.box .img-box .img-item p{
+  /* padding: 0.5em 2em 2em 2em; */
+  text-align: center;
+}
+.wisdom .box-shadow-1{  
+  -webkit-box-shadow: 3px 3px 3px;  
+  -moz-box-shadow: 3px 3px 3px;  
+  box-shadow: 3px 3px 3px;  
+} 
+/* 7 */
+.wisdom .gridfour {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 7 */
+.wisdom .gridfour .list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  grid-auto-flow: dense;
+}
+.wisdom .gridfour .w-series li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.wisdom .gridfour .w-series li img{
+  height: 60px;
+}
+/* 7兼容 */
+@media (max-width: 720px) {
+  .wisdom .gridfour .list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  }
+}
+
+/* 7 */
+@media (max-width: 300px) {
+  .wisdom .gridfour .list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+
+  }
+}
+.wisdom section.box .cloud-box {
+  display: flex;
+}
+
+
+.wisdom .box .cloud-box .img-item{
+  width: 40%;
+  height: 280px;
+  /* height: auto; */
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;  
+  border-radius: 20px;
+  padding:2em;
+}
+.wisdom .box .cloud-box .img-item img{
+width: 15%;
+/* padding: 2em 1em 0 1em; */
+}
+.wisdom .box .cloud-box .img-item span{
+  color:#0068B7;
+  font-weight: 600;
+  padding-bottom: 1em;
+}
+.wisdom .box .cloud-box .img-item div{
+  width: 80%;
+  border-top:2px solid #eee;
+  padding: 0.5em;
+}
+.wisdom .box .cloud-box .img-item p{
+  /* padding: 0.5em 2em 2em 2em; */
+  text-align: center;
+}
+.wisdom  .box-shadow-1{  
+  -webkit-box-shadow: 3px 3px 3px;  
+  -moz-box-shadow: 3px 3px 3px;  
+  box-shadow: 3px 3px 3px;  
+} 
+@media(max-width:1050px){
+  .wisdom section.box .cloud-box .img-item{
+    /* flex-direction: column; */
+    width: 40%;
+  }
+}
+@media (max-width: 720px) {
+  .wisdom section.box .cloud-box .img-item{
+    /* flex-direction: column; */
+    width: 80%;
+    margin-top: 8%;
+  }
+  .wisdom section.box .cloud-box {
+    flex-direction: column;
+  }
+}
+/*  */
+.wisdom .r-w-b {
+  background: -webkit-linear-gradient(left, red, white, blue); /* Safari 5.1-6, Chrome 10-25 */
+  background: linear-gradient(to right, red, white, blue); /* 标准的线性渐变语法 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.wisdom .box-smb{
+  width: 100%;
+  position: relative;
+}
+.wisdom .box-smb .smb-item{
+  position: absolute;
+  right: 10%;
+  top:35%;
+  padding: 1% 0;
+  width:34%;
+  background-color: #fff;
+  box-shadow: 0 0px 2px 0px;
+  border-radius: 15px;
+}
+.wisdom .box-smb .smb-item .smb-img{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+ 
+}
+.wisdom .box-smb .smb-item .smb-img h6{
+  color:#0068B7;
+  font-weight: 600;
+}
+.wisdom .box-smb .smb-item .smb-img img{
+  width: 10%;
+  margin:2%;
+}
+.wisdom .box-smb .smb-item p{
+  width: 90%;
+  font-size: 12px;
+  padding:0 4%;
+  margin: 0 auto;
+}
+@media (max-width: 850px) {
+  
+.wisdom .box-smb .smb-item{
+    width:90%;
+    position: initial;
+    background-color: #fff;
+    box-shadow: 0 0px 2px 0px;
+    border-radius: 15px;
+    margin: 5%;
+    padding: 2%;
+  }
+  
+.wisdom .box-smb .smb-item p {
+    width: 90%;
+    font-size: 16px;
+    padding: 0 4%;
+    margin-left: 10%;
+    text-align: left !important;
+  }
+  
+.wisdom .box-smb .smb-item .smb-img img {
+    width: 10%;
+    margin: 1% 2%;
+}
+.wisdom section.box .list h2 {
+  text-align: center;
+}
+}
+
+
+.wisdom .box-swiper {
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.wisdom .swiper {
+  flex: 0 0 100%;
+  display: none;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+
+.wisdom .swiper img{
+  max-width: 100%;
+  height: auto;
+}
+
+.wisdom .img-two{
+  display: none;
+}
+
+
+.wisdom .swiper-name{
+  color: white;
+  position: absolute;
+  top: 8%;
+  left: 12%;
+  padding: 10px;
+  width: 30%;
+  text-align: left;
+}
+
+
+.wisdom .swiper-name h2 {
+  margin: 0;
+  text-align: left;
+}
+
+
+.wisdom .swiper-name p {
+  margin: 0;
+  text-align: left;
+  margin:3% 0;
+  margin-bottom: 2%;
+}
+
+.wisdom .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 5%;
+}
+
+.wisdom .swiper-pagination-bullets .swiper-pagination-bullet {
+  background: rgba(140, 140, 140, 0.39);
+  width: 8px;
+  height: 8px;
+}
+/* 控制按钮样式 */
+
+.wisdom .controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 控制按钮样式 */
+
+.wisdom .dot-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.wisdom .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.wisdom .dot.active {
+  background-color: #007BFF;
+}
+
+/* 鼠标悬停时的按钮样式 */
+.wisdom .dot:hover {
+  background-color: #0056b3;
+}
+.wisdom .swiper-slide {
+  text-align: center;
+}
+
+.wisdom .swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 850px) {
+  .wisdom .swiper-name{
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    padding: 10px;
+    width: 30%;
+    text-align: left;
+    width: 100%;
+    text-align: center;
+  }
+  .wisdom .swiper-name p{
+    text-align: center;
+  }
+  .wisdom .swiper-name h2 {
+    text-align: center;
+}
+.wisdom .img-two{
+    display: block;
+  }
+  .wisdom .img-one{
+    display: none;
+  }
+  .wisdom.box-swiper {
+    padding: 0 !important;
+}
+
+}
+@media (max-width: 720px) {
+  .wisdom .swiper-name .anviz-primary-btn{
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 0;
+}
+.wisdom .swiper-name{
+  top: 0;
+}
+}
+

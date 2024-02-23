@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style type="text/css">
+        html,
+        body {
+            height: auto;
+            scroll-behavior: smooth
+        }
+
+        .B38Z .desktop {
+            display: block
+        }
+
+        .B38Z .phone {
+            display: none
+        }
+
+        .B38Z .max-1400 {
+            width: 1400px;
+            margin: 0 auto
+        }
+
+        .B38Z .block {
+            padding-top: 70px
+        }
+
+        .B38Z h2 {
+            font-size: 30px;
+            text-align: left;
+            margin-bottom: 20px
+        }
+
+        .B38Z p {
+            font-size: 16px
+        }
+
+        .B38Z img {
+            margin-bottom: 0
+        }
+
+        .B38Z .header {
+            position: relative
+        }
+
+        .B38Z .header .header-main {
+            position: absolute;
+            top: 0;
+            left: calc((100% - 1400px)/2);
+            bottom: 0;
+            display: flex;
+            justify-content: start
+        }
+
+        .B38Z .header .header-main .left,
+        .B38Z .header .header-main .right {
+            width: 50%
+        }
+
+        .B38Z .header .header-main .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start
+        }
+
+        .B38Z .header .header-main .left h1 {
+            font-size: 64px
+        }
+
+        .B38Z .header .header-main .left p {
+            font-size: 24px
+        }
+
+        .B38Z .header .header-main .left .btn-group {
+            margin: 50px 0
+        }
+
+        .B38Z .header .header-main .left .btn-group a.btn {
+            border: 2px #9f3637 solid;
+            color: #fff;
+            padding: 8px 10px;
+            font-size: 18px;
+            margin-right: 40px
+        }
+
+        .B38Z .features ul {
+            display: flex;
+            margin: 40px 0;
+            justify-content: space-between
+        }
+
+        .B38Z .features ul li {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .B38Z .features ul li i {
+            font-size: 40px;
+            border: 1px #8e8e8e solid;
+            border-radius: 50%;
+            padding: 10px;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin-bottom: 7px
+        }
+
+        .B38Z .features ul li span {
+            font-weight: bold;
+            text-align: center
+        }
+
+        .B38Z .features ul li.blue i {
+            color: #00a0e8
+        }
+
+        .B38Z .scene .scene-list {
+            display: flex;
+            justify-content: space-between
+        }
+
+        .B38Z .scene .scene-list .item {
+            width: 49%;
+            text-align: center
+        }
+
+        .B38Z .scene .scene-list .item span {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 16px
+        }
+
+        .B38Z .scene .scene-list .item img {
+            width: 100%
+        }
+
+        .B38Z .specifications {
+            margin-bottom: 20px
+        }
+
+        .B38Z .specifications .table-box {
+            overflow: hidden
+        }
+
+        .B38Z .specifications .table-box table {
+            width: 100%;
+            border-top: 1px solid #c7c8c9
+        }
+
+        .B38Z .specifications .table-box table td,
+        .B38Z .specifications .table-box table th {
+            padding: 8px 15px;
+            font-weight: 500;
+            font-size: 18px;
+            border-bottom: 1px solid #c7c8c9;
+            border-right: 1px solid #c7c8c9;
+            word-break: break-word
+        }
+
+        .B38Z .specifications .table-box table td.center>div,
+        .B38Z .specifications .table-box table th.center>div {
+            text-align: center;
+            margin: 0 auto;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content
+        }
+
+        .B38Z .specifications .table-box table td.center img,
+        .B38Z .specifications .table-box table th.center img {
+            margin: 15px auto;
+            width: 100px
+        }
+
+        .B38Z .specifications .table-box table td:last-child,
+        .B38Z .specifications .table-box table th:last-child {
+            border-right: none
+        }
+
+        .B38Z .specifications .table-box table tbody tr.grey-bg {
+            background: #e4e4e4
+        }
+
+        .B38Z .specifications .table-box table tbody tr td {
+            font-weight: normal;
+            text-align: center
+        }
+
+        .B38Z .specifications .table-box table tbody tr td:first-child {
+            text-align: left
+        }
+
+        .B38Z .specifications .table-box table tbody tr td:last-child {
+            text-align: center
+        }
+
+        .B38Z .specifications .table-box table tbody tr td.center {
+            font-weight: normal;
+            text-align: center
+        }
+
+        .B38Z .solution .bg {
+            background: #efefef;
+            padding: 50px;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin: 0 auto
+        }
+
+        .B38Z .inquiry {
+            text-align: center;
+            margin-bottom: 70px
+        }
+
+        .B38Z .inquiry a.btn {
+            background-color: #9f3637;
+            color: #fff;
+            padding: 8px 15px;
+            font-size: 16px
+        }
+
+        .B38Z .platorm {
+            margin-top: 60px
+        }
+
+        .B38Z .platorm ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            justify-content: space-between
+        }
+
+        .B38Z .platorm ul li {
+            width: 49%;
+            background-color: #efefef;
+            padding: 40px 0
+        }
+
+        .B38Z .platorm ul li>div img {
+            max-height: 400px;
+            margin: 0 auto
+        }
+
+        .B38Z .platorm .app-introduction {
+            text-align: center;
+            padding: 0 20px
+        }
+
+        .B38Z .platorm .app-introduction span {
+            font-size: 24px;
+            margin: 15px 0;
+            display: block
+        }
+
+        .B38Z .platorm .app-introduction a.btn {
+            width: -webkit-max-content;
+            width: -moz-max-content;
+            width: max-content
+        }
+
+        .B38Z .download {
+            margin-bottom: 50px
+        }
+
+        .B38Z .download .download-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0;
+            width: 100%;
+            margin: 0 auto;
+            color: #000
+        }
+
+        .B38Z .download .download-list .download-item {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            min-height: 50px;
+            padding: 4px 6px;
+            border-bottom: 1px solid rgba(0, 0, 0, .1)
+        }
+
+        .B38Z .download .download-list .download-item:first-child {
+            border-top: 1px solid rgba(0, 0, 0, .1)
+        }
+
+        @media(max-width: 850px) {
+            .B38Z .download .download-list .download-item {
+                display: block;
+                align-items: flex-start;
+                padding: 15px 0
+            }
+        }
+
+        .B38Z .download .download-list .download-item .item {
+            min-width: 20%
+        }
+
+        .B38Z .download .download-list .download-item .item-type {
+            color: #00a0e8;
+            font-weight: 700
+        }
+
+        .B38Z .download .download-list .download-item .item-title {
+            color: #000;
+            min-width: 280px
+        }
+
+        .B38Z .download .download-list .download-item .item-right {
+            min-width: 40%
+        }
+
+        @media(max-width: 850px) {
+            .B38Z .download .download-list .download-item .item-right {
+                text-align: left;
+                padding-left: 0
+            }
+        }
+
+        .B38Z .download .download-list .download-item .item-size {
+            text-align: center;
+            min-width: 10%
+        }
+
+        @media(max-width: 850px) {
+            .B38Z .download .download-list .download-item .item-size {
+                text-align: left;
+                margin-bottom: 4px
+            }
+        }
+
+        .B38Z .download .download-list .download-item .item-download a {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #00a0e8;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 4px
+        }
+
+        @media(max-width: 1400px) {
+            .B38Z .max-1400 {
+                width: 100%;
+                padding-left: 5px;
+                padding-right: 5px
+            }
+
+            .B38Z .header .header-main {
+                left: 0
+            }
+        }
+
+        @media(max-width: 850px) {
+            .B38Z .desktop {
+                display: none
+            }
+
+            .B38Z .phone {
+                display: block
+            }
+
+            .B38Z .max-1400,
+            .B38Z .max-1000 {
+                width: 100%
+            }
+
+            .B38Z .backimg {
+                -o-object-fit: cover;
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                margin-bottom: 0;
+                max-width: unset
+            }
+
+            .B38Z .block {
+                padding: 0 15px;
+                margin-top: 40px
+            }
+
+            .B38Z .block h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+                text-align: left;
+                font-weight: 600
+            }
+
+            .B38Z .block p {
+                font-size: 16px
+            }
+
+            .B38Z .block h3 {
+                font-size: 18px
+            }
+
+            .B38Z .header .header-main {
+                position: unset
+            }
+
+            .B38Z .header .header-main .left {
+                padding: 15px;
+                width: 100%;
+                text-align: center;
+                display: block
+            }
+
+            .B38Z .header .header-main .left h1 {
+                line-height: unset;
+                font-size: 20px
+            }
+
+            .B38Z .header .header-main .left p {
+                font-size: 16px
+            }
+
+            .B38Z .header .header-main .left .btn-group a.btn {
+                margin-right: 0
+            }
+
+            .B38Z .features ul.list {
+                flex-wrap: wrap
+            }
+
+            .B38Z .features ul.list li {
+                width: 33%;
+                margin-top: 10px
+            }
+
+            .B38Z .scene .scene-list {
+                flex-direction: column
+            }
+
+            .B38Z .scene .scene-list .item {
+                width: 100%
+            }
+
+            .B38Z .specifications .table-scroll {
+                overflow-x: scroll
+            }
+
+            .B38Z .specifications .table-scroll .table-box {
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content
+            }
+
+            .B38Z .specifications .table-scroll .table-box table td,
+            .B38Z .specifications .table-scroll .table-box table th {
+                word-break: unset
+            }
+
+            .B38Z .specifications .table-scroll .table-box table thead th.center>div {
+                margin: 0 auto 0 0
+            }
+
+            .B38Z .specifications .table-scroll .table-box table tbody tr td:last-child {
+                text-align: left
+            }
+
+            .B38Z .specifications .table-scroll .table-box table tbody tr td.center {
+                text-align: left
+            }
+
+            .B38Z .platorm ul {
+                flex-direction: column
+            }
+
+            .B38Z .platorm ul li {
+                width: 100%;
+                margin-bottom: 20px
+            }
+        }
+
+        #getFreeCode h2 {
+            text-align: center;
+        }
+    </style>
+    <div class="template B38Z">
+        <div class="header"><img alt="iCam B38Z" auto_mobile="true" class="backimg" height=""
+                src="https://www.anviz.com/file/files/2516" width="" />
+            <div class="max-1400 header-main">
+                <div class="left">
+                    <h1>iCam-B38Z</h1>
+
+                    <p>8MP AI IR Outdoor Bullet Network Camera</p>
+
+                    <div class="btn-group"><a aria-label="“get" class="minor-intellisight-btn" demo="" free=""
+                            href="#getFreeCode">Get a free demo</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="details_nav_bar">
+            <div class="page-item">
+                <div class="navbar_tab navbar-default" id="productDetailsNav">
+                    <ul class="nav_bar">
+                        <li class="nav-item" style="padding-left: 0"><a aria-label="“iCam-B38Z”"
+                                class="nav-link">iCam-B38Z</a></li>
+                        <li class="nav-item v1 v_active"><a aria-label="“overview”" class="nav-link"
+                                href="#section1">Overview</a></li>
+                        <li class="nav-item v2"><a aria-label="“features”" class="nav-link"
+                                href="#section2">Features</a></li>
+                        <li class="nav-item v3"><a aria-label="“scenes”" class="nav-link" href="#section3">Scenes</a>
+                        </li>
+                        <li class="nav-item v4"><a aria-label="“specifications”" class="nav-link"
+                                href="#section4">Specifications</a></li>
+                        <li class="nav-item v5"><a aria-label="“platform”" class="nav-link"
+                                href="#section5">Platform</a></li>
+                        <li class="nav-item v6"><a aria-label="“download”" class="nav-link"
+                                href="#section6">Download</a></li>
+                    </ul>
+
+                    <div class="select">
+                        <div class="select_tit v_active v1"><a aria-label="“”">iCam-B38Z</a></div>
+                    </div>
+
+                    <div class="icon_down"><img alt="icon792" auto_mobile="true" class="lazyload" height=""
+                            src="https://www.anviz.com/file/files/792" width="" /></div>
+
+                    <ul class="space-item">
+                        <li>&nbsp;</li>
+                    </ul>
+
+                    <ul class="share_con">
+                        <li><a a="" aria-label="“get" class="minor-intellisight-btn" demo="" free=""
+                                href="#getFreeCode">Get a Free Demo</a></li>
+                        <li class="nav-item">
+                            <div class="sharethis-inline-share-buttons">&nbsp;</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="select_box">
+                    <li class="nav-item v2"><a aria-label="“overview”" class="nav-link" href="#section1">Overview</a>
+                    </li>
+                    <li class="nav-item v3"><a aria-label="“features”" class="nav-link" href="#section2">Features</a>
+                    </li>
+                    <li class="nav-item v4"><a aria-label="“scenes”" class="nav-link" href="#section3">Scenes</a></li>
+                    <li class="nav-item v5"><a aria-label="“specifications”" class="nav-link"
+                            href="#section4">Specifications</a></li>
+                    <li class="nav-item v6"><a aria-label="“platorm”" class="nav-link" href="#section5">Platorm</a></li>
+                    <li class="nav-item v7"><a aria-label="“download”" class="nav-link" href="#section6">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Product Introduction -->
+
+        <div class="introduction max-1400 block" id="section1">
+            <h2>Product Overview</h2>
+
+            <p>iCam-B38Z is an outdoor bullet camera with 8MP/4K Ultra HD resolution and stylish design. The perfect
+                combination of Intelligent Infrared and day/night function greatly improve the visibility effect in the
+                dark and low-light environments. The 3X motorized lens can clearly auto adjust the images within 50
+                meters range. The IP66 design ensures you the flexbile installation in the outdoor environment. The
+                iCam-B3 series supports standard H.264/H.265 and also the stanard onvif protocol. The optional WiFi
+                Model(-W) or 4G Model(-G) offers wireless communication and easily setup. The edge storage SD card slot
+                can support up to 128GB micro SD card. The device has built-in person detection and vehicle detection
+                functions and you can easily get event alarm from the Intellisight mobile APP.</p>
+        </div>
+        <!-- Product Features -->
+
+        <div class="features max-1400 block" id="section2">
+            <h2>Product Features</h2>
+
+            <ul class="list">
+                <li><i class="icon-a-8m"></i> <span>High Deﬁnition up<br />
+                        to 8M</span></li>
+                <li><i class="icon-a-trueday"></i> <span>True Day/<br />
+                        Night</span></li>
+                <li><i class="icon-a-dual"></i> <span>Dual Way Audio</span></li>
+                <li><i class="icon-a-smart-e"></i> <span>Smart Events</span></li>
+                <li><i class="icon-a-NPU"></i> <span>Edge Deep<br />
+                        Learning Engine</span></li>
+                <li><i class="icon-a-water"></i> <span>IP66 Design</span></li>
+            </ul>
+        </div>
+        <!-- Installation Scene -->
+
+        <div class="scene max-1400 block" id="section3">
+            <h2>Product Scenes</h2>
+
+            <div class="scene-list">
+                <div class="item"><img alt="Person Detection" auto_mobile="true" class="lazyload" height=""
+                        src="https://www.anviz.com/file/files/2517" width="" /> <span>Person Detection</span></div>
+
+                <div class="item"><img alt="Vehicle Detection" auto_mobile="true" class="lazyload" height=""
+                        src="https://www.anviz.com/file/files/2518" width="" /> <span>Vehicle Detection</span></div>
+            </div>
+        </div>
+        <!-- Product Specifications -->
+
+        <div class="specifications max-1400 block" id="section4">
+            <h2>Product Specifications</h2>
+
+            <div class="table-scroll">
+                <div class="table-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th class="center" width="380">
+                                    <div><img alt="iCam-B38Z Video camera" auto_mobile="true" class="lazyload" height=""
+                                            src="https://www.anviz.com/file/files/2519" width="" />
+                                        <span>iCam-B38Z</span></div>
+                                </th>
+                                <th class="center" width="380">
+                                    <div><img alt="iCam-B38ZW camera" auto_mobile="true" class="lazyload" height=""
+                                            src="https://www.anviz.com/file/files/2520" width="" />
+                                        <span>iCam-B38ZW<br />
+                                            (WIFI Model-Coming Soon)</span></div>
+                                </th>
+                                <th class="center" width="380">
+                                    <div><img alt="iCam-B38ZG camera" auto_mobile="true" class="lazyload" height=""
+                                            src="https://www.anviz.com/file/files/2521" width="" />
+                                        <span>iCam-B38ZG<br />
+                                            (4G Model-Coming Soon)</span></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody><!-- Camera -->
+                            <tr class="grey-bg">
+                                <td>Camera</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Image Sensor</td>
+                                <td colspan="3">1/1.8&quot; 8 Megapixel Progressive Scan CMOS</td>
+                            </tr>
+                            <tr>
+                                <td>Max. Resolution</td>
+                                <td colspan="3">3840(H)x2160(V)</td>
+                            </tr>
+                            <tr>
+                                <td>Shutter Time</td>
+                                <td colspan="3">1/12s ~ 1/10000s</td>
+                            </tr>
+                            <tr>
+                                <td>Minimum Illumination</td>
+                                <td colspan="3">Color: 0.005Lux @(F1.2,AGC ON) B/W: 0Lux @(IR LED ON)</td>
+                            </tr>
+                            <tr>
+                                <td>Day/Night</td>
+                                <td colspan="3">IR-CUT with Auto Switch/Scheduled</td>
+                            </tr>
+                            <tr>
+                                <td>WDR</td>
+                                <td colspan="3">HDR</td>
+                            </tr>
+                            <tr>
+                                <td>BLC</td>
+                                <td colspan="3">Support</td>
+                            </tr>
+                            <!-- Lens -->
+                            <tr class="grey-bg">
+                                <td>Lens</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Mount Type</td>
+                                <td colspan="3">Fixed M12</td>
+                            </tr>
+                            <tr>
+                                <td>Focal Length</td>
+                                <td colspan="3">3.6mm-10mm (0.14-0.39&quot;) zoom lens with DC-IRIS</td>
+                            </tr>
+                            <tr>
+                                <td>Aperture</td>
+                                <td colspan="3">F1.5(W)~F2.8(T)</td>
+                            </tr>
+                            <tr>
+                                <td>FOV</td>
+                                <td colspan="3">99&deg;~42&deg;(H)</td>
+                            </tr>
+                            <tr>
+                                <td>Iris Type</td>
+                                <td colspan="3">DC-IRIS</td>
+                            </tr>
+                            <!-- Illuminator -->
+                            <tr class="grey-bg">
+                                <td>Illuminator</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>IR Range</td>
+                                <td colspan="3">Up to 50m (1968.5&quot;)</td>
+                            </tr>
+                            <tr>
+                                <td>Wavelength</td>
+                                <td colspan="3">850 nm</td>
+                            </tr>
+                            <!-- Audio -->
+                            <tr class="grey-bg">
+                                <td>Audio</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Audio Compression</td>
+                                <td colspan="3">G.711, G.726, AAC-LC</td>
+                            </tr>
+                            <tr>
+                                <td>Audio Type</td>
+                                <td colspan="3">Mono</td>
+                            </tr>
+                            <tr>
+                                <td>Audio Capability</td>
+                                <td colspan="3">Environmental Noise Filter, Echo Cancellation, Two-way Audio</td>
+                            </tr>
+                            <!-- Video -->
+                            <tr class="grey-bg">
+                                <td>Video</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Video Compression</td>
+                                <td colspan="3">H.264, H.265</td>
+                            </tr>
+                            <tr>
+                                <td>Video Bit Rate</td>
+                                <td colspan="3">512kbps ~ 16mbps</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Resolution</td>
+                                <td colspan="3">Main Stream (3840*2160, 2560*1440, 1920*1080, 1280*720)</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Sub Stream (1920*1080, 1280*720, 704*576, 640*480)</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Third Stream (1280*720, 704*576, 640*480)</td>
+                            </tr>
+                            <tr>
+                                <td>Region of Interest (ROI)</td>
+                                <td colspan="3">4 Fixed Regions for Each Stream; Target Cropping of Third Stream</td>
+                            </tr>
+                            <!-- Image -->
+                            <tr class="grey-bg">
+                                <td>Image</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Image Setting</td>
+                                <td colspan="3">Saturation, Brightness, Contrast, Sharpness, Auto white balance</td>
+                            </tr>
+                            <tr>
+                                <td>Image Enhancement</td>
+                                <td colspan="3">Lens Distortion Correction, Defog, 2D/3D DNR</td>
+                            </tr>
+                            <tr>
+                                <td>S/N Ratio</td>
+                                <td colspan="3">39dB</td>
+                            </tr>
+                            <tr>
+                                <td>Dynamic Range</td>
+                                <td colspan="3">&gt;74dB</td>
+                            </tr>
+                            <tr>
+                                <td>Others</td>
+                                <td colspan="3">OSD, Image Flip,Picture Overlay</td>
+                            </tr>
+                            <!-- Smart Events -->
+                            <tr class="grey-bg">
+                                <td>Smart Events</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Video Analytics</td>
+                                <td colspan="3">Defocus Detection, Scene Change Detection,Occlusion Detection</td>
+                            </tr>
+                            <tr>
+                                <td>Smart Events</td>
+                                <td colspan="3">Intrusion Detection,Line Crossing Detection,Region Entrance
+                                    Detection,Region Exiting Detection,Loitering Detection</td>
+                            </tr>
+                            <tr>
+                                <td>Deep Learning Events</td>
+                                <td colspan="3">Vehicle Detection,Face &amp; Pedestrian Detection</td>
+                            </tr>
+                            <!-- Network -->
+                            <tr class="grey-bg">
+                                <td>Network</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Protocols</td>
+                                <td colspan="3">
+                                    TCP/IP,ICMP,HTTP,HTTPS,FTP,DHCP,DNS,DDNS,RTP,RTSP,RTCP,PPPoE,NTP,UPnP,SMTP,SNMP,IGMP,IPv4,IPv6
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Compatibility</td>
+                                <td colspan="3">ONVIF, GB28181, CGI API</td>
+                            </tr>
+                            <tr>
+                                <td>Management</td>
+                                <td colspan="3">IntelliSight cloud, IntelliSight mobile</td>
+                            </tr>
+                            <!-- 4G -->
+                            <tr class="grey-bg">
+                                <td>4G</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Frequency</td>
+                                <td>/</td>
+                                <td>/</td>
+                                <td>TE-TDD: Band34/38/39/40/41;<br />
+                                    LTE-FDD: Band1/2/3/4/5/7/8/12/13/18/19/20/25/26/28/66;<br />
+                                    GSM: 850MHz/ 900MHz/ 1800MHz/ 1900MHz;<br />
+                                    WCDMA: Band1/2/4/5/6/8/19</td>
+                            </tr>
+                            <tr>
+                                <td>Standard</td>
+                                <td>/</td>
+                                <td>/</td>
+                                <td>LTE-TDD , LTE-FDD,GSM, WCDMA</td>
+                            </tr>
+                            <!-- Interface -->
+                            <tr class="grey-bg">
+                                <td>Interface</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Ethernet</td>
+                                <td colspan="3">1 RJ45 (10/100/1000Mbps)</td>
+                            </tr>
+                            <tr>
+                                <td>WIFI</td>
+                                <td>/</td>
+                                <td>IEEE 802.11 b/g/n</td>
+                                <td>/</td>
+                            </tr>
+                            <tr>
+                                <td>Storage</td>
+                                <td colspan="3">Built-in MicroSD/SDHC/SDXC Slot, up to 128 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Alarm</td>
+                                <td colspan="3">1 input, 1 output</td>
+                            </tr>
+                            <tr>
+                                <td>Audio</td>
+                                <td colspan="3">External 1 line in, External 1 line out</td>
+                            </tr>
+                            <tr>
+                                <td>Key</td>
+                                <td colspan="3">Reset Button</td>
+                            </tr>
+                            <!-- General -->
+                            <tr class="grey-bg">
+                                <td>General</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Power Supply</td>
+                                <td colspan="3">DC12V 1A/POE (IEEE 802.3af)</td>
+                            </tr>
+                            <tr>
+                                <td>Power Consumption</td>
+                                <td colspan="3">&lt;12W</td>
+                            </tr>
+                            <tr>
+                                <td>Operating Conditions</td>
+                                <td colspan="3">-30&deg;C to 60&deg;C (-22&deg;F to 140&deg;F), Humidity: 10% to 90% (No
+                                    Condensation)</td>
+                            </tr>
+                            <tr>
+                                <td>Weather Proof</td>
+                                <td colspan="3">IP66</td>
+                            </tr>
+                            <tr>
+                                <td>Certiﬁcations</td>
+                                <td colspan="3">CE, FCC, RoHS</td>
+                            </tr>
+                            <tr>
+                                <td>Net Weight</td>
+                                <td colspan="3">2.8KGS</td>
+                            </tr>
+                            <tr>
+                                <td>Dimensions</td>
+                                <td colspan="3">&Phi;120*303mm (&Phi;4.72*11.93&quot;)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="solution max-1400 block">
+            <h2>Related Solution &amp; App</h2>
+
+            <div class="bg"><img alt="iCam B38Z intellisight" auto_mobile="true" height=""
+                    src="https://www.anviz.com/file/files/2522" width="" /></div>
+        </div>
+
+        <div class="platorm max-1400 block" id="section5">
+            <h2>Platform &amp; App</h2>
+
+            <ul>
+                <li>
+                    <div><img alt="iCam B38Z Cameras" auto_mobile="true" class="lazyload" height=""
+                            src="https://www.anviz.com/file/files/2289" width="" />
+                        <div class="app-introduction"><a href="/smart-ai-surveillance-cctv-system-intellisight.html"
+                                title="IntelliSight Desktop"><span>IntelliSight Desktop</span></a><br />
+                            <a class="btn anviz-btn anviz-btn-primary"
+                                href="/smart-ai-surveillance-cctv-system-intellisight.html#desktop" rel="nofollow"
+                                target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div><img alt="mobile iCam B38Z" auto_mobile="true" class="lazyload" height=""
+                            src="https://www.anviz.com/file/files/2290" width="" />
+                        <div class="app-introduction"><a href="/smart-ai-surveillance-cctv-system-intellisight.html"
+                                title="IntelliSight Mobile App"><span>IntelliSight Mobile App</span></a><br />
+                            <a class="btn anviz-btn anviz-btn-primary"
+                                href="/smart-ai-surveillance-cctv-system-intellisight.html#section4" rel="nofollow"
+                                target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="inquiry max-1400 block"><a class="btn anviz-btn"
+                href="/form/contactus.html?from_url=https%3A%2F%2Fwww.anviz.com%2F" rel="nofollow">Send an Inquiry</a>
+        </div>
+        <div id="section6"></div>
+        <div class="block max-1400">{{%inquiry_form_white%}}</div>
+    </div>
+    <script>
+        $(function () {
+            var juli = $(".details_nav_bar").offset().top;
+            var vf1 = $("#section1").offset().top;
+            var vf2 = $("#section2").offset().top;
+            var vf3 = $("#section3").offset().top;
+            var vf4 = $("#section4").offset().top;
+            var vf5 = $("#section5").offset().top;
+            var vf6 = $("#section6").offset().top;
+            $(window).scroll(function () {
+                var gju = $(window).scrollTop();
+                if (gju >= juli) {
+                    $(".details_nav_bar").addClass('xq_hover');
+                    $(".product-nav").addClass("on");
+                    $(".product-nav").removeClass("in");
+                    $('.seat').css('height', '66px')
+                } else {
+                    $(".details_nav_bar").removeClass('xq_hover');
+                    $(".product-nav").addClass("in");
+                    $(".product-nav").removeClass("on");
+                    $('.seat').css('height', '0px')
+                }
+                if ($(this).width() > 850) {
+                    if (gju >= juli) {
+                        $(".top-nav").addClass("on");
+                        $(".top-nav").removeClass("in");
+                    } else {
+                        $(".top-nav").addClass("in");
+                        $(".top-nav").removeClass("on");
+                    }
+                } else {
+                    if (gju >= juli) {
+                        $(".top-nav").addClass("on");
+                        $(".top-nav").removeClass("in");
+                    } else {
+                        $(".top-nav").addClass("in");
+                        $(".top-nav").removeClass("on");
+                    }
+                }
+
+                if (gju >= vf1) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v1").addClass("v_active");
+                }
+                if (gju >= vf2 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v2").addClass("v_active");
+                }
+                if (gju >= vf3 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v3").addClass("v_active");
+                }
+                if (gju >= vf4 - 200) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v4").addClass("v_active");
+                }
+                if (gju >= vf5 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v5").addClass("v_active");
+                }
+                if (gju >= vf6 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v6").addClass("v_active");
+                }
+            });
+
+            window.onload = function () {
+                var juli = $(".details_nav_bar").offset().top;
+                var gju = $(window).scrollTop() + 68;
+                if (gju >= juli) {
+                    $(".details_nav_bar").addClass('xq_hover');
+                    $(".product-nav").addClass("on");
+                    $(".product-nav").removeClass("in");
+                    $(".top-nav").addClass("on");
+                    $(".top-nav").removeClass("in");
+                } else {
+                    $(".details_nav_bar").removeClass('xq_hover');
+                    $(".product-nav").addClass("in");
+                    $(".product-nav").removeClass("on");
+                    $(".top-nav").addClass("in");
+                    $(".top-nav").removeClass("on");
+                }
+                if (gju >= juli) {
+                    $(".top-nav").addClass("on");
+                    $(".top-nav").removeClass("in");
+                } else {
+                    $(".top-nav").addClass("in");
+                    $(".top-nav").removeClass("on");
+                }
+                if (gju >= vf1) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v1").addClass("v_active");
+                }
+                if (gju >= vf2) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v2").addClass("v_active");
+                }
+                if (gju >= vf3) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v3").addClass("v_active");
+                }
+                if (gju >= vf4) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v4").addClass("v_active");
+                }
+                if (gju >= vf5) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v5").addClass("v_active");
+                }
+                if (gju >= vf6) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v6").addClass("v_active");
+                }
+            }
+
+            $(".select_box").click(function () {
+                $(".icon_down").click();
+            })
+
+
+
+
+            var flag = true
+            $(".icon_down").click(function () {
+                if (flag) {
+                    $(".select_box").fadeIn()
+                    $(".icon_down>img").attr("src", "/file/files/821");
+                    flag = false
+                } else {
+                    $(".select_box").fadeOut()
+                    $(".icon_down>img").attr("src", "/file/files/792");
+                    flag = true
+                }
+            })
+        })
+    </script>
+    <style type="text/css">
+        /* 导航样式 */
+        .template .details_nav_bar {
+            width: 100%;
+            margin-top: 0 !important;
+            border-top: 0 !important;
+            border-bottom: 2px solid #9F3637;
+            backdrop-filter: saturate(180%) blur(20px);
+            -moz-backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            -o-backdrop-filter: saturate(180%) blur(20px);
+            -ms-backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(241, 241, 241, 0.87);
+        }
+
+        .navbar-default {
+            background: none;
+        }
+
+        .nav_bar {
+            align-items: center;
+            line-height: normal;
+            width: auto;
+            display: flex;
+            white-space: nowrap;
+            margin: 10px 0;
+        }
+
+        .space-item {
+            flex: 1;
+        }
+
+        .navbar_tab .nav-item {
+            width: auto;
+            height: auto;
+            padding: 0 20px;
+            font-size: 16px;
+            align-items: center;
+
+
+        }
+
+        .navbar_tab .nav-item:first-child a {
+            font-size: 22px;
+        }
+
+        .nav-item>a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #3e3a39;
+            font-family: "Montserrat-Regular" !important;
+            font-weight: normal;
+            text-decoration: none;
+            pointer-events: all;
+        }
+
+        .share_img {
+            display: flex !important;
+            align-items: center;
+        }
+
+        .share_img>img {
+            margin-bottom: 0 !important;
+        }
+
+        .navbar_tab {
+            border: none;
+            height: 100%;
+        }
+
+        .template .details_nav_bar .navbar-default {
+            height: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0 15px;
+            display: flex;
+        }
+
+        .v_active {
+            color: #9F3637;
+        }
+
+        .v_active>a {
+            color: #000;
+            font-size: 18px !important;
+        }
+
+        .v_inquiry {
+            /* border: 1px solid #00A0E8; */
+            background-color: #9F3637;
+            border-radius: 6px;
+            height: auto;
+            padding: 8px 20px;
+        }
+
+        .v_inquiry>a {
+            color: #fff;
+        }
+
+        .xq_hover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .select {
+            float: left;
+            width: 60%;
+            display: none;
+        }
+
+        .select_tit {
+            padding: 13px 0;
+        }
+
+        .select_tit>a {
+            text-decoration: none;
+        }
+
+        .share_con {
+            display: flex;
+            margin: 13px 0;
+        }
+
+        .share_con img {
+            width: 100%;
+        }
+
+        .select_box {
+            width: 70%;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .select_box>li {
+            border-bottom: 1px solid rgba(210, 210, 215, 0.5);
+            padding: 10px 0;
+        }
+
+        .icon_down {
+            float: left;
+            width: 15%;
+            padding: 15px 0;
+            display: none;
+        }
+
+        .details_nav_bar .navbar-default .nav_bar .nav-item.v_active a {
+            color: #9F3637;
+        }
+
+        .anviz-btn,
+        .anviz-primary-btn,
+        .is-plain-primary,
+        input[type="submit"] {
+            background-color: #9F3637;
+            border-color: #9F3637;
+        }
+
+        .anviz-btn:hover,
+        .anviz-primary-btn:hover,
+        .is-plain-primary:hover,
+        input[type="submit"]:hover {
+            background-color: #6d2626;
+            border-color: #6d2626;
+        }
+
+        /* 导航自适应 */
+        @media screen and (max-width: 850px) {
+            .content .page-item {
+                padding: 0 0 !important;
+            }
+
+            .template .details_nav_bar .navbar-default {
+                display: block;
+                overflow: hidden;
+            }
+
+            .nav_bar {
+                display: none !important;
+            }
+
+            .select {
+                display: block;
+                width: auto;
+            }
+
+            .icon_down {
+                display: block;
+                width: auto;
+            }
+
+            .icon_down>img {
+                margin-bottom: 0px;
+            }
+
+            .space-item {
+                display: none !important;
+            }
+
+            .share_con {
+                float: right;
+                width: auto;
+                margin: 10px 0 !important;
+            }
+
+            .share_con .nav-item .nav-link {
+                font-size: 12px !important;
+                display: unset;
+                color: #000;
+            }
+
+            .v_inquiry {
+                padding: 5px 5px;
+                font-size: 12px;
+                background-color: transparent;
+                border: 1px #000 solid;
+            }
+
+            .nav-item {
+                font-size: 16px;
+            }
+
+            .share_con .anviz-btn {
+                padding: 12px;
+            }
+
+            .navbar_tab .nav-item {
+                width: auto;
+                height: auto;
+                padding: 4px 5px;
+                align-items: center;
+            }
+
+            .select_box {
+                flex-direction: column;
+                width: 100%;
+
+
+            }
+
+            .select_box .nav-item {
+                padding: 10px 15% !important;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper 5.4.5.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+</head>
+
+<body>
+    <style type="text/css">
+        html,
+        body {
+            height: auto;
+            scroll-behavior: smooth
+        }
+
+        .c2-ser .max-1400 {
+            width: 1400px;
+            margin: 0 auto
+        }
+
+        .c2-ser .max-1000 {
+            width: 1000px;
+            margin: 0 auto
+        }
+
+        .c2-ser .desktop {
+            display: block
+        }
+
+        .c2-ser .phone {
+            display: none
+        }
+
+        .c2-ser .grey-bg {
+            background-color: #e8e8e8
+        }
+
+        .c2-ser .backimg {
+            -o-object-fit: cover;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            margin-bottom: 0
+        }
+
+        .c2-ser .anviz-btn {
+            color: #fff;
+            font-weight: normal;
+            border: none
+        }
+
+        .c2-ser h1 {}
+
+        .c2-ser h2 {
+            margin-bottom: 20px
+        }
+
+        .c2-ser h3 {
+            font-size: 30px
+        }
+
+        .c2-ser .header p {
+            font-size: 36px
+        }
+
+        .c2-ser img {
+            margin-bottom: 0
+        }
+
+        .c2-ser .header {
+            position: relative
+        }
+
+        .c2-ser .header .header-main,
+        .absolute.max-1400 {
+            position: absolute;
+            top: 0;
+            left: calc((100% - 1400px)/2);
+            bottom: 0;
+            display: flex
+        }
+
+        .c2-ser .header .header-main .left,
+        .c2-ser .header .header-main .right {
+            width: 50%
+        }
+
+        .c2-ser .header .header-main .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #fff
+        }
+
+        .c2-ser .header .header-main .left h2 {
+            color: #00ae91;
+            margin-bottom: 15px
+        }
+
+        .c2-ser .header .header-main .left h2 i {
+            font-size: 56px;
+            vertical-align: middle
+        }
+
+        .c2-ser .header .header-main .left h2 span {
+            vertical-align: middle
+        }
+
+        .c2-ser .header .header-main .left h1 {}
+
+        .c2-ser .header .header-main .left p {
+            margin: 10px 0 50px 0
+        }
+
+        .c2-ser .header .header-main .left form {
+            margin-top: 60px
+        }
+
+        .c2-ser .header .header-main .left form .input {
+            height: 45px;
+            display: flex;
+            width: 65%
+        }
+
+        .c2-ser .header .header-main .left form .input .text {
+            border: 1px #bdbdbd solid;
+            height: 45px;
+            padding: 0 10px;
+            background-color: #fff;
+            width: inherit
+        }
+
+        .c2-ser .header .header-main .left form .input .text input[type=text] {
+            height: 100%;
+            border: 0;
+            background: #fff;
+            width: 100%
+        }
+
+        .c2-ser .header .header-main .left>div a.anviz-btn {
+            background: linear-gradient(270deg, #1d2088 0%, #0068b7 100%);
+            border-radius: 8px;
+            font-size: 18px
+        }
+
+        .c2-ser .header .header-main .right {
+            position: relative
+        }
+
+        .c2-ser .header .discount {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 1px #000 solid;
+            padding: 9px;
+            overflow: hidden;
+            position: absolute;
+            right: calc((100% - 1400px)/4);
+            top: 130px
+        }
+
+        .c2-ser .header .discount .blackbg {
+            background: #000;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .c2-ser .header .discount .blackbg .price {
+            font-size: 60px;
+            font-weight: 800
+        }
+
+        .c2-ser .header .discount .blackbg .condition {
+            font-size: 14px
+        }
+
+        .c2-ser .header .discount .blackbg .condition .underline {
+            text-decoration: underline
+        }
+
+        .c2-ser .reader .backimg,
+        .c2-ser .poe .backimg {
+            width: 60%;
+            margin-left: auto
+        }
+
+        .c2-ser .block {
+            margin-top: 50px;
+            position: relative
+        }
+
+        #section2 {
+            padding-top: 0;
+            margin-top: 70px
+        }
+
+        .c2-ser .block h2 {
+            text-align: left
+        }
+
+        .c2-ser .overview p {}
+
+        .c2-ser .overview img {
+            margin: 0 auto;
+            width: 50%
+        }
+
+        .c2-ser .icon-list ul {
+            display: flex;
+            justify-content: space-between
+        }
+
+        .c2-ser .icon-list ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 25px
+        }
+
+        .c2-ser .icon-list ul li .icon-bg {
+            border-radius: 50%;
+            width: 133px;
+            height: 133px;
+            background: #0068b7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-bottom: 15px
+        }
+
+        .c2-ser .icon-list ul li span {
+            font-size: 18px;
+            font-family: 'Montserrat', 'Montserrat-Regular', Open Sans, Helvetica, Arial, sans-serif, Georgia, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti';
+        }
+
+        .c2-ser .cpu {
+            color: #fff
+        }
+
+        .c2-ser .cpu .main {
+            display: flex;
+            flex-direction: column
+        }
+
+        .c2-ser .cpu .main h2 {
+            width: 100%;
+            margin: 50px 0
+        }
+
+        .c2-ser .cpu .main ul {
+            display: flex
+        }
+
+        .c2-ser .cpu .main ul li {
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            border-right: 1px solid #fff;
+            flex-direction: column
+        }
+
+        .c2-ser .cpu .main ul li:first-child {
+            padding-left: 0
+        }
+
+        .c2-ser .cpu .main ul li span:first-child {
+            font-size: 40px
+        }
+
+        .c2-ser .cpu .main ul li span:first-child a {
+            font-size: 18px;
+            color: #fff
+        }
+
+        .c2-ser .cpu .main ul li:last-child {
+            border-right: none
+        }
+
+        .c2-ser .reader .main {
+            display: flex
+        }
+
+        .c2-ser .reader .main .left {
+            width: 50%;
+            padding-top: 5%
+        }
+
+        .c2-ser .reader .main .left h2 {
+            text-align: left
+        }
+
+        .c2-ser .why .item-box .item-block {
+            display: flex
+        }
+
+        .c2-ser .why .item-box .grey-bg .item-block {
+            padding: 0
+        }
+
+        .c2-ser .why .item-box .item-block .left,
+        .c2-ser .why .item-box .item-block .right {
+            width: 50%
+        }
+
+        .c2-ser .why .item-box .item-block .left.text,
+        .c2-ser .why .item-box .item-block .right.text {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .c2-ser .why .item-box .item-block .left.text>div,
+        .c2-ser .why .item-box .item-block .right.text>div {
+            width: 75%
+        }
+
+        .c2-ser .why .item-box .item-block .left.text>div ul,
+        .c2-ser .why .item-box .item-block .right.text>div ul {
+            display: flex;
+            margin-top: 50px;
+            align-items: center
+        }
+
+        .c2-ser .why .item-box .item-block .left.text>div ul li img,
+        .c2-ser .why .item-box .item-block .right.text>div ul li img {
+            margin-right: 30px
+        }
+
+        .c2-ser .why .item-box .item-block .left.text>div p>span,
+        .c2-ser .why .item-box .item-block .right.text>div p>span,
+        .c2-ser .why .item-box .item-block .right.text>div p>a {
+            text-decoration: underline
+        }
+
+        .c2-ser .why .item-box .item-block .right.img img {
+            margin-left: auto;
+            margin-right: 0
+        }
+
+        .c2-ser .why .item-box .item-block {
+            padding: 20px 0
+        }
+
+        .c2-ser .why .item-box .item-block.ip .img img {
+            margin-top: -50px;
+            margin-bottom: 50px
+        }
+
+        .c2-ser .why .poe {
+            position: relative
+        }
+
+        .c2-ser .why .poe .main .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .c2-ser .why h3 {
+            margin-bottom: 30px
+        }
+
+        .c2-ser .management {
+            background-color: #10ad91;
+            color: #fff;
+            padding-bottom: 30px;
+            position: relative;
+            padding-top: 70px
+        }
+
+        .c2-ser .management .m-title {
+            display: none !important;
+            margin-bottom: 10px
+        }
+
+        .c2-ser .management .main {
+            display: flex;
+            width: 100%
+        }
+
+        .c2-ser .management .main .left {
+            display: flex;
+            flex-direction: column
+        }
+
+        .c2-ser .management .main .left .bottom,
+        .c2-ser .management .m-title {
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+            align-items: center
+        }
+
+        .c2-ser .management .main .left .bottom img,
+        .c2-ser .management .m-title img {
+            margin-right: 10px
+        }
+
+        .c2-ser .management .main .left div {
+            text-align: center
+        }
+
+        .c2-ser .management .main .left>img {
+            width: 80%;
+            margin: 10px auto
+        }
+
+        .c2-ser .management .main .left div a.anviz-btn {
+            background: linear-gradient(270deg, #1d2088 0%, #0068b7 100%);
+            border-radius: 8px;
+            font-size: 18px
+        }
+
+        .c2-ser .management .main .right img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 30%
+        }
+
+        .c2-ser .config {
+            background-color: #e8e8e8;
+            padding-top: 50px
+        }
+
+        .c2-ser .table .table-box {
+            overflow: hidden
+        }
+
+        .c2-ser .table .table-box table {
+            width: 100%
+        }
+
+        .c2-ser .table .table-box table td,
+        .c2-ser .table .table-box table th {
+            border: .5px solid #000;
+            padding: 15px;
+            font-weight: 500;
+            font-size: 16px
+        }
+
+        .c2-ser .table .table-box table td.center,
+        .c2-ser .table .table-box table th.center {
+            text-align: center
+        }
+
+        .c2-ser .table .table-box table thead tr {
+            background: linear-gradient(270deg, #1d2088 0%, #0068b7 100%);
+            color: #fff
+        }
+
+        .c2-ser .table .table-box table td.center img {
+            margin: 0 auto;
+            max-height: 120px
+        }
+
+        .c2-ser .get-free {
+            position: relative;
+            color: #fff
+        }
+
+        .c2-ser .get-free>.max-1400 {
+            position: absolute;
+            top: 50px;
+            left: calc((100% - 1400px)/2);
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly
+        }
+
+        .c2-ser .get-free>.max-1400>div>p {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .c2-ser .get-free>.max-1400>div .form {
+            width: 30%;
+            margin: 30px 0 0 auto
+        }
+
+        .c2-ser .get-free>.max-1400>div .form form {
+            color: #333
+        }
+
+        .c2-ser .get-free>.max-1400>div .form p {
+            font-size: 14px;
+            text-align: left;
+            margin-top: 20px
+        }
+
+        .c2-ser .get-free>.max-1400>div .form p a {
+            color: #fff;
+            text-decoration: underline
+        }
+
+        .c2-ser .link-list {
+            margin-bottom: 30px
+        }
+
+        .c2-ser .link-list ul {
+            display: flex;
+            justify-content: space-around
+        }
+
+        .c2-ser .link-list ul li {
+            text-align: center;
+            color: #6d7278;
+            cursor: pointer
+        }
+
+        .c2-ser .link-list ul li a:hover {
+            color: #00ae91
+        }
+
+        .c2-ser .link-list ul li a i {
+            font-size: 72px;
+            display: block;
+            margin: 15px
+        }
+
+        .c2-ser .link-list ul li a p {
+            font-size: 16px
+        }
+
+        .c2-ser .products .max-1400 {
+            width: 1200px
+        }
+
+        .c2-ser .products .max-1400 .product-list .article-tags article .tag-header a.tags-title {
+            color: #000
+        }
+
+        .c2-ser .app .app-list {
+            display: flex;
+            justify-content: space-between
+        }
+
+        .c2-ser .app .app-list .item {
+            width: 30%
+        }
+
+        .c2-ser .app .app-list .item p {}
+
+        .c2-ser .download {
+            margin-bottom: 50px
+        }
+
+        .download h2 {
+            margin-bottom: 20px
+        }
+
+        .download .download-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0;
+            width: 100%;
+            margin: 0 auto;
+            color: #fff
+        }
+
+        .download .download-list .download-item {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            min-height: 50px;
+            padding: 4px 6px;
+            border-bottom: 1px solid rgba(0, 0, 0, .3);
+            color: #555
+        }
+
+        .download .download-list .download-item:first-child {
+            border-top: 1px solid rgba(0, 0, 0, .3)
+        }
+
+        .download .download-list .download-item .item {
+            min-width: 20%
+        }
+
+        .download .download-list .download-item .item-type {
+            color: #00a0e8;
+            font-weight: 700
+        }
+
+        .download .download-list .download-item .item-right {
+            min-width: 40%
+        }
+
+        .download .download-list .download-item .item-size {
+            text-align: center;
+            min-width: 10%
+        }
+
+        .download .download-list .download-item .item-download a {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #00a0e8;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 4px
+        }
+
+        @media(max-width: 850px) {
+            .c2-ser .desktop {
+                display: none
+            }
+
+            .c2-ser .phone {
+                display: block
+            }
+
+            .absolute.max-1400 {
+                position: unset
+            }
+
+            .c2-ser .max-1400,
+            .c2-ser .max-1000 {
+                width: 100%
+            }
+
+            .c2-ser .block {
+                padding: 0 15px;
+                margin-top: 20px
+            }
+
+            .c2-ser .block h2 {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .c2-ser .block p {
+                font-size: 16px
+            }
+
+            .c2-ser .block h3 {
+                font-size: 18px;
+                color: #00ae91;
+                text-align: center;
+                margin-bottom: 10px
+            }
+
+            .c2-ser .header {
+                background: #424242
+            }
+
+            .c2-ser .header .discount {
+                position: unset;
+                border: none;
+                background-color: #00ae91;
+                border-radius: 0;
+                width: 100%;
+                height: unset;
+                padding: 0 15px
+            }
+
+            .c2-ser .header .discount .blackbg {
+                background: unset;
+                flex-direction: row;
+                justify-content: space-around
+            }
+
+            .c2-ser .header .discount .blackbg .price {
+                font-size: 36px;
+                font-weight: 600;
+                margin-right: 20px
+            }
+
+            .c2-ser .header .discount .blackbg br {
+                display: none
+            }
+
+            .c2-ser .header .discount .blackbg .condition {
+                text-align: left;
+                display: flex;
+                align-items: center
+            }
+
+            .c2-ser .header .discount .blackbg .condition .underline {
+                text-decoration: none
+            }
+
+            .c2-ser .header img.backimg {
+                width: 200%;
+                max-width: unset;
+                float: right
+            }
+
+            .c2-ser .header .header-main {
+                position: unset;
+                display: block
+            }
+
+            .c2-ser .header .header-main .left {
+                width: 100%;
+                text-align: center
+            }
+
+            .c2-ser .header .header-main .left h2 {
+                font-size: 24px;
+                margin-bottom: 0
+            }
+
+            .c2-ser .header .header-main .left h1 {
+                margin: 10px 0
+            }
+
+            .c2-ser .header p {
+                font-size: 24px
+            }
+
+            .c2-ser .header .header-main .left form {
+                margin-top: 20px
+            }
+
+            .c2-ser .header .header-main .left form .input {
+                width: 90%;
+                margin: 0 auto
+            }
+
+            .c2-ser .header .header-main .left form .input button[type=submit] {
+                background-color: #000;
+                border-color: #000
+            }
+
+            .c2-ser .overview p {}
+
+            .c2-ser .why .item-box .item-block {
+                flex-direction: column;
+                margin-top: 20px
+            }
+
+            .c2-ser .why .item-box .item-block .left,
+            .c2-ser .why .item-box .item-block .right {
+                width: 100%;
+                padding: 0
+            }
+
+            .c2-ser .why .item-box .item-block .left.text,
+            .c2-ser .why .item-box .item-block .right.text {
+                margin: 5px 0
+            }
+
+            .c2-ser .why .item-box .item-block .left.text>div,
+            .c2-ser .why .item-box .item-block .right.text>div {
+                width: 100%;
+                text-align: center
+            }
+
+            .c2-ser .why .item-box .item-block .left.text>div p,
+            .c2-ser .why .item-box .item-block .right.text>div p {}
+
+            .c2-ser .why .item-box .item-block:nth-child(even) {
+                flex-direction: column-reverse
+            }
+
+            .c2-ser .table .table-scroll {
+                overflow-x: scroll
+            }
+
+            .c2-ser .table .table-scroll .table-box {
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content
+            }
+
+            .c2-ser .table .table-scroll .table-box table td,
+            .c2-ser .table .table-scroll .table-box table th {
+                padding: 10px;
+                font-size: 16px
+            }
+
+            .c2-ser .get-free {
+                background-color: rgba(0, 174, 145, .1);
+                padding: 30px 15px
+            }
+
+            .c2-ser .get-free .block-form {
+                position: unset
+            }
+
+            .c2-ser .get-free .block-form>div h2 {
+                color: #000
+            }
+
+            .c2-ser .get-free .block-form>div p {
+                color: #555;
+                width: 100%;
+                text-align: left
+            }
+
+            .c2-ser .get-free .block-form>div .form {
+                width: 100%
+            }
+
+            .c2-ser .get-free .block-form>div .form>p {
+                margin-top: 30px
+            }
+
+            .c2-ser .get-free .block-form img.backimg.phone {
+                margin-top: 30px
+            }
+
+            .c2-ser .link-list ul {
+                flex-direction: column
+            }
+
+            .c2-ser .link-list ul li a i {
+                margin: 20px
+            }
+
+            .c2-ser .link-list ul li a p {
+                font-size: 14px
+            }
+
+            .c2-ser .icon-list ul {
+                flex-wrap: wrap
+            }
+
+            .c2-ser .cpu .main {
+                color: #000
+            }
+
+            .c2-ser .cpu .main h2 {
+                margin: 20px 0
+            }
+
+            .c2-ser .cpu .main ul {
+                justify-content: space-between
+            }
+
+            .c2-ser .cpu .main ul li {
+                text-align: left;
+                padding: 0;
+                border: none
+            }
+
+            .c2-ser .cpu .main ul li span:first-child {
+                font-size: 24px
+            }
+
+            .c2-ser .cpu .main ul li {
+                border-color: #000
+            }
+
+            .c2-ser .cpu .main ul li span:first-child a {
+                color: #000
+            }
+
+            .c2-ser .reader .main .left,
+            .c2-ser .reader .main .right {
+                width: 100%
+            }
+
+            .c2-ser .reader .main .left h2,
+            .c2-ser .reader .main .right h2 {
+                text-align: center
+            }
+
+            .c2-ser .why .item-box .item-block .left.text>div ul,
+            .c2-ser .why .item-box .item-block .right.text>div ul {
+                justify-content: center
+            }
+
+            .c2-ser .why .item-box>.item-block>div {
+                flex-direction: column-reverse
+            }
+
+            .c2-ser .management .main {
+                flex-direction: column
+            }
+
+            .c2-ser .management .main .right img {
+                position: unset;
+                margin-left: 15px;
+                width: 100%
+            }
+
+            .c2-ser .config {
+                padding: 10px 0
+            }
+
+            .c2-ser .config h2,
+            .c2-ser .app h2 {
+                text-align: center
+            }
+
+            .c2-ser .app .app-list {
+                flex-direction: column
+            }
+
+            .c2-ser .app .app-list .item {
+                width: 100%;
+                margin-bottom: 20px
+            }
+        }
+
+        @media(max-width: 1400px) {
+
+            .c2-ser .max-1400,
+            .c2-ser .header .header-main,
+            .absolute.max-1400 {
+                width: 100%;
+                left: unset
+            }
+
+            .c2-ser .products .max-1400 {
+                width: 100%
+            }
+        }
+
+        @media(min-width: 1024px)and (max-width: 1400px) {
+            .c2-ser .max-1400 {
+                width: 100%
+            }
+
+            .c2-ser h1 {}
+
+            .c2-ser h2 {
+                font-size: 32px
+            }
+
+            .c2-ser .block {
+                padding: 0 15px;
+                margin-top: 20px
+            }
+
+            .c2-ser .header .discount {
+                right: 3%;
+                top: 3%
+            }
+
+            .c2-ser .header .header-main {
+                left: 0
+            }
+
+            .c2-ser .header .header-main .left {
+                padding: 0 0 0 40px
+            }
+
+            .c2-ser .header .header-main .left h1 {}
+
+            .c2-ser .header .header-main .left form {
+                margin-top: 30px
+            }
+
+            .c2-ser .get-free {
+                padding: 0
+            }
+        }
+
+        .details_nav_bar .navbar-default .nav_bar .nav-item.v_active a {
+            color: #00ae91
+        }
+
+        .template .details_nav_bar {
+            border-bottom: 2px solid #00ae91 !important
+        }
+
+        form .select2-selection__placeholder {
+            text-align: left
+        }
+
+        #getFreeCode.static-form-white .input-form .input-control,
+        #getFreeCode.static-form-white .select2-container--default .select2-selection--single {
+            background-color: #fff
+        }
+
+        .form-inline .form-group {
+            display: unset
+        }
+
+        #section1,
+        .get-free .form #getFreeCode {
+            padding-top: 0
+        }
+
+        .content .page-content {
+            padding-bottom: 0
+        }
+
+        @media(min-width: 1024px)and (max-width: 1400px) {
+            .c2-ser .get-free>.max-1400 {
+                left: 0;
+                padding: 15px;
+                flex-direction: row
+            }
+
+            .c2-ser .get-free>.max-1400 .top {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center
+            }
+
+            .c2-ser .get-free>.max-1400 .bottom {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center
+            }
+
+            .c2-ser .get-free>.max-1400>div .form {
+                width: 90%;
+                margin: 0 auto
+            }
+
+            .c2-ser .get-free>.max-1400>div .form p {
+                margin-top: 0
+            }
+
+            .c2-ser .get-free>.max-1400>div .form ul.message-warp {
+                margin-bottom: 0
+            }
+        }
+
+        @media(min-width: 850px)and (max-width: 1400px) {
+
+            .c2-ser .cpu .main ul,
+            .c2-ser .why .item-box .item-block .main>div,
+            .c2-ser .reader .main .left,
+            .c2-ser .header .header-main .left {
+                margin-left: 3em
+            }
+        }
+
+        @media(max-width: 850px) {
+            .content .page-content {
+                margin-top: 0
+            }
+
+            .c2-ser .get-free>.max-1400>div .form p a {
+                color: unset
+            }
+
+            .c2-ser .block.reader {
+                display: flex;
+                flex-direction: column
+            }
+
+            .c2-ser .reader .backimg,
+            .c2-ser .poe .backimg {
+                width: 100%
+            }
+
+            .c2-ser .overview img {
+                width: 100%
+            }
+
+            .c2-ser .icon-list ul li {
+                width: 50%
+            }
+
+            .c2-ser .why .item-box .grey-bg .item-block {
+                padding-bottom: 20px
+            }
+
+            .c2-ser .why .item-box .item-block .left.text>div ul li img,
+            .c2-ser .why .item-box .item-block .right.text>div ul li img {
+                margin: 0 auto
+            }
+
+            .c2-ser .why .item-box>.item-block>div {
+                text-align: center
+            }
+
+            .c2-ser .management h2 {
+                text-align: center
+            }
+
+            .download .max-1400 {
+                width: 100%;
+                margin: 0 auto;
+                padding: 10px
+            }
+
+            .download h2 {
+                font-size: 28px
+            }
+
+            .download .download-list .download-item {
+                display: block;
+                align-items: flex-start;
+                padding: 15px 0
+            }
+
+            .download .download-list .download-item .item-right {
+                text-align: left;
+                padding-left: 0
+            }
+
+            .download .download-list .download-item .item-size {
+                text-align: left;
+                margin-bottom: 4px
+            }
+
+            .c2-ser .management {
+                padding: 15px !important
+            }
+
+            .c2-ser .management .main .left .bottom {
+                display: none
+            }
+
+            .c2-ser .management .m-title {
+                display: flex !important
+            }
+        }
+
+        .get-free h2,
+        .get-free p {
+            color: #000
+        }
+
+        .loop h2 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .c2-ser .get-free {
+            color: #202020
+        }
+
+
+        .c2-ser .header .header-main .left .play-btn {
+            width: 100px;
+            height: auto;
+        }
+
+        .c2-ser .header .header-main .left .play-btn a {
+            color: #fff;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+
+        .c2-ser .header {
+            width: 100%;
+            height: 41.25vw;
+        }
+
+        @media (max-width:1920px) {
+            width: 1920px;
+            max-width: 100%;
+            height: 41.25vw;
+            margin: 0 auto;
+        }
+
+        @media (max-width:850px) {
+            .c2-ser .header {
+                height: auto;
+            }
+
+            .c2-ser .block p {
+                text-align: center;
+                padding: 0 15px;
+            }
+
+            .c2-ser .header .header-main .left {
+                padding: 2em 1em;
+            }
+
+            .c2-ser .header .header-main .left .play-btn {
+                width: 100%;
+            }
+
+            .alert-container {
+                position: fixed;
+                left: 0 !important;
+                top: 0 !important;
+                bottom: 0 !important;
+                right: 0 !important;
+                z-index: 100001;
+                width: 96% !important;
+                height: 96% !important;
+                margin-left: 2% !important;
+                margin-top: 2% !important;
+            }
+
+            .alert-container iframe {
+                height: 100vh;
+            }
+        }
+
+        .c2-ser .ios-android {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 30%;
+            margin-bottom: 1em;
+
+        }
+
+        @media screen and (max-width: 850px) {
+
+            #st-4,
+            #st-el-1.st-hidden {
+                display: none;
+            }
+
+            .c2-ser .ios-android {
+                max-width: 70%;
+                margin: auto;
+            }
+
+            .details_nav_bar .page-item .navbar-default .share_con li:last-child {
+                display: none;
+            }
+
+            .details_nav_bar .page-item .navbar-default {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <div class="template max-1400 c2-ser" id="section1">
+        <div class="header"><img alt="CrossChex Cloud" auto_mobile="true" class="backimg" height=""
+                src="https://www.anviz.com/file/files/2677" width="" />
+            <!-- <img class="backimg phone" width="" height="" src="https://www.anviz.com/img/Mobile.png" class="lazyload" alt="mobile"> -->
+            <div class="max-1400 header-main">
+                <div class="left">
+                    <h1 style="color:#fff;">C2 Series</h1>
+
+                    <h5 class="color-ff">Outdoor Compact Access Control and Versatile Time &amp; Attendance Devices</h5>
+                </div>
+
+                <div class="right">&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="details_nav_bar">
+            <div class="page-item">
+                <div class="navbar_tab navbar-default" id="productDetailsNav">
+                    <ul class="nav_bar">
+                        <li class="nav-item" style="padding-left: 0"><a aria-label="“c2" series="">C2 Series</a></li>
+                        <li class="nav-item v1 v_active"><a aria-label="“overview”" class="nav-link"
+                                href="#section1">Overview</a></li>
+                        <li class="nav-item v2"><a aria-label="“features”" class="nav-link"
+                                href="#section2">Features</a></li>
+                        <li class="nav-item v3"><a aria-label="“applications”" class="nav-link"
+                                href="#section3">Applications</a></li>
+                        <li class="nav-item v4"><a aria-label="“configuration”" class="nav-link"
+                                href="#section4">Configuration</a></li>
+                        <li class="nav-item v5"><a aria-label="“specification”" class="nav-link"
+                                href="#section5">Specification</a></li>
+                        <li class="nav-item v6"><a aria-label="download" class="nav-link" href="#section6">Download</a>
+                        </li>
+                    </ul>
+
+                    <div class="select">
+                        <div class="select_tit v_active v1"><a aria-label="">C2 Series</a></div>
+                    </div>
+
+                    <div class="icon_down"><img alt="icon792" auto_mobile="true" class="lazyload" height=""
+                            src="https://www.anviz.com/file/files/792" width="" /></div>
+
+                    <ul class="space-item">
+                        <li>&nbsp;</li>
+                    </ul>
+
+                    <ul class="share_con">
+                        <li><a aria-label="“inquiry”" class="anviz-primary-btn" href="/form.html"
+                                rel="nofollow">Inquiry</a></li>
+                        <li class="nav-item">
+                            <div class="sharethis-inline-share-buttons">&nbsp;</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="select_box">
+                    <li class="nav-item v2"><a aria-label="“overview”" class="nav-link" href="#section1">Overview</a>
+                    </li>
+                    <li class="nav-item v3"><a aria-label="“features”" class="nav-link" href="#section2">Features</a>
+                    </li>
+                    <li class="nav-item v4"><a aria-label="“applications”" class="nav-link"
+                            href="#section3">Applications</a></li>
+                    <li class="nav-item v5"><a aria-label="“configurations”" class="nav-link"
+                            href="#section4">Configuration</a></li>
+                    <li class="nav-item v6"><a aria-label="“specification”" class="nav-link"
+                            href="#section5">Specification</a></li>
+                    <li class="nav-item v7"><a aria-label="“download”" class="nav-link" href="#section6">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- overview -->
+
+        <div class="overview max-1400 block" id="section1">
+            <p>C2 Series (C2 Pro, C2 Slim, C2 KA and C2 SR) is a biometric identification and RFID card access control
+                &amp; time attendance based on Anviz&#39;s advanced technology. With the mullion-mount, keypad design,
+                and IP65 dust &amp; waterproof, the C2 Series can be installed in various environments and outdoor
+                installation, turnstiles etc. It provides installers with lower installation and maintenance costs by
+                supporting PoE. C2 Series also supports dual-frequency (125kHz/13.56MHz) cards with the multi-smartcard
+                reader, HID iClass &amp; Prox cards and communications with smartphones to access the door. C2 Pro with
+                fingerprint scanner, RFID reader and personal PIN offer versatile punching options, plus CrossChex Cloud
+                time attendance software support, super easy time tracking which provides hassle-free workforce
+                management.</p>
+
+            <div class="c2-partner-list">{{%c2 series partner%}}</div>
+            <img alt="Biometric Access Control &amp; Time Clock System" auto_mobile="true" class="lazyload" height=""
+                src="https://www.anviz.com/file/files/2678" width="" />
+        </div>
+
+        <div class="icon-list max-1400 block">
+            <ul>
+                <li>
+                    <div class="icon-bg"><img alt="Biometric Access Control &amp; Time Clock System" auto_mobile="true"
+                            class="lazyload" height="" src="https://www.anviz.com/file/files/2693" width="" /></div>
+                    <span>IP65 Dust &amp; Water Proof</span>
+                </li>
+                <li>
+                    <div class="icon-bg"><img alt="Biometric Access Control &amp; Time Clock System" auto_mobile="true"
+                            class="lazyload" height="" src="https://www.anviz.com/file/files/2694" width="" /></div>
+                    <span>Multi-Smartcard Reader</span>
+                </li>
+                <li>
+                    <div class="icon-bg"><img alt="Biometric Access Control &amp; Time Clock System" auto_mobile="true"
+                            class="lazyload" height="" src="https://www.anviz.com/file/files/2695" width="" /></div>
+                    <span>Mobile Access</span>
+                </li>
+                <li>
+                    <div class="icon-bg"><img alt="Biometric Access Control &amp; Time Clock System" auto_mobile="true"
+                            class="lazyload" height="" src="https://www.anviz.com/file/files/2696" width="" /></div>
+                    <span>PoE Easy Installation</span>
+                </li>
+                <li>
+                    <div class="icon-bg"><img alt="Biometric Access Control &amp; Time Clock System" auto_mobile="true"
+                            class="lazyload" height="" src="https://www.anviz.com/file/files/2697" width="" /></div>
+                    <span>Mullion-type Design</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cpu block" id="section2"><img alt="Biometric Access Control &amp; Time Clock System"
+                auto_mobile="true" class="backimg lazyload" height="" src="https://www.anviz.com/file/files/2698"
+                width="" />
+            <div class="max-1400 absolute main">
+                <h2 class="color-ff">Increased 30% Recognition Speed Compare to the Last Version</h2>
+
+                <ul>
+                    <li class="color-ff"><span>30%</span> <span>Performance<br />
+                            increased</span></li>
+                    <li class="color-ff"><span><a aria-label="“”">Max.</a>10,000</span> <span>Users</span></li>
+                    <li class="color-ff"><span><a aria-label="“”">Max.</a>100,000</span> <span>Logs</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="reader block"><img alt="Biometric Access Control &amp; Time Clock System" auto_mobile="true"
+                class="backimg lazyload" height="" src="https://www.anviz.com/file/files/2701" width="" />
+            <div class="max-1400 absolute main">
+                <div class="left">
+                    <h2 class="color-ff">Multi-Smartcard Reader</h2>
+
+                    <p class="color-ff">Support 125kHz and 13.56MHz RFID including MIFARE, MIFARE Plus, DESFire, MIFARE
+                        Ultralight, FeliCa and EM, HID iClass &amp; Prox. NFC will be introduced in the future.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block why">
+            <div class="item-box">
+                <div class="grey-bg">
+                    <div class="max-1400 item-block">
+                        <div class="left img"><img alt="Biometric Access Control &amp; Time Clock System"
+                                auto_mobile="true" class="lazyload" height=""
+                                src="https://www.anviz.com/file/files/2680" width="" /></div>
+
+                        <div class="text flex flex-row-center-start">
+                            <div>
+                                <h2>Communicates with Smartphones</h2>
+
+                                <p class="color-crosschex">With Anviz <a aria-label="“”" class="minor-crosschex-btn"
+                                        href="/crosschex-mobile.html">CrossChex Mobile</a> App, your smartphone is a key
+                                    to access.</p>
+
+                                <ul class="ios-android">
+                                    <li><img alt="Biometric Access Control" auto_mobile="true" class="lazyload"
+                                            height="" src="https://www.anviz.com/file/files/2681" width="" /></li>
+                                    <li><img alt="Time Clock System" auto_mobile="true" class="lazyload" height=""
+                                            src="https://www.anviz.com/file/files/2682" width="" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-block block">
+                    <div class="max-1400 item-block">
+                        <div class="left text">
+                            <div>
+                                <h2 class="color-ff" style="text-align: left;">Mullion-type Design</h2>
+
+                                <p class="color-ff">Mount easily with a small access control terminal that can easily be
+                                    installed on a door frame.</p>
+                            </div>
+                        </div>
+
+                        <div class="right img"><img alt="Biometric Access Control Time Clock System" auto_mobile="true"
+                                class="lazyload" height="" src="https://www.anviz.com/file/files/2683" width="" /></div>
+                    </div>
+                </div>
+
+                <div class="grey-bg block">
+                    <div class="max-1400 item-block ip">
+                        <div class="left img"><img alt="Time Clock System" auto_mobile="true" class="lazyload" height=""
+                                src="https://www.anviz.com/file/files/2700" width="" /></div>
+
+                        <div class="right text">
+                            <div>
+                                <h2>IP65 Dust &amp; Water Proof</h2>
+
+                                <p style="color:#000;">C2 Series access control terminals are designed to be used indoor
+                                    and outdoor applications coupled with IP65 ingress protection.</p>
+
+                                <ul>
+                                    <li><img alt="Biometric Access Control" auto_mobile="true" class="lazyload"
+                                            height="" src="https://www.anviz.com/file/files/2699" width="" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-block block">
+                    <div class="poe"><img alt="PoE Easy Installation" auto_mobile="true" class="backimg lazyload"
+                            height="" src="https://www.anviz.com/file/files/3979" width="" />
+                        <div class="max-1400 absolute main">
+                            <div class="left">
+                                <h2 class="color-ff">PoE Easy Installation</h2>
+
+                                <p class="color-ff">Support power sourcing over Ethernet cable compliance to IEEE802.3af
+                                    standard, to provide users with lower installation cost, simpler cabling, and lower
+                                    maintenance cost.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block management">
+            <div class="max-1400">
+                <div class="m-title phone"><img alt="Time Clock" auto_mobile="true" class="lazyload" height=""
+                        src="https://www.anviz.com/file/files/2686" width="" /> CrossChex Cloud</div>
+
+                <h2 class="textcenter"><a href="/cloud-based-time-and-attendance-solution-crosschex-cloud.html">Time and
+                        Attendance Cloud Support Provides Hassle-free Workforce Management</a></h2>
+
+                <div class="main">
+                    <div class="left">
+                        <div><a alt="cloud based time and attendance solution crosschex cloud" aria-label=""
+                                class="anviz-primary-btn"
+                                href="/cloud-based-time-and-attendance-solution-crosschex-cloud.html" rel="nofollow"
+                                title="Time and Attendance Cloud">Learn More</a></div>
+                        <img alt="System" auto_mobile="true" class="lazyload" height=""
+                            src="https://www.anviz.com/file/files/2685" width="" />
+                        <div class="bottom desktop"><img alt="CrossChex Cloud" auto_mobile="true" class="lazyload"
+                                height="" src="https://www.anviz.com/file/files/2686" width="" /> CrossChex Cloud</div>
+                    </div>
+
+                    <div class="right"><img alt="Biometric System" auto_mobile="true" class="lazyload" height=""
+                            src="https://www.anviz.com/file/files/2703" width="" /></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block app max-1400" id="section3">
+            <h2 class="color-ff">Applications</h2>
+
+            <div class="app-list">
+                <div class="item"><img
+                        alt="People are passing the turnstiles with Anviz biometric access control terminals"
+                        auto_mobile="true" class="lazyload" height=""
+                        src="https://www.anviz.com/file/files/2706/Anviz top physical and logical access control system.jpg"
+                        width="" />
+                    <p>C2 Series can be used as a turnstile integrated management system composed of computers,
+                        fingerprint identification technology, intelligent pedestrian turnstile gate, smart card, access
+                        control, and time attendance management software.</p>
+
+                    <p>Further, C2 Series&nbsp;has been regarded as a top physical and logical access control system to
+                        solve the security concern of enterprises.</p>
+                </div>
+
+                <div class="item"><img alt="tracking software could generate timesheets" auto_mobile="true"
+                        class="lazyload" height="" src="https://www.anviz.com/file/files/2705/Time-attendance-software"
+                        width="" />
+                    <p>Using CrossChex&nbsp;Cloud as a time&nbsp;attendance software to automatically generate a
+                        timesheet to track the time a particular employee has worked during a certain period.</p>
+
+                    <p>Due to fingerprint scanner like C2 Pro supports the both biometric identification and biometric
+                        authentication, it is an established solution that is being used in time&nbsp;attendance
+                        management.</p>
+                </div>
+
+                <div class="item"><img alt="Open the door with your phone" auto_mobile="true" class="lazyload" height=""
+                        src="https://www.anviz.com/file/files/2704/smartphone-door-access-using-CrossChex" width="" />
+                    <p>When it comes to choosing a reliable commercial door&nbsp;entry&nbsp;with&nbsp;smartphone mobile,
+                        C2 Series is always a better investment.</p>
+
+                    <p>RFID&nbsp;door lock system combined with biometric readers of C2 Series enhanced door security,
+                        especially for high-security applications such as in medical, financial, or government
+                        facilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block config" id="section4">
+            <div class="max-1400">
+                <h2>Configuration</h2>
+                <img alt="Time Clock System" auto_mobile="true" class="lazyload" height=""
+                    src="https://www.anviz.com/file/files/2707" width="" />
+            </div>
+        </div>
+
+        <div class="block max-1400 table" id="section5">
+            <h2 class="color-ff">Specification</h2>
+
+            <div class="table-scroll">
+                <div class="table-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="center" colspan="2" style="border-right-color: #fff;">Model Name</th>
+                                <th class="center" colspan="1" style="border-right-color: #fff;">C2 SR</th>
+                                <th class="center" colspan="1" style="border-right-color: #fff;">C2 KA</th>
+                                <th class="center" colspan="1" style="border-right-color: #fff;">C2 Slim</th>
+                                <th class="center" colspan="1">C2 Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                                <!-- <td class="center"><img width="" height="" src="https://www.anviz.com/file/files/2689" class="lazyload" alt="Biometric Access Control"></td>
+                            <td class="center"><img width="" height="" src="https://www.anviz.com/file/files/2690" class="lazyload" alt="Biometric"></td>
+                            <td class="center"><img width="" height="" src="https://www.anviz.com/file/files/2691" class="lazyload" alt="Biometric Access Control & Time Clock System"></td>
+                            <td class="center"><img width="" height="" src="https://www.anviz.com/file/files/2692" class="lazyload" alt="Biometric System"></td> -->
+                                <td class="center"><img alt="Access Control Time Clock System" auto_mobile="true"
+                                        class="lazyload" height="" src="https://www.anviz.com/file/files/2708"
+                                        width="" /></td>
+                                <td class="center"><img alt="Access Control Time Clock" auto_mobile="true"
+                                        class="lazyload" height="" src="https://www.anviz.com/file/files/2709"
+                                        width="" /></td>
+                                <td class="center"><img alt="Biometric Access Control System" auto_mobile="true"
+                                        class="lazyload" height="" src="https://www.anviz.com/file/files/2710"
+                                        width="" /></td>
+                                <td class="center"><img alt="Biometric Access Control" auto_mobile="true"
+                                        class="lazyload" height="" src="https://www.anviz.com/file/files/2711"
+                                        width="" /></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">General</td>
+                                <td>Identification Mode</td>
+                                <td class="center">Card</td>
+                                <td class="center">Card, Password</td>
+                                <td class="center">Finger, Card</td>
+                                <td class="center">Finger, Password, Card</td>
+                            </tr>
+                            <tr>
+                                <td>RFID Options</td>
+                                <td class="center">125kHz EM &amp; 13.56MHz MIFARE</td>
+                                <td class="center">125kHz EM &amp; 13.56MHz MIFARE</td>
+                                <td class="center">125kHz EM &amp; 13.56MHz MIFARE,<br />
+                                    HID iClass &amp; Prox (HID Version)</td>
+                                <td class="center">125kHz EM &amp; 13.56MHz MIFARE,<br />
+                                    HID iClass &amp; Prox (HID Version)</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Capacity</td>
+                                <td>Max. Users</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">10,000</td>
+                                <td class="center">3,000</td>
+                                <td class="center">10,000</td>
+                            </tr>
+                            <tr>
+                                <td>Max. Cards</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">10,000</td>
+                                <td class="center">3,000</td>
+                                <td class="center">10,000</td>
+                            </tr>
+                            <tr>
+                                <td>Max. Logs</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">100,000</td>
+                                <td class="center">50,000</td>
+                                <td class="center">100,000</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="11">Function</td>
+                                <td>Time Attendance Mode</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">8</td>
+                            </tr>
+                            <tr>
+                                <td>Group, Time Zone</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">16 groups, 32 time zones</td>
+                                <td class="center">16 groups, 32 time zones</td>
+                                <td class="center">16 groups, 32 time zones</td>
+                            </tr>
+                            <tr>
+                                <td>Work Code</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">6 digits</td>
+                            </tr>
+                            <tr>
+                                <td>Short Message</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">50</td>
+                            </tr>
+                            <tr>
+                                <td>Web Sever</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                            </tr>
+                            <tr>
+                                <td>Record Auto Inquiry</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                            </tr>
+                            <tr>
+                                <td>Daylight Saving</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                            </tr>
+                            <tr>
+                                <td>Voice Prompt</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">Voice</td>
+                                <td class="center">Voice</td>
+                                <td class="center">Voice</td>
+                            </tr>
+                            <tr>
+                                <td>Multiple Language</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                            </tr>
+                            <tr>
+                                <td>Software</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">CrossChex Standard</td>
+                                <td class="center">CrossChex Standard</td>
+                                <td class="center">CrossChex Standard &amp; CrossChex Cloud</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="11">Hardware</td>
+                                <td>CPU</td>
+                                <td class="center">32-bit Processor</td>
+                                <td class="center">1.0 GHz Processor</td>
+                                <td class="center">1.0 GHz Processor</td>
+                                <td class="center">Dual-core 1.0 GHz Processor</td>
+                            </tr>
+                            <tr>
+                                <td>Fingerprint Sensor</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">AFOS Touch Active Sensor</td>
+                                <td class="center">AFOS Touch Active Sensor</td>
+                            </tr>
+                            <tr>
+                                <td>Finger Scanning Area</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">22mmx18mm (0.87x0.71&quot;)</td>
+                                <td class="center">22mmx18mm (0.87x0.71&quot;)</td>
+                            </tr>
+                            <tr>
+                                <td>Display</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">3.5&quot; TFT</td>
+                            </tr>
+                            <tr>
+                                <td>Keypad</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">Physical Button</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">Physical Button</td>
+                            </tr>
+                            <tr>
+                                <td>Dimensions(W x H x D)</td>
+                                <td class="center">50x159x25mm (1.97x6.26x0.98&quot;</td>
+                                <td class="center">50x159x25mm (1.97x6.26x0.98&quot;)</td>
+                                <td class="center">50x159x32mm (1.97x6.26x1.26&quot;)</td>
+                                <td class="center">140x190x32mm (5.51x7.48x1.26&quot;)</td>
+                            </tr>
+                            <tr>
+                                <td>Working Temperature</td>
+                                <td class="center">-10&deg;C~60&deg;C (14&deg;F~140&deg;F)</td>
+                                <td class="center">-10&deg;C~60&deg;C (14&deg;F~140&deg;F)</td>
+                                <td class="center">-10&deg;C~60&deg;C (14&deg;F~140&deg;F)</td>
+                                <td class="center">-10&deg;C~60&deg;C (14&deg;F~140&deg;F)</td>
+                            </tr>
+                            <tr>
+                                <td>Humidity</td>
+                                <td class="center">20% to 90%</td>
+                                <td class="center">20% to 90%</td>
+                                <td class="center">20% to 90%</td>
+                                <td class="center">0% to 90%</td>
+                            </tr>
+                            <tr>
+                                <td>PoE</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">IEEE802.3af</td>
+                                <td class="center">IEEE802.3af</td>
+                                <td class="center">IEEE802.3af</td>
+                            </tr>
+                            <tr>
+                                <td>Power Input</td>
+                                <td class="center">DC12V</td>
+                                <td class="center">DC12V</td>
+                                <td class="center">DC12V</td>
+                                <td class="center">DC12V</td>
+                            </tr>
+                            <tr>
+                                <td>IP Grade</td>
+                                <td class="center">IP65</td>
+                                <td class="center">IP65</td>
+                                <td class="center">IP65</td>
+                                <td class="center">&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="9">I/O</td>
+                                <td>TCP/IP</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                            </tr>
+                            <tr>
+                                <td>RS485</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td>USB Host</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                            </tr>
+                            <tr>
+                                <td>Wi-Fi</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                            </tr>
+                            <tr>
+                                <td>Bluetooth</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td>Relay</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                            </tr>
+                            <tr>
+                                <td>I/O</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">Door Contact/ Exit Button</td>
+                                <td class="center">Door Contact/ Exit Button</td>
+                                <td class="center">Exit Button</td>
+                            </tr>
+                            <tr>
+                                <td>Tamper Alarm</td>
+                                <td class="center">&mdash;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&radic;</td>
+                                <td class="center">&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td>Wiegand</td>
+                                <td class="center">Output</td>
+                                <td class="center">Input &amp; Output</td>
+                                <td class="center">Input &amp; Output</td>
+                                <td class="center">Output</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="download max-1400 block" id="section6">
+            <h2>Download</h2>
+
+            <ul class="download-list">
+                <li class="download-item">
+                    <div class="item item-date">04/29/2022</div>
+
+                    <div class="item item-type">V1.0</div>
+
+                    <div class="item item-right">C2 Series Brochure EN</div>
+
+                    <div class="item item-size">2.06 MB</div>
+
+                    <div class="item item-download"><a alt="FacePass 7 Pro Flyer" aria-label="“”"
+                            href="https://www.dropbox.com/s/vsgydfgwipc8z6x/Anviz-C2%20Series-Brochure-05.07.2022-EN-RGB.pdf?dl=0"
+                            rel="nofollow">Download</a></div>
+                </li>
+                <li class="download-item">
+                    <div class="item item-date">04/29/2022</div>
+
+                    <div class="item item-type">V1.0</div>
+
+                    <div class="item item-right">C2 KA Product Images</div>
+
+                    <div class="item item-size">18.5 MB</div>
+
+                    <div class="item item-download"><a alt="FacePass 7 Pro Flyer" aria-label="“”"
+                            href="https://www.dropbox.com/sh/slg0rsrwpr1k4hd/AAD5rh1y3HVojI-obYlbb7-Xa?dl=0"
+                            rel="nofollow">Download</a></div>
+                </li>
+                <li class="download-item">
+                    <div class="item item-date">04/29/2022</div>
+
+                    <div class="item item-type">V1.0</div>
+
+                    <div class="item item-right">C2 Pro/ C2 Pro HID Product Images</div>
+
+                    <div class="item item-size">8.6 MB</div>
+
+                    <div class="item item-download"><a alt="FacePass 7 Pro Flyer" aria-label="“”"
+                            href="https://www.dropbox.com/sh/kdoswsrcg1vpn4n/AADwIi5kMTD7YvxhnunPnuPka?dl=0"
+                            rel="nofollow">Download</a></div>
+                </li>
+                <li class="download-item">
+                    <div class="item item-date">04/29/2022</div>
+
+                    <div class="item item-type">V1.0</div>
+
+                    <div class="item item-right">C2 Slim/ C2 Slim HID Product Images</div>
+
+                    <div class="item item-size">12.9 MB</div>
+
+                    <div class="item item-download"><a alt="FacePass 7 Pro Flyer" aria-label="“”"
+                            href="https://www.dropbox.com/sh/2maj84l5w2qqoq4/AADdCZJ1yw0FXmsCwmQJF9aja?dl=0"
+                            rel="nofollow">Download</a></div>
+                </li>
+                <li class="download-item">
+                    <div class="item item-date">04/29/2022</div>
+
+                    <div class="item item-type">V1.0</div>
+
+                    <div class="item item-right">C2 SR Product Images</div>
+
+                    <div class="item item-size">10.2 MB</div>
+
+                    <div class="item item-download"><a alt="FacePass 7 Pro Flyer" aria-label="“”"
+                            href="https://www.dropbox.com/sh/uvzx6sx5bxawgpy/AACmd-T6IOA66-gNUqYbFJ3Da?dl=0"
+                            rel="nofollow">Download</a></div>
+                </li>
+            </ul>
+        </div>
+        <!-- get free demo -->
+
+        <div class="block get-free" style="display:none">{{%inquiry_form_white%}}</div>
+
+        <div class="max-1400 block" id="section7">{{%c2-related-product%}}</div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+
+            var M = {}
+            var video = `"<iframe  allowfullscreen src='https://www.youtube.com/embed/kd2ETPYgQLw' frameborder='0' width='100%' height='100%'  scrolling='no' frameborderwidth='0' frameborderheight='0'></iframe>"`;
+
+            $('.play-btn a').on('click', function () {
+                M.dialog2 = jqueryAlert({
+                    'style': 'pc',
+                    'content': video,
+                    'width': '60%',
+                    'height': '60%',
+                    'z-index': '999999',
+                    'modal': true,
+                    'animateType': 'linear',
+                })
+            })
+
+            var juli = $(".details_nav_bar").offset().top;
+            var vf1 = $("#section1").offset().top;
+            var vf2 = $("#section2").offset().top;
+            var vf3 = $("#section3").offset().top;
+            var vf4 = $("#section4").offset().top;
+            var vf5 = $("#section5").offset().top;
+            var vf6 = $("#section6").offset().top;
+            $(window).scroll(function () {
+                var gju = $(window).scrollTop();
+                if (gju >= juli) {
+                    console.log('gju  ' + gju + '  juli  ' + juli)
+                    $('.product-nav.scroll-active.on').css('display', 'none')
+                    $(".details_nav_bar").addClass('xq_hover');
+                    $(".product-nav").addClass("on");
+                    $(".product-nav").removeClass("in");
+                } else {
+
+                    $('.product-nav.scroll-active').css('display', 'block')
+                    $(".details_nav_bar").removeClass('xq_hover');
+                    $(".product-nav").addClass("in");
+                    $(".product-nav").removeClass("on");
+                }
+                if ($(this).width() > 850) {
+                    if (gju >= juli) {
+                        $(".top-nav").addClass("on");
+                        $(".top-nav").removeClass("in");
+                    } else {
+                        $(".top-nav").addClass("in");
+                        $(".top-nav").removeClass("on");
+                    }
+                } else {
+                    if (gju >= juli) {
+                        $(".top-nav").addClass("on");
+                        $(".top-nav").removeClass("in");
+                    } else {
+                        $(".top-nav").addClass("in");
+                        $(".top-nav").removeClass("on");
+                    }
+                }
+
+                if (gju >= vf1 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v1").addClass("v_active");
+                }
+                if (gju >= vf2 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v2").addClass("v_active");
+                }
+                if (gju >= vf3 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v3").addClass("v_active");
+                }
+                if (gju >= vf4 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v4").addClass("v_active");
+                }
+                if (gju >= vf5 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v5").addClass("v_active");
+                }
+                if (gju >= vf6 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v6").addClass("v_active");
+                }
+            });
+
+            window.onload = function () {
+                var juli = $(".details_nav_bar").offset().top;
+                var gju = $(window).scrollTop() + 68;
+                if (gju >= juli) {
+                    $(".details_nav_bar").addClass('xq_hover');
+                    $(".product-nav").addClass("on");
+                    $(".product-nav").removeClass("in");
+                    $(".top-nav").addClass("on");
+                    $(".top-nav").removeClass("in");
+                } else {
+                    $(".details_nav_bar").removeClass('xq_hover');
+                    $(".product-nav").addClass("in");
+                    $(".product-nav").removeClass("on");
+                    $(".top-nav").addClass("in");
+                    $(".top-nav").removeClass("on");
+                }
+                if (gju >= juli) {
+                    $(".top-nav").addClass("on");
+                    $(".top-nav").removeClass("in");
+                } else {
+                    $(".top-nav").addClass("in");
+                    $(".top-nav").removeClass("on");
+                }
+                if (gju >= vf1 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v1").addClass("v_active");
+                }
+                if (gju >= vf2) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v2").addClass("v_active");
+                }
+                if (gju >= vf3) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v3").addClass("v_active");
+                }
+                if (gju >= vf4) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v4").addClass("v_active");
+                }
+                if (gju >= vf5) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v5").addClass("v_active");
+                }
+                if (gju >= vf6) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v6").addClass("v_active");
+                }
+            }
+
+            $(".select_box").click(function () {
+                $(".icon_down").click();
+            })
+
+
+
+
+            var flag = true
+            $(".icon_down").click(function () {
+                if (flag) {
+                    $(".select_box").fadeIn()
+                    $(".icon_down>img").attr("src", "https://www.anviz.com/file/files/821");
+                    flag = false
+                } else {
+                    $(".select_box").fadeOut()
+                    $(".icon_down>img").attr("src", "https://www.anviz.com/file/files/792");
+                    flag = true
+                }
+            })
+        })
+    </script>
+    <style type="text/css">
+        /* 导航样式 */
+        .template .details_nav_bar {
+            width: 100%;
+            margin-top: 0 !important;
+            border-top: 0 !important;
+            border-bottom: 2px solid #00a0e8;
+            backdrop-filter: saturate(180%) blur(20px);
+            -moz-backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            -o-backdrop-filter: saturate(180%) blur(20px);
+            -ms-backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(241, 241, 241, 0.87);
+        }
+
+        .navbar-default {
+            background: none;
+        }
+
+        .nav_bar {
+            align-items: center;
+            line-height: normal;
+            width: auto;
+            display: flex;
+            white-space: nowrap;
+            margin: 10px 0;
+        }
+
+        .space-item {
+            flex: 1;
+        }
+
+        .navbar_tab .nav-item {
+            width: auto;
+            height: auto;
+            padding: 0 20px;
+            font-size: 16px;
+            align-items: center;
+
+
+        }
+
+        .navbar_tab .nav-item:first-child a {
+            font-size: 22px;
+        }
+
+        .nav-item>a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #3e3a39;
+            font-family: "Montserrat-Regular" !important;
+            font-weight: normal;
+            text-decoration: none;
+            pointer-events: all;
+        }
+
+        .share_img {
+            display: flex !important;
+            align-items: center;
+        }
+
+        .share_img>img {
+            margin-bottom: 0 !important;
+        }
+
+        .navbar_tab {
+            border: none;
+            height: 100%;
+        }
+
+        .template .details_nav_bar .navbar-default {
+            height: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0 15px;
+            display: flex;
+        }
+
+        .v_active {
+            color: #00a0e8;
+        }
+
+        .v_active>a {
+            color: #000;
+            font-size: 18px !important;
+        }
+
+        .v_inquiry {
+            /* border: 1px solid #00A0E8; */
+            background-color: #00a0e8;
+            border-radius: 6px;
+            height: auto;
+            padding: 8px 20px;
+        }
+
+        .v_inquiry>a {
+            color: #fff;
+        }
+
+        .xq_hover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .select {
+            float: left;
+            width: 60%;
+            display: none;
+        }
+
+        .select_tit {
+            padding: 13px 0;
+        }
+
+        .select_tit>a {
+            text-decoration: none;
+        }
+
+        .share_con {
+            display: flex;
+            margin: 13px 0;
+        }
+
+        .share_con img {
+            width: 100%;
+        }
+
+        .select_box {
+            width: 70%;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .select_box>li {
+            border-bottom: 1px solid rgba(210, 210, 215, 0.5);
+            padding: 10px 0;
+        }
+
+        .icon_down {
+            float: left;
+            width: 15%;
+            padding: 15px 0;
+            display: none;
+        }
+
+        /* 导航自适应 */
+        @media screen and (max-width: 850px) {
+            .content .page-item {
+                padding: 0 0 !important;
+            }
+
+            .template .details_nav_bar .navbar-default {
+                display: flex;
+                overflow: hidden;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .nav_bar {
+                display: none !important;
+            }
+
+            .select {
+                display: block;
+                width: auto;
+            }
+
+            .icon_down {
+                display: block;
+                width: auto;
+            }
+
+            .icon_down>img {
+                margin-bottom: 0px;
+            }
+
+            .space-item {
+                display: none !important;
+            }
+
+            .share_con {
+                float: right;
+                width: auto;
+                margin: 0 !important;
+            }
+
+            .share_con .nav-item .nav-link {
+                font-size: 12px !important;
+                display: unset;
+                color: #000;
+            }
+
+            .v_inquiry {
+                padding: 5px 5px;
+                font-size: 12px;
+                background-color: transparent;
+                border: 1px #000 solid;
+            }
+
+            .nav-item {
+                font-size: 16px;
+            }
+
+            .share_con .anviz-btn {
+                padding: 12px;
+            }
+
+            .navbar_tab .nav-item {
+                width: auto;
+                height: auto;
+                padding: 4px 5px;
+                align-items: center;
+            }
+
+            .select_box {
+                flex-direction: column;
+                width: 100%;
+
+
+            }
+
+            .select_box .nav-item {
+                padding: 10px 15% !important;
+            }
+        }
+
+        section h4,
+        section h2,
+        section p,
+        .page-content h2,
+        .page-content p,
+        section .item ul .border-right ul li,
+        .c2-ser .app .app-list .item p,
+        section.compare-table-sction .table>tbody>tr>td,
+        .c2-ser .table .table-box table td,
+        .c2-ser .table .table-box table th,
+        section .item ul li span,
+
+        .download .download-list .download-item .item,
+
+        .c2-ser .overview p,
+        .c2-ser .icon-list ul li span {
+            color: #ddd;
+        }
+
+        .page-content form .select-fill-x select {
+            width: 100%;
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+header{
+    &.mobile{
+        .top-nav-bg{
+            background: #4b4b4a;
+        }
+    }
+    &.new-nav-warp{
+        .product-nav{
+            @media (max-width:720px){
+                overflow-y: scroll;
+                visibility: visible;
+                background: #4b4b4a;
+                &:hover{
+                    background: #4b4b4a;
+                }
+            }
+            .series-pro-nav{
+                > li{
+                    &.series-item{
+                        padding: 0 6px;
+                        .series-link{
+                            font-size: 14px;
+                        }
+                    }
+                    @media (max-width:1200px){
+                        &.series-item{
+                            padding: 0;
+                        }
+                    }
+                }
+                li{
+                    @media (min-width:1025px) and (max-width:1439px){
+                        // &:nth-child(n+6):not(.login):not(.search-bar-warp){
+                        //     display: none;
+                        // }
+                    }
+                    &.support-nav{
+                        .icon{
+                            display: none;
+                        }
+                        &:hover{
+                            .sub-nav{
+                                overflow: visible;
+                                @media (max-width:850px){
+                                    height: auto !important;
+                                }
+                                ul{
+                                    li{
+                                        white-space: nowrap;
+                                        position: relative;
+                                        
+                                        .sub-nav{
+                                            display: none;
+                                            transition: all 0.3s ease;
+                                            @media (max-width:850px){
+                                                display: none;
+                                                position: relative;
+                                                height: fit-content !important;
+                                                padding-left: 1em;
+                                            }
+                                        }
+                                        &:hover{
+                                            .sub-nav{
+                                                display: block;
+                                                margin-left: 0;
+                                                top: 0;
+                                                left: 100%;
+                                                @media (max-width:850px){
+                                                    left: 0;
+                                                }
+                                                li{
+                                                    a{
+                                                        padding: 1em;
+                                                    }
+                                                    &:hover{
+                                                        a{
+                                                            color: #00A0E8;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            > ul{
+                                                .sub-nav{
+                                                    overflow-x: visible;
+                                                    overflow-y: hidden;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}

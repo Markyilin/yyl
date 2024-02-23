@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .h1-num {
+        font-size: 60px;
+        background-color: #eee;
+        height: 1200px;
+    }
+    .h2-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .number, .number2, .number3 {
+        font-size: 36px;
+        text-align: center;
+        padding: 20px;
+        background-color: #ccc;
+        width: 30%;
+        height: 200px;
+        /* 添加 CSS 过渡效果 */
+        transition: width 2s;
+    }
+</style>
+</head>
+<body>
+
+<!-- 一个空的占位元素，用于滚动到它时触发加载效果 -->
+<div class="h1-num">222</div>
+<!-- 加载效果的数字容器 -->
+<div class="h2-title">
+    <h2 class="number" id="numberDisplay">0</h2>
+    <h2 class="number2" id="numberDisplay2">0</h2>
+    <h2 class="number3" id="numberDisplay3">0</h2>
+</div>
+
+
+<script>
+// 添加一个标志来记录加载效果是否已触发
+let hasLoaded = false;
+
+// 使用 JavaScript 监听滚动事件
+window.addEventListener('scroll', function() {
+    // 如果加载效果已触发，则不再执行
+    if (hasLoaded) {
+        return;
+    }
+
+    // 获取.number元素距离顶部的距离
+    const numberElement = document.querySelector('.number');
+    const numberTop = numberElement.getBoundingClientRect().top;
+
+    // 获取.number2元素距离顶部的距离
+    const numberElement2 = document.querySelector('.number2');
+    const numberTop2 = numberElement2.getBoundingClientRect().top;
+
+    // 获取.number3元素距离顶部的距离
+    const numberElement3 = document.querySelector('.number3');
+    const numberTop3 = numberElement3.getBoundingClientRect().top;
+
+    // 当滚动到.number元素时，添加加载效果
+    if (numberTop <= window.innerHeight) {
+        startLoadingEffect('numberDisplay', 200);
+    }
+
+    // 当滚动到.number2元素时，添加加载效果
+    if (numberTop2 <= window.innerHeight) {
+        startLoadingEffect('numberDisplay2', 100);
+    }
+
+    // 当滚动到.number3元素时，添加加载效果
+    if (numberTop3 <= window.innerHeight) {
+        startLoadingEffect('numberDisplay3', 66);
+    }
+});
+
+// 启动加载效果函数
+function startLoadingEffect(id, targetNumber) {
+    const numberDisplay = document.getElementById(id);
+    let currentNumber = 0;
+    const increment = 1; // 增加的步长
+
+    const updateNumber = () => {
+        if (currentNumber <= targetNumber) {
+            numberDisplay.textContent = currentNumber;
+            currentNumber += increment;
+            // 使用requestAnimationFrame来实现平滑的动画效果
+            requestAnimationFrame(updateNumber);
+        } else {
+            // 标志加载效果已触发
+            hasLoaded = true;
+        }
+    };
+
+    // 启动加载效果
+    updateNumber();
+}
+</script>
+
+</body>
+</html>

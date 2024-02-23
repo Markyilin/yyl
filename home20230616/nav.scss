@@ -1,0 +1,138 @@
+@mixin gradient-bg($path,$color1,$color2) {
+    background: linear-gradient($path, $color1, $color2) !important;
+    background: -webkit-linear-gradient($path, $color1, $color2) !important;
+    background: -moz-linear-gradient($path, $color1, $color2) !important;
+    background: -o-linear-gradient($path, $color1, $color2) !important;
+    background: linear-gradient($path, $color1, $color2) !important;
+    background: rgba(29, 32, 138, 1);
+    transition: all 0.3s ease-in;
+}
+@mixin btn-bg($bg-color){
+    background-color: $bg-color;
+}
+$to-right: to right;
+.scroll-active{
+    @include gradient-bg($to-right,#0068B7, #1D2088);
+}
+.anviz-primary-btn-new{
+    color: #fff;
+    @include btn-bg(#0068B7);
+}
+
+header{
+    &.mobile{
+        .top-nav-bg{
+            background: #4b4b4a;
+        }
+    }
+    &.new-nav-warp{
+        .product-nav{
+            // 旧的导航这里为空
+            transition: background-color 0.2s linear !important;
+            transition: all 0.3s ease-in;
+            @include gradient-bg($to-right,#0068B7, #1D2088);
+            &.scroll-active{
+                -webkit-backdrop-filter: saturate(180%) blur(20px);
+                backdrop-filter: saturate(180%) blur(20px);
+                position: fixed;
+                top: 0;
+            }
+            &:hover{
+                @include gradient-bg($to-right,#0068B7, #1D2088);
+                cursor: pointer;
+            }
+            @media (max-width:720px){
+                overflow-y: scroll;
+                visibility: visible;
+                background: #4b4b4a;
+                &:hover{
+                    background: #4b4b4a;
+                }
+            }
+            .series-pro-nav{
+                > li{
+                    &.series-item{
+                        padding: 0 6px;
+                        &.login,
+                        &.cart{
+                            .series-link{
+                                padding: 0 10px;
+                            }
+                        }
+                        .series-link{
+                            font-size: 14px;
+                            
+                            span{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    @media (max-width:1200px){
+                        &.series-item{
+                            padding: 0;
+                        }
+                    }
+                }
+                li{
+                    &.support-nav{
+                        .icon{
+                            display: none;
+                        }
+                        &:hover{
+                            .sub-nav{
+                                overflow: visible;
+                                @media (max-width:850px){
+                                    height: auto !important;
+                                }
+                                ul{
+                                    li{
+                                        white-space: nowrap;
+                                        position: relative;
+                                        .sub-nav{
+                                            display: none;
+                                            transition: all 0.3s ease;
+                                            @media (max-width:850px){
+                                                display: none;
+                                                position: relative;
+                                                height: fit-content !important;
+                                                padding-left: 1em;
+                                            }
+                                        }
+                                        &:hover{
+                                            .sub-nav{
+                                                display: block;
+                                                margin-left: 0;
+                                                top: 0;
+                                                left: 100%;
+                                                @media (max-width:850px){
+                                                    left: 0;
+                                                }
+                                                li{
+                                                    a{
+                                                        padding: 1em;
+                                                    }
+                                                    &:hover{
+                                                        a{
+                                                            color: #00A0E8;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            > ul{
+                                                .sub-nav{
+                                                    overflow-x: visible;
+                                                    overflow-y: hidden;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}

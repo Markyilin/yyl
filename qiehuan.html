@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper 5.4.5.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+</head>
+<script src="./jquery-3.2.1.js"></script>
+<script src="./swiper.min 5.4.5.js"></script>
+<body>
+    <style lang="scss">
+ .product-app-phone {
+          display: none;
+      }
+      .product-app {
+          background-color: #efefef;
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          .mask-slider__images-list{
+  /*             position: absolute; */
+              top: 0%;
+              left: 0%;
+              width: 50%;
+              .mask-slider__images-list-item{
+  /*                 position: absolute; */
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  display: none;
+                img{
+  /*               	max-width: 320px; */
+                  max-width: 400px;
+                }
+                  &.mask-slider__images-list-item--active{
+                      /* // position: relative; */
+                      display: block;
+                  }
+                  &.transition-off{
+                      z-index: 1;
+                      display: block;
+                  }
+                  &.transition-on{
+                      position: absolute;
+                      z-index: 2;
+                      display: block;
+                    left: -50%;
+                      img{
+                          -webkit-animation: reveal_slide .5s ease-in-out;
+                                  animation: reveal_slide .5s ease-in-out
+                      }
+                  }
+              }
+          }
+          .app-main {
+  /*             padding: 40px 200px 40px 0; */
+              width: 50%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              .app-text{
+                  p.text{
+                    height: 50px;
+                    width: 70%;
+                  }
+              }
+              ul {
+                  flex-direction: column;
+                  align-items: flex-start;
+                  li {
+                      padding: 10px 0;
+                      margin-top: 15px;
+                      display: flex;
+                      text-align: left;
+                      align-items: center;
+                      span.icon {
+                          font-size: 32px;
+                          border-radius: 50%;
+                          padding: 10px;
+                          background-color: #d8d8d8;
+                          margin-right: 10px;
+                        display: flex;
+                          &::before {
+                              color: #fff;
+                          }
+                      }
+                      .icon_name {
+                          display: block;
+                          font-size: 18px
+                      }
+                  }
+              }
+          }
+      }
+      .product-app-phone , .product-app{
+          ul li.active span.icon{
+              background-color: #00A0E8;
+          }
+      }
+      .notifications {
+          margin-top: 100px;
+          padding: 40px 40px;
+          overflow: hidden;
+          .title {
+              text-align: center;
+          }
+          .notification-image-list {
+              margin-top: 80px;
+              position: relative;
+              height: 400px;
+              img {
+                  position: absolute;
+                  &:nth-child(1) {
+                      left: 60px;
+                      top: 40px;
+
+                  }
+                  &:nth-child(2) {
+                      left: 50%;
+                      margin-left: -190px;
+                      z-index: 9;
+                  }
+                  &:nth-child(3) {
+                      right: 0;
+                      bottom: -25px;
+                  }
+              }
+          }
+      }
+      .pro-max-diy {
+          padding-top: 0;
+          padding-bottom: 0;
+          font-size: 0;
+          height: unset;
+          padding-left: 0;
+          position: relative;
+        .left{
+          width: 100%;
+        }
+        .right{
+          position: absolute;
+          top: 60px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          width: 60% !important;
+          .title{
+              font-size: 45px;
+          }
+        }
+          p {
+              font-size: 20px;
+          }
+      }
+      .ansi{
+        position: relative;
+        .left{
+          position: absolute;
+          top: 15%;
+          left: 15%;
+        }
+        .right{
+          width: 100%
+        }
+        .text{
+          .title{
+            img{
+              width: 45%
+            }
+          }
+        }
+      }
+
+    .g-gray-bg{
+      background: #d8d8d8;
+    }
+      .gray2-bg {
+          .right {
+              width: 35%;
+          }
+      }
+      .times-access{
+          padding-top: 0;
+      }
+      .home-style {
+          text-align: center;
+          .item-banner {
+              justify-content: space-evenly;
+              padding: 50px;
+              height: unset;
+              span {
+                  font-size: 24px;
+                  color: #5f5f5f;
+              }
+          }
+      }
+      .temperature {
+          .title{
+              text-align: center;
+          }
+          .box{
+            position: relative;
+          }
+          img {
+              position: relative;
+              width: 100%;
+          }
+          .temp {
+              position: absolute;
+              display: flex;
+              align-items: center;
+              span {
+                  font-size: 150px;
+              }
+              &.low {
+                  left: 8%;
+                  top: 5%;
+                  span::before {
+                      color: #fff;
+                  }
+                  a {
+                      color: #fff;
+                      font-size: 28px;
+                      margin: -30px;
+                  }
+              }
+              &.high {
+                  right: 8%;
+                  bottom: 5%;
+                  span::before {
+                      color: #444;
+                  }
+                  a {
+                      color: #444;
+                      font-size: 28px;
+                      margin: -30px;
+                  }
+              }
+          }
+      }
+
+      .icon_list {
+          padding: 50px;
+          .title {
+              text-align: center;
+          }
+        }
+    </style>
+    <div class="product-app-phone">
+        <div class="title">Smartphone App</div>
+        <ul>
+            <li class="active" data-name="Share-Ekeys">
+                <!--                           <span class="icon-ekeys icon"></span> -->
+                <span class="icon">
+                    <img width height class="lazyload" data-src="{{ " Share_Ekey.svg" | asset_url }}" alt="" />
+                </span>
+            </li>
+            <li data-name="Manage-Users">
+                <!--                           <span class="icon-users icon"></span> -->
+                <span class="icon">
+                    <img width height class="lazyload" data-src="{{ " Manage_users.svg" | asset_url }}" alt="" />
+                </span>
+            </li>
+            <li data-name="Log-Record">
+                <!--                           <span class="icon-logs icon"></span> -->
+                <span class="icon">
+                    <img width height class="lazyload" data-src="{{ " Log_Record.svg" | asset_url }}" alt="" />
+                </span>
+            </li>
+            <li data-name="Tap-and-Go">
+                <!--                          <span class="icon-tag-go icon"></span> -->
+                <span class="icon">
+                    <img width height class="lazyload" data-src="{{ " Notification2.svg" | asset_url }}" alt="" />
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="product-app">
+        <ul class="mask-slider__images-list">
+            <li class="mask-slider__images-list-item Share-Ekeys mask-slider__images-list-item--active"
+                data-name="Share-Ekeys">
+                <img width height class="lazyload" src="{{ 'ubolt_pro_max_app_share.png' | asset_url}}"
+                    alt="Share eKeys Smart Lock" />
+            </li>
+            <li class="mask-slider__images-list-item Manage-Users" data-name="Manage-Users">
+                <img width height class="lazyload" data-src="{{ 'ubolt_pro_max_app_user.png' | asset_url }}"
+                    alt="Manage Users App Smart Lock" />
+            </li>
+            <li class="mask-slider__images-list-item Log-Record" data-name="Log-Record">
+                <img width height class="lazyload" data-src="{{ 'ubolt_pro_max_app_recode.png' | asset_url }}"
+                    alt="Log Record App Smart Lock" />
+            </li>
+            <li class="mask-slider__images-list-item Tap-and-Go" data-name="Tap-and-Go">
+                <img width height class="lazyload" data-src="{{ 'ubolt_pro_max_app_key.png' | asset_url }}"
+                    alt="Smart Lock Smartphone App" />
+            </li>
+        </ul>
+
+        <div class="app-main">
+            <div class="app-text">
+                <div class="title">Share Ekeys</div>
+                <p class="text Share-Ekeys">Grant access for specific dates or times.
+                </p>
+                <p class="text Manage-Users" hidden>Knows who has the access to your lock and how. Add or delete
+                    users any time you want.
+                </p>
+                <p class="text Log-Record" hidden>You can see a Log of who’s entered and exactly when they did
+                    from
+                    your smartphone.
+                </p>
+                <p class="text Tap-and-Go" hidden>The U-tec App enables you to unlock your door with your
+                    smartphone.
+                </p>
+            </div>
+            <ul>
+                <li class="active" data-name="Share-Ekeys">
+                    <!--                                   <span class="icon-ekeys icon"></span> -->
+
+                    <span class="icon">
+                        <img width height class="lazyload" data-src="{{ " Share_Ekey.svg" | asset_url }}" alt="" />
+                    </span>
+                    <span class="icon_name">Share Ekeys</span>
+
+                </li>
+                <li data-name="Manage-Users">
+                    <!--                                   <span class="icon-users icon"></span> -->
+                    <span class="icon">
+                        <img width height class="lazyload" data-src="{{ " Manage_users.svg" | asset_url }}" alt="" />
+                    </span>
+                    <span class="icon_name">Manage Users</span>
+
+                </li>
+                <li data-name="Log-Record">
+                    <!--                                   <span class="icon-logs icon"></span> -->
+                    <span class="icon">
+                        <img width height class="lazyload" data-src="{{ " Log_Record.svg" | asset_url }}" alt="" />
+                    </span>
+                    <span class="icon_name">Log Record</span>
+
+                </li>
+                <li data-name="Tap-and-Go">
+                    <!--                                   <span class="icon-tag-go icon"></span> -->
+                    <span class="icon">
+                        <img width height class="lazyload" data-src="{{ " Notification2.svg" | asset_url }}" alt="" />
+                    </span>
+                    <span class="icon_name">Smart Notification<sup>1</sup></span>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="endAPP"></div>
+
+    <script>
+        // smartphone app
+        // app pc title 控制
+        if (screenW > 850) {
+            $('.app-main .title').text('Smartphone App');
+        }
+
+        // smartphone app 中图标的点击事件
+        $('.product-app-phone ul li, .product-app .app-main ul li').on('click', appChange);
+
+        // smartphone app 中图标的hover事件
+        if (screenW > 850) {
+            $('.product-app-phone ul li, .product-app .app-main ul li').on('mouseenter', appChange);
+        }
+
+
+        // 切换APP图片
+        function appChange() {
+            clearInterval(timer) // 停止计时器
+            if ($(this).hasClass('active')) {
+                timer = setInterval(autoplay, 5000);
+                return;
+            }
+            $(this).addClass('active').siblings().removeClass('active')
+            var now_tag = $(this).attr('data-name');
+            $('.product-app .app-main').find('.' + now_tag).show().siblings('p').hide() //控制app中文本显示
+            // 点击后触发左侧图像切换效果的class操作
+            $('.mask-slider__images-list').find('.mask-slider__images-list-item--active').removeClass('mask-slider__images-list-item--active').addClass('transition-off').siblings().removeClass('transition-off');
+            $('.mask-slider__images-list').find('.' + now_tag).addClass('transition-on').siblings().removeClass('transition-on');
+            setTimeout(function () {
+                $('.product-app .mask-slider__images-list').find('.transition-off').removeClass('transition-off');
+                $('.mask-slider__images-list').find('.' + now_tag).removeClass('transition-on').addClass('mask-slider__images-list-item--active').siblings().removeClass('mask-slider__images-list-item--active');
+            }, 500);
+            if (screenW <= 850) {
+                $('.app-main .title').text($(this).attr('data-name').split('-').join(' '));
+                $('.product-app-phone ul li , .product-app .app-main ul li').on('mouseenter', appChange)
+            }
+            timer = setInterval(autoplay, 5000); // 重启计时器
+        }
+
+        // Smartphone App 计时器
+        var timer = setInterval(autoplay, 5000);
+
+        // Smartphone App 动画效果（自动播放）
+        function autoplay() {
+            var dom = $('.product-app .mask-slider__images-list').find('.mask-slider__images-list-item--active').next();
+
+            if (dom.length == 0) {
+                $('.product-app .mask-slider__images-list').find('.mask-slider__images-list-item--active').removeClass('mask-slider__images-list-item--active').addClass('transition-off');
+                $('.product-app .mask-slider__images-list li').first().addClass('transition-on');
+            } else {
+                $('.product-app .mask-slider__images-list').find('.mask-slider__images-list-item--active').removeClass('mask-slider__images-list-item--active').addClass('transition-off').next().addClass('transition-on');
+            }
+            setTimeout(function () {
+                if (dom.length == 0) {
+                    $('.product-app .mask-slider__images-list').find('.transition-off').removeClass('transition-off');
+                    $('.product-app .mask-slider__images-list').find('.transition-on').removeClass('transition-on').addClass('mask-slider__images-list-item--active');
+                } else {
+                    $('.product-app .mask-slider__images-list').find('.transition-off').removeClass('transition-off').next().removeClass('transition-on').addClass('mask-slider__images-list-item--active');
+                }
+            }, 500);
+            var now_tag = dom.attr('data-name');
+            $('.product-app .app-main').find('.' + now_tag).show().siblings('p').hide() //控制app中文本显示
+            if (dom.attr('data-name') == undefined) {
+                now_tag = $('.product-app .mask-slider__images-list li').first().attr('data-name');
+            }
+            console.log(now_tag)
+            $('.product-app-phone ul, .product-app .app-main ul').find("li[data-name='" + now_tag + "']").addClass('active').siblings().removeClass('active');
+            if (screenW <= 850) {
+                $('.app-main .title').text($('.product-app-phone ul li.active').attr('data-name').split('-').join(' '));
+            }
+        }
+
+
+        // images-list show
+        $('.img-list .btn-more').on('click', function () {
+            if ($('.img-list ul').find('li.hide').length > 0) {
+                $('.img-list ul').find('li.hide').removeClass('hide').addClass('show')
+            } else {
+                $('.img-list ul').find('li.show').removeClass('show').addClass('hide')
+            }
+        })
+
+        // specifications
+        $('.specifications .collapse .item .down-title').on('click', function () {
+            $(this).next().slideToggle();
+
+            if ($(this).next().css('display') == 'block' && $(this).parents('.FAQ').length == 0) {
+                $(this).next().css('display', 'flex');
+            }
+            var now_flag = $(this).find('.icon-down').length == 1
+            if (now_flag) {
+                $(this).find('.icon-down').removeClass('icon-down').addClass('icon-up')
+            } else {
+                $(this).find('.icon-up').removeClass('icon-up').addClass('icon-down')
+            }
+        })
+
+    </script>
+</body>
+
+</html>

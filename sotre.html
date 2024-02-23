@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*判断 如果网页https://u-tec.com/pages/store?get10-discountfromads后get10-discountfromads 存在，则在该页面中body添加newYear类，不存在后缀则删除newYear类 */
+    var url = window.location.href;
+    var urlArr = url.split('?');
+    var urlArr2 = urlArr[1].split('&');
+    var urlArr3 = urlArr2[0].split('=');
+    var urlArr4 = urlArr2[1].split('=');
+    if (urlArr3[1] == 'get10-discountfromads') {
+        document.body.classList.add('newYear');
+    } else {
+        document.body.classList.remove('newYear');
+    }
+</script>
+</html>

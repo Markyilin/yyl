@@ -1,0 +1,146 @@
+body{
+    .new-nav-warp{
+        &.mobile{
+            z-index: 99991;
+            .top-nav{
+                height: calc(100% - 50px);
+                .product-nav{
+                    padding: 0 2em;
+                    .series-pro-nav{
+                        padding: 0;
+                    }
+                    .search-form{
+                        margin-top: 2em;
+                        padding: 0;
+                        form{
+                            padding: 0 !important;
+                            width: 100%;
+                            border-bottom: 0;
+                            input{
+                                border: 1px solid #575757;
+                                background: rgba(#232322,.26) !important;
+                                border-radius: 4px;
+                                &[placeholder]{
+                                    font-size: 16px;
+                                }
+                            }
+                            .search_btn{
+                                right: 20px;
+                                left: auto !important;
+                                font-size: 25px;
+                                color: #9C9C9C;
+                            }
+                        }
+                    }
+                }
+            }
+            .language-list{
+                height: 50px;
+                padding: 0 2em;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .title{
+                    flex-basis: 90%;
+                    color: #00A0E9;
+                    font-weight: 500;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+                .icon{
+                    flex-basis: 10%;
+                    color: #fff;
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    .language-all{
+        transform: translateX(101%);
+        position: absolute;
+        width: 100%;
+        background: #4A4A4A;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 99992;
+        transition: all 0.3s ease-in-out;
+        &.active{
+            width: 100%;
+            transform: translateX(0%);
+            transition: all 0.3s ease-in-out;
+            .list{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                hr{
+                    border-color: #646363;
+                }
+                .item{
+                    width: 100%;
+                    padding: 15px 2em;
+                    color: #fff;
+                    border-bottom: 1px solid #646363;
+                    &:hover{
+                        color: #00A0E9;
+                    }
+                    &.back{
+                        width: 100%;
+                        height: 54px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-size: 40px;
+                        color: #fff;
+                        padding: 15px;
+                        .icon{
+                            width: 100%;
+                        }
+                    }
+                    &.other{
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 54px;
+                        .icon{
+                            font-size: 40px;
+                            color: #fff;
+                            padding: 0;
+                            transition: all 0.3s ease-in-out;
+                            &.active{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+            .all-list{
+                display: none;
+                padding: 10px 2em;
+                width: 100%;
+                height: calc(100% - 440px);
+                background: rgba(#232322,.12);
+                overflow-y: overlay;
+                -webkit-overflow-scrolling: touch;
+                overflow: -moz-scrollbars-none;
+                -ms-overflow-style: none;  
+                min-height: 300px;
+                &::-webkit-scrollbar { 
+                    display: none;
+                }
+                &.active{
+                    display: block;
+                }
+                .item{
+                    padding: 10px;
+                    color: #B0B0B0;
+                    &:hover{
+                        color: #00A0E9;
+                    }
+                }
+            }
+        }
+    }
+}

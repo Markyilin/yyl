@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css?v=1680838179s">
+    <link rel="stylesheet" href="../swiper 5.4.5.css">
+    <link rel="stylesheet" href="../../fonts/anviz-font.css">
+    <link rel="stylesheet" href="../../fonts/static-page-font.css">
+    <!-- 导航模块样式 -->
+    <link rel="stylesheet" href="../home20230616/nav.css">
+    <!-- content -->
+    <link rel="stylesheet" href="solution.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="../home20230616/footer.css">
+</head>
+
+<body class="">
+    <div class="content" id="containerBody">
+        <!-- nav -->
+        <header class="nav-warp new-nav-warp">
+            <div class="top-nav top-nav-bg">
+                <ul class="mobile-header-nav">
+                    <li class="js-header-item">
+                        <div class="menu-btn">
+                            <span class="menubtn menubtn_linewrap_top">
+                                <span class="menubtn_line menubtn_line-top"></span>
+                            </span>
+                            <span class="menubtn menubtn_linewrap_bottom">
+                                <span class="menubtn_line menubtn_line-bottom"></span>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="js-header-item">
+                        <a href="/" data-ajax-progressing="top"><span class="icon icon-logo"></span></a>
+                    </li>
+                    <li class="js-header-item">
+                        <a href="/login.html" class="login">
+                            <i class="icon icon-user-login"></i>
+                        </a>
+                    </li>
+                </ul>
+                <img class="anviz-logo" src="https://www.anviz.com/static/img/logos/Anviz-logo.png" alt="" hidden="">
+                <div class="product-nav" style="border: none;">
+                    <ul class="series-pro-nav">
+                        <li class="logo series-item">
+                            <a href="/" data-ajax-progressing="top">
+                                <span class="icon icon-logo icon-logo-color"></span>
+                            </a>
+                        </li>
+                        <li class="series-item support-nav ">
+                            <a href="javascript: void(0);" class="series-link">
+                                Access Control
+                                <span class="icon icon-down"></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a href="/access-control-solution">Overview</a></li>
+                                    <li class="series-item"><a href="/crosschex-desk">CrossChex Standard</a></li>
+                                    <li class="series-item"><a
+                                            href="/product.html?tag=Biometric&amp;extraTag[]=Facial">Face Series</a>
+                                    </li>
+                                    <li class="series-item"><a href="/c2-series">C2 Series</a></li>
+                                    <li class="series-item"><a href="/miracle-series">M Series</a></li>
+                                    <li class="series-item"><a href="/vf30-pro">VF30 Pro</a></li>
+                                    <li class="series-item"><a href="/product.html?tag=Access%20control">Others</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item support-nav ">
+                            <a href="javascript: void(0);" class="series-link" style="">
+                                Time Attendance
+                                <span class="icon icon-down" style=""></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a href="/time-attendance-solution">Overview</a></li>
+                                    <li class="series-item"><a
+                                            href="/cloud-based-time-and-attendance-solution-crosschex-cloud">CrossChex
+                                            Cloud</a></li>
+                                    <li class="series-item"><a href="/wisdom-series">W Series</a></li>
+                                    <li class="series-item"><a href="/search.html?keyword=ep30">EP Series</a></li>
+                                    <li class="series-item"><a href="/product/a350-4g-wireless-time-clock.html">A350
+                                            Series</a></li>
+                                    <li class="series-item"><a href="/product.html">Others</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item support-nav " style="">
+                            <a href="javascript: void(0);" class="series-link">
+                                Smart Surveillance
+                                <span class="icon icon-down"></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a
+                                            href="/smart-ai-surveillance-cctv-solution.html">Overview</a></li>
+                                    <li class="series-item">
+                                        <a href="javascript:void()">Dome Camera</a>
+                                        <div class="sub-nav">
+                                            <ul>
+                                                <li><a href="/5mp-uhd-ai-smart-mini-dome-indoor-ir-cctv-camera.html"
+                                                        class="series-item">iCam-D25</a></li>
+                                                <li><a href="/4k-uhd-ai-smart-dome-outdoor-ir-cctv-camera.html"
+                                                        class="series-item">iCam-D48Z</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="javascript:void()">Bullet Camera</a>
+                                        <div class="sub-nav">
+                                            <ul>
+                                                <li><a href="/5mp-uhd-ai-smart-bullet-outdoor-ir-cctv-camera.html"
+                                                        class="series-item">iCam-B25</a></li>
+                                                <li><a href="/4k-uhd-ai-smart-bullet-outdoor-ir-cctv-camera.html"
+                                                        class="series-item">iCam-B38Z</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="javascript:void()">Fisheye Camera</a>
+                                        <div class="sub-nav">
+                                            <ul>
+                                                <li><a href="/4k-fhd-ai-smart-fisheye-indoor-outdoor-cctv-camera.html"
+                                                        class="series-item">iCam-D48F</a></li>
+                                                <li><a href="/8mp-uhd-ai-smart-mini-fisheye-cctv-camera.html"
+                                                        class="series-item">iCam-D28F</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="javascript:void()">NVR</a>
+                                        <div class="sub-nav">
+                                            <ul>
+                                                <li><a href="/4k-smart-dual-hdd-32-channels-nvr.html"
+                                                        class="series-item">Live Station 2</a></li>
+                                                <li><a href="/4k-smart-4-hdd-64-channels-nvr.html"
+                                                        class="series-item">Live Station 4</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="series-item"><a href="/product.html?tag=Accessories">Accessories</a></li>
+                                    <li class="series-item"><a
+                                            href="/smart-ai-surveillance-cctv-system-intellisight">VMS &amp; Mobile
+                                            App</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item support-nav " style="">
+                            <a href="javascript: void(0);" class="series-link">
+                                Solutions
+                                <span class="icon icon-down"></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a
+                                            href="/cloud-based-time-and-attendance-solution-crosschex-cloud">Smart
+                                            Cloud-based Time Attendance</a></li>
+                                    <li class="series-item"><a href="/crosschex-mobile">Mobile Access</a></li>
+                                    <li class="series-item"><a
+                                            href="/facial-recognition-access-control-and-time-attendance-solution">Face
+                                            Recognition</a></li>
+                                    <li class="series-item"><a href="/miracle-series.html">Outdoor Access Control</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item support-nav"><a href="javascript: void(0);" class="series-link">
+                                Partner <span class="icon icon-down"></span> </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item">
+                                        <a href="/be-partner.html">Anviz Partner Program</a>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="/form/become-a-distributor.html">Anviz Distributor Partner</a>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="/form/become-a-technology-partner.html">Anviz Technology Partner</a>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="/form/become-a-service-provider.html">Anviz Service Provider</a>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="/project-registration-program.html">Project Registration Program</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item  ">
+                            <a href="/technology.html" class="series-link">
+                                Technology </a>
+
+                        </li>
+
+                        <li class="series-item space-item">&nbsp;</li>
+                        <li class="series-item support-nav ">
+                            <a href="javascript: void(0);" class="series-link">
+                                Support
+                                <span class="icon icon-down"></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a href="/support-2023.html">Help Center</a></li>
+                                    <li class="series-item"><a href="/faq.html">FAQ</a></li>
+                                    <li class="series-item"><a href="/activity/index.html?tab_id=2">Training</a></li>
+                                    <li class="series-item"><a href="https://community.anviz.com/">Community</a></li>
+                                    <li class="series-item"><a href="/download.html">Download</a></li>
+                                    <li class="series-item"><a href="/account/ticket/add.html">Trouble Tickets</a></li>
+                                    <li class="series-item"><a href="/warranty-policy.html">Warranty &amp; RMA</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="series-item login">
+                            <a class="Login series-link" href="/login.html">
+                                <span class="icon icon-user"></span> </a>
+                        </li>
+
+                        <li class="series-item search-bar-warp">
+                            <div class="search-bar">
+                                <span class="icon-search icon-ff fs-16"></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="search-form search-animation series-item">
+                        <form id="topSearchForm" action="/search.html" method="get">
+                            <div class="search-input">
+                                <span class="icon-search search_btn fs-16"></span>
+                                <input type="text" class="form-control" name="keyword" autofocus="autofocus"
+                                    placeholder="Search...">
+                                <div class="keywords">
+                                    <a href="/search/index.html?keyword=FaceDeep" class="search-title">
+                                        FaceDeep </a>
+                                    <a href="/search/index.html?keyword=CrossChex" class="search-title">
+                                        CrossChex </a>
+                                </div>
+                            </div>
+                        </form>
+                        <a class="close icon-close"></a>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="language-list">
+                <span class="title">English</span>
+                <span class="icon icon-right"></span>
+            </div>
+        </header>
+        <!-- content -->
+        <div class="content" id="containerBody">
+           <div class="solution">
+                <div class="solution-banner schoolyard-banner">
+                    <img src="https://www.anviz.com/file/files/3933/schoolyard-bg.jpeg" alt="" class="bg">
+                    <div class="info max-1440">
+                        <h1>Securing Students, Staff, and Valuable Assets in Education</h1>
+                        <h2>Create more effective security plans using cloud-based access control & video surveillance technology</h2>
+                    </div>
+                </div>
+                
+                <div class="solution-technology mb-5">
+                    <div class="info max-1440">
+                        <h2 class="mb-2">We support the entire education journey</h2>
+                        <p>An integrated security solution from Anviz supports the entire education journey. From K-12 schools to community colleges, universities, and graduate schools – we work with institutions of all sizes to deliver the education security solution you need to be future-ready.</p>
+                        <ul class="list mt-2">
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3934/schoolyard01.jpeg" alt="">
+                                <h5>Early Childhood Education</h5>
+                                <p>Grant access to approved employees and parents and create a smooth school safety solution that gives parents peace of mind.</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3935/schoolyard02.jpeg" alt="">
+                                <h5>K-12 Education</h5>
+                                <p>Prevent unauthorized intruders, monitor access points for risks and initiate campus lockdowns during an emergency.</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3936/schoolyard03.jpeg" alt="">
+                                <h5>Colleges and Universities</h5>
+                                <p>Promote campus safety from dorms to classrooms and everything in between.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-school-features mb-5">
+                    <div class="info max-1440">
+                        <ul class="list">
+                            <li class="item tex">
+                                <h2>Benefits of Anviz solution for your campus or school security</h2>
+                                <p>Anviz’s powerful, cloud-based systems for K-12 and university campuses streamlines school security management and empowers educators with: </p>
+                                <ul class="text">
+                                    <li>
+                                        <h5>Security & Safety</h5>
+                                        <p>Our connected video surveillance, audio, and access control technology give you better visibility, better control and better communication across your school district or campus. With intelligent analytics that provide early threat detection, we help you prevent or mitigate security incidents before they escalate.</p>
+                                    </li>
+                                    <li>
+                                        <h5>Flexibility & Scalability</h5>
+                                        <p>Anviz integrated solutions are scalable and flexible, allowing you to easily integrate your access control solution with other campus services like cashless vending, meal plans, printing, library systems, transportation services, and more—all on one unified management platform.</p>
+                                    </li>
+                                    <li>
+                                        <h5>Students & Staff experiences</h5>
+                                        <p>Touchless and mobile technology to provide your staff and students with a safer, healthier, and more convenient experience. Minimize admin distractions for staff and students to help them get on with the central task of learning. Anviz creates a welcoming and secure campus environment with a solution that is designed to seamlessly fit into its surroundings.</p>
+                                    </li>
+                                    <li>
+                                        <h5>Simplified management</h5>
+                                        <p>To handle all the security and smart classroom needs, minimizing IT complexity and enhancing easy management while reducing costs is another top concern. Anviz can help here with a unique, highly efficient, "all-in-one" hardware and software architecture. Streamline campus access management to reduce costs and increase flexibility.</p>
+                                    </li>
+                                </ul>
+                                <a href="" class="anviz-primary-btn">Learn More</a>
+                            </li>
+                            <li class="item img">
+                                <img src="https://www.anviz.com/file/files/3943/schoolyard04.jpeg" alt="">
+                                <div class="info">
+                                    <h2>56%</h2>
+                                    <p>Schools, colleges and universities surveyed who rated their security technology as “not enough”.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-technology mb-5">
+                    <div class="info max-1440">
+                        <h2>What we offer</h2>
+                        <ul class="list mt-2">
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3920/business11.jpeg" alt="">
+                                <h5>Visitor Tracking</h5>
+                                <p>Campuses host parents, volunteers and guests – control access and track who is on site with Visitor Management.</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3921/business12.jpeg" alt="">
+                                <h5>Attendance management</h5>
+                                <p>Access your time and attendance data from any internet-connected device or download the mobile app for flexible deployment.</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3922/business13.jpeg" alt="">
+                                <h5>Smart access</h5>
+                                <p>Face recognition, smartphone and students smart card compatibility eliminates the risks and costs of lost keys</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3923/business14.jpeg" alt="">
+                                <h5>Parking management</h5>
+                                <p>Anviz offers a system for school buses that performs real-time identity authentication for drivers and passengers and transmits records to a headquarters server via 4G wireless connection</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3924/business15.jpeg" alt="">
+                                <h5>Health Management</h5>
+                                <p>Anviz contactless solution also provides an thermal temperature measurement for educational institutions that still require health checks.</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3925/business16.jpeg" alt="">
+                                <h5>Perimeter security management</h5>
+                                <p>Our technology helps you remotely monitor your perimeter and identify culprits if incidents do occur.</p>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="solution-technology mb-5">
+                    <div class="info max-1440">
+                        <h2>Our advantages</h2>
+                        <ul class="list mt-2">
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3937/schoolyard11.jpeg" alt="">
+                                <h5>Intelligent applications serve a variety of needs</h5>
+                                <p>Versatile and interactive applications for the construction of digital campuses with improved automation levels and enhanced security</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3938/schoolyard12.jpeg" alt="">
+                                <h5>Easy integration with third-party systems</h5>
+                                <p>Easily integrates with external infor-mation management systems or other third-party systems, adding to the diversity of educational resources and methods</p>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3939/schoolyard13.jpeg" alt="">
+                                <h5>One platform with visualized dashboard</h5>
+                                <p>One system unites all devices, applications and scenarios with a visualized education dashboard, helping management teams make quicker and smarter decisions</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="solution-technology mb-5">
+                    <div class="info max-1440">
+                        <h2>Our advantages</h2>
+                        <ul class="list mt-2">
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3940/schoolyard14.jpeg" alt="">
+                                <h5>Access Control</h5>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3941/schoolyard15.jpeg" alt="">
+                                <h5>Time Attendance</h5>
+                            </li>
+                            <li class="item">
+                                <img src="https://www.anviz.com/file/files/3942/schoolyard16.jpeg" alt="">
+                                <h5>Smart Surveillance</h5>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+     <!-- footer -->
+    <footer>
+        <div class="footer-box max-1440">
+            <div class="footer-header">
+                <ul class="links grid gap-10 grid-col-8">
+                    <li class="item">
+                        <a href="" class="title">Access Control</a>
+                        <ul class="sub-links">
+                            <li><a href="" class="sub-title">Face Series</a></li>
+                            <li><a href="" class="sub-title">C2 Series</a></li>
+                            <li><a href="" class="sub-title">M series</a></li>
+                            <li><a href="" class="sub-title">EP 30</a></li>
+                            <li><a href="" class="sub-title">VF 30</a></li>
+                            <li><a href="" class="sub-title">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="" class="title">Time Attendance</a>
+                        <ul class="sub-links">
+                            <li><a href="" class="sub-title">Face Series</a></li>
+                            <li><a href="" class="sub-title">W Series</a></li>
+                            <li><a href="" class="sub-title">EP300 Pro</a></li>
+                            <li><a href="" class="sub-title">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="" class="title">Surveillance</a>
+                        <ul class="sub-links">
+                            <li><a href="" class="sub-title">Dome Series</a></li>
+                            <li><a href="" class="sub-title">Bullet Series</a></li>
+                            <li><a href="" class="sub-title">Fisheye Series</a></li>
+                            <li><a href="" class="sub-title">Multi-sensors Series</a></li>
+                            <li><a href="" class="sub-title">PTZ Series</a></li>
+                            <li><a href="" class="sub-title">LPR Camera</a></li>
+                            <li><a href="" class="sub-title">NVR</a></li>
+                            <li><a href="" class="sub-title">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="" class="title">Solutions</a>
+                        <ul class="sub-links">
+                            <li><a href="" class="sub-title">CrossChex</a></li>
+                            <li><a href="" class="sub-title">IntelliSight</a></li>
+                            <li><a href="" class="sub-title">Face Recognition</a></li>
+                            <li><a href="" class="sub-title">Back to Office</a></li>
+                            <li><a href="" class="sub-title">Back to School</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="" class="title">Support</a>
+                        <ul class="sub-links">
+                            <li><a href="" class="sub-title">Download</a></li>
+                            <li><a href="" class="sub-title">FAQ</a></li>
+                            <li><a href="" class="sub-title">Warranty & RMA</a></li>
+                            <li><a href="" class="sub-title">Marketing Support</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="" class="title">About</a>
+                        <ul>
+                            <li><a href="" class="sub-title">Contact Us</a></li>
+                            <li><a href="" class="sub-title">Careers</a></li>
+                            <li><a href="" class="sub-title">Press</a></li>
+                            <li><a href="" class="sub-title">NDAA</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="" class="title">Community</a>
+                        <ul class="sub-links">
+                            <li><a href="" class="sub-title">Releases</a></li>
+                            <li><a href="" class="sub-title">How It Works</a></li>
+                            <li><a href="" class="sub-title">Feature Request</a></li>
+                            <li><a href="" class="sub-title">Early Access</a></li>
+                            <li><a href="" class="sub-title">Stories</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="" class="title">Partner</a>
+                        <ul class="sub-links">
+                            <li><a href="" class="sub-title">Find a Reseller</a></li>
+                            <li><a href="" class="sub-title">Service Provider</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-body">
+                <h2>Secure Workplace, Simplify Management</h2>
+                <ul>
+                    <li class="media-hot">
+                        <a href="https://twitter.com/anvizglobal" class="media-icon twitter" target="_blank">
+                            <span class="icon icon-twitter"></span>
+                        </a>
+                        <a href="https://www.facebook.com/AnvizHQ" class="media-icon facebook" target="_blank">
+                            <span class="icon icon-facebook"></span>
+                        </a>
+                        <a href="https://www.youtube.com/user/AnvizGlobalinc" class="media-icon youtobe" target="_blank">
+                            <span class="icon icon-youtobe"></span>
+                        </a>
+                        <a href="https://www.linkedin.com/company/shanghai-anviz-biometric-tech--co--ltd-?trk=tyah&amp;trkInfo=tas%3Aanviz%2Cidx%3A2-2-3" class="media-icon linkedin" target="_blank">
+                            <span class="icon icon-linkedin"></span>
+                        </a>
+                        <a href="https://www.instagram.com/anvizglobal/?igshid=1i42l3mcte7gz" class="media-icon instagram" target="_blank">
+                            <span class="icon icon-instagram"></span>
+                        </a>
+                    </li>
+                    <li class="stay-form">
+                        <h5>STAY IN Touch</h5>
+                        <form action="" class="subscription-form">
+                        <input type="text" placeholder="Email">
+                        <a href="" class="anviz-btn anviz-primary-btn anviz-primary-btn-new margin-t15">
+                            <span class="icon icon-a-emailentity"></span>
+                        </a>
+                        </form>
+                    </li>
+                    <li class="anviz-shop">
+                        <a href="" class="btn-link margin-t15">Shop on Anviz »</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <ul>
+                    <li>Copyright © 2023 Anviz Global Inc. All rights reserved. </li>
+                    <li>
+                        <a href="" class="btn-link">EN</a>
+                        <a href="" class="btn-link">Login In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../jquery-3.2.1.js"></script>
+    <script src="../swiper.min 5.4.5.js"></script>
+    <script>
+        $(function () {
+            /**
+             * 鼠标滚动到 smart-solution 时，smart-solution 脱离文档，执行 swiper 方法
+             * swiper 方法执行完之后，smart-solution 重新接入文档中按正常方式滚动
+            */
+
+            $(window).scroll(function() {
+                
+                var scrollTop = $(window).scrollTop();
+                var boxOffsetTop = $('#smartSolution').offset().top;
+                var boxHeight = $('#smartSolution').height();
+                var windowHeight = $(window).height();
+                var swiperTriggerOffsetTop = $('#MySolution').offset().top;
+                var screenW = screen.width;
+
+
+                if (scrollTop >= boxOffsetTop && scrollTop <= boxOffsetTop + boxHeight - windowHeight) {
+                    $('.smart-solution').addClass('sticky');
+                } else {
+                    $('.smart-solution').removeClass('sticky');
+                }
+
+                if (scrollTop >= swiperTriggerOffsetTop - windowHeight) {
+                    // 执行 swiper 的方法
+                    var solutionSwiper = new Swiper('.mySolution',{
+			            // loop : true,
+                        // autoplay : {
+                        //     delay:3000
+                        // },
+                        mousewheel: true,        
+                        pagination: {
+                            el: ".solution-pagination",
+                            clickable: true
+                        },
+                        on:{
+                            toEdge(){
+                                //最后一个 slider 时
+                                $('.smart-solution').removeClass('sticky');
+                                solutionSwiper.mousewheel.disable();
+                            },
+                        }
+                    });
+                }
+
+                if (scrollTop >= $(document).height() - windowHeight) {
+                    $('.smart-solution').removeClass('sticky');
+                }
+            });
+
+            /**
+             * safari 浏览器中，响应式模式下，导航菜单禁止使用hover事件
+             * 1. 检测用户使用的浏览器和设备类型
+             * 2. 如果用户使用 Safari 浏览器和移动设备，则禁用 hover 事件
+             * 3. 或者您可以使用 CSS 来禁用 hover 效果
+            */
+            var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+            if (isSafari && isMobile) {
+                $('header .series-pro-nav series-item').off("mouseenter mouseleave");
+            };
+
+            /**
+             * safari 浏览器中，响应式模式下，iphone 手机点击无效
+             */
+             $('header .series-pro-nav series-item').on("touchend", function(event) {
+                // 阻止默认行为，避免触发 click 事件
+                event.preventDefault();
+                // 处理点击事件的逻辑
+            });
+
+             //顶部搜索栏,如果长度小于2，就不允许搜索,如：m5就可以搜索
+            jQuery('#topSearchForm').submit(function (e) {
+                var keyword = jQuery('[name="keyword"]', this).val();
+                if (keyword.length < 2) {
+                    jQuery('.icon-search', this).showError('keyword', $.i18n.map['topNav.error.search']);
+                    return false;
+                }
+            });
+
+            //用户中心 my-anviz 移动端导航
+            jQuery(".fixed-menu .icon-menu").click(function () {
+                jQuery("body").toggleClass("show-sidebar no-scroll");
+            });
+            jQuery('.full').click(function () {
+                jQuery("body").removeClass("show-sidebar no-scroll");
+            });
+            //手机端点击左侧导航栏菜单按钮出现菜单栏
+            $('.nav-content .js-content').mouseleave(function () {
+                var index = $(this).attr('data-index');
+                $('.nav-content .js-content').removeClass('active');
+            });
+            $('.js-header-item').on('click', '.menu-btn', function () {
+                $(this).toggleClass('active-menu');
+                $('header').toggleClass('mobile');
+                $('body').toggleClass('no-scroll');
+                $('html').toggleClass('ac-gn-noscroll');
+                $('html').toggleClass('ac-gn-noscroll-long');
+            });
+
+            //窗口滚动超过35px时顶部导航栏fixed定位
+            window.onscroll = function () {
+                if ($(this).scrollTop() >= 35) {
+                    $(".product-nav").addClass("scroll-active")
+                } else {
+                    $(".product-nav").removeClass("scroll-active")
+                }
+                ;
+            };
+
+            //浏览器窗口变化后需要做的事情
+            window.onresize = function () {
+
+                if ($(this).width() > 1240 && $(".menu-btn").hasClass('active-menu')) {
+                    $(".menu-btn").click();
+                }
+                if ($(this).width() <= 1240 && $(".product-nav").hasClass('show')) {
+                    $(".show>.search-form>.close").click();
+                }
+            };
+
+            //导航栏鼠标移入去除border
+            $(".product-nav").mouseover(function () {
+                $(this).css("border", "none")
+            });
+
+            //判断页面有无class="rotation_chart"(即为判断有无轮播图)给content添加border
+            if ($('.rotation_chart').length > 0) {
+                $(".content").css({
+                    "border-top": "none"
+                });
+                $('.page-banner-info').css({
+                    'padding-top': '8%'
+                });
+                $(".content").removeClass('rotation_chart');
+            } else {
+                // $("body > .content").css({
+                //     "border-top": "55px solid #4a4a4a"
+                // })
+            };
+
+            //页面刷新时保持顶部导航栏状态
+            window.onload = function () {
+                if ($(this).scrollTop() >= 35) {
+                    $(".product-nav").addClass("scroll-active")
+                } else {
+                    $(".product-nav").removeClass("scroll-active")
+                }
+                ;
+            };
+
+            //顶部导航栏语言切换
+            $('.top-nav .language').click(function () {
+                $(this).parents('.nav-series-list').toggleClass("language-active");
+            });
+            $('.series-pro-nav .language').hover(function () {
+                $(this).toggleClass('mobile-hover');
+            });
+
+            //顶部导航栏搜索框点击X按钮关闭搜索框
+            $(".search-bar, .search-form .close").click(function () {
+                $(".product-nav").toggleClass("show");
+                $(".product-nav .search-form form .search-input .form-control").val("")
+            });
+
+            //手机端导航栏SOLUTIONS和SUPPORT点击事件
+            $(".support-nav").click(function () {
+                $(this).toggleClass("mobile-hover").siblings().removeClass("mobile-hover");
+                $(this).children(".sub-nav").toggleClass("sub-nav-select").parent().siblings().children(".sub-nav").removeClass("sub-nav-select");
+            });
+
+            //判断当前视口的宽度
+            if ($(window).width() >= 851) {
+                $('header').removeClass('mobile')
+            }
+        });
+
+
+        // 禁止页面滚动
+        function unableScroll() {
+            var top = $(document).scrollTop();
+                $(document).on('scroll.unable',function (e) {
+                $(document).scrollTop(top);
+            })
+        }
+        // 解禁页面滚动
+        function enableScroll() {
+            $(document).unbind("scroll.unable");
+        };
+
+        var swiper = new Swiper(".myMobileSolution", {
+			noSwiping: true,
+            autoplay:true,
+			loop : true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			breakpoints: {
+				850: {
+					slidesPerView: 1,
+					spaceBetween: 30,
+				},
+                768:{
+                    slidesPerView: 1,
+					spaceBetween: 30,
+                }
+			},
+      });
+   
+        var swiper = new Swiper(".myUnmatched", {
+                autoplay:true,
+                effect: 'fade',
+                loop:true,
+                pagination: {
+                el: ".industry-pagination",
+                clickable: true,
+                renderBullet: function (index, className){
+                    let iconName = '';
+                    let icon = '';
+                    switch(index){
+                    case 0:
+                        icon = 'icon-a-realestate';
+                        iconName = 'Commercial Real Estate';
+                        iconhref = '';
+                        break;
+                    case 1:
+                        icon = 'icon-a-manufactur';
+                        iconName = 'Manufacturing Facilities';
+                        iconhref = '';
+                        break;
+                    case 2:
+                        icon = 'icon-a-education';
+                        iconName = 'Education';
+                        iconhref = '';
+                        break;
+                    case 3:
+                        icon = 'icon-a-medical';
+                        iconName = 'Medical Services';
+                        iconhref = '';
+                        break;
+                    case 4:
+                        icon = 'icon-a-retail';
+                        iconName = 'Retail';
+                        iconhref = '';
+                        break;
+                    case 5:
+                        icon = 'icon-a-government';
+                        iconName = 'Government';
+                        iconhref = '';
+                        break;
+                    default:
+                        icon = 'icon-a-realestate';
+                        iconName = 'Commercial Real Estate';
+                        iconhref = '';
+                    }
+                    return `<li class=${className}><ul class="sub"><li><span class=${icon}></span><h5>${iconName}</h5></li><li class="a-learn-more"><a href="${iconhref}" class="link-btn" target="_blank">Learn More > </a></li></ul></div>`
+                }
+                },
+            });
+
+    </script>
+</body>
+
+</html>

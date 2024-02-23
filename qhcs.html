@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .tabs {
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background-color: #bbb;
+        }
+    </style>
+    <div class="tabs level1">
+        <div class="tab active">Tab 1</div>
+        <div class="tab">Tab 2</div>
+        <div class="tab">Tab 3</div>
+    </div>
+    <div class="tabs-group">
+        <div class="tabs level2">
+          <div class="tab active">Subtab 1-1</div>
+          <div class="tab">Subtab 1-2</div>
+          <div class="tab">Subtab 1-3</div>
+        </div>
+        <div class="tabs level2" style="display: none;">
+          <div class="tab active">Subtab 2-1</div>
+          <div class="tab">Subtab 2-2</div>
+          <div class="tab">Subtab 2-3</div>
+        </div>
+        ...
+      </div>
+    <!-- <div class="tabs level2">
+        <div class="tab active">Subtab 1-1</div>
+        <div class="tab">Subtab 1-2</div>
+        <div class="tab">Subtab 1-3</div>
+    </div>
+    <div class="tabs level3">
+        <div class="tab active">Subtab 2-1</div>
+        <div class="tab">Subtab 2-2</div>
+        <div class="tab">Subtab 2-3</div>
+    </div>
+    <div class="tabs level4">
+        <div class="tab active">Subtab 3-1</div>
+        <div class="tab">Subtab 3-2</div>
+        <div class="tab">Subtab 3-3</div>
+    </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.tab').click(function () {
+                var $this = $(this);
+                var $tabs = $this.closest('.tabs');
+                var index = $this.index();
+
+                $tabs.find('.tab').removeClass('active');
+                $this.addClass('active');
+                if ($tabs.hasClass('level1')) {
+                    $('.tabs-group').each(function () {
+                        $(this).find('.tabs').hide().eq(index).show().find('.tab:first').click();
+                    });
+                }
+                // if ($tabs.hasClass('level1')) {
+                //   $('.level2 .tab, .level3 .tab, .level4 .tab').removeClass('active').hide();
+                //   $('.level2 .tab').eq(index).addClass('active').show();
+                //   $('.level3 .tab:first, .level4 .tab:first').addClass('active').show();
+                // } else if ($tabs.hasClass('level2')) {
+                //   $('.level3 .tab, .level4 .tab').removeClass('active').hide();
+                //   $('.level3 .tab').eq(index).addClass('active').show();
+                //   $('.level4 .tab:first').addClass('active').show();
+                // } else if ($tabs.hasClass('level3')) {
+                //   $('.level4 .tab').removeClass('active').hide();
+                //   $('.level4 .tab').eq(index).addClass('active').show();
+                // }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

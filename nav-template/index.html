@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css?v=1666583223">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css?v=1672293827">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css?v=1680838179s">
+    <link rel="stylesheet" href="../swiper 5.4.5.css">
+    <link rel="stylesheet" href="../fonts/anviz-font.css">
+    <!-- 导航模块样式 -->
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body class="width-1440">
+    <div class="content" id="containerBody">
+        <header class="nav-warp new-nav-warp">
+            <div class="top-nav top-nav-bg">
+                <ul class="mobile-header-nav">
+                    <li class="js-header-item">
+                        <div class="menu-btn">
+                            <span class="menubtn menubtn_linewrap_top">
+                                <span class="menubtn_line menubtn_line-top"></span>
+                            </span>
+                            <span class="menubtn menubtn_linewrap_bottom">
+                                <span class="menubtn_line menubtn_line-bottom"></span>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="js-header-item">
+                        <a href="/" data-ajax-progressing="top"><span class="icon icon-logo"></span></a>
+                    </li>
+                    <li class="js-header-item">
+                        <a href="/login.html" class="login">
+                            <i class="icon icon-user-login"></i>
+                        </a>
+                    </li>
+                </ul>
+                <img class="anviz-logo" src="https://www.anviz.com/static/img/logos/Anviz-logo.png" alt="" hidden="">
+                <div class="product-nav" style="border: none;">
+                    <ul class="series-pro-nav">
+                        <li class="logo series-item">
+                            <a href="/" data-ajax-progressing="top">
+                                <span class="icon icon-logo icon-logo-color"></span>
+                            </a>
+                        </li>
+                        <li class="series-item support-nav ">
+                            <a href="javascript: void(0);" class="series-link">
+                                Access Control
+                                <span class="icon icon-down"></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a href="/access-control-solution">Overview</a></li>
+                                    <li class="series-item"><a href="/crosschex-desk">CrossChex Standard</a></li>
+                                    <li class="series-item"><a
+                                            href="/product.html?tag=Biometric&amp;extraTag[]=Facial">Face Series</a>
+                                    </li>
+                                    <li class="series-item"><a href="/c2-series">C2 Series</a></li>
+                                    <li class="series-item"><a href="/miracle-series">M Series</a></li>
+                                    <li class="series-item"><a href="/vf30-pro">VF30 Pro</a></li>
+                                    <li class="series-item"><a href="/product.html?tag=Access%20control">Others</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item support-nav ">
+                            <a href="javascript: void(0);" class="series-link" style="">
+                                Time Attendance
+                                <span class="icon icon-down" style=""></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a href="/time-attendance-solution">Overview</a></li>
+                                    <li class="series-item"><a
+                                            href="/cloud-based-time-and-attendance-solution-crosschex-cloud">CrossChex
+                                            Cloud</a></li>
+                                    <li class="series-item"><a href="/wisdom-series">W Series</a></li>
+                                    <li class="series-item"><a href="/search.html?keyword=ep30">EP Series</a></li>
+                                    <li class="series-item"><a href="/product/a350-4g-wireless-time-clock.html">A350
+                                            Series</a></li>
+                                    <li class="series-item"><a href="/product.html">Others</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item support-nav " style="">
+                            <a href="javascript: void(0);" class="series-link">
+                                Smart Surveillance
+                                <span class="icon icon-down"></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a
+                                            href="/smart-ai-surveillance-cctv-solution.html">Overview</a></li>
+                                    <li class="series-item">
+                                        <a href="javascript:void()">Dome Camera</a>
+                                        <div class="sub-nav">
+                                            <ul>
+                                                <li><a href="/5mp-uhd-ai-smart-mini-dome-indoor-ir-cctv-camera.html"
+                                                        class="series-item">iCam-D25</a></li>
+                                                <li><a href="/4k-uhd-ai-smart-dome-outdoor-ir-cctv-camera.html"
+                                                        class="series-item">iCam-D48Z</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="javascript:void()">Bullet Camera</a>
+                                        <div class="sub-nav">
+                                            <ul>
+                                                <li><a href="/5mp-uhd-ai-smart-bullet-outdoor-ir-cctv-camera.html"
+                                                        class="series-item">iCam-B25</a></li>
+                                                <li><a href="/4k-uhd-ai-smart-bullet-outdoor-ir-cctv-camera.html"
+                                                        class="series-item">iCam-B38Z</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="javascript:void()">Fisheye Camera</a>
+                                        <div class="sub-nav">
+                                            <ul>
+                                                <li><a href="/4k-fhd-ai-smart-fisheye-indoor-outdoor-cctv-camera.html"
+                                                        class="series-item">iCam-D48F</a></li>
+                                                <li><a href="/8mp-uhd-ai-smart-mini-fisheye-cctv-camera.html"
+                                                        class="series-item">iCam-D28F</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="javascript:void()">NVR</a>
+                                        <div class="sub-nav">
+                                            <ul>
+                                                <li><a href="/4k-smart-dual-hdd-32-channels-nvr.html"
+                                                        class="series-item">Live Station 2</a></li>
+                                                <li><a href="/4k-smart-4-hdd-64-channels-nvr.html"
+                                                        class="series-item">Live Station 4</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="series-item"><a href="/product.html?tag=Accessories">Accessories</a></li>
+                                    <li class="series-item"><a
+                                            href="/smart-ai-surveillance-cctv-system-intellisight">VMS &amp; Mobile
+                                            App</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item support-nav " style="">
+                            <a href="javascript: void(0);" class="series-link">
+                                Solutions
+                                <span class="icon icon-down"></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a
+                                            href="/cloud-based-time-and-attendance-solution-crosschex-cloud">Smart
+                                            Cloud-based Time Attendance</a></li>
+                                    <li class="series-item"><a href="/crosschex-mobile">Mobile Access</a></li>
+                                    <li class="series-item"><a
+                                            href="/facial-recognition-access-control-and-time-attendance-solution">Face
+                                            Recognition</a></li>
+                                    <li class="series-item"><a href="/miracle-series.html">Outdoor Access Control</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item support-nav"><a href="javascript: void(0);" class="series-link">
+                                Partner <span class="icon icon-down"></span> </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item">
+                                        <a href="/be-partner.html">Anviz Partner Program</a>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="/form/become-a-distributor.html">Anviz Distributor Partner</a>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="/form/become-a-technology-partner.html">Anviz Technology Partner</a>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="/form/become-a-service-provider.html">Anviz Service Provider</a>
+                                    </li>
+                                    <li class="series-item">
+                                        <a href="/project-registration-program.html">Project Registration Program</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="series-item  ">
+                            <a href="/technology.html" class="series-link">
+                                Technology </a>
+
+                        </li>
+
+                        <li class="series-item space-item">&nbsp;</li>
+                        <li class="series-item support-nav ">
+                            <a href="javascript: void(0);" class="series-link">
+                                Support
+                                <span class="icon icon-down"></span>
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li class="series-item"><a href="/support-2023.html">Help Center</a></li>
+                                    <li class="series-item"><a href="/faq.html">FAQ</a></li>
+                                    <li class="series-item"><a href="/activity/index.html?tab_id=2">Training</a></li>
+                                    <li class="series-item"><a href="https://community.anviz.com/">Community</a></li>
+                                    <li class="series-item"><a href="/download.html">Download</a></li>
+                                    <li class="series-item"><a href="/account/ticket/add.html">Trouble Tickets</a></li>
+                                    <li class="series-item"><a href="/warranty-policy.html">Warranty &amp; RMA</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="series-item login">
+                            <a class="Login series-link" href="/login.html">
+                                <span class="icon icon-user"></span>Login </a>
+                        </li>
+
+                        <li class="series-item search-bar-warp">
+                            <div class="search-bar">
+                                <span class="icon-search icon-ff fs-16"></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="search-form search-animation series-item">
+                        <form id="topSearchForm" action="/search.html" method="get">
+                            <div class="search-input">
+                                <span class="icon-search search_btn fs-16"></span>
+                                <input type="text" class="form-control" name="keyword" autofocus="autofocus"
+                                    placeholder="Search...">
+                                <div class="keywords">
+                                    <a href="/search/index.html?keyword=FaceDeep" class="search-title">
+                                        FaceDeep </a>
+                                    <a href="/search/index.html?keyword=CrossChex" class="search-title">
+                                        CrossChex </a>
+                                </div>
+                            </div>
+                        </form>
+                        <a class="close icon-close"></a>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="language-list">
+                <span class="title">English</span>
+                <span class="icon icon-right"></span>
+            </div>
+        </header>
+    </div>
+    <script src="../jquery-3.2.1.js"></script>
+    <script>
+        // usage:
+        $(function () {
+
+            /**
+             * safari 浏览器中，响应式模式下，导航菜单禁止使用hover事件
+             * 1. 检测用户使用的浏览器和设备类型
+             * 2. 如果用户使用 Safari 浏览器和移动设备，则禁用 hover 事件
+             * 3. 或者您可以使用 CSS 来禁用 hover 效果
+            */
+            var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+            if (isSafari && isMobile) {
+                $('header .series-pro-nav series-item').off("mouseenter mouseleave");
+            };
+
+            /**
+             * safari 浏览器中，响应式模式下，iphone 手机点击无效
+             */
+             $('header .series-pro-nav series-item').on("touchend", function(event) {
+                // 阻止默认行为，避免触发 click 事件
+                event.preventDefault();
+                // 处理点击事件的逻辑
+            });
+
+             //顶部搜索栏,如果长度小于2，就不允许搜索,如：m5就可以搜索
+            jQuery('#topSearchForm').submit(function (e) {
+                var keyword = jQuery('[name="keyword"]', this).val();
+                if (keyword.length < 2) {
+                    jQuery('.icon-search', this).showError('keyword', $.i18n.map['topNav.error.search']);
+                    return false;
+                }
+            });
+
+            //用户中心 my-anviz 移动端导航
+            jQuery(".fixed-menu .icon-menu").click(function () {
+                jQuery("body").toggleClass("show-sidebar no-scroll");
+            });
+            jQuery('.full').click(function () {
+                jQuery("body").removeClass("show-sidebar no-scroll");
+            });
+            //手机端点击左侧导航栏菜单按钮出现菜单栏
+            $('.nav-content .js-content').mouseleave(function () {
+                var index = $(this).attr('data-index');
+                $('.nav-content .js-content').removeClass('active');
+            });
+            $('.js-header-item').on('click', '.menu-btn', function () {
+                $(this).toggleClass('active-menu');
+                $('header').toggleClass('mobile');
+                $('body').toggleClass('no-scroll');
+                $('html').toggleClass('ac-gn-noscroll');
+                $('html').toggleClass('ac-gn-noscroll-long');
+            });
+
+            //窗口滚动超过35px时顶部导航栏fixed定位
+            window.onscroll = function () {
+                if ($(this).scrollTop() >= 35) {
+                    $(".product-nav").addClass("scroll-active")
+                } else {
+                    $(".product-nav").removeClass("scroll-active")
+                }
+                ;
+            };
+
+            //浏览器窗口变化后需要做的事情
+            window.onresize = function () {
+
+                if ($(this).width() > 1240 && $(".menu-btn").hasClass('active-menu')) {
+                    $(".menu-btn").click();
+                }
+                if ($(this).width() <= 1240 && $(".product-nav").hasClass('show')) {
+                    $(".show>.search-form>.close").click();
+                }
+            };
+
+            //导航栏鼠标移入去除border
+            $(".product-nav").mouseover(function () {
+                $(this).css("border", "none")
+            });
+
+            //判断页面有无class="rotation_chart"(即为判断有无轮播图)给content添加border
+            if ($('.rotation_chart').length > 0) {
+                $(".content").css({
+                    "border-top": "none"
+                });
+                $('.page-banner-info').css({
+                    'padding-top': '8%'
+                });
+                $(".content").removeClass('rotation_chart');
+            } else {
+                // $("body > .content").css({
+                //     "border-top": "55px solid #4a4a4a"
+                // })
+            };
+
+            //页面刷新时保持顶部导航栏状态
+            window.onload = function () {
+                if ($(this).scrollTop() >= 35) {
+                    $(".product-nav").addClass("scroll-active")
+                } else {
+                    $(".product-nav").removeClass("scroll-active")
+                }
+                ;
+            };
+
+            //顶部导航栏语言切换
+            $('.top-nav .language').click(function () {
+                $(this).parents('.nav-series-list').toggleClass("language-active");
+            });
+            $('.series-pro-nav .language').hover(function () {
+                $(this).toggleClass('mobile-hover');
+            });
+
+            //顶部导航栏搜索框点击X按钮关闭搜索框
+            $(".search-bar, .search-form .close").click(function () {
+                $(".product-nav").toggleClass("show");
+                $(".product-nav .search-form form .search-input .form-control").val("")
+            });
+
+            //手机端导航栏SOLUTIONS和SUPPORT点击事件
+            $(".support-nav").click(function () {
+                $(this).toggleClass("mobile-hover").siblings().removeClass("mobile-hover");
+                $(this).children(".sub-nav").toggleClass("sub-nav-select").parent().siblings().children(".sub-nav").removeClass("sub-nav-select");
+            });
+
+            //判断当前视口的宽度
+            if ($(window).width() >= 851) {
+                $('header').removeClass('mobile')
+            }
+        })
+    </script>
+</body>
+
+</html>

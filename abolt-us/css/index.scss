@@ -1,0 +1,513 @@
+.template{
+    width: 100%;
+    height: auto;
+    &.about-us{
+        min-width: 850px;
+        margin: auto;
+        @media (max-width:850px){
+            min-width: 100%;
+            width: 100%;
+        }
+        h2{
+            margin-bottom: 1em;
+            text-align: center;
+        }
+        p{
+            margin-bottom: 16px;
+            text-align: left;
+        }
+        .banner{
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0;
+            &.header-banner{
+                height: 42.8vw;
+                background-image: url(https://www.anviz.com/file/files/3287/abolt-us-bg.jpg);
+                background-repeat: no-repeat;
+                background-position: top;
+                background-size: 100% auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                @media (max-width:850px){
+                    height: 600px;
+                    background-image: url(https://www.anviz.com/file/files/3288/about-us-mobile-bg.jpg);
+                }
+                h1,h3{
+                    color: #fff;
+                }
+                h1{
+                    font-weight: bold;
+                    font-size: 4.375rem;
+                    @media (max-width:850px){
+                        font-size: 1.875rem;
+                    }
+                }
+                h3{
+                    font-size: 1.875rem;
+                    @media (max-width:850px){
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+            &.overview{
+                padding: 4em 0;
+                text-align: center;
+            }
+            &.moments{
+                .years-box{
+                    width: 100%;
+                    height: auto;
+                    padding: 2em 0;
+                    .sub-title{
+                        color: #0068B7;
+                        font-size: 1.75rem;
+                        text-align: left;
+                        padding-bottom: 10px;
+                        margin-bottom: 0;
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        @media (max-width: 850px){
+                            text-align: center;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            width: 100%;
+                            height: 1px;
+                            background: #0068B7;
+                        }
+                    }
+                    .mobile-list{
+                        display: none;
+                        @media (max-width: 850px){
+                            display: block;
+                            overflow: hidden;
+                            position: relative;
+                            .myMoments{
+                                .swiper-slide{
+                                    .features{
+                                        margin: 2em auto;
+                                        max-width: 50%;
+                                    }
+                                    .des{
+                                        text-align: center;
+                                        max-width: 80%;
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .list{
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: space-between;
+                        @media (max-width: 850px){
+                            display: none;
+                        }
+                        .item{
+                            padding: 3em 0;
+                           flex: 1; 
+                           position: relative;
+                           &::before{
+                                content: "";
+                                position: absolute;
+                                width: 1px;
+                                height: 100px;
+                                top: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background: #0068B7;
+                            }
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                left: 50%;
+                                top: -5px;
+                                transform: translateX(-50%);
+                                display: block;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                background: #0068B7;
+                            }
+                           .features{
+                               max-width: 80%;
+                               margin: auto;
+                               margin-bottom: 1em;
+                               position: relative;
+                           }
+                           h4{
+                               color: #0068B7;
+                               text-align: center;
+                               font-size: 1rem;
+                               padding: 0 10px;
+                               line-height: 1.5;
+                           }
+                           &:nth-child(1){
+                                .features{
+                                    max-width: 60%;
+                                }
+                           }
+                           &:nth-child(2){
+                                top: 100px;
+                                .features{
+                                    max-width: 100%;
+                                }
+                                &::before{
+                                    content: "";
+                                    top: -100px;
+                                    height: 150px;
+                                }
+                                &::after{
+                                    content: "";
+                                    top:-105px;
+                                }
+                           }
+                           &:nth-child(5){
+                                top: -20px;
+                                .features{
+                                    max-width: 60%;
+                                }
+                                &::before{
+                                    content: "";
+                                    top: 20px;
+                                    height: 100px;
+                                }
+                                &::after{
+                                    content: "";
+                                    top:15px;
+                                }
+                            }
+                            &:nth-child(6){
+                                top: 120px;
+                                .features{
+                                    max-width: 110%;
+                                }
+                                &::before{
+                                    content: "";
+                                    top: -120px;
+                                    height: 200px;
+                                }
+                                &::after{
+                                    content: "";
+                                    top:-125px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.diffrent{
+                margin: 6em 0;
+                padding: 4em;
+                background: rgba(#000,.03);
+                @media (max-width:850px){
+                    margin: 0;
+                    padding: 4em 15px;
+                }
+                .map{
+                    padding: 3em 0;
+                    h3{
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                    .text-list{
+                        display: flex;
+                        justify-content: space-between;
+                        @media (max-width:850px){
+                            flex-wrap: wrap;
+                        }
+                        .item{
+                            flex: 1;
+                            padding: 1em;
+                            @media (max-width:850px){
+                                flex-basis: 25%;
+                            }
+                            h2{
+                                text-align: left;
+                                font-size: 3rem;
+                                font-weight: bold;
+                                margin-bottom: 15px;
+                                @media (max-width: 850px){
+                                    font-size: 1.5rem;
+                                }
+                            }
+                            p{
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+                .application{
+                    h3{
+                        text-align: center;
+                        font-weight: bold;
+                        @media (max-width:850px){
+                            text-align: left;
+                        }
+                    }
+                    p{
+                        text-align: center;
+                        @media (max-width:850px){
+                            text-align: left;
+                        }
+                    }
+                    .innovation{
+                        display: flex;
+                        height: 59.2vw;
+                        background: rgba(#000,.03) url(https://www.anviz.com/file/files/3305/Innovation-bg.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+                        @media (max-width:850px){
+                            height: auto;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            right: -70px;
+                            top: 0;
+                            bottom: 0;
+                            width: 20%;
+                            height: 100%;
+                            background-image: linear-gradient(to left,rgba(247,247,247,1) 30%,rgba(247,247,247,0.3) 70%);
+                            z-index: 10;
+                            @media (max-width:850px){
+                                right: 0;
+                            }
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            left: -70px;
+                            top: 0;
+                            bottom: 0;
+                            width: 20%;
+                            height: 100%;
+                            background-image: linear-gradient(to right,rgba(247,247,247,1) 30%,rgba(247,247,247,0.3) 70%);
+                            z-index: 10;
+                            @media (max-width:850px){
+                                left: 0;
+                            }
+                        }
+                        img{
+                            z-index: 12;
+                            &.pc{
+                                @media (max-width:850px){
+                                    display: none;
+                                }
+                            }
+                            &.mobile-img{
+                                display: none;
+                                @media (max-width:850px){
+                                    display: block;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.makes{
+                @media (max-width: 850px){
+                    padding: 2em 0;
+                }
+                .container{
+                    @media (min-width: 1200px){
+                        width: 100%;
+                        padding: 0;
+                    }
+                    @media (min-width: 992px){
+                        width: 100%;
+                        padding: 0;
+                    }
+                    @media (min-width: 768px){
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+                .title-info{
+                    @media (min-width: 1200px){
+                        width: 1170px;
+                        margin: auto;
+                    }
+                    @media (min-width: 992px){
+                        width: 970px;
+                        margin: auto;
+                    }
+                    @media (max-width: 850px){
+                        h2{
+                            text-align: center;
+                            padding: 0;
+                        }
+                    }
+                }
+                .makes-banner{
+                    margin: 2em 0;
+                    padding: 2em;
+                    height: 41.5vw;
+                    background-image: url(https://www.anviz.com/file/files/3308/build-bg.jpg);
+                    background-repeat: no-repeat;
+                    background-position: top;
+                    background-size: cover;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    @media (max-width: 1024px){
+                        height: auto;
+                    }
+                    .info{
+                        display: flex;
+                        max-width: 70%;
+                        margin: auto;
+                        @media (max-width: 850px){
+                            max-width: 100%;
+                        }
+                        strong,p{
+                            color: #fff;
+                        }
+                        strong{
+                            font-size: 4.5rem;
+                            @media (max-width: 850px){
+                                font-size: 2.25rem;
+                            }
+                        }
+                        p{
+                            font-size: 1.875rem;
+                            @media (max-width: 850px){
+                                font-size: 1.125rem;
+                            }
+                        }
+                    }
+                    .build-list{
+                        display: flex;
+                        width: 70%;
+                        max-width: 70%;
+                        margin: auto;
+                        @media (max-width: 1024px){
+                            flex-wrap: wrap;
+                        }
+                        @media (max-width: 850px){
+                            max-width: 100%;
+                            width: 100%;
+                        }
+                        .item{
+                            flex: 1;
+                            @media (max-width: 1024px){
+                                flex-basis: 35%;
+                            }
+                            img{
+                                margin: auto;
+                                margin-bottom: 1em;
+                            }
+                            p{
+                                text-align: center;
+                                margin-bottom: 0;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            &.partner-logos{
+                width: 100%;
+                height: auto;
+                padding: 4em 0;
+                background: rgba(#000,0.03);
+                .logos{
+                    margin: 2em auto 0;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    img{
+                        max-width: 9%;
+                        margin: 1em;
+                        flex: 1;
+                        @media (max-width:850px){
+                            max-width: 16%;
+                        }
+                    }
+                }
+            }
+            &.sustainability{
+                p{
+                    text-align: center;
+                }
+                padding: 4em 0;
+                h2{
+                    margin-bottom: 15px;
+                }
+                .list{
+                    width: 100%;
+                    height: auto;
+                    margin: 4em auto;
+                    .item{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        margin-bottom: 4em;
+                        .img-box,
+                        .info{
+                            flex: 1;
+                        }
+                        .info{
+                            padding-left: 2em;
+                            @media (max-width:850px){
+                                padding-left: 0;
+                            }
+                            h3,p{
+                                text-align: left;
+                            }
+                            h3{
+                                font-weight: bold;
+                            }
+                        }
+                        .img-box{
+                            border-radius: 1.5rem;
+                            overflow: hidden;
+                            @media (max-width:850px){
+                                margin-bottom: 1em;       
+                            }
+                            img{
+                                width: 100%;
+                                margin: 0;
+                                max-width: 100%;
+                                
+                            }
+                        }
+                        &:nth-child(odd){
+                            flex-direction: row;
+                            @media (max-width:850px){
+                                flex-direction: column;
+                            }
+                        }
+                        &:nth-child(2n){
+                            flex-direction: row-reverse;
+                            @media (max-width:850px){
+                                flex-direction: column;
+                            }
+                            .info{
+                                padding-right: 2em;
+                                padding-left: 0;
+                                @media (max-width:850px){
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

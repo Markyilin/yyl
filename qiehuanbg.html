@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    li {
+        list-style: none;
+    }
+
+    .tab-main {
+        width: 90vw;
+        height: 100vh;
+        margin: 5em auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .tab-main .tab-header {
+        width: 30%;
+        height: 100vh;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+    }
+
+    .tab-main .tab-header .tab-header-top {
+        width: 100%;
+        height: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tab-main .tab-header .tab-header-top h4 {
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #eee;
+    }
+
+    .tab-main .tab-header .tab-header-top .h4-active {
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+    }
+
+    .tab-main .tab-header .tab-header-main {
+        width: 100%;
+        height: 10%;
+    }
+
+    .tab-main .tab-header .tab-header-main ul {
+        width: 80%;
+        height: 100%;
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tab-main .tab-header .tab-header-main li {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        background-color: #9FA0A0;
+        border-radius: 50%;
+    }
+
+    .tab-main .tab-header .tab-header-main .top-active {
+        background-color: #00A0E9;
+    }
+
+    .tab-main .tab-content {
+        width: 60%;
+        height: auto;
+
+    }
+
+    .tab-main .tab-header .tab-right1,
+    .tab-main .tab-header .tab-right2 {
+        width: 30%;
+        margin-top: 10%;
+    }
+
+    .tab-main .tab-header a img {
+        width: 100%;
+
+    }
+
+    .tab-main .tab-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .box li {
+        float: left;
+        margin: 0 1px;
+        cursor: pointer;
+
+    }
+
+    .box img {
+        width: 100px;
+        opacity: .5;
+        transition: all .2s;
+        border: 2px solid transparent;
+    }
+
+    .box .bg-active2,
+    .box .bg-active {
+        opacity: 1;
+        border: 2px solid #FFD800;
+    }
+
+    .qiehuan {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .bgimg {
+        width: 100%;
+        height: 100%;
+        background: url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346);
+        background-size: 100%;
+        transition: background-image .5s;
+        background-repeat: no-repeat;
+    }
+
+    .bgimg2 {
+        width: 100%;
+        height: 100%;
+        background: url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp.jpg?v=1676604645);
+        background-size: 100%;
+        transition: background-image .5s;
+        background-repeat: no-repeat;
+    }
+
+    .tab-header-bottom {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 70%;
+    }
+</style>
+
+<body>
+    <div class="tab-main">
+        <div class="tab-content" id="tab-content">
+            <div class="bgimg" id="bgimg">
+                <li class="img-big"></li>
+                <li class="img-big"></li>
+                <li class="img-big"></li>
+                
+
+            </div>
+            <div class="bgimg2" id="
+wonsuo">
+                <li class="img-big"></li>
+                <li class="img-big"></li>
+                <li class="img-big"></li>
+            </div>
+        </div>
+        <div class="tab-header" id="tab-header">
+            <div class="tab-header-top">
+                <h4 class="Outdoor-tab tab-h4 h4-active">Outdoor</h4>
+                <h4 class="Indoor-tab tab-h4">Indoor</h4>
+            </div>
+            <div class="tab-header-main">
+                <a href="">
+                    <ul class="Outdoor-one main-one">
+                        <li class="top-active">
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/44641052ec087246a15e8551df3adfac.png?v=1695100093"
+                                alt="">
+                        </li>
+                        <li>
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/c66a342a6a630f339350510b3d8189f4.png?v=1695100093"
+                                alt="">
+                        </li>
+                        <li>
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/cd1e2fbd0b3964d23c0990e179c6c0d2.png?v=1695100093"
+                                alt="">
+                        </li>
+                    </ul>
+                </a>
+                <a href="">
+                    <ul class="Indoor-one main-one">
+                        <li class="top-active">
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/44641052ec087246a15e8551df3adfac.png?v=1695100093"
+                                alt="">
+                        </li>
+                        <li>
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/c66a342a6a630f339350510b3d8189f4.png?v=1695100093"
+                                alt="">
+                        </li>
+                        <li>
+                            <img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/cd1e2fbd0b3964d23c0990e179c6c0d2.png?v=1695100093"
+                                alt="">
+                        </li>
+                    </ul>
+                </a>
+            </div>
+            <div class="tab-header-bottom">
+                <div class="tab-right1 Outdoor-two">
+                    <a enter-class="Outdoor-a" href="javascript:;" class="on">
+                        <ul class="box Outdoor-box-one">
+                            <li><img class="bg-active"
+                                    src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor2.webp?v=1684199451"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor3.webp?v=1684199483"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor4.webp?v=1684199504"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor5.webp?v=1684199617"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor10.webp?v=1684199771"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor13.webp?v=1684202195"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195"
+                                    alt=""></li>
+                        </ul>
+                        <ul class="box Outdoor-box-two">
+                            <li><img class="bg-active"
+                                    src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor2.webp?v=1684199451"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor3.webp?v=1684199483"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor4.webp?v=1684199504"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor5.webp?v=1684199617"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor10.webp?v=1684199771"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor13.webp?v=1684202195"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195"
+                                    alt=""></li>
+                        </ul>
+                        <ul class="box Outdoor-box-three">
+                            <li><img class="bg-active"
+                                    src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor2.webp?v=1684199451"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor3.webp?v=1684199483"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor4.webp?v=1684199504"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor5.webp?v=1684199617"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor10.webp?v=1684199771"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor13.webp?v=1684202195"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195"
+                                    alt=""></li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="tab-right2 Indoor-two">
+                    <a class="Indoor-a" href="javascript:;">
+                        <ul class="box Indoor-box-one">
+                            <li><img class="bg-active2"
+                                    src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-270140.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-298946.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-265807.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-356827.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Which-product-suits-you-best.jpg?v=1676534077"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Which-product-suits-you-best1.jpg?v=1676534077"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195"
+                                    alt=""></li>
+                        </ul>
+                        <ul class="box Indoor-box-two">
+                            <li><img class="bg-active2"
+                                    src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-270140.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-298946.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-265807.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-356827.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Which-product-suits-you-best.jpg?v=1676534077"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Which-product-suits-you-best1.jpg?v=1676534077"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195"
+                                    alt=""></li>
+                        </ul>
+                        <ul class="box Indoor-box-three">
+                            <li><img class="bg-active2"
+                                    src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-270140.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-298946.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-265807.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp-356827.jpg?v=1676604645"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Which-product-suits-you-best.jpg?v=1676534077"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/Which-product-suits-you-best1.jpg?v=1676534077"
+                                    alt=""></li>
+                            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195"
+                                    alt=""></li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="qiehuan">
+        <div class="bgimg"></div>
+        <ul class="box">
+            <li ><img class="bg-active" src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346" alt=""></li>
+            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor2.webp?v=1684199451" alt=""></li>
+            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor3.webp?v=1684199483" alt=""></li>
+            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor4.webp?v=1684199504" alt=""></li>
+            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor5.webp?v=1684199617" alt=""></li>
+            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor10.webp?v=1684199771" alt=""></li>
+            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor13.webp?v=1684202195" alt=""></li>
+            <li><img src="https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor14.webp?v=1684202195" alt=""></li>
+        </ul>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            var $imgs = $('.box-one img');
+            $imgs.on('click', function () {
+                // 移除所有图片的.bg-active样式
+                $imgs.removeClass('bg-active');
+                // 添加.bg-active样式到点击的图片
+                $(this).addClass('bg-active');
+                // 设置背景图片
+                $('.bgimg').css('backgroundImage', 'url(' + $(this).attr('src') + ')');
+            });
+            var $imgs2 = $('.box-two img');
+            $imgs2.on('click', function () {
+                // 移除所有图片的.bg-active样式
+                $imgs2.removeClass('bg-active2');
+                // 添加.bg-active样式到点击的图片
+                $(this).addClass('bg-active2');
+                // 设置背景图片
+                $('.bgimg2').css('backgroundImage', 'url(' + $(this).attr('src') + ')');
+            });
+            var $h4 = $('.tab-right1 h4');
+            $h4.on('click', function () {
+                // 设置背景图片
+                $('.box-one').css('display', 'none');
+                $('.bgimg').css('display', 'none');
+            });
+        });
+    </script> -->
+</body>
+<script>
+    $(document).ready(function () {
+        // 初始状态，显示Outdoor选项卡内容，隐藏Indoor选项卡内容
+        $('.tab-right1, .Outdoor-one, .Outdoor-box-one').show();
+        $('.Outdoor-box-two, .Outdoor-box-three').hide();
+        $('.tab-right2, .Indoor-one, .Indoor-box-one, .bgimg2, .bgimg3').hide();
+
+        // 默认显示第一个Outdoor选项卡项目
+        $('.Outdoor-tab').addClass('h4-active');
+        $('.Outdoor-one li:first-child').addClass('top-active');
+        $('.Outdoor-box-one:first-child, .Outdoor-box-two:first-child, .Outdoor-box-three:first-child').show();
+        // $('#tab-content .bgimg').css('background-image', 'url(' + $('.Outdoor-one li:first-child img').attr('src') + ')');
+        $('.tab-content > div.Outdoor-box-one:first-child').show();
+        $('.tab-content > div.Outdoor-box-two:first-child, .tab-content > div.Outdoor-box-three:first-child, .tab-content > div.Indoor-box-one:first-child, .tab-content > div.Indoor-box-two:first-child, .tab-content > div.Indoor-box-three:first-child').hide();
+
+        // 点击Outdoor-tab时
+        $('.Outdoor-tab').on('click', function () {
+            $('.tab-h4').removeClass('h4-active');
+            $(this).addClass('h4-active');
+            // 显示Outdoor选项卡内容，隐藏Indoor选项卡内容
+            $('.tab-right1, .Outdoor-one').show();
+            $('.tab-right2, .Indoor-one').hide();
+            // 默认显示第一个Outdoor选项卡项目
+            $('.Outdoor-one li:first-child').addClass('top-active');
+            $('.Outdoor-box-one:first-child, .Outdoor-box-two:first-child, .Outdoor-box-three:first-child').show();
+            $('#tab-content .bgimg').css('background-image', 'url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/outdoor1.webp?v=1684199346)');
+            $('#tab-content .bgimg').style('transition:background-image .5s;')
+            $('.tab-content > div.Outdoor-box-one:first-child').show();
+            $('.tab-content > div.Outdoor-box-two:first-child, .tab-content > div.Outdoor-box-three:first-child, .tab-content > div.Indoor-box-one:first-child, .tab-content > div.Indoor-box-two:first-child, .tab-content > div.Indoor-box-three:first-child').hide();
+        });
+
+        // 点击Indoor-tab时
+        $('.Indoor-tab').on('click', function () {
+            $('.tab-h4').removeClass('h4-active');
+            $(this).addClass('h4-active');
+            // 显示Indoor选项卡内容，隐藏Outdoor选项卡内容
+            $('.tab-right2, .Indoor-one, .Indoor-box-one').show();
+            $('.tab-right1, .Outdoor-one').hide();
+            $('.bgimg2, .bgimg3').hide();
+        $('.Indoor-box-two, .Indoor-box-three').hide();
+            // 默认显示第一个Indoor选项卡项目
+            $('.Indoor-one li:first-child').addClass('top-active');
+            $('.Indoor-box-one:first-child, .Indoor-box-two:first-child, .Indoor-box-three:first-child').show();
+            $('#tab-content .bgimg').css('background-image', 'url(https://cdn.shopifycdn.net/s/files/1/0795/7689/files/wecom-temp.jpg?v=1676604645)');
+            $('.tab-content > div.Indoor-box-one:first-child').show();
+            $('.tab-content > div.Indoor-box-two:first-child, .tab-content > div.Indoor-box-three:first-child, .tab-content > div.Outdoor-box-one:first-child, .tab-content > div.Outdoor-box-two:first-child, .tab-content > div.Outdoor-box-three:first-child').hide();
+        });
+
+        // 点击.Outdoor-one和.Indoor-one里的li时添加top-active类
+        $('.Outdoor-one li, .Indoor-one li').on('click', function () {
+            $('.Outdoor-one li, .Indoor-one li').removeClass('top-active');
+            $(this).addClass('top-active');
+            // 获取点击的li的索引
+            var index = $(this).index();
+            // 隐藏所有Outdoor-box和Indoor-box
+            $('.Outdoor-box-one, .Outdoor-box-two, .Outdoor-box-three, .Indoor-box-one, .Indoor-box-two, .Indoor-box-three').hide();
+
+            // 显示对应的Outdoor-box或Indoor-box
+            $('.Outdoor-box-one:eq(' + index + '), .Outdoor-box-two:eq(' + index + '), .Outdoor-box-three:eq(' + index + '), .Indoor-box-one:eq(' + index + '), .Indoor-box-two:eq(' + index + '), .Indoor-box-three:eq(' + index + ')').show();
+
+            // 切换背景图片
+            var imgUrl = $(this).find('img').attr('src');
+            $('#tab-content .bgimg').css('background-image', 'url(' + imgUrl + ')');
+
+            // 显示对应的.tab-content里的div，隐藏其他的
+            $('.tab-content > div').hide();
+            $('.tab-content > div.Outdoor-box-one:eq(' + index + '), .tab-content > div.Outdoor-box-two:eq(' + index + '), .tab-content > div.Outdoor-box-three:eq(' + index + '), .tab-content > div.Indoor-box-one:eq(' + index + '), .tab-content > div.Indoor-box-two:eq(' + index + '), .tab-content > div.Indoor-box-three:eq(' + index + ')').show();
+        });
+
+// 默认显示第一个Outdoor选项卡项目
+$('.Outdoor-tab').addClass('h4-active');
+    $('.Outdoor-one li:first-child').addClass('top-active');
+    $('.Outdoor-box-one:first-child').show();
+    $('#tab-content .bgimg').css('background-image', 'url(' + $('.Outdoor-one li:first-child img').attr('src') + ')');
+    $('.tab-content > div.Outdoor-box-one:first-child').show();
+    $('.tab-content > div.Outdoor-box-two:first-child, .tab-content > div.Outdoor-box-three:first-child, .tab-content > div.Indoor-box-one:first-child, .tab-content > div.Indoor-box-two:first-child, .tab-content > div.Indoor-box-three:first-child').hide();
+
+    // 点击Outdoor-tab时
+    $('.Outdoor-tab').on('click', function () {
+        $('.tab-h4').removeClass('h4-active');
+        $(this).addClass('h4-active');
+        // 显示Outdoor选项卡内容，隐藏Indoor选项卡内容
+        $('.tab-right1, .Outdoor-one').show();
+        $('.tab-right2, .Indoor-one').hide();
+        // 默认显示第一个Outdoor选项卡项目
+        $('.Outdoor-one li:first-child').addClass('top-active');
+        $('.Outdoor-box-one:first-child').show();
+        $('#tab-content .bgimg').css('background-image', 'url(' + $('.Outdoor-one li:first-child img').attr('src') + ')');
+        $('.tab-content > div.Outdoor-box-one:first-child').show();
+        $('.tab-content > div.Outdoor-box-two:first-child, .tab-content > div.Outdoor-box-three:first-child, .tab-content > div.Indoor-box-one:first-child, .tab-content > div.Indoor-box-two:first-child, .tab-content > div.Indoor-box-three:first-child').hide();
+    });
+
+    // 点击Indoor-tab时
+    $('.Indoor-tab').on('click', function () {
+        $('.tab-h4').removeClass('h4-active');
+        $(this).addClass('h4-active');
+        // 显示Indoor选项卡内容，隐藏Outdoor选项卡内容
+        $('.tab-right2, .Indoor-one').show();
+        $('.tab-right1, .Outdoor-one').hide();
+        // 默认显示第一个Indoor选项卡项目
+        $('.Indoor-one li:first-child').addClass('top-active');
+        $('.Indoor-box-one:first-child').show();
+        $('#tab-content .bgimg').css('background-image', 'url(' + $('.Indoor-one li:first-child img').attr('src') + ')');
+        $('.tab-content > div.Indoor-box-one:first-child').show();
+        $('.tab-content > div.Outdoor-box-one:first-child, .tab-content > div.Outdoor-box-two:first-child, .tab-content > div.Outdoor-box-three:first-child, .tab-content > div.Indoor-box-two:first-child, .tab-content > div.Indoor-box-three:first-child').hide();
+    });
+
+    // 点击.Outdoor-one和.Indoor-one里的li时添加top-active类
+    $('.Outdoor-one li, .Indoor-one li').on('click', function () {
+        $('.Outdoor-one li, .Indoor-one li').removeClass('top-active');
+        $(this).addClass('top-active');
+
+        // 获取点击的li的索引
+        var index = $(this).index();
+
+        // 隐藏所有Outdoor-box和Indoor-box
+        $('.Outdoor-box-one, .Outdoor-box-two, .Outdoor-box-three, .Indoor-box-one, .Indoor-box-two, .Indoor-box-three').hide();
+
+        // 显示对应的Outdoor-box或Indoor-box
+        if ($(this).parent().hasClass('Outdoor-one')) {
+            $('.Outdoor-box-one:eq(' + index + ')').show();
+            $('#tab-content .bgimg').css('background-image', 'url(' + $('.Outdoor-box-one:eq(' + index + ') img').attr('src') + ')');
+            $('.tab-content > div.Outdoor-box-one:eq(' + index + ')').show();
+        } else {
+            $('.Indoor-box-one:eq(' + index + ')').show();
+            $('#tab-content .bgimg').css('background-image', 'url(' + $('.Indoor-box-one:eq(' + index + ') img').attr('src') + ')');
+            $('.tab-content > div.Indoor-box-one:eq(' + index + ')').show();
+        }
+
+        $('.tab-content > div.Outdoor-box-two:eq(' + index + '), .tab-content > div.Outdoor-box-three:eq(' + index + '), .tab-content > div.Indoor-box-two:eq(' + index + '), .tab-content > div.Indoor-box-three:eq(' + index + ')').hide();
+    });
+
+    // 点击.Outdoor-box-one, .Outdoor-box-two, .Outdoor-box-three, .Indoor-box-one, .Indoor-box-two, .Indoor-box-three里的图片时切换背景图片
+    $('.box img').on('click', function () {
+        var imgUrl = $(this).attr('src');
+        $('#tab-content .bgimg, #tab-content .bgimg2, #tab-content .bgimg3').css('background-image', 'url(' + imgUrl + ')');
+    });
+
+        // 点击box里的图片时切换背景图片
+        $('.box img').on('click', function () {
+            var imgUrl = $(this).attr('src');
+            $('#tab-content .bgimg').css('background-image', 'url(' + imgUrl + ')');
+        });
+    });
+</script>
+
+
+
+
+<!-- 实现多层选项卡 
+1.点击.tab-h4,这两个进行切换,Outdoor-tab对应的.Outdoor-one显示,.Indoor-one隐藏 反之亦然
+2.点击.Outdoor-one或者Indoor-one里面的li img,对应Outdoor-box-one/Outdoor-box-two/Outdoor-box-three等,对应的显示,其余隐藏
+3.点击box时,对应的img放置在.bgimg里
+-->
+<!-- 点击Outdoor-tab时,显示.Outdoor-one,Outdoor-two,隐藏Indoor-one,Indoor-two,点击Indoor-tab时反之, 
+     点击.Outdoor-one里的li时添加top-active类,显示对应的.Outdoor-box-one,.Outdoor-box-two,.Outdoor-box-three,并且对应的tab-content里div显示隐藏,默认显示第一个,点击Indoor-one同理 -->
+
+</html>

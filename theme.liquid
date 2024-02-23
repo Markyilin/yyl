@@ -1,0 +1,449 @@
+
+{%- if template contains  'pa1ge.cart' -%}
+    <!--LayoutHub-Workspace-Start-->{{ content_for_layout }}<!--LayoutHub-Workspace-End-->
+    {%- else -%}
+    <!doctype html>
+    {% assign lang = shop.locale %}
+    
+    <html  class="no-js" lang="{{ lang }}">
+    <head>
+    {%- capture borzoii_amphtml_link_tag -%}{%- unless current_tags -%}{%- if request.locale.primary and template.suffix == blank -%}{%- if request.page_type == 'article' or request.page_type == 'blog' or request.page_type == 'collection' or request.page_type == 'list-collections' or request.page_type == 'page' or request.page_type == 'product' -%}<link rel="amphtml" href="{{ 'https://' | append: request.host | append: '/a/h' | append: request.path }}">{%- endif -%}{%- endif -%}{%- endunless -%}{%- endcapture -%}
+    {{ borzoii_amphtml_link_tag }}
+    <title>
+      {{ page_title }}{% if current_tags %} – tagged "{{ current_tags |
+      join: ', ' }}"{% endif %}{% if current_page != 1 %} – Page {{
+      current_page }}{% endif %}{% unless page_title contains shop.name %}
+      – {{ shop.name }}{% endunless %}
+    </title>
+    <!-- AMPIFY-ME:START -->
+    {% include 'ampify-me-snippet' %}
+    <!-- AMPIFY-ME:END -->
+    {% capture sb %}{% render 'sb-snippet' %}{% endcapture %}{% unless sb contains 'Liquid error' %}{% render 'sb-snippet' %}{% endunless %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-865608834"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-865608834');
+    </script>
+      
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W7P9SJF');</script>
+        <!-- End Google Tag Manager -->  
+        {%- render 'layouthub_header' -%}
+        <meta name="facebook-domain-verification" content="ek330deuifinmxapinkkg7wrxph5cl" />
+        <script>!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_fmwllcxx');rdt('track', 'PageVisit');</script>
+        <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TL767XP"></script>
+        <!-- BEGIN PRIVY WIDGET CODE -->
+        <script type='text/javascript'> var _d_site = _d_site || '5A505392D3620C83B7A0DAB1'; </script>
+        <script src='https://widget.privy.com/assets/widget.js'></script>
+        <!-- END PRIVY WIDGET CODE -->
+        {% capture sb %}{% include "Secomapp-Description" %}{% endcapture %}{% unless sb contains "Liquid error" %}{% include "Secomapp-Description" %}{% endunless %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="google-site-verification" content="1tl3aq0tnKXYURQ5OFVgQhGuuAnq5qAKCHtn9oZidb4" />
+        <meta name="theme-color" content="{{ settings.color_button }}">
+        <meta name="facebook-domain-verification" content="69aa15w1ysidhwdlz0qovuxvkzyhqe" />
+        <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0795/7689/files/shopify_thumbnail.jpg?v=1622104460" />
+        <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0795/7689/files/shopify_thumbnail.jpg?v=1622104460" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="628" />
+        <meta name="msvalidate.01" content="17A14EF75CA5A5000E442E224A4F81B1" />
+        
+        {% include 'multi-site-seo' %}
+        
+        <link rel="canonical" href="{{ canonical_url }}">
+        <link rel="icon" href="https://cdn.shopify.com/s/files/1/0795/7689/files/u-tec-web.ico?v=1671431004" type="image/x-icon">
+        {% include 'roi_hunter_easy_head_snippet' %}
+        {%- if settings.favicon != blank -%}
+        <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+        {%- endif -%}
+        {%- capture seo_title -%}
+        {%- if template == 'search' and search.performed == true -%}
+        {{ 'general.search.heading' | t: count: search.results_count }}: {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+        {%- else -%}
+        {{ page_title }}
+        {%- endif -%}
+        {%- if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+        {%- endif -%}
+        {%- if current_page != 1 -%}
+        &ndash; {{ 'general.meta.page' | t: page: current_page }}
+        {%- endif -%}
+        {%- assign escaped_page_title = page_title | escape -%}
+        {%- unless escaped_page_title contains shop.name -%}
+        &ndash; {{ shop.name }}
+        {%- endunless -%}
+        {%- endcapture -%}
+        {%- comment smartseo_integration_begin_meta_data -%}<title>{{ seo_title | strip }}</title>{%- endcomment smartseo_integration_end_meta_data -%}
+        {%- if page_description -%}
+        {%- comment smartseo_integration_begin_meta_data -%}<meta name="description" content="{{ page_description | escape }}">{%- endcomment smartseo_integration_end_meta_data -%}
+        {%- endif -%}
+        {% include 'social-meta-tags' %}
+        <!-- Theme CSS -->
+        {% comment %}
+         一个插件 .aio 引起的 
+        {{ 'font.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'swiper 4.5.3.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'u-tec.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'activity-banner.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'new-store.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'idme-theme-style.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'browser-compatible.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'swiper 4.5.3.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'lazysizes.min.js' | asset_url | script_tag }}
+        {{ 'discount-code-activity.js' | asset_url | script_tag }}
+        {{ 'idme-theme-style.aio.min.css' | asset_url | stylesheet_tag }}
+        {{ 'idme-theme-template.js' | asset_url | script_tag }}
+        {{ 'globo.formbuilder.aio.min.css' | asset_url | stylesheet_tag }}
+        {% endcomment %}
+      
+        {{ 'font.css' | asset_url | stylesheet_tag }}
+        {{ 'font.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'theme2.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'header.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'footer.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'viewer.min.css' | asset_url | stylesheet_tag }}
+        {{ 'swiper 4.5.3.css' | asset_url | stylesheet_tag }}
+        {{ 'u-tec.css' | asset_url | stylesheet_tag }}
+        {{ 'activity-banner.css' | asset_url | stylesheet_tag }}
+        {{ 'new-store.css' | asset_url | stylesheet_tag }}
+        {{ 'cart.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'web.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'mobile-nav.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'idme-theme-style.css' | asset_url | stylesheet_tag }}
+        {{ 'static.scss.css' | asset_url | stylesheet_tag }}
+        {{ 'browser-compatible.css' | asset_url | stylesheet_tag }}
+        {{ 'idme-theme-style.css' | asset_url | stylesheet_tag }}
+        {{ 'idme-theme-template.js' | asset_url | script_tag }}
+        
+      
+        <!--  20230427 add  -->
+        {{ 'jianrong-bujiu.css' | asset_url | stylesheet_tag }}
+        <!--   2023-7-20 nav-->
+        {{ 'navigation-below.css' | asset_url | script_tag }}
+      
+      
+        {% if template contains  'product.SmartLock-UL3BT' %}
+        {{ 'ul3bt.scss.css' | asset_url | stylesheet_tag }}
+        {% endif %}
+        {% if template contains  'product.SmartLock-U-Bolt-Pro' %}
+        {{ 'u-bolt-pro.scss.css' | asset_url | stylesheet_tag }}
+        {% endif %}
+        {{ 'jquery.min.js' | asset_url | script_tag }}
+        {%- if template.directory == 'customers' -%}
+        <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+        {%- endif -%}
+        <!-- Third Party JS Libraries -->
+        
+        {{ 'modernizr-2.7.1.min.js' | asset_url | script_tag }}
+        {{ 'api.jquery.js' | asset_url | script_tag }}
+        {{ 'swiper.min 5.4.5.js' | asset_url | script_tag }}
+        {{ 'priceNavScroll.js' | asset_url | script_tag }}
+        {{ 'cnav.js' | asset_url | script_tag }}
+        {{ 'product-public.js' | asset_url | script_tag }}
+        {{ 'product-cart.js' | asset_url | script_tag }}
+        {{ 'idme-theme-template.js' | asset_url | script_tag }}
+        {{ 'scrollspy.js' | asset_url | script_tag }}
+      
+        
+    
+        <script src="{{ 'discount-code-activity.js' | asset_url }}" async="async"></script>
+        <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
+        <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
+        <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+        <script src="{{ 'viewer.min.js' | asset_url }}" defer="defer"></script>
+        {{ content_for_header }}
+    
+        <!-- Store object -->
+        {% include 'theme-options' %}
+        <!-- Start of u-tec Zendesk Widget script -->
+        {% comment %}
+        <script>
+          /*<![CDATA[*/
+            window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="u-tec.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('
+            <div class="zendesk">
+            {% include 'globo.formbuilder.scripts' %}
+             </div>
+        </script>
+        {% endcomment %}
+        <script>
+          var theme = {
+            strings: {
+              addToCart: {{ 'products.product.add_to_cart' | t | json }},
+              soldOut: {{ 'products.product.sold_out' | t | json }},
+              unavailable: {{ 'products.product.unavailable' | t | json }},
+              regularPrice: {{ 'products.product.regular_price' | t | json }},
+              sale: {{ 'products.product.on_sale' | t | json }},
+              showMore: {{ 'general.filters.show_more' | t | json }},
+              showLess: {{ 'general.filters.show_less' | t | json }},
+              addressError: {{ 'sections.map.address_error' | t | json }},
+              addressNoResults: {{ 'sections.map.address_no_results' | t | json }},
+              addressQueryLimit: {{ 'sections.map.address_query_limit_html' | t | json }},
+              authError: {{ 'sections.map.auth_error_html' | t | json }},
+              newWindow: {{ 'general.accessibility.link_messages.new_window' | t | json }},
+              external: {{ 'general.accessibility.link_messages.external' | t | json }},
+              newWindowExternal: {{ 'general.accessibility.link_messages.new_window_and_external' | t | json }},
+              quantityMinimumMessage: {{ 'products.product.quantity_minimum_message' | t | json }}
+            },
+            moneyFormat: {{ shop.money_format | json }}
+          }
+            document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        </script>
+    
+        <!-- Start of u-tec Zendesk Widget script -->
+        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=34116a9e-541c-4362-ac71-678681e727a8"> </script>
+        <!-- End of u-tec Zendesk Widget script -->
+      
+        {% comment %}
+        <script src="https://www.dwin1.com/19038.js" type="text/javascript" defer="defer"></script>
+        {% render 'kickbooster' %}
+        {% endcomment %}
+        
+        
+    
+      
+        {% if template contains 'product' %}{% endif %}
+        <!-- Extend -- Add necessary SDK script tags and configure the store -->
+        <script src="https://sdk.helloextend.com/extend-sdk-client/v1/extend-sdk-client.min.js"></script>  
+        <script src="https://sdk.helloextend.com/extend-sdk-client-shopify-addon/v1/extend-sdk-client-shopify-addon.min.js"></script>  
+        <script>Extend.config({ storeId: 'a00c7605-a75c-490e-89bc-6f39cd687f51', environment: 'production' })</script>
+        <!-- Extend -- Load the aftermarket script -->
+        {% render 'extend-aftermarket-integration' %}
+        
+        <script type="text/javascript" async="" src="https://d1ueqj2piinir6.cloudfront.net/web/recom/dist/main.js?shop=u-tec.myshopify.com"></script>
+        {% include 'mg-tracking-script' %}
+        {% include 'talkable-partial' %}
+        <script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'10170334','userEmail': '<email_address>'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+        {% render 'upsell-script' %}
+        <script src="https://cdn.attn.tv/u-tec/dtag.js"></script>
+        {% render 'upsell-collections-script' %}
+        {% include 'swift_core' %} 
+     </head>
+    {% include 'globo.formbuilder.scripts' %}
+    
+      
+    <!-- activity code addClass newYear | blackfive-day | cristmas  -->
+    <body class="newYear down-nav full-screen accesories activity browser-compatible form big-header {% if customer %}customer-logged-in{% endif %} template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} navigation-{{ settings.header-navigation-location }} {% if template == 'product.slideshow' %}template-product-slideshow{% endif %}">{% endif %}
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7P9SJF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <script id="klarnaJS" async role='reload' src="https://na-library.klarnaservices.com/lib.js" data-client-id="e087ba95-20da-54a9-88b0-1eb3ffca84d7"></script>
+        <div class="opendiv video"><div class="fluid-width-video-wrapper"><iframe src="" frameborder="0" allowfullscreen></iframe></div></div>
+        <div class="opendivmask"></div>
+        <!--  mobile cart    -->
+        <div class="cart-view-bg">
+          <div class="cart-page">
+            <div class="close-cart"><span class="icon icon-utec-close"></span></div>
+            <div class="cart-page-content">
+            </div>
+          </div>
+        </div>
+    
+        <div class="max-w1440">
+          <!--  activity snippet  -->
+          {% include 'activity' %}
+          <!-- header snippet -->
+          {% include 'header' %}
+          <!-- main content -->
+          <main class="main-content {% if template contains 'collection' and collection.image and settings.collection-show-featured-image %}{% unless template contains 'list-collections' %}collection-has-featured-image{% endunless %}{% endif %}" role="main">
+            {% unless template contains 'index' or fullBleed %}
+            {% unless template contains 'slideshow' and settings.product-slideshow-layout == 'full-width' %}
+            {% include 'breadcrumbs' %}
+            {% endunless %}
+            {% endunless %}
+            <!--LayoutHub-Workspace-Start-->{{ content_for_layout }}<!--LayoutHub-Workspace-End-->
+          </main>
+          {% include 'mg-recommend' %} 
+          {% section 'footer' %}
+        </div>
+        {% if product %}
+        <div class="cart-template-fixed">
+          {% section 'cart-template' %}
+        </div>
+        {% else %}
+        <div class="cart-template-fixed" hidden>
+          {% section 'cart-template' %}
+        </div>
+        {% endif %}
+        {% if template == 'product.SmartLock-U-Bolt' %}
+        {% section 'des_msg_att' %}
+        {% endif %}
+        {% if template ==  'product.SmartLock-U-Bolt-Pro' %}
+        {% section 'des_msg_att' %}
+        {% endif %}
+        {% if template ==  'page.smartLockLEVER' %}
+        {% section 'des_msg_att' %}
+        {% endif %}
+        {% if template contains 'product' %}
+            {% include 'stamped-bazaarvoice' %}
+        {% endif%}
+        {% if template ==  'page.smart-lock-store' %}
+          <style>
+            body.activity .activity-warp{
+              display:block;
+            }
+          </style>
+        {% endif %}
+        <script> 		
+          function myInit(){ 		
+              StampedFn.init({ 	
+                  apiKey: 'pubkey-PbHUQIx021m6c7D7wcU40N0Zi9O7v7', 
+                  storeUrl: 'u-tec.myshopify.com' 
+              }); 	
+          } 		
+        </script> 
+        <script async onload="myInit()" type="text/javascript" src="https://cdn-stamped-io.azureedge.net/files/widget.min.js"></script>	
+        <style>
+            .stamped-badge:before {
+              content: attr(data-rating);
+              display: inline-block !important;
+              font-size: 18px;
+              font-weight: bold;
+              margin-right: 10px;
+              margin-left: 10px;
+              vertical-align: sub;
+            }
+            span.stamped-badge-caption {
+              display: none;
+            }
+            .stamped-badge-starrating {
+              vertical-align: sub !important;
+            }
+            .stamped-review-avatar-content,
+            ul.stamped-pagination {
+              text-align: center !important;
+            }
+            @media only screen and (min-width:481px) {
+              .mobile-badge,
+              .badge-mobile {
+                display: none !IMportant;
+              }
+            }
+            @media only screen and (max-width:480px) {
+              .pro-link-name {
+                width: auto !important;
+              }
+              .pro_name {
+                margin-right: 0 !Important;
+              }
+              .mobile-badge,
+              .badge-mobile {
+                margin-bottom: 4px !important;
+              }
+              #launcher {
+                displaY: none !Important;
+              }
+            }
+            .icon-utec-logo:before {
+              content: "\e94e" !important;
+            }
+        </style>
+      {% include 'subscribe-it-helper' %}
+      <!-- Back in Stock helper snippet -->
+      {% render 'back-in-stock-helper' %}
+      <!-- End Back in Stock helper snippet -->
+      <!-- Stamped - Begin script -->
+      <script async type="text/javascript" id="stamped-script-widget" data-api-key="pubkey-PbHUQIx021m6c7D7wcU40N0Zi9O7v7" src="https://cdn1.stamped.io/files/widget.min.js"></script>
+      <!-- Stamped - End script -->
+     
+      <!-- Twitter universal website tag code -->
+      <script>
+        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+        },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+        a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init','o6yux');
+        twq('track','PageView');
+      </script>
+      <!-- End Twitter universal website tag code -->  
+      {% include 'vzmedia' %} 
+      {% comment %}
+      {% section 'cookie' %}
+      <div></div>
+      <script id="CookieDeclaration" src="https://consent.cookiebot.com/e370e933-eb57-4fea-af19-70c4aca5936a/cd.js" type="text/javascript" async></script>
+      {% endcomment %}
+      {%- render 'layouthub_footer' -%} 
+      {{ '//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js?23' | script_tag }}
+      <!-- **BEGIN** Hextom TMS Translator // Main Include - DO NOT MODIFY -->
+      <script src="{{ 'tms-translator.js' | asset_url }}" defer="defer"></script>
+      <!-- **END** Hextom TMS Translator // Main Include - DO NOT MODIFY -->
+    </body>
+    </html>
+    <script>
+      $(function() {
+        $(".opendivbtn").click(function() {
+          $(".opendiv.video iframe").attr("src", $(this).attr("href"));
+          $(".opendiv.video,.opendivmask").addClass("active");
+          return false;
+        });
+        $(".opendivmask").click(function() {
+          $(".opendiv.video iframe").attr("src", "");
+          $(".opendiv.video,.opendivmask").removeClass("active");
+        });
+    
+        $(".opendivmask").click(function() {
+          $(".opendiv,.opendivmask").removeClass("active");
+          $("html,body").css("overflow", "auto");
+        });
+        $(".opendiv .closediv").click(function() {
+          $(".opendivmask").trigger("click");
+        });
+        
+        let black5 = 0;
+        if(black5 === 1){
+          $('.salse5').removeClass('black5');
+          $('.activity-warpper .black5').removeClass('black5');
+          $('.activity-warpper .noneed').addClass('black5');
+        }
+      });
+     Shopify.shop = 'u-tec.myshopify.com';
+    </script>
+    
+    <script type="text/javascript">
+        var AddShoppersWidgetOptions = { 'loadCss': false, 'pushResponse': false };
+        (!function(){
+            var t=document.createElement("script");
+            t.type="text/javascript",
+            t.async=!0,
+            t.id="AddShoppers",
+            t.src="https://shop.pe/widget/widget_async.js#63ea31dd44cc8204de9d3004",
+            document.getElementsByTagName("head")[0].appendChild(t)
+        }());
+    </script>
+    
+    <script src="https://app-sp.webkul.com/warranty-management/js/wk_warranty.js"></script>
+    <script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} {% if product.first_available_variant.price %}window.KlarnaThemeGlobals.data_purchase_amount = {{ product.first_available_variant.price }};{% endif %}window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
+    <script>
+        var cur_url = window.location.href;
+        var isParams = cur_url.includes('get10-discountfromads')
+       var isParams2 = cur_url.includes('subscriber-sms-2023bts')
+        if(isParams){
+            $("body").addClass("newYear");
+            $(".discount-code").html("ADS10");
+            $(".handle-u-bolt-pro").hide();
+            $(".handle-u-bolt").hide();
+            $("#shopify-section-smart-lock-accessories").hide();
+        } else if(isParams2){
+            $("body").addClass("newYear");
+            $(".discount-code").html("BTS2023");
+          $(".activity-warp a").html("Use Code BTS2023 to Get 20% Discount.");
+             $(".discount-info").html(`<div class="discount-info"><span>20% OFF</span> with Code :</div>`);
+            $(".handle-u-bolt-pro").hide();
+            $(".handle-u-bolt").hide();
+            $("#shopify-section-smart-lock-accessories").hide();
+        } else {
+            // $("body").removeClass("newYear");
+          $("body").addClass("newYear");
+        }
+    </script>
+    
+    
+    
+    

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Questionnaire</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+    <!-- <style>
+        .form365 {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2em;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10'%3E%3Cpath d='M1 1l7 7 7-7'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 12px;
+            background-color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 4em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .radio-container,
+        .checkbox-container {
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: start;
+        }
+
+        .radio-container label,
+        .checkbox-container label {
+            display: flex;
+            width: 48%;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .radio-container input[type="radio"],
+        .checkbox-container input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 2em;
+            /* background-color: #f9f9f9; */
+            border: 1px solid #9b9b9b;
+            border-radius: 5px;
+        }
+
+        .form-container input,
+        .form-container select {
+            /* width: 58%; */
+            margin-bottom: 20px;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #aaa;
+        }
+
+        .form-container label {
+            width: 40%;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            color:#aaa;
+        }
+
+
+        .con-int {
+            width: 48%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        @media screen and (max-width: 1260px) {
+
+            .radio-container,
+            .checkbox-container {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            form {
+                padding: 10px;
+            }
+
+            .radio-container label,
+            .checkbox-container label,
+            .form-container label,
+            .form-container input,
+            .form-container select {
+                width: 100%;
+            }
+
+            .form-container {
+                display: block;
+            }
+
+            .con-int {
+                width: 100%;
+            }
+        }
+    </style> -->
+</head>
+<script src="./jquery-3.2.1.js"></script>
+
+<script>
+    function validateForm() {
+        var isValid = true;
+       
+        var formData = {
+                doors: $("input[name='doors_secured']:checked").val(),
+                business_types: $("#business_type").val(),
+                product_types: $("input[name='product']:checked").map(function () {
+                    return $(this).val();
+                }).get(),
+                employees: $("input[name='employees_count']:checked").val(),
+                area: $("input[name='protecting']:checked").map(function () {
+                    return $(this).val();
+                }).get(),
+                email: $("#your_Email").val(),
+                first_name: $("#first_name").val(),
+                last_name: $("#last_name").val(),
+                job_title: $("#job_title").val(),
+                company_name: $("#company_name").val(),
+                phone_name: $("#phone").val(),
+                web_site: $("#website").val(),
+                city: $("#city").val(),
+                state: $("#state_Province").val(),
+                country: $("#country").val(),
+            };
+        console.log(formData);
+        //判断formData是否为空,为空则不提交,不为空则在判断邮箱是否正确，正确则提交，错误则不提交
+        if (formData.doors == undefined || formData.business_types == undefined || formData.product_types.length == 0 || formData.employees == undefined || formData.area.length == 0 || formData.email == "" || formData.first_name == "" || formData.last_name == "" || formData.company_name == "" || formData.phone_name == "" || formData.city == "" || formData.country == "") {
+            isValid = false;
+            alert("Please fill in the complete information");
+            
+        } else {
+            //判断邮箱是否正确
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test($("#your_Email").val())) {
+                $("#your_Email").next().text("Please enter a valid email address.");
+                isValid = false;
+                alert("Please fill in the correct email");
+                
+            } else {
+                $("#your_Email").next().text("");
+            }
+        }
+        return isValid;
+    }
+    //这是一个ajax请求
+    $(document).ready(function () {
+        var isSubmitting = false;
+
+        $("#submitBtn").click(function (event) {
+            event.preventDefault();
+            if (isSubmitting) {
+                return;
+            }
+
+            if (!validateForm()) {
+                return;
+            }
+
+            var formData = {
+                doors: $("input[name='doors_secured']:checked").val(),
+                business_types: $("#business_type").val(),
+                product_types: $("input[name='product']:checked").map(function () {
+                    return $(this).val();
+                }).get(),
+                employees: $("input[name='employees_count']:checked").val(),
+                area: $("input[name='protecting']:checked").map(function () {
+                    return $(this).val();
+                }).get(),
+                email: $("#your_Email").val(),
+                first_name: $("#first_name").val(),
+                last_name: $("#last_name").val(),
+                job_title: $("#job_title").val(),
+                company_name: $("#company_name").val(),
+                phone_name: $("#phone").val(),
+                web_site: $("#website").val(),
+                city: $("#city").val(),
+                state: $("#state_Province").val(),
+                country: $("#country").val(),
+            };
+            console.log(formData);
+
+            // 禁用提交按钮，避免重复提交
+            $("#submitBtn").prop("disabled", true);
+            // 发送数据到后台API 
+            $.ajax({
+                url: "https://my.u-tec.com/api/form/365/create",
+                type: "post",
+                data: JSON.stringify(formData),
+                contentType: "application/json",
+                dataType: "json",
+                beforeSend: function () {
+                    isSubmitting = true; // 标记为正在提交
+                },
+
+                success: function (data) {
+                    console.log(data, "data");
+                    // 提示 接口中的 message
+                    // alert(data.message);
+                    if (data.message === "SUCC") {
+                        alert("Submitted successfully");
+                        // 清空表单数据
+                        $("input[type='text']").val("");
+                        $("input[type='email']").val("");
+                        $("input[type='tel']").val("");
+                        $("input[type='url']").val("");
+                        $("input[type='radio']").prop("checked", false);
+                        $("input[type='checkbox']").prop("checked", false);
+                        $("select").val("");
+                    } else {
+                        alert("Submission Failed");
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                    alert("Submission Failed");
+                },
+                complete: function () {
+                    isSubmitting = false; // 标记为提交完成
+                    // 启用提交按钮
+                    $("#submitBtn").prop("disabled", false);
+                }
+            });
+        });
+    });
+
+</script>
+
+<body>
+    <style>
+        body .main-content .become-partner {
+            padding-top: 200px;
+            max-width: 850px;
+            margin: auto;
+
+        }
+
+        body .main-content .become-partner .u-tec-form {}
+
+        body .main-content .become-partner .u-tec-form .form-item {
+            margin-bottom: 2em;
+        }
+
+        body .main-content .become-partner .u-tec-form .form-item.input {}
+
+        body .main-content .become-partner .u-tec-form .form-item.required {}
+
+        body .main-content .become-partner .u-tec-form .form-item .item-label {}
+
+        body .main-content .become-partner .u-tec-form .form-item .item-input {}
+
+        body .main-content .become-partner .u-tec-form .form-item .item-input input.input {}
+
+        .become-partner {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2em;
+        }
+
+        .head {
+            text-align: left;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .head p {
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .required {
+            color: red;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='10'%3E%3Cpath d='M1 1l7 7 7-7'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 12px;
+            background-color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 4em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-top: 3%;
+            margin-bottom: 2%;
+        }
+
+        .radio-container,
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+
+        .radio-container label,
+        .checkbox-container label {
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+            cursor: pointer;
+            align-items: baseline;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .radio-container input[type="radio"],
+        .checkbox-container input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .form-container {
+            padding: 2em;
+            border: 1px solid #ccc;
+        }
+
+        .form-container input,
+        .form-container select {
+            /* width: 58%; */
+            margin-bottom: 20px;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #000000;
+        }
+
+        .form-container label {
+            /* width: 40%; */
+            /* position: absolute; */
+            top: 2px;
+            left: 10px;
+            color: #000000;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+        .con-int {
+            /* width: 48%; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* position: relative; */
+        }
+
+        @media screen and (max-width: 1260px) {
+
+            .radio-container,
+            .checkbox-container {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            form {
+                padding: 10px;
+            }
+
+            .form-container {
+                padding: 0;
+            }
+
+            .radio-container label,
+            .checkbox-container label,
+            .form-container label,
+            .form-container input,
+            .form-container select {
+                width: 100%;
+            }
+
+            .form-container {
+                display: block;
+            }
+
+            .con-int {
+                width: 100%;
+            }
+        }
+    </style>
+    <section class="365-form">
+        <div class="form365">
+            <h1>Form Questionnaire</h1>
+            <p>Please fill out the following form:</p>
+            <p class="required">
+                * is a required item
+            </p>
+            <!-- <form action="/submit_form" method="post"> -->
+            <form method="post">
+                <!-- New question: What kind of business are you protecting? -->
+                <div class="question mt-5">What kind of business are you protecting? <span class="required">*</span>
+                </div>
+                <select id="business_type" name="business_type" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Professional and business services">Professional and business services</option>
+                    <option value="Financial activities">Financial activities</option>
+                    <option value="Information">Information</option>
+                    <option value="Wholesale Trade">Wholesale Trade</option>
+                    <option value="Retail Trade">Retail Trade</option>
+                    <option value="Warehousing and Storage">Warehousing and Storage</option>
+                    <option value="Educational Services">Educational Services</option>
+                    <option value="Health Care and Social Assistance">Health Care and Social Assistance</option>
+                    <option value="Hotel Restaurant">Hotel Restaurant</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                </select>
+                <span class="error-message"></span>
+
+                <!-- New question: How many employees are there in one location? -->
+                <div class="question mt-5">How many employees are there in one location?
+                    <span class="required business">*</span>
+
+                </div>
+                <div class="radio-container mt-5">
+                    <label> <input type="radio" name="employees_count" value="<5" required> Less than 5 </label>
+                    <label> <input type="radio" name="employees_count" value="5-19" required> 5-19 </label>
+                    <label> <input type="radio" name="employees_count" value="20-99" required> 20-99 </label>
+                    <label> <input type="radio" name="employees_count" value="100+" required> 100 or more </label>
+
+                </div>
+
+                <!-- New question: What kind of product are you considering? -->
+                <div class="question mt-5">What kind of product are you considering? （multiple options）
+                    <span class="required business">*</span>
+
+                </div>
+                <div class="checkbox-container clearfix">
+                    <label> <input type="checkbox" name="product" value="Smartdoorlock"> Smart Door Lock </label>
+                    <label>
+                        <input type="checkbox" name="product" value="TimeAttendanceAccessControl"> Time Attendance
+                        Access Control
+                    </label>
+                    <label> <input type="checkbox" name="product" value="SecurityCamera"> Security Camera </label>
+                    <label> <input type="checkbox" name="product" value="SoftwarePlatform"> Software Platform </label>
+
+                </div>
+
+                <!-- New question: What area are you protecting? -->
+                <div class="question mt-5">What area are you protecting? （multiple options）
+                    <span class="required business">*</span>
+                </div>
+                <div class="checkbox-container clearfix">
+                    <label> <input type="checkbox" name="protecting" value="entry door" required> entry door </label>
+                    <label> <input type="checkbox" name="protecting" value="reception" required> reception </label>
+                    <label>
+                        <input type="checkbox" name="protecting" value="public area and corridor" required> public area
+                        and corridor
+                    </label>
+                    <label> <input type="checkbox" name="protecting" value="rooms" required> rooms </label>
+
+                </div>
+
+                <!-- New question: How many doors do you need secured? -->
+                <div class="question">How many doors do you need secured?
+                    <span class="required business">*</span>
+
+                </div>
+                <div class="radio-container">
+                    <label> <input type="radio" name="doors_secured" value="up_to_2" required> Up to 2 doors </label>
+                    <label> <input type="radio" name="doors_secured" value="up_to_10" required> Up to 10 doors </label>
+                    <label> <input type="radio" name="doors_secured" value="up_to_20" required> Up to 20 doors </label>
+                    <label> <input type="radio" name="doors_secured" value="none" required> None </label>
+
+                </div>
+                <div class="form-container mt-5">
+                    <div class="con-int">
+                        <label for="your_Email">Your Email: <span class="required">*</span> </label>
+                        <input type="text" id="your_Email" name="your_Email" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="con-int">
+                        <label for="first_name">First Name: <span class="required">*</span> </label>
+                        <input type="text" id="first_name" name="first_name" required>
+                        <span class="error-message"></span>
+
+                    </div>
+                    <div class="con-int">
+                        <label for="last_name">Last Name: <span class="required">*</span> </label>
+                        <input type="text" id="last_name" name="last_name" required>
+                        <span class="error-message"></span>
+
+                    </div>
+                    <div class="con-int">
+                        <label for="job_title">Job Title: </label>
+                        <input type="text" id="job_title" name="job_title" required>
+                        <span class="error-message"></span>
+
+                    </div>
+                    <div class="con-int">
+                        <label for="company_name">Company Name: <span class="required">*</span> </label>
+                        <input type="text" id="company_name" name="company_name" required>
+                        <span class="error-message"></span>
+
+                    </div>
+                    <div class="con-int">
+                        <label for="phone">Phone Number: <span class="required">*</span> </label>
+                        <!-- 电话号码 -->
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-message"></span>
+
+                    </div>
+                    <div class="con-int">
+                        <label for="website">Website:</label>
+                        <input type="url" id="website" name="website" required>
+                        <span class="error-message"></span>
+
+                    </div>
+                    <div class="con-int">
+                        <label for="city">City: <span class="required">*</span> </label>
+                        <input type="text" id="city" name="city" required>
+                        <span class="error-message"></span>
+
+                    </div>
+                    <div class="con-int">
+                        <label for="state_Province">State/Province</label>
+                        <input type="text" id="state_Province" name="state_Province" required>
+                        <span class="error-message"></span>
+
+                    </div>
+                    <div class="con-int">
+                        <label for="country">Country: <span class="required">*</span> </label>
+                        <input type="text" id="country" name="country" required>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <button id="submitBtn">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
