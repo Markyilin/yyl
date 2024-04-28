@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .icon {
+            background-color: #E7F5FF;
+        }
+
+        .icon h1 {
+            text-align: center;
+            padding: 20px 0;
+            font-weight: 800;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-direction {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .grid-7 {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(7, 2fr);
+            align-items: center;
+            background-color: #E7F5FF;
+        }
+
+        .grid-7 img {
+            width: 50%;
+        }
+
+        .grid-7 p {
+            text-align: center;
+            white-space: normal;
+        }
+
+        .grid-3 {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(7, 1fr);
+            align-items: center;
+        }
+
+        @media (max-width: 720px) {
+            .grid-7 {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1%;
+                ;
+            }
+
+            .grid-7 .flex-direction {
+                width: 24%;
+                padding: 10px 0;
+            }
+        }
+    </style>
+
+    <div class="icon">
+        <h1>Applications</h1>
+        <div class="grid-7">
+            <div class="flex-direction">
+                <img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4405" />
+                <p>Smart Home</p>
+            </div>
+            <div class="flex-direction">
+                <img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4406" />
+                <p>Light control</p>
+            </div>
+            <div class="flex-direction">
+                <img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4407" />
+                <p>Smart button</p>
+            </div>
+            <div class="flex-direction">
+                <img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4408" />
+                <p>Smart Plug</p>
+            </div>
+            <div class="flex-direction">
+                <img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4409" />
+                <p>Smart Sensors</p>
+            </div>
+            <div class="flex-direction">
+                <img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4410" />
+                <p>Indoor positioning</p>
+            </div>
+            <div class="flex-direction">
+                <img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4411" />
+                <p>Consumer Electronics</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

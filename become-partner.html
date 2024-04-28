@@ -11,24 +11,32 @@
   <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
 
   <style>
-    body .main-content .become-partner{
-    padding-top: 200px;
-      max-width:850px;
-                margin: auto;
-      
+    body .main-content .become-partner {
+      padding-top: 200px;
+      max-width: 850px;
+      margin: auto;
     }
-    body .main-content .become-partner .u-tec-form{}
-    body .main-content .become-partner .u-tec-form .form-item{
-      margin-bottom:2em;
+
+    body .main-content .become-partner .u-tec-form {}
+
+    body .main-content .become-partner .u-tec-form .form-item {
+      margin-bottom: 2em;
     }
-    body .main-content .become-partner .u-tec-form .form-item.input{}
-    body .main-content .become-partner .u-tec-form .form-item.required{}
-    body .main-content .become-partner .u-tec-form .form-item .item-label{}
-    body .main-content .become-partner .u-tec-form .form-item .item-input{}
-    body .main-content .become-partner .u-tec-form .form-item .item-input input.input{}
-        .error-message{
-          color: red;
-        }
+
+    body .main-content .become-partner .u-tec-form .form-item.input {}
+
+    body .main-content .become-partner .u-tec-form .form-item.required {}
+
+    body .main-content .become-partner .u-tec-form .form-item .item-label {}
+
+    body .main-content .become-partner .u-tec-form .form-item .item-input {}
+
+    body .main-content .become-partner .u-tec-form .form-item .item-input input.input {}
+
+    .error-message {
+      color: red;
+    }
+
     .become-partner {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -193,11 +201,11 @@
 </head>
 <script src="./jquery-3.2.1.js"></script>
 <script>
-   // 简单的表单验证函数
+  // 简单的表单验证函数
   function validateForm() {
     var isValid = true;
     var errorMessage = "Please fill in all required fields and check for errors:\n";
-//获取become-partner类下的所有input标签和select标签
+    //获取become-partner类下的所有input标签和select标签
     var requiredFields = document.querySelectorAll(".become-partner input[required], .become-partner select[required]");
     // console.log(requiredFields);
 
@@ -296,7 +304,7 @@
     }
   }
 
-//这是一个ajax请求
+  //这是一个ajax请求
   $(document).ready(function () {
     var isSubmitting = false;
 
@@ -322,7 +330,7 @@
         address: $("#Address").val(),
         city: $("#city").val(),
         state: $("#states").val(),
-        
+
         country: $("#country").val(),
         zip: $("#Zip").val(),
         Total_Annual_Revenue: $("#Total").val(),
@@ -339,7 +347,7 @@
       // 禁用提交按钮，避免重复提交
       $("#submitBtn").prop("disabled", true);
       $.ajax({
-        url: "https://erp-test.anvizsys.com:6062/api/shopify/crm",
+        url: "https://erp.xthings.cc:6062/api/shopify/crm",
         type: "POST",
         data: JSON.stringify(formData),
         contentType: "application/json", // 指定请求的数据类型为 JSON
@@ -415,15 +423,16 @@
         </label>
       </div>
       <div class="radio-container mt-5">
-        <label> <input type="radio" name="Years_in_Business" value="0-1" > 0-1 </label>
-        <label> <input type="radio" name="Years_in_Business" value="2-5" > 2-5 </label>
-        <label> <input type="radio" name="Years_in_Business" value="6-10" > 6-10 </label>
-        <label> <input type="radio" name="Years_in_Business" value=">10" > >10 </label>
+        <label> <input type="radio" name="Years_in_Business" value="0-1"> 0-1 </label>
+        <label> <input type="radio" name="Years_in_Business" value="2-5"> 2-5 </label>
+        <label> <input type="radio" name="Years_in_Business" value="6-10"> 6-10 </label>
+        <label> <input type="radio" name="Years_in_Business" value=">10"> >10 </label>
       </div>
       <div class="con-int">
         <label for="Total Annual Revenue" class="question">Total Annual Revenue</label>
         <!-- 只能输入数字 -->
-        <input type="text" id="Total" name="Total Annual Revenue" oninput="value=value.replace(/[^\d]/g,'')"  placeholder="Default currency USD">
+        <input type="text" id="Total" name="Total Annual Revenue" oninput="value=value.replace(/[^\d]/g,'')"
+          placeholder="Default currency USD">
         <!-- <span class="usd">USD</span> -->
       </div>
       <div class="con-int">
@@ -527,7 +536,7 @@
         {% section 'partner-products' %}
       </div>
     {% endcomment %} -->
-    
+
   </section>
 </body>
 

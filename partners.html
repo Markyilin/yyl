@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper 5.4.5.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+    <!-- <link rel="stylesheet" href="./wisdom-Series.css"> -->
+    <!-- <link rel="stylesheet" href="./w3/index.css"> -->
+
+</head>
+<script src="./jquery-3.2.1.js"></script>
+<script src="./swiper.min 5.4.5.js"></script>
+
+</head>
+
+<body>
+    <style type="text/css">
+        .partner {
+            background: #f8f8f8
+        }
+
+        .partner h1 {
+            color: #111;
+            font-size: 62px
+        }
+
+        .partner i.icon-a-warning {
+            display: none
+        }
+
+        .partner .max-1400 {
+            max-width: 1400px;
+            margin: auto;
+            height: 100%
+        }
+
+        @media(max-width: 1400px) {
+            .partner .max-1400 {
+                max-width: 80%
+            }
+        }
+
+        @media(max-width: 850px) {
+            .partner .max-1400 {
+                max-width: 90%
+            }
+        }
+
+        .partner h2 {
+            line-height: 70px
+        }
+
+        .partner .backimg {
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%;
+            margin: 0;
+            margin-top: -2px
+        }
+
+        .partner .block {
+            margin-top: 70px;
+            padding-bottom: 4em;
+        }
+
+        .partner .header {
+            color: #fff;
+            position: relative
+        }
+
+        .partner .header .program {
+            padding-top: 100px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center
+        }
+
+        .partner .header .program h4 {
+            margin-top: 0
+        }
+
+        .partner .header .program p {
+            font-size: 16px
+        }
+
+        .partner .desc p {
+            font-size: 18px
+        }
+
+        .partner .why {
+            width: 1400px;
+            margin: 0 auto;
+            margin-top: 80px;
+            overflow: hidden
+        }
+
+        .partner .why .collapse {
+            display: block;
+            margin-bottom: 15px
+        }
+
+        .partner .why .collapse>.item {
+            background: #fff;
+            border-radius: 15px;
+            padding: 0 25px;
+            margin-bottom: 1px
+        }
+
+        .partner .why .collapse>.item .down-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer
+        }
+
+        .partner .why .collapse>.item .down-title>span {
+            line-height: 65px;
+            display: flex;
+            align-items: center
+        }
+
+        .partner .why .collapse>.item .down-title>span>i {
+            margin-right: 5px
+        }
+
+        .partner .why .collapse>.item .down-title:hover span {
+            color: #999
+        }
+
+        .partner .why .collapse>.item .down-title i.icon-a-error {
+            transform: rotate(45deg)
+        }
+
+        .partner .why .collapse>.item .down-title i.icon-a-error::before {
+            font-size: 24px
+        }
+
+        .partner .why .collapse>.item .down-title i.icon-a-ok::before {
+            color: #00b237
+        }
+
+        .partner .why .collapse>.item .down-contant {
+            font-size: 18px;
+            margin-top: 10px;
+            overflow: hidden
+        }
+
+        .partner .why .collapse>.item .down-contant .list {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0
+        }
+
+        .partner .why .collapse>.item .down-contant .list .item {
+            width: 20%;
+            text-align: center
+        }
+
+        .partner .why .collapse>.item .down-contant .list .item .img-bg {
+            border-radius: 10px
+        }
+
+        .partner .why .collapse>.item .down-contant .list .item .img-bg img {
+            width: 80%;
+            margin: 20px auto
+        }
+
+        .partner .why .collapse>.item .down-contant .list .item>span {
+            font-size: 18px
+        }
+
+        .partner .why .collapse>.item .down-contant p {
+            margin-bottom: 15px
+        }
+
+        .partner .why .collapse>.item.show {
+            margin-bottom: 20px
+        }
+
+        .partner .be_partner .list {
+            display: flex;
+            justify-content: space-between
+        }
+
+        .partner .be_partner .list .item {
+            width: 30%;
+            background: #fff;
+            display: flex;
+            flex-direction: column
+        }
+
+        .partner .be_partner .list .item h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            min-height: 100px;
+            padding: 10px 0;
+            margin: 0;
+            text-align: center;
+            background: #e7e7e7
+        }
+
+        .partner .be_partner .list .item img {
+            width: 50%;
+            margin: 40px auto 20px auto
+        }
+
+        .partner .be_partner .list .item .desc {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            font-size: 16px
+        }
+
+        .partner .be_partner .list .item .desc p {
+            text-align: left;
+            margin-bottom: 15px
+        }
+
+        @media(max-width: 1400px) {
+            .partner .why {
+                width: 100%;
+                left: calc((100% - 80%) / 2)
+            }
+        }
+
+        @media(max-width: 850px) {
+            .partner .backimg {
+                max-width: unset;
+                -o-object-position: center;
+                object-position: center;
+                height: 100%;
+                width: unset
+            }
+
+            .partner h2 {
+                font-size: 24px;
+                line-height: 36px
+            }
+
+            .partner .header .program {
+                width: 100%;
+            }
+
+            .partner .header .program h1 {
+                line-height: normal;
+                margin-bottom: 15px;
+                margin-bottom: 0
+            }
+
+            .partner .why {
+                position: unset;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto
+            }
+
+            .partner .why .collapse {
+                width: 100%
+            }
+
+            .partner .why .collapse .item .down-title>span {
+                font-size: 16px
+            }
+
+            .partner .why .collapse .item .down-contant p {
+                font-size: 14px
+            }
+
+            .partner .why .collapse .item .down-contant .list {
+                flex-direction: column
+            }
+
+            .partner .why .collapse .item .down-contant .list>.item {
+                width: 100%;
+                margin-bottom: 15px;
+                text-align: center
+            }
+
+            .partner .be_partner .list {
+                flex-direction: column
+            }
+
+            .partner .be_partner .list .item {
+                width: 100%;
+                margin-top: 15px
+            }
+        }
+
+        @media (max-width:850px) {
+            .partner .header {
+                min-height: 200px;
+            }
+
+            .partner .backimg {
+                max-width: 100%;
+            }
+
+            .partner .header .program h1 {
+                font-size: 36px;
+                color: #000;
+            }
+        }
+    </style>
+    <div class="template max-1400 partner">
+        <div class="header"><img alt="backimg" auto_mobile="true" class="backimg"
+                src="https://www.anviz.com/file/files/828" />
+            <div>
+                <div class="program max-1400">
+                    <h1>Anviz Partner Program</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-1400">
+            <div class="desc block">
+                <h2>General Introduction</h2>
+
+                <p>Anviz Partner Program is designed for industry-leading distributors, resellers, software developers,
+                    system integrators, installers with highly qualified intelligent solutions of physical access
+                    control, time &amp; attendance and surveillance products. The program helps partners build a
+                    sustainable business model in a fast-changing environment, where customers require value-added
+                    services, focused technical expertise, and high levels of satisfaction.</p>
+            </div>
+
+            <div class="why block">
+                <h2>Become Successful with Anviz</h2>
+
+                <div class="collapse">
+                    <div class="item show">
+                        <div class="down-title"><span> <i class="icon-a-warning"></i> 1. Innovative Solution </span> <i
+                                class="icon-a-ok"></i></div>
+
+                        <div class="down-contant info">
+                            <p>With 20 years of development, Anviz focuses on providing cutting edge security solutions
+                                for enterprises with easy to install, easy to deploy, easy to use and easy to maintain
+                                concepts. and our solution has served more than 200,000 enterprises and SMB customers.
+                            </p>
+
+                            <div class="list">
+                                <div class="item">
+                                    <div class="img-bg"><img alt="Attendance Solution" auto_mobile="true"
+                                            src="https://www.anviz.com/file/files/2471" /></div>
+                                    <span>Access Control and Time &amp; Attendance Solution</span>
+                                </div>
+
+                                <div class="item">
+                                    <div class="img-bg"><img alt="Smart Surveillance Solution" auto_mobile="true"
+                                            src="https://www.anviz.com/file/files/2472" /></div>
+                                    <span>Smart Surveillance Solution</span>
+                                </div>
+                                <div class="item">
+                                        <div class="img-bg">
+                                            <img src="https://www.anviz.com/file/files/4349" alt="">
+                                        </div>
+                                        <span>Integrated Security Solution</span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="down-title"><span> <i class="icon-a-warning"></i> 2. Easy to Sale </span> <i
+                                class="icon-a-error"></i></div>
+
+                        <div class="down-contant info">
+                            <p>Anviz team directly invest and promote on the local market to generate sales requirements
+                                and the partner just need to raise the stock, enjoy qualified leads and easy to sale.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="down-title"><span> <i class="icon-a-warning"></i> 3. Strong Project Support </span>
+                            <i class="icon-a-error"></i>
+                        </div>
+
+                        <div class="down-contant info">
+                            <p>Anviz has more than 400 self-development Intellectual property and over 200 R&amp;D
+                                experts to satisfy the customer requirements and fulfill the project customization.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="down-title"><span> <i class="icon-a-warning"></i> 4. Considerable Hardware Profit
+                                Margin </span> <i class="icon-a-error"></i></div>
+
+                        <div class="down-contant info">
+                            <p>Anviz Partner can enjoy a considerable profit margin compare to average level of the
+                                security industry.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="down-title"><span> <i class="icon-a-warning"></i> 5. Sustainable Product Supply
+                            </span> <i class="icon-a-error"></i></div>
+
+                        <div class="down-contant info">
+                            <p>Having a 50,000 production center with 2 million units annual production capacity, A
+                                weekly door to door services could be provided to any place from the world for all hot
+                                selling products.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="down-title"><span> <i class="icon-a-warning"></i> 6. Complete Local Support </span>
+                            <i class="icon-a-error"></i>
+                        </div>
+
+                        <div class="down-contant info">
+                            <p>A complete local support package will be provided to each partner, including online
+                                training courses, co-local marketing events, and 24/5 trouble shooting program.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="be_partner block">
+                <h2>Becoming a Partner</h2>
+
+                <div class="list">
+                    <div class="item">
+                        <h3>Become Distribution Partner</h3>
+                        <img alt="Anviz Authorized Distributor Program" auto_mobile="true"
+                            src="https://www.anviz.com/file/files/2473" />
+                        <div class="desc">
+                            <p>Anviz Authorized Distributor Program is designed to help sustain a profitable business
+                                model in a fast-changing environment where resellers require best-in-class value-added
+                                services, a high level of selling support, and focused technical expertise.</p>
+
+                            <p>Our Authorized Distributors offer a broad range of value-added services for Anviz
+                                partners and serve as an extension of Anviz, helping to ensure partners have the tools
+                                and support needed to be successful and serving three primary roles: Distribution
+                                Logistics, Market Reach and Channel Development.</p>
+
+                            <div><a class="anviz-btn anviz-primary-btn"
+                                    href="{{%home_url%}}/form?scene=distribution-partner" rel="nofollow"
+                                    title="AASP register now">Register Now</a></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <h3>Become Anviz Authorized System Integrator</h3>
+                        <img alt="Anviz Authorized System Integrator" auto_mobile="true"
+                            src="https://www.anviz.com/file/files/2476" />
+                        <div class="desc">
+                            <p>Anviz Authorized System Integrator is aimed to cooperate with qualifed system integrators
+                                to fullfill Anviz products into projects from government facilities, campus, bank,
+                                healthcare, and commercial buildings and the partners can enjoy a long-term Anviz
+                                cutting edge technology and complete customized project support.</p>
+
+                            <div><a class="anviz-btn anviz-primary-btn"
+                                    href="{{%home_url%}}/form?sence=system-integrator" rel="nofollow"
+                                    title="AASI register now">Register Now</a></div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <h3>Become Technology Partner</h3>
+                        <img alt="Anviz Service Provider" auto_mobile="true"
+                            src="https://www.anviz.com/file/files/4350" />
+                        <div class="desc">
+                            <p>Technology partner is aimed to integrate Anviz products to your own or third party platform to fulfill the projects, enjoying a long-term Anviz cutting edge technology and complete customized project support. </p>
+
+                            <div><a class="anviz-btn anviz-primary-btn"
+                                    href="{{%home_url%}}/anviz-one.html" rel="nofollow"
+                                    title="AAD register now">Register Now</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('.down-contant').hide()
+            $('.item.show .down-contant').show()
+            $('.collapse .item').on('click', '.down-title', function () {
+                $(this).parent('.item').siblings().removeClass('show')
+                $(this).find('i.icon-a-error').removeClass('icon-a-error').addClass('icon-a-ok').parent().parent().addClass('show')
+
+                $(this).next().slideDown().parent('.item').siblings().find('.down-contant').slideUp()
+            })
+        })
+    </script>
+</body>
+
+</html>

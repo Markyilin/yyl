@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        .author-box {
+            display: none;
+        }
+
+        .casesutdy-details .content b {
+            font-family: "Montserrat-bold" !important;
+        }
+
+        .case .seven .right li {
+            display: list-item !important;
+        }
+
+        .content .page-item .right {
+            margin-left: 5%;
+        }
+
+        @media(max-width: 768px) {
+            /* margin-left: 0%; */
+        }
+
+        .case {
+            width: 100%;
+            max-width: 1440px;
+            height: auto;
+            background-color: #fff;
+            margin: 0 auto
+        }
+
+        @media(max-width: 768px) {
+            .case {
+                max-width: 100%
+            }
+        }
+
+        .case .box {
+            margin-bottom: 2em
+        }
+
+        @media(max-width: 768px) {
+            .case .box {
+                padding: 0 15px
+            }
+        }
+
+        .case .one {
+            width: 100%;
+            min-height: 450px;
+            background: url(/file/files/4277) no-repeat center center;
+            background-size: cover
+        }
+
+        @media(max-width: 768px) {
+            .case .one {
+                min-height: 250px;
+                background-position: left
+            }
+
+            .casesutdy-details .content {
+                padding: 0;
+            }
+
+            .casesutdy-details .page-item {
+                padding-top: 0;
+            }
+
+            .case .box {
+                padding: 0;
+            }
+
+            .content .page-item .right {
+                margin-left: 0;
+            }
+        }
+
+        .case .title {
+            text-align: center;
+            max-width: 100%;
+            display: block;
+            margin: auto;
+            font-size: 35px !important;
+            padding-top: 30px;
+        }
+
+        @media(max-width: 768px) {
+            .case .title {
+                max-width: 100%;
+                margin-bottom: 1em
+            }
+        }
+
+        .case .sub-title {
+            text-align: center;
+            max-width: 100%;
+            margin: auto;
+            font-size: 20px !important;
+        }
+
+        @media(max-width: 768px) {
+            .case .sub-title {
+                max-width: 100%
+            }
+        }
+
+        #text {
+            color: #555； font-weight:bold
+        }
+
+        .case .pub-img img,
+        .dayede {
+            max-width: 40% !important;
+            padding-top: 30px;
+        }
+
+        @media(max-width: 768px) {
+            .case .pub-img img {}
+        }
+
+        .case .four,
+        .case .seven {
+            display: flex;
+            justify-content: space-between
+        }
+
+        @media(max-width: 768px) {
+
+            .case .four,
+            .case .seven {
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start
+            }
+
+            footer .mail-warp form {
+                align-items: center;
+            }
+
+            footer .mail-warp form .form-group {
+                margin: 0;
+            }
+
+            footer .mail-warp form .anviz-btn {}
+        }
+
+        .case .four .left,
+        .case .four .right,
+        .case .seven .left,
+        .case .seven .right {
+            width: 46%
+        }
+
+        @media(max-width: 768px) {
+
+            .case .four .left,
+            .case .four .right,
+            .case .seven .left,
+            .case .seven .right {
+                width: 100%
+            }
+
+            .case .seven {}
+        }
+
+        .case .four .left img,
+        .case .seven .left img {
+            max-width: 100%;
+            height: 200px
+        }
+
+        @media(max-width: 768px) {
+
+            .case .four .left img,
+            .case .seven .left img {
+                margin-bottom: 1em
+            }
+
+            .casesutdy-details .case .dayede {
+                max-width: 40% !important;
+            }
+        }
+
+        .case .four .right img,
+        .case .seven .right img {
+            max-width: 100%;
+            height: 80px4277
+        }
+
+        .case .seven {
+            align-items: center;
+        }
+
+        .case .seven .left img {
+            height: auto;
+            max-height: 74vh
+        }
+
+        .case .seven .right ul {
+            padding: 0
+        }
+
+        .case .seven .right .sub-title {
+            text-align: left;
+            max-width: 100%
+        }
+
+        .case .seven .right li {
+            margin-bottom: 2em;
+            display: block
+        }
+
+        .case .eight img {
+            display: block;
+            max-width: 100%
+        }
+
+        .case .nine .sub-title {
+            text-align: left;
+            max-width: 100%
+        }
+
+        .case .ten {
+            padding-bottom: 3em
+        }
+
+        .case .ten .url {
+            margin-bottom: 1em
+        }
+
+        .case .ten .link {
+            color: #09c;
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 15px
+        }
+
+        .case .ten small {
+            color: #777
+        }
+
+        .hannah .left {
+            display: flex;
+            width: auto;
+            flex: 1;
+        }
+
+        .casesutdy-details .content p,
+        .casesutdy-details .content .des,
+        .casesutdy-details .content h1,
+        .casesutdy-details .content h2,
+        .casesutdy-details .content h3,
+        .casesutdy-details .content h4,
+        .casesutdy-details .content h5,
+        .casesutdy-details .content h6,
+        .casesutdy-details .content span,
+        .casesutdy-details .content strong,
+        .casesutdy-details .content a,
+        .casesutdy-details .content b,
+        .casesutdy-details .content small,
+        .casesutdy-details .content div,
+        .casesutdy-details .content header,
+        .casesutdy-details .content section,
+        .casesutdy-details .content tr,
+        .casesutdy-details .content td,
+        .casesutdy-details .content th,
+        .casesutdy-details .content ul,
+        .casesutdy-details .content li,
+        .casesutdy-details .content ol,
+        .casesutdy-details .content dt,
+        .casesutdy-details .content dl {
+            font-family: 'Montserrat-Light';
+            margin-bottom: 1em;
+            white-space: normal;
+            word-break: break-word;
+            color: #101010;
+            font-size: 20px;
+        }
+
+        .h4-a {
+            font-size: 20px !important;
+            color: #000
+            font-weight: 800;
+        }
+    </style>
+
+    <div class="case"><img alt="" auto_mobile="true" src="/Adminewyqeywquyewqueqw/ckeditor/files/4425"
+            style="width: 1920px; height: 1081px;" />
+        <div class="box three">
+            <div data-hash="d56784eba14598229356afab70c67052" data-version="3.0.0" mainstory="" tdoc-src="{"><span
+                    style="font-size:20px;"><span style="line-height:100%"><span style="font-family:Calibri"><span
+                                style="font-family:宋体">
+                                <font face="Calibri">Attended by thousands of security and public safety professionals,
+                                    ISC WEST 2024 has just ended. The show explained the security industry&#39;s next
+                                    trends and customer focus: AI, 5G, robotics, environmental protection, and
+                                    energy.<br />
+                                    <br />
+                                    Poised to reaffirm its position as an innovator in converged intelligent security
+                                    systems, Anviz launched its latest prevention-focused innovation, Anviz One. An
+                                    All-In-One Intelligent Security Solution, Anviz One is designed to meet the needs of
+                                    small and medium-sized businesses (SMBs) across various sectors, including retail,
+                                    food and beverage, K-2 campuses, and gyms.&nbsp;
+                                </font>
+                            </span></span><br />
+                        <br />
+                        <span data-font-family="" system-ui=""><span
+                                style="font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color emoji,Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif"><span
+                                    style="font-weight:normal"><span style="font-style:normal"><span
+                                            style="color:#333333"><span style="letter-spacing:0pt"><span
+                                                    style="vertical-align:baseline"><span style="line-height:100%"><span
+                                                            data-font-family="" system-ui=""><span
+                                                                style="font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color emoji,Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif"><span
+                                                                    style="font-weight:normal"><span
+                                                                        style="font-style:normal"><span
+                                                                            style="color:#333333"><span
+                                                                                style="letter-spacing:0pt"><span
+                                                                                    style="vertical-align:baseline"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+                <p><span style="font-size:20px;"><span style="font-size:20px"><span style="font-family:Calibri"><span
+                                    style="font-family:宋体">
+                                    <font face="Calibri">Anviz One has attracted the interest of many traditional
+                                        security installers and integrators. Although there is no lack of products in
+                                        the industry that claim to be security integration platforms, Anviz One&#39;s
+                                        lightweight design, self-developed hardware products, and simpler and
+                                        user-friendly software interactions have impressed them deeply.</font>
+                                </span></span></span><br />
+                        <br />
+                        <span style="font-size:20px"><span style="font-family:Calibri"><span style="font-family:宋体">
+                                    <font face="Calibri">A client said: that Anviz One&#39;s access control and
+                                        surveillance functions are easier linkage and more cost-effective upon closer
+                                        understanding, and he would like to recommend it to some SME clients. Another
+                                        customer said: In terms of design, parameters, and promotion, Anviz One has
+                                        attracted his attention. So he asked for a demo on the spot and went back to
+                                        test it.</font>
+                                </span></span></span><br />
+                        <br />
+                        <span style="font-size:20px"><span style="font-family:Calibri"><span style="font-family:宋体">
+                                    <font face="Calibri">The product manager of Anviz One, Felix, said: &quot;Anviz One
+                                        is targeted at the following three scenarios for small and medium-sized
+                                        businesses:<br />
+                                        1. entry and exit<br />
+                                        2. areas where important items are stored<br />
+                                        3. business campus perimeters<br />
+                                        Utilizing technologies such as AI Biometrics and 4G, enables security managers
+                                        to enjoy a smarter and simpler product experience.&quot;</font>
+                                </span></span></span></span><br />
+                    <br />
+                    <img alt="" auto_mobile="true" src="/Adminewyqeywquyewqueqw/ckeditor/files/4426"
+                        style="width: 1920px; height: 1081px;" /><br />
+                    <span style="font-size:20px;"><strong><span style="font-family:Calibri"><span
+                                    style="font-family:宋体">
+                                    <font face="Calibri"> <a
+                                            href="https://www.discoverisc.com/west/en-us/2024-exhibitors/2024-products-directory.html?refinementList%5B0%5D%5B0%5D=features%3ASIA%20NPS%20Awards&locale=en-US&query="
+                                            class="h4-a">New Product Showcase</a></font>
+                                </span></span></strong><br />
+                        <span style="font-family:Calibri"><span style="font-family:宋体">
+                                <font face="Calibri">At the new product showcase organized by SIA (Security Industry
+                                    Association), targeting highly corrosive outdoor scenarios such as chemical plants
+                                    and seaside, Anviz&#39;s 2024 4g AI Electroplated Camera extends the service life of
+                                    outdoor cameras with the latest process. &quot;In the past, some users at the
+                                    seaside were worried about the service life of the camera. So we made special
+                                    improvements and looked prettier.&quot;</font>
+                            </span></span></span><br />
+                    <br />
+                    <img alt="" auto_mobile="true" src="/Adminewyqeywquyewqueqw/ckeditor/files/4419"
+                        style="width: 1920px; height: 1081px;" /><br />
+                    <br />
+                    <span style="font-size:20px;"><span style="font-family:Calibri"><span style="font-family:宋体">
+                                <font face="Calibri"><strong>ACS Quest&nbsp;</strong>&nbsp;</font>
+                            </span><span style="font-family:宋体"></span></span><br />
+                        <span style="font-family:Calibri"><span style="font-family:宋体">
+                                <font face="Calibri">Some of the industry KOLs also come to the show site to
+                                    communicate, among them, Lee Odess, who was involved personally in the ACS
+                                    Quest&#39;s access control and smart lock field activity, which attracted thousands
+                                    of exhibitors to come and interact with the Anviz team to clock in and take pictures
+                                    with the Anviz brand.</font>
+                            </span></span></span><br />
+                    <br />
+                    <video style="width:100%" autoplay="" loop="" muted="" playsinline="" preload="" tabindex="-1">
+                        <source src="https://www.anviz.com/file/video/4429.mp4" type="video/mp4">
+                        <img alt="" auto_mobile="true" src="https://www.anviz.com/files/4422"
+                            style="width: 1920px; height: 1081px;" />
+                    </video>
+                    <br />
+                    <span style="font-size:20px;"><strong><span style="font-family:Calibri"><span
+                                    style="font-family:宋体">
+                                    <font face="Calibri">Highly recognized by multiple media</font>
+                                </span></span><span style="font-family:Calibri"><span
+                                    style="font-family:宋体"></span></span></strong></span><br />
+                    <span style="font-size:10.5pt"><span style="font-family:Calibri"><span style="font-size:20px;"><span
+                                    style="font-family:宋体">
+                                    <font face="Calibri">The chief editors of <a
+                                            href="https://www.securityinfowatch.com/video-surveillance/product/55016672/anviz-anviz-one">Security
+                                            Info Watch</a> ,
+                                        <a
+                                            href="https://www.ravepubs.com/the-anviz-ai-based-security-platform-is-perfect-for-proav-integrators-to-sell/ ">Pro
+                                            AV news</a> ,
+                                        <a
+                                            href="https://www.securityinformed.com/news/anviz-unveils-innovative-intelligent-security-solution-smbs-isc-west-2024-co-951-ga-co-11020-ga-co-1712743283-ga.1712745399.html?utm_source=SSc%20International%20Edition&utm_medium=Redirect&utm_campaign=International%20Redirect%20Popup Securityinformed">SecurityInformed</a>,
+                                        Pro AV&nbsp;news,
+                                        SecurityInformed, and other famous security industry media came to the booth for
+                                        interviews, discussing the trends of the security industry and plans for the
+                                        future positioning of Anviz in the track of the SMB security market.
+                                    </font>
+                                </span></span><br />
+                            <span style="font-size:10.5000pt"><span style="font-family:Calibri"><span
+                                        style="font-size:16px;"><br />
+                                        <img alt="" auto_mobile="true" src="/Adminewyqeywquyewqueqw/ckeditor/files/4424"
+                                            style="width: 1920px; height: 1081px;" /></span><br />
+                                    <span style="font-size:20px;"><span style="font-family:Calibri"><span
+                                                style="font-family:宋体">
+                                                <font face="Calibri">Having felt the recognition from the market and the
+                                                    enthusiasm of our customers at ISC West, in 2024 Anviz will extend
+                                                    its business market with North America as the central focus,
+                                                    providing smart and efficient solutions to more SMBs and enterprise
+                                                    organizations.</font>
+                                            </span></span> <span style="font-family:Calibri"><span
+                                                style="font-family:宋体"></span></span></span></span></span></span></span><br />
+                    <span style="font-size:20px;"><br />
+                        <strong>Follow Us&nbsp;on LinkedIn for more updates:&nbsp;<a
+                                href="https://www.linkedin.com/company/1714290/admin/feed/posts/">Anviz&nbsp;Global&nbsp;</a></strong></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

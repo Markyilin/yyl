@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ad</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper 5.4.5.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+</head>
+<script src="./jquery-3.2.1.js"></script>
+<script src="./swiper.min 5.4.5.js"></script>
+
+<body>
+    <style type="text/css">
+       
+
+        body,
+        html {
+            background-color: #fff !important;
+        }
+
+        .relative {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (min-width: 1260px) {
+            .Singapore-ad .container {
+                width: 1260px;
+                padding: 0 2em;
+            }
+        }
+
+
+
+        .Singapore-ad h2,
+        .Singapore-ad h3 {
+            text-align: center;
+        }
+
+        .Singapore-ad .banner {
+            width: 100%;
+        }
+
+        .image-mmobile {
+            display: none;
+        }
+
+        @media (max-width: 850px) {
+            .Singapore-ad .banner {
+                height: auto;
+            }
+
+
+        }
+
+        .Singapore-ad .banner .mobile-banner {
+            display: none;
+        }
+
+        @media (max-width: 850px) {
+            .Singapore-ad .banner .mobile-banner {
+                display: block;
+            }
+        }
+
+        .Singapore-ad .banner .pc-banner {
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 850px) {
+            .Singapore-ad .banner .pc-banner {
+                display: none;
+            }
+
+            .anviz-primary-btn {
+                margin: 10px;
+                text-align: center;
+            }
+
+            .list .anviz-primary-btn {
+                margin: 10px auto;
+            }
+        }
+
+        .Singapore-ad .banner {
+            background-image: url(https://www.anviz.com/file/files/4351);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .Singapore-ad .banner .banner-info {
+            width: 100vw;
+            height: 100%;
+            padding: 20px 5%;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-title {
+            color: #fff;
+            text-align: center;
+            margin: 40px auto;
+
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            width: 28vw;
+            height: 28vw;
+            background-color: #fff;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 3px 3px 20px 2px #dddddd;
+            padding: 10px;
+
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-item .banner-center-5 .image {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-item label {
+            width: 80%;
+            text-align: left;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-item .minor-blue-btn {
+            width: 100%;
+            margin-bottom: 5%;
+            font-size: 18px;
+            white-space: normal;
+        }
+
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-right h6 {
+            font-weight: 600;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-right span {
+            font-weight: 500;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-left .minor-crosschex-btn {
+            align-items: center;
+            justify-content: space-between;
+            width: 70%;
+            height: 10%;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-left .a-left {
+            width: 20%;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-left .a-right {
+            width: 80%;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-center {
+            width: 32vw;
+            height: auto;
+            min-height: 32vw;
+            z-index: 1;
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-center h2 {
+            margin-bottom: 5%;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-center .banner-center-1,
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-center .banner-center-2,
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-center .banner-center-3 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 100%;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-center h2 {
+            color: #0068B7;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-left>img {
+            height: 50%;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-left h6 {
+            font-weight: 600;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .a-left img {
+            width: 40%;
+            margin: 0;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .a-right span {
+            font-size: 12px;
+            font-weight: 400;
+            white-space: normal;
+        }
+
+        .banner-right ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 70%;
+        }
+
+        .banner-right ul li {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 2% 0;
+        }
+
+        .banner-right ul li img {
+            width: 15%;
+            margin: 0;
+            padding: 0 5px;
+        }
+
+        .banner-right ul li span {
+            display: inline-block;
+            width: 70%;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        .flex-direction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .flex-direction2 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        .flex-img-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .flex-img-text .left-img {
+            width: 100%;
+        }
+
+        .flex-img-text img {
+            width: 90%;
+        }
+
+        .flex-img-text .right-text {
+            box-shadow: 3px 3px 20px 2px #dddddd;
+            padding: 20px 20px 0;
+            background-color: #0EA58A;
+            position: relative;
+
+        }
+
+        .flex-img-text .right-text h6 {
+            color: #fff;
+            font-weight: 600;
+            margin-left: 5%;
+        }
+
+        .flex-img-text .right-text img {
+            width: 6px;
+            margin: 5%;
+        }
+
+        .flex-img-text .right-text .flex-img-text {
+            justify-content: space-evenly;
+            flex-direction: row;
+            display: block;
+            padding: 25% 0;
+        }
+
+        .flex-img-text .right-text .flex-img-text img {
+            width: 50%;
+            margin: 5% 0 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+
+
+        .flex-img-text .right-text .flex-img-text .minor-boxfree {
+            background-color: #fff;
+            color: #0EA58A;
+            border-color: #fff;
+            border-radius: 40px;
+            padding: 2% 6%;
+            width: 50%;
+            text-align: center;
+            margin-left: 5%;
+        }
+
+        .Buy .flex-img-text {
+            background-color: #f2f7fb;
+            justify-content: space-between;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+
+        .Buy .flex-img-text img {
+            width: 10%;
+            margin-left: 5%;
+        }
+
+        .Buy .flex-img-text h2 {
+            width: 20%;
+            border-right: 2px solid #0068B7;
+            color: #0068B7;
+
+        }
+
+        .Buy .flex-img-text .flex-direction {
+            text-align: left;
+            align-items: flex-start;
+            padding: 2% 0;
+            flex: 1;
+            margin-left: 5%;
+        }
+
+        .Buy .flex-img-text .flex-direction p {
+            color: #0068B7;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .Buy h5 {
+            text-align: center;
+            font-weight: 800;
+            margin: 20px;
+        }
+
+        @media (max-width: 1160px) {
+            .Singapore-ad .banner .banner-info .banner-info-item .banner-left .minor-crosschex-btn {
+                align-items: center;
+                justify-content: space-between;
+                width: 80%;
+                height: 15%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .Singapore-ad .banner .banner-info .anviz-primary-btn {
+                margin: 1em auto;
+            }
+
+            .Singapore-ad .banner .banner-info .banner-info-item .banner-left,
+            .Singapore-ad .banner .banner-info .banner-info-item .banner-right {
+                display: none;
+            }
+
+            .Singapore-ad .banner .banner-info .banner-info-item .banner-center {
+                width: 60vw;
+                height: 80%;
+            }
+
+            .flex-img-text .right-text .flex-img-text {
+                padding: 10% 0;
+            }
+        }
+
+        @media (max-width: 850px) {
+
+            .Singapore-ad .banner .banner-info .banner-info-item .banner-center {
+                width: 80vw;
+                height: 80%;
+            }
+
+            .Singapore-ad .banner {
+                background-image: url(https://www.anviz.com/file/files/4371);
+            }
+
+            .flex-img-text {
+                flex-direction: column;
+            }
+
+            .flex-img-text img {
+                width: 100%;
+            }
+
+            .Buy .flex-img-text img {
+                width: 30%;
+                margin: 10px 0;
+            }
+
+            .Buy .flex-img-text h2 {
+                width: 100%;
+                border-right: none;
+                padding: 0;
+            }
+
+            .Buy .flex-img-text .flex-direction {
+                align-items: center;
+                padding: 0;
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .anviz-primary-btn {
+                margin: 5px 0;
+            }
+
+            .image-mmobile {
+                display: block;
+            }
+
+            .image-pc {
+                display: none;
+            }
+
+            .w720none {
+                display: none;
+            }
+
+            .Singapore-ad h2,
+            .Singapore-ad p,
+            .Singapore-ad h6 {
+                text-align: center !important;
+            }
+
+            .flex-img-text .right-text .flex-img-text img {
+                width: 45%;
+            }
+
+            .flex-img-text .right-text .flex-img-text .minor-boxfree {
+                width: 45%;
+            }
+
+            .flex-img-text .right-text .flex-img-text {
+                text-align: center;
+                padding: 10% 0 35%;
+            }
+        }
+
+
+
+
+        @media (max-width: 850px) {
+            .Singapore-ad .overviews {
+                padding: 2em 0;
+            }
+        }
+
+        .Singapore-ad section {
+            padding: 2em 0;
+        }
+
+        @media (max-width: 850px) {
+            .Singapore-ad section {
+                padding: 2em 0;
+            }
+
+        }
+
+        .Singapore-ad .boxfree {
+            background-color: #F9F9F9;
+        }
+
+        .Singapore-ad section p {
+            text-align: center;
+        }
+
+
+
+
+
+
+        .Singapore-ad section .item {
+            padding: 0;
+        }
+
+        .Singapore-ad section .item img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .flex-3 {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .flex-3 li img {
+            max-height: 100px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-3 li {
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .grid-3 li img {
+            width: 100%;
+
+        }
+
+        .grid-3 li .grid-3btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            position: absolute;
+            bottom: 10%;
+            transform: translateX(-50%);
+        }
+
+        .flex-4 {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* 7 */
+        .Singapore-ad .gridfour {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .Singapore-ad .gridfour .gridfour-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .overviews {
+            background-color: #F9F9F9;
+            padding: 20px 0;
+        }
+
+        .overviews .Build-h4 {
+            background-color: #0068B7;
+            color: #fff;
+            padding: 6px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .Singapore-ad .Industry li {
+            position: relative;
+        }
+
+        .Singapore-ad .Industry li h5 {
+            position: absolute;
+            left: 5%;
+            top: 5%;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* 7 */
+        .Singapore-ad .gridfour .list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            grid-auto-flow: dense;
+            flex: 1;
+        }
+
+        .Singapore-ad .gridfour .gridfour-item-div {
+            position: relative;
+            height: 100%;
+            width: 32%;
+        }
+
+        .Singapore-ad .gridfour .gridfour-item1 .gridfour-item-div {
+            margin: 30px 30px 30px 0;
+        }
+
+        .Singapore-ad .gridfour .gridfour-item2 .gridfour-item-div {
+            margin: 30px 0 30px 30px;
+        }
+
+        .Singapore-ad .gridfour .gridfour-item-div img {
+            margin: 0;
+        }
+
+        .Singapore-ad .gridfour .w-series li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .Singapore-ad .gridfour .gridfour-item-div h2 {
+            position: absolute;
+            top: 10px;
+            width: 55%;
+            color: #fff;
+        }
+
+        .Singapore-ad .gridfour .gridfour-item1 .gridfour-item-div h2 {
+            right: 0;
+
+        }
+
+        .Singapore-ad .gridfour .gridfour-item2 .gridfour-item-div h2 {
+            left: 0;
+        }
+
+        .Singapore-ad .gridfour .w-series li a,
+        .Singapore-ad .gridfour .w-series li h6 {
+            color: #0068B7;
+            font-weight: 600;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .Singapore-ad .gridfour .w-series li img {
+            width: 80%;
+            margin: 0;
+        }
+
+
+        @media (max-width: 720px) {
+            .Singapore-ad .gridfour .gridfour-item {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .Singapore-ad .gridfour .gridfour-item2 {
+                flex-direction: column-reverse;
+
+            }
+
+            .Singapore-ad .gridfour .gridfour-item .gridfour-item-div {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .Singapore-ad .gridfour .w-series li {
+                padding: 10px;
+            }
+
+            .Singapore-ad .gridfour .w-series li h6 {
+                font-size: 12px;
+            }
+
+            .Singapore-ad .Industry li h5 {
+                font-size: 18px;
+            }
+
+            .Singapore-ad .gridfour .gridfour-item-div h2 {
+                position: absolute;
+                top: 50%;
+                color: #fff;
+                transform: translateY(-50%);
+                width: auto;
+                margin: 0 10px;
+            }
+
+            .flex-3,
+            .flex-4 {
+                gap: 10px;
+            }
+
+            .Singapore-ad .Industry.flex-4 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+            }
+
+            .Singapore-ad .gridfour .w-series li {
+                background-color: #f9f9f9;
+            }
+
+            .Singapore-ad .gridfour .w-series li h6 {
+                position: inherit;
+                color: #0068B7;
+                font-weight: 600;
+            }
+
+            .Singapore-ad .gridfour .list {
+                gap: 5px;
+            }
+
+            .grid-3 {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 30px;
+            }
+        }
+
+        .Singapore-ad section.box .cloud-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .Singapore-ad section.box .cloud-box .img-item {
+            background-color: #F9F9F9;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Singapore-ad section.box .cloud-box .img-item p {
+            font-weight: 600;
+        }
+
+        .Singapore-ad section.box .cloud-box .img-item h1 small {
+            color: #0068B7;
+            font-weight: 600;
+        }
+
+        .Singapore-ad section.box .cloud-box .img-item h1 {
+            color: #0068B7;
+        }
+
+        .Singapore-ad section.box .cloud-box .absolute-btn {
+            position: absolute;
+            bottom: 5%;
+            margin: 0 auto;
+            text-align: center;
+            color: #000;
+            /* width: 70%; */
+            background-color: #fff;
+            border-radius: 30px;
+            font-weight: 600;
+            padding: 6px 20px;
+
+        }
+
+        .absolute-bom {
+            position: absolute;
+            color: #fff;
+        }
+
+        .Singapore-ad .box .cloud-box .img-item img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .Singapore-ad .box .cloud-box .img-item h6 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .Singapore-ad section.box .cloud-box .absolute-btn {
+            position: absolute;
+            bottom: 5%;
+            padding: 1% 3%;
+            font-size: 16px;
+        }
+
+        form h2 {
+            text-align: center;
+        }
+
+        h3.title {
+            color: #fff;
+        }
+
+        @media (max-width: 1260px) {
+            .Singapore-ad section.box .cloud-box .absolute-btn {
+                bottom: 4%;
+                padding: 1% 3%;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .Singapore-ad section.box .cloud-box .img-item {
+                margin-top: 8%;
+            }
+
+            .Singapore-ad section.box .cloud-box {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .Singapore-ad section.box .cloud-box .absolute-btn {
+                bottom: 5%;
+            }
+
+            .absolute-bom {
+                bottom: 3%;
+            }
+
+        }
+
+        /*  */
+        .Singapore-ad .r-w-b {
+            background: -webkit-linear-gradient(left, red, white, blue);
+            /* Safari 5.1-6, Chrome 10-25 */
+            background: linear-gradient(to right, red, white, blue);
+            /* 标准的线性渐变语法 */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .Singapore-ad .boxcontainer {
+            background-color: #F9F9F9;
+
+        }
+
+
+        /* 控制按钮样式 */
+
+        .Singapore-ad .controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* 控制按钮样式 */
+
+        .Singapore-ad .dot-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+
+        .Singapore-ad .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .Singapore-ad .dot.active {
+            background-color: #007BFF;
+        }
+
+        /* 鼠标悬停时的按钮样式 */
+        .Singapore-ad .dot:hover {
+            background-color: #0056b3;
+        }
+
+
+
+
+        .loop .title {
+            margin-top: 0em;
+        }
+
+
+
+        .Singapore-ad .loop h2,
+        .Singapore-ad .loop p {
+            color: #000;
+        }
+
+        .loop .partnerSwiper {
+            display: block;
+        }
+
+        .Roughly-mp4 video {
+            margin: 50px auto;
+        }
+
+        .Roughly-mp4 video {
+            width: 100%;
+        }
+
+        @media (max-width: 850px) {
+
+            .partner-list .loop .partnerSwiper,
+            .loop .partnerSwiper {
+                padding: 0 1em;
+                padding-right: 0 !important;
+            }
+        }
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #fff;
+            opacity: 1;
+            /* Firefox */
+            display: block !important;
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: black;
+        }
+
+        ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: black;
+        }
+
+        .select-wrap,
+        .input-box {
+            position: relative;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .select2-container {
+            box-sizing: border-box;
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            vertical-align: middle;
+        }
+
+        input[type=checkbox],
+        input[type=radio] {
+            margin: 10px auto;
+        }
+
+        .radio-box {
+            width: 100%;
+            margin: 0 auto;
+            /* border: 1px solid #d0d0d5; */
+            border-radius: 4px;
+            transition: border-color 0.25s;
+            padding: 0;
+
+        }
+
+        .select2-container {
+            box-sizing: border-box;
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            vertical-align: middle;
+        }
+
+
+        form {
+            /* box-shadow: 3px 3px 20px 2px #dddddd; */
+            /* max-width: 720px; */
+            width: 100%;
+            margin: 0 auto;
+            /* border: 1px solid #d0d0d5; */
+            border-radius: 30px;
+            color: #fff;
+        }
+
+
+
+        .myForm h2,
+        .myForm p {
+            color: #0068B7;
+        }
+
+        .select2-selection--single {
+            height: 60px !important;
+            padding: 16px 16px 13px;
+            border: 1px solid #d0d0d5 !important;
+            border-radius: 4px;
+            -webkit-transition: border-color .25s;
+            transition: border-color .25s;
+            margin: 0 !important;
+        }
+
+        .input-form .select-label {
+            z-index: 1;
+        }
+
+        form .form-tab {
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        .Singapore-ad form h3 {
+            text-align: left;
+            padding: 0 20px;
+            color: #0068B7;
+            font-weight: 600;
+        }
+
+        .Singapore-ad form h3::after {
+            content: "\273D";
+            font-size: 12px;
+            color: #ff001f;
+            position: absolute;
+        }
+
+        .item-box-input,
+        .radio-wrap.radio_required {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .radio-wrap.radio_required {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px 4%;
+        }
+
+        .radio-box input[type="radio"] {
+            display: none;
+            /* 隐藏默认的单选按钮 */
+        }
+
+        .radio-box input[type="radio"]+label {
+            position: relative;
+            padding-left: 35px;
+            /* 留出空间放置自定义的单选按钮 */
+            cursor: pointer;
+        }
+
+        .radio-box input[type="radio"]+label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            /* 自定义单选按钮的宽度 */
+            height: 25px;
+            /* 自定义单选按钮的高度 */
+            border: 2px solid #d0d0d5;
+            border-radius: 50%;
+            /* 使其成为圆形 */
+        }
+
+        .radio-box input[type="radio"]:checked+label:before {
+            background: #fff;
+            /* 当单选按钮被选中时，填充黑色 */
+        }
+
+        .input-form .select-label {
+            position: absolute;
+            font-size: 12px;
+            line-height: 1.5;
+            left: 16px;
+            top: 0px;
+            color: #555;
+            padding: 0 2px;
+            font-weight: 300;
+            transform-origin: 0 0;
+            pointer-events: none;
+            transition: all 0.25s;
+        }
+
+        .form-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        #form_submit {
+            width: 200px;
+        }
+
+        .flex-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 1420px) {
+            .input-box {
+                position: relative;
+                width: 95%;
+                margin: 10px auto;
+            }
+        }
+
+        @media (max-width: 850px) {
+
+            .item-box-input,
+            .radio-wrap.radio_required {
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .select-wrap,
+            .input-box {
+                width: 95%;
+            }
+
+            .flex-btn {
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            .flex-name {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 720px) {
+
+            .item-box-input,
+            .radio-wrap.radio_required {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .radio-wrap.radio_required {
+                gap: 10px;
+
+            }
+        }
+
+        .error {
+            border: 1px solid #f00 !important;
+        }
+
+        .input-form .input-outline {
+            color: #000;
+        }
+
+        .hidden-radio {
+            display: none;
+        }
+
+        .dots span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: 0 5px;
+            background-color: #0068B7;
+            border-radius: 50%;
+        }
+
+        .dots .dots-active {
+            background-color: #e3e3e3;
+        }
+
+        .banner-center-back {
+            padding: 5px 10%;
+        }
+
+        .banner-center-5 .minor-blue-btn-no,
+        .banner-center-3 .minor-blue-btn-no {
+            background-color: #DBDBDB;
+            border: #DBDBDB;
+        }
+
+        .container h5 {
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .Singapore-ad .nav-bar .nav-bar-item {
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .Singapore-ad .nav-bar ul {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .Singapore-ad .nav-bar .share_con {
+            justify-content: flex-end;
+            width: 30%;
+        }
+
+        .Singapore-ad .nav-bar .share_con img {
+            margin: 0;
+        }
+
+        .Singapore-ad .nav-bar .nav {
+            width: 90%;
+        }
+
+        .Singapore-ad .nav-bar ul li {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .Singapore-ad .nav-bar ul li .product-title {
+            margin-right: 1em;
+            font-weight: 500;
+        }
+
+        .Singapore-ad .nav-bar .links {
+            display: flex;
+        }
+
+        .Singapore-ad .nav-bar ul li .links a {
+            padding: 0 15px;
+        }
+
+        .Singapore-ad .nav-bar.xq_hover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(241, 241, 241, 0.87);
+        }
+
+        @media (max-width: 720px) {
+            .Singapore-ad .nav-bar .nav-bar-item .nav {
+                display: none;
+            }
+
+            .Singapore-ad .nav-bar .nav-bar-item {
+                justify-content: center;
+            }
+
+            .Singapore-ad .nav-bar .share_con {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .Singapore-ad .nav-bar ul {
+                padding: 0;
+            }
+
+            .Singapore-ad .nav-bar .nav {
+                display: none;
+            }
+
+            .anviz-primary-btn {
+                margin: 5px 0;
+            }
+
+            .Singapore-ad .nav-bar.xq_hover {
+                top: 60px;
+            }
+
+            .w720none {
+                display: none;
+            }
+
+            .Singapore-ad h2,
+            .Singapore-ad p,
+            .Singapore-ad h6 {
+                text-align: center !important;
+            }
+        }
+    </style>
+    <div class="content Singapore-ad w3 template">
+        <div class="banner fullscreen" id="series">
+            <div class="banner-info">
+                <h1 class="banner-info-title mb-2">Secure Workplace, Simplify Management</h1>
+                <div class="banner-info-item">
+                    <div class="banner-left banner-item">
+                        <img src="https://www.anviz.com/file/files/4352" alt="">
+                        <h6> Anviz helps Build your customized security solution</h6>
+                    </div>
+                    <div class="banner-center banner-item">
+                        <div class="banner-center-1">
+                            <h2>Choose Your Business</h2>
+                            <label><input type="radio" name="business" value="Commercial Real Estate"
+                                    class="hidden-radio"><span class="minor-blue-btn">Commercial Real
+                                    Estate</span></label>
+                    l        <abel><input type="radio" name="business" value="Manufacturing Facilities"
+                                    class="hidden-radio"><span class="minor-blue-btn">Manufacturing
+                                    Facilities</span></abel>
+                            <label><input type="radio" name="business" value="Education" class="hidden-radio"><span
+                                    class="minor-blue-btn">Education</span></label>
+                            <label><input type="radio" name="business" value="Other" class="hidden-radio"><span
+                                    class="minor-blue-btn">Other</span></label>
+                            <div class="dots">
+                                <span class="dots-active"></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="banner-center-2">
+                            <h2>What solutions are you interested in</h2>
+                            <label><input type="radio" name="solution" value="Access Control" class="hidden-radio"><span
+                                    class="minor-blue-btn">Access Control</span></label>
+                            <label><input type="radio" name="solution" value="Time Attendance"
+                                    class="hidden-radio"><span class="minor-blue-btn">Time Attendance</span></label>
+                            <label><input type="radio" name="solution" value="Smart Surveillance"
+                                    class="hidden-radio"><span class="minor-blue-btn">Smart Surveillance</span></label>
+                            <div class="dots">
+                                <span></span>
+                                <span class="dots-active"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="banner-center-2back banner-center-back minor-line-blue-btn">
+                                &lt; back
+                            </div>
+                        </div>
+                        <div class="banner-center-3">
+                            <h2>Do you need customized solution services</h2>
+                            <label><input type="radio" name="custom_solution" value="Yes" class="hidden-radio"><span
+                                    class="minor-blue-btn">Yes</span></label>
+                            <label><input type="radio" name="custom_solution" value="No" class="hidden-radio"><span
+                                    class="minor-blue-btn minor-blue-btn-no">No</span></label>
+                            <div class="dots">
+                                <span></span>
+                                <span></span>
+                                <span class="dots-active"></span>
+                                <span></span>
+                            </div>
+                            <div class="banner-center-3back banner-center-back minor-line-blue-btn">
+                                &lt; back
+                            </div>
+                        </div>
+                        <div class=" banner-center-4">
+                            <div class="myForm" id="Become">
+                                <form method="post" class="fixed-form input-form">
+                                    <div class="item titleRequired type0 form_component" style="display: block;">
+                                        <h2 class="title  mb-1"> Basic information </h2>
+                                        <div class="desc  mb-1"></div>
+                                        <div class="item-box">
+                                            <div class="item-box-input">
+                                                <div class="input-box  type0 required form_component">
+                                                    <input type="text" name="email_from"
+                                                        class="input-control input-outline" placeholder="Your Email"
+                                                        value="">
+                                                    <label class="input-label">
+                                                        Your Email
+                                                    </label>
+                                                </div>
+                                                <div class="input-box  type0 required form_component">
+                                                    <input type="text" name="first_name"
+                                                        class="input-control input-outline" placeholder="First Name"
+                                                        value="">
+                                                    <label class="input-label">
+                                                        First Name
+                                                    </label>
+                                                </div>
+                                                <div class="input-box  type0 required form_component">
+                                                    <input type="text" name="last_name"
+                                                        class="input-control input-outline" placeholder="Last Name"
+                                                        value="">
+                                                    <label class="input-label">
+                                                        Last Name
+                                                    </label>
+                                                </div>
+                                                <div class="input-box  type0 required form_component">
+                                                    <input type="text" name="function"
+                                                        class="input-control input-outline" placeholder="Job Title"
+                                                        value="">
+                                                    <label class="input-label">
+                                                        Job Title
+                                                    </label>
+                                                </div>
+                                                <div class="input-box  type0 required form_component">
+                                                    <input type="text" name="partner_name"
+                                                        class="input-control input-outline" placeholder="Company Name"
+                                                        value="">
+                                                    <label class="input-label">
+                                                        Company Name
+                                                    </label>
+                                                </div>
+                                                <div class="input-box  type0 required form_component">
+                                                    <input type="text" name="phone" class="input-control input-outline"
+                                                        placeholder="Phone Number" value="">
+                                                    <label class="input-label">
+                                                        Phone Number
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-footer">
+                                            <button type="submit" id="form_submit" name="inquiry_form_submit_en"
+                                                class="anviz-primary-btn" value="">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span class="dots-active"></span>
+                                </div>
+                                <div class="banner-center-4back banner-center-back minor-line-blue-btn">
+                                    &lt; back
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-center-5">
+                            <h2>Successfully submitted!</h2>
+                            <img class="image" src="https://www.anviz.com/file/files/4372" alt="">
+                            <a class="minor-blue-btn flex-img-text" href="tel:+65 97495008">
+                                <div class="a-left">
+                                    <img src="https://www.anviz.com/file/files/4353" alt="">
+                                </div>
+                                <span> Contact Us Now! +65 97495008</span>
+
+                            </a>
+
+                            <span class="minor-blue-btn minor-blue-btn-no banner-center-5-back">No</span>
+                        </div>
+
+                    </div>
+                    <div class="banner-right banner-item">
+                        <h6>Anviz Security Solutions</h6>
+                        <ul>
+                            <li>
+                                <img src="https://www.anviz.com/file/files/4354" alt="">
+                                <span>Access Control</span>
+                            </li>
+                            <li>
+                                <img src="https://www.anviz.com/file/files/4355" alt="">
+                                <span>Smart Surveillance</span>
+                            </li>
+                            <li>
+                                <img src="https://www.anviz.com/file/files/4356" alt="">
+                                <span>Time Attendance</span>
+                            </li>
+                            <li>
+                                <img src="https://www.anviz.com/file/files/4357" alt="">
+                                <span>Multiple check-in methods</span>
+                            </li>
+                            <li>
+                                <img src="https://www.anviz.com/file/files/4358" alt="">
+                                <span>Intelligent face recognition</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar" id="productDetailsNav2">
+            <div class="container nav-bar-item">
+                <ul class="nav">
+                    <li class="item">
+                        <h5 class="product-title">Build Your Customized Security Solution with Anviz </h5>
+                    </li>
+                    <li class="item">
+                    </li>
+                </ul>
+
+                <ul class="share_con">
+                    <li>
+                        <div class="Singapore-ad-top anviz-primary-btn">
+                            Submit Form
+                            <!-- <img src="https://www.anviz.com/file/files/4373" alt=""> -->
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="Singapore-ad-main">
+            <section class="box gray" id="Advantages">
+                <div class="container">
+                    <div class="Roughly-mp4 mt-5">
+                        <h2 class="mb-2 w720none">2024 New AI Security Automation Solution for Singapore Enterprise</h2>
+                        <p>Suitable for small and medium-sized business. By integrating AI, cloud, and IoT, we provide a
+                            smarter, more responsive system capable of analyzing patterns, predicting breaches, and
+                            automating responses.</p>
+                        <!-- <video autoplay="" loop=""  preload="" playsinline tabindex="-1">
+                            <source src="https://www.anviz.com/file/files/4305" type="video/mp4">
+                        </video> -->
+                        <video autoplay loop muted playsinline preload="none"
+                            src="https://www.anviz.com/file/video/4305">
+                            <source src="https://www.anviz.com/file/video/4305" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="Buy mt-5">
+                        <h5>How to Buy</h5>
+                        <div class="flex-img-text">
+                            <h2>Step 1 </h2>
+                            <div class="flex-direction">
+                                <p class="name">
+                                    Submit the form
+                                </p>
+                                <span>Also you can give us a call after filling out the form. The call is quick and
+                                    easy.</span>
+                            </div>
+                        </div>
+                        <div class="flex-img-text">
+                            <h2>Step 2 </h2>
+                            <div class="flex-direction">
+                                <p class="name">
+                                    Customize your system
+                                </p>
+                                <span>On the call, talk through specifics, and customize a system to fit your
+                                    needs.</span>
+                            </div>
+                        </div>
+                        <div class="flex-img-text">
+                            <h2>Step 3 </h2>
+                            <div class="flex-direction">
+                                <p class="name">
+                                    <!-- Schedule an installation -->
+                                    Assigning a suitable vendor to serve you.
+                                </p>
+                                <span>Pick a time that works, and sit back while the installer professionally installs
+                                    your
+                                    system.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="box boxfree">
+                <div class="container ">
+                    <div class="flex-img-text">
+                        <div class="left-img flex-direction">
+                            <img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4366" />
+                        </div>
+
+                        <div class="right-text">
+                            <h6 class="mt-2 mb-2">Free Cloud-based Time & Attendance Management Solution
+                            </h6>
+                            <div class="flex-img-text">
+                                <a href="/cloud-based-time-and-attendance-solution-crosschex-cloud.html"
+                                    class="minor-boxfree" previewlistener="true">Learn More</a>
+                                <img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4374" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                <div class="max-1440 gridfour info mt-5 mb-3">
+                    <div class="gridfour-item gridfour-item1">
+                        <div class="gridfour-item-div">
+                            <img alt="FaceDeep 3" class="image-pc" auto_mobile="true"
+                                src="https://www.anviz.com/file/files/4375" />
+                            <img alt="FaceDeep 3" class="image-mmobile" auto_mobile="true"
+                                src="https://www.anviz.com/file/files/4383" />
+                            <h2>For
+                                Indoor
+                            </h2>
+                        </div>
+                        <ul class="list w-series gap-20">
+                            <li>
+                                <img alt="Face Reader" auto_mobile="true" src="https://www.anviz.com/file/files/4399" />
+                                <a href="/facedeep-3-smart-face-recognition-terminal.html">
+                                    <h6>
+                                        Face Recognition >
+                                    </h6>
+                                </a>
+                            </li>
+                            <li>
+                                <img alt="Dome Camera" auto_mobile="true" src="https://www.anviz.com/file/files/4400" />
+                                <a href="/5mp-uhd-ai-smart-mini-dome-indoor-ir-cctv-camera.html">
+                                    <h6>
+                                        Dome Camera >
+                                    </h6>
+                                </a>
+                            </li>
+                            <li>
+                                <img alt="Lock With NFC" auto_mobile="true"
+                                    src="https://www.anviz.com/file/files/4401" />
+                                <h6>
+                                    Lock With NFC
+                                </h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gridfour-item gridfour-item2">
+
+                        <ul class="list w-series gap-20">
+                            <li>
+                                <img alt="Bullet Camera" auto_mobile="true"
+                                    src="https://www.anviz.com/file/files/4402" />
+                                <a href="/4k-uhd-ai-smart-bullet-outdoor-ir-cctv-camera.html">
+                                    <h6>
+                                        Bullet Camera >
+                                    </h6>
+                                </a>
+                            </li>
+                            <li>
+                                <img alt="Fingerprint Reader" auto_mobile="true"
+                                    src="https://www.anviz.com/file/files/4403" />
+                                <a href="/product/m5plus-access-control.html">
+                                    <h6>
+                                        Fingerprint Reader >
+                                    </h6>
+                                </a>
+                            </li>
+                            <li><img alt="Waterproof Reader" auto_mobile="true"
+                                    src="https://www.anviz.com/file/files/4404" />
+                                <a href="/product/c2ka-access-control-1.html">
+                                    <h6>
+                                        Waterproof Reader >
+                                    </h6>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="gridfour-item-div">
+                            <img alt="FaceDeep 3" class="image-pc" auto_mobile="true"
+                                src="https://www.anviz.com/file/files/4379" />
+                            <img alt="FaceDeep 3" class="image-mmobile" auto_mobile="true"
+                                src="https://www.anviz.com/file/files/4384" />
+                            <h2>For
+
+                                Outdoor
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="box">
+                <div class="container">
+                    <div class="Buy deciding">
+                        <div class="flex-img-text">
+                            <img src="https://www.anviz.com/file/files/4359" alt="">
+                            <div class="flex-direction">
+                                <p class="name">
+                                    Would you need any help deciding?
+                                </p>
+                                <span>Anviz Local agent in Singapore can help customize the perfect solution for
+                                    you.</span>
+                                <span>Fill out the form and call to get connected with an Anviz agent. </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="box gray">
+                <div class="container" id="num">
+                    <h5>About Anviz</h5>
+                    <p>Located in Silicon Valley, Anviz is a converged intelligent security solution provider for
+                        SMBs and enterprise organizations worldwide. The company provides comprehensive biometrics,
+                        video surveillance and security management solutions based on cloud, Internet of Things
+                        (IoT), and AI technologies. </p>
+                    <div class="cloud-box">
+
+                        <div class="img-item">
+                            <p>Patents and Intellectual Properties</p>
+                            <h1><span class="number">200</span>+</h1>
+                        </div>
+                        <div class="img-item">
+                            <p>Industry Leader</p>
+                            <h1><span class="number">17 </span><small>&nbsp;Years+</small></h1>
+                        </div>
+                        <div class="img-item">
+                            <p>Projects Spread in 140 Countries and Regions</p>
+                            <h1><span class="number">200</span>K+</h1>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="box gray" style="background-color: #F2F7FB;">
+                <div class="container">
+                    <h5 class="mt-2 mb-2">Memberships of Security Associations</h5>
+                    <ul class="flex-3 gap-20">
+                        <li>
+                            <img alt="FaceDeep 3" auto_mobile="true" src="https://www.anviz.com/file/files/4385" />
+
+                        </li>
+                        <li>
+                            <img alt="iCam-D25" auto_mobile="true" src="https://www.anviz.com/file/files/4386" />
+
+                        </li>
+                        <li>
+                            <img alt="Latch 5" auto_mobile="true" src="https://www.anviz.com/file/files/4387" />
+
+                        </li>
+                    </ul>
+                    <h5 class="mt-2 mb-2">Recommended by Media</h5>
+                    <ul class="flex-4 gap-20">
+                        <li>
+                            <img alt="FaceDeep 3" auto_mobile="true" src="https://www.anviz.com/file/files/4388" />
+                        </li>
+                        <li>
+                            <img alt="iCam-D25" auto_mobile="true" src="https://www.anviz.com/file/files/4389" />
+                        </li>
+                        <li>
+                            <img alt="Latch 5" auto_mobile="true" src="https://www.anviz.com/file/files/4390" />
+                        </li>
+                        <li>
+                            <img alt="Latch 5" auto_mobile="true" src="https://www.anviz.com/file/files/4391" />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="box gray">
+                <div class="container">
+                    <h5 class="mt-2 mb-2">Create Specific Solutions for Your Industry</h5>
+                    <ul class="flex-4 gap-20 Industry">
+                        <li>
+                            <img alt="Education" auto_mobile="true" src="https://www.anviz.com/file/files/4392" />
+                            <h5>Education</h5>
+                        </li>
+                        <li>
+                            <img alt="Retail" auto_mobile="true" src="https://www.anviz.com/file/files/4393" />
+                            <h5>Retail</h5>
+                        </li>
+                        <li>
+                            <img alt="Office" auto_mobile="true" src="https://www.anviz.com/file/files/4394" />
+                            <h5>Office</h5>
+                        </li>
+                        <li>
+                            <img alt="Manufacturing" auto_mobile="true" src="https://www.anviz.com/file/files/4395" />
+                            <h5>Manufacturing</h5>
+                        </li>
+                    </ul>
+                    <p>Anviz’s diverse customer base spans industries such as commercial, education, manufacturing, and
+                        retail. We could customize exclusive security solutions for your industry needs.</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script>
+        $(window).scroll(function () {
+            var numTop = $('#num').offset().top - $(window).height();
+            if ($(window).scrollTop() > numTop) {
+                $('.number').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+                $(window).off('scroll');
+            }
+        });
+        $('.banner-center-2, .banner-center-3, .banner-center-4,.banner-center-5').hide();
+        $('.banner-center-1 input[type="radio"]').click(function () {
+            $('.banner-center-1').hide();
+            $('.banner-center-2').show();
+        });
+        $('.banner-center-2back').click(function () {
+            $('.banner-center-2').hide();
+            $('.banner-center-1').show();
+        });
+        $('.banner-center-2 input[type="radio"]').click(function () {
+            $('.banner-center-2').hide();
+            $('.banner-center-3').show();
+        });
+        $('.banner-center-3back').click(function () {
+            $('.banner-center-3').hide();
+            $('.banner-center-2').show();
+        });
+        $('.banner-center-3 input[type="radio"]').click(function () {
+            $('.banner-center-3').hide();
+            $('.banner-center-4').show();
+        });
+        $('.banner-center-4back').click(function () {
+            $('.banner-center-4').hide();
+            $('.banner-center-3').show();
+        });
+        $('.banner-center-5-back').click(function () {
+            $('.banner-center-5').hide();
+            $('.banner-center-1').show();
+        });
+        $('.Singapore-ad-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            $('.banner-center-1').show();
+            $('.banner-center-2, .banner-center-3, .banner-center-4,.banner-center-5').hide();
+
+        });
+        var juli = $("#productDetailsNav2").offset().top;
+        window.addEventListener('scroll', function () {
+            var gju = $(window).scrollTop();
+            var productNav = $(".product-nav");
+            if (gju >= juli) {
+                $("#productDetailsNav2").addClass('xq_hover');
+                productNav.hide();
+            } else {
+                $("#productDetailsNav2").removeClass('xq_hover');
+                productNav.show();
+            }
+            var flag = true
+            $("#productDetailsNav2 .icon-down").click(function () {
+                if (flag) {
+                    $('.links').addClass('active');
+                    flag = false
+                } else {
+                    $(".links").removeClass('active')
+                    flag = true
+                }
+
+            });
+            $('.links a').on('click', function () {
+                $('.links').removeClass('active')
+            })
+        })
+        $(document).ready(function () {
+
+            $("#form_submit").click(function (e) {
+                e.preventDefault();
+                // 清除之前的错误提示
+                $('.input-outline').removeClass('error');
+                // 验证项
+                var business = $('input[name="business"]:checked').val();
+                var customized = $('input[name="custom_solution"]:checked').val();
+                var solution = $('input[name="solution"]:checked').val();
+                var email = $('input[name="email_from"]').val();
+                var firstName = $('input[name="first_name"]').val();
+                var lastName = $('input[name="last_name"]').val();
+                var jobTitle = $('input[name="function"]').val();
+                var companyName = $('input[name="partner_name"]').val();
+                var phone = $('input[name="phone"]').val();
+                // 检查每一项是否为空，如果为空则添加错误类
+                // 检查customTypeId是否为空，如果为空则添加错误类
+                if (!email) $('input[name="email_from"]').addClass('error');
+                if (!firstName) $('input[name="first_name"]').addClass('error');
+                if (!lastName) $('input[name="last_name"]').addClass('error');
+                if (!jobTitle) $('input[name="function"]').addClass('error');
+                if (!companyName) $('input[name="partner_name"]').addClass('error');
+                if (!phone) $('input[name="phone"]').addClass('error');
+                // 如果没有错误类，那么发送Ajax请求
+                if ($('.error').length == 0) {
+                    var dataObject = {
+                        business: business,
+                        solution: solution,
+                        customized: customized,
+                        email_from: email,
+                        first_name: firstName,
+                        last_name: lastName,
+                        function: jobTitle,
+                        partner_name: companyName,
+                        phone: phone,
+                    };
+                    $.ajax({
+                        url: "https://www.anviz.com/form/index/saveData",
+                        type: "POST",
+                        // contentType: 'application/json',
+                        // contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                        data: (dataObject),
+                        success: function (response) {
+                            if (response.status === 200) {
+                                // 重置表单
+                                $('input[type="text"], input[type="password"], input[type="hidden"], textarea').val('');
+                                $('select').prop('selectedIndex', 0);
+                                $('input[type="checkbox"], input[type="radio"]').prop('checked', false);
+                                $('.banner-center-4').hide();
+                                $('.banner-center-5').show();
+                                // window.open(response.data.redirect_url, '_blank');
+                            } else {
+                                alert("Form submission failed, please try again later.");
+                            }
+                        },
+                        error: function () {
+                            alert("Form submission failed, please try again later.");
+                        }
+                    });
+                } else {
+                    alert("All fields are required, please make sure every field is filled out.");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

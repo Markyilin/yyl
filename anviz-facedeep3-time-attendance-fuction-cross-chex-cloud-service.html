@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style type="text/css">
+        /* a全网页公共部分 */
+        .title span {
+            padding: 0.8em;
+            /* background-color: #0626d2; */
+            /* 渐变色背景 左浅右深*/
+            background: linear-gradient(to right, #2a67b1, #252c87);
+            border-radius: 0 2em 2em 0;
+            color: #fff !important;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        @media(max-width: 720px) {
+            .title span {
+                font-size: 18px;
+            }
+
+        }
+
+        /* a 公共兼容 */
+        @media(max-width: 1440px) {
+            .max-1440 {
+                max-width: 1260px;
+                margin: 0 auto;
+            }
+        }
+
+
+        /* 1 banner */
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /*2  */
+        .banner .max-1440 {
+            width: 100%;
+        }
+
+        /*2  */
+
+        .banner .max-1440 h1 {
+            text-align: center;
+        }
+
+        /*2  */
+
+        .banner .max-1440 p {
+            text-align: left;
+        }
+
+
+        /* 2 一边文字一边图片*/
+        /* 左右公共 */
+        .main-banner .main-banner-one {
+            width: 100%;
+            height: auto;
+            align-items: center;
+        }
+
+        /* 2 */
+        .main-banner .main-banner-one img {
+            width: 50%;
+            height: auto;
+        }
+
+        .main-banner .main-banner-one .lt-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .main-banner .bnt-left {
+            align-items: self-start;
+        }
+
+        .lt-text {
+            width: 48%;
+        }
+
+        .rt-img {
+            width: 48%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* 2右图左文字 兼容*/
+        @media(max-width: 850px) {
+            .rt-img {
+                flex-direction: column;
+            }
+
+            .main-banner .main-banner-one img {
+                width: 100%;
+                height: auto;
+            }
+
+            .lt-text {
+                width: 100%;
+            }
+
+        }
+
+        @media(max-width: 720px) {
+            .bnt-right {
+                flex-direction: column-reverse;
+            }
+
+            .rt-img {
+                width: 100%;
+            }
+        }
+
+        /* 2左图右文字 兼容 */
+        .lt-img {
+            width: 100%;
+        }
+
+        .rt-text {
+            width: 98%;
+        }
+
+        @media(max-width: 720px) {
+            .bnt-left {
+                flex-direction: column;
+            }
+
+            .main-banner .bnt-left {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .main-banner .bnt-left img {
+                width: 100%;
+                height: auto;
+            }
+
+            .main-banner .title {
+                margin-top: 10%;
+                margin-bottom: 7%;
+            }
+
+            .infoto {
+                padding: 10px 0 20px;
+            }
+        }
+
+        /* 3 图片排版「最少二张图」 */
+        .gridphone {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* 3 */
+        .gridphone .list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            grid-auto-flow: dense;
+        }
+
+        .gridphone .list img {
+            width: 100%;
+        }
+
+        /* 3兼容 */
+        @media (max-width: 1260px) {
+            .gridphone .list {
+                gap: 20px;
+            }
+        }
+
+        /* 3 */
+        @media (max-width: 850px) {
+            .gridphone .list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        /* 3 */
+        @media (max-width: 720px) {
+            .gridphone .list {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+
+            }
+        }
+
+        /* 7 */
+        .gridfour {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* 7 */
+        .gridfour .list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            grid-auto-flow: dense;
+        }
+
+
+
+        /* 7兼容 */
+        @media (max-width: 400px) {
+            .gridfour .list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        /* 7 */
+        @media (max-width: 300px) {
+            .gridfour .list {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+
+            }
+        }
+
+    </style>
+    <!--这是一个网页模版 -->
+    <div class="template"><!--1 banner -->
+        <div class="banner"><!-- banner全屏图片 --><img alt="THE CUSTOMER" auto_mobile="true"
+                src="/Adminewyqeywquyewqueqw/ckeditor/files/4332" style="width: 1920px; height: 815px;" />
+            <div class="info max-1440">
+                <p>As the UAE&#39;s economy continued to get ahead, its territory became the world&#39;s experimental
+                    zone for pioneering construction technologies. The continuous rise of the construction industry has
+                    introduced a large number of laborers to stations on construction sites.</p>
+
+                <p>&ldquo;How to systematically manage workers under regulations, while ensuring the rights and
+                    interests of both workers and enterprises is the main problem currently faced by NGC on its way
+                    forward.</p>
+            </div>
+        </div>
+        <!-- 2 一边文字一边图片 -->
+
+        <div class="main-banner info"><!-- 小标题 -->
+            <p class="title mb-3 mt-5"><span>THE CUSTOMER</span></p>
+            <!-- 左图右文字 -->
+
+            <div class="main-banner-one info flex gap-20 bnt-left">
+                <div class="lt-img-img"><img alt="THE CUSTOMER" auto_mobile="true"
+                        src="/Adminewyqeywquyewqueqw/ckeditor/files/4329" style="width: 165px; height: 191px;" /></div>
+                <div class="lt-img">
+                    <p>Nael General Contracting (NGC), founded in 1998, is one of the UAE&#39;s premier construction
+                        companies. Its core areas of expertise include the Design and Execution of Turnkey Construction
+                        Projects, Steel Structures, Aluminum &amp; Glassworks, Interior Fit-out, Hard &amp; Soft
+                        landscapes, MEP infrastructure, and Facilities Management. Based on 25 years of safe working
+                        life, NGC currently has more than 9,000 employees and has successfully contracted not limited to
+                        250 projects.</p>
+
+                    <p>&ldquo;NGC is seeking the best intelligent attendance solution for one of its construction sites
+                        with nearly a thousand workers. To this end, NGC consulted Anviz&#39;s long-term partner Xedos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info four">
+                <p class="title mb-3 mt-5"><span> THE CHALLENGE</span></p>
+
+                <div>
+                    <p>In the absence of intelligent attendance equipment, workers&#39; attendance management on and off
+                        work is bitterly chaotic. Workers&#39; shifts are unreasonable and shift coordination is
+                        formidable. There are even abundant irregularities such as punching in on behalf of others and
+                        tampering with attendance data without permission. So laborers take the fairness of wage
+                        calculations with a grain of salt.</p>
+
+                    <p>&ldquo;At the same time, the human resources department spends at least 10 hours per month
+                        sorting out the clock data of nearly a thousand employees to output monthly results reports. The
+                        financial department also demands to settle workers&#39; compensation based on attendance
+                        reports. It leads to continuous delays in salary payments. It is urgent to seek an intelligent
+                        and complete attendance solution.</p>
+                </div>
+            </div>
+            <!-- 右图左文字 -->
+
+            <p class="title mb-3 mt-5"><span>THE SOLOUTION</span></p>
+
+            <div class="main-banner-one info flex gap-20 bnt-right">
+                <div class="text">
+                    <div class="infoto"><!-- 小标题添加 class="fw-6" 加粗-->
+                        <p class="fw-6">Simplify attendance while outputting cloud reports</p>
+
+                        <p>Based on ensuring the attendance management of nearly a thousand laborers, while also meeting
+                            the output of centralized visual reports and reducing labor costs, FaceDeep 3 &amp;
+                            CrossChex Cloud can cover the above needs and submit a satisfactory solution to NGC.</p>
+
+                        <p>&ldquo;NGC&#39;s site manager said, &quot;Attendance at the construction site is not
+                            transparent, and most workers are often worried about whether their salary for the next
+                            month will be recorded in their accounts. There has even been chaos in paid attendance,
+                            which has brought a lot of trouble to the normal operation of construction.&quot; Based on
+                            high-precision liveness face detection and dual-camera lenses, FaceDeep 3 can accurately
+                            identify workers and complete personal attendance verification under any environmental
+                            conditions, &nbsp;preventing the use of fake faces such as videos and pictures to check-in.
+                            The CrossChex Cloud implements hierarchical management and designs administrator operation
+                            logs to record their action lines, effectively eliminating the unhealthy trend of tampering
+                            with records for personal gain.</p>
+
+                        <p>&ldquo;NGC&#39;s Finance Minister said, &quot;Every month some workers appeal against errors
+                            in attendance records, but there is nothing we can do about the large amount of confusing
+                            data records.&quot; Integrate through CrosssChex Cloud and SQL DATABASE to synchronize each
+                            employee&#39;s attendance records, and automatically generate attendance visualization
+                            reports. Administrators and employees can make attendance management transparent by viewing
+                            reports at any time. The cloud system is equipped with shift and schedule management
+                            functions that administrators can adjust in real-time according to the construction
+                            progress. Workers can apply for make-up attendance to achieve flexible management.</p>
+                    </div>
+                    <div class="gridphone">
+                        <div class="list">
+                            <img alt="THE CUSTOMER" auto_mobile="true"
+                                src="/Adminewyqeywquyewqueqw/ckeditor/files/4330" />
+                            <img alt="THE CUSTOMER" auto_mobile="true"
+                                src="/Adminewyqeywquyewqueqw/ckeditor/files/4331" />
+                        </div>
+                    </div>
+                    <p>NGC&#39;s Finance Minister said, &quot;Every month some workers appeal against errors in
+                        attendance records, but there is nothing we can do about the large amount of confusing data
+                        records.&quot; Integrate through CrosssChex Cloud and SQL DATABASE to synchronize each
+                        employee&#39;s attendance records, and automatically generate attendance visualization reports.
+                        Administrators and employees can make attendance management transparent by viewing reports at
+                        any time. The cloud system is equipped with shift and schedule management functions that
+                        administrators can adjust in real-time according to the construction progress. Workers can apply
+                        for make-up attendance to achieve flexible management.</p>
+                </div>
+            </div>
+            <!-- 4  -->
+
+            <div class="info four">
+                <p class="title mb-5 mt-3"><span> KEY BENEFITS </span></p>
+
+                <div class="infoto"><!-- 小标题添加 class="fw-6" 加粗-->
+                    <p class="fw-6">Convenient and worry-free attendance experience</p>
+
+                    <p>The efficient attendance system ensures a quick clock-in experience and simplifies the attendance
+                        process. Cloud visual reports make it easy to calculate workers&#39; salaries.</p>
+
+                    <p class="fw-6">Reduced human resource costs</p>
+
+                    <p>Cloud visual reports make it easy to calculate workers&#39; salaries. For the HR department,
+                        there&#39;s no longer a need to manually sort out large amounts of attendance data.</p>
+                </div>
+            </div>
+            <!--   -->
+
+            <div class="info four">
+                <p class="title mb-3 mt-5"><span> CLIENT&#39;S QUOTE </span></p>
+
+                <div class="infoto"><!-- 小标题添加 class="fw-6" 加粗-->
+                    <p>&ldquo;The person in charge of NGC said, &quot;The attendance plan tailored by Anviz for us has
+                        received unanimous praise from all employees. It reduced more than 85% of the labor costs spent
+                        on worker attendance management and saved the company nearly 60,000 dirhams per month.&quot;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
