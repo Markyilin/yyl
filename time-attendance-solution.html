@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ad</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper 5.4.5.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+</head>
+<script src="./jquery-3.2.1.js"></script>
+<script src="./swiper.min 5.4.5.js"></script>
+
+<body>
+    <style type="text/css">
+        .dc-solution {
+            width: 100%;
+            height: auto
+        }
+
+        .dc-solution h1,
+        .dc-solution h2,
+        .dc-solution h3,
+        .dc-solution h4,
+        .dc-solution p {
+            margin-bottom: 10px
+        }
+
+        .dc-solution .btn {
+            max-width: 170px;
+            width: auto;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-size: 1.125rem;
+            transition: all .3s ease-in-out
+        }
+
+        .dc-solution .btn.btn-circle {
+            border-radius: 40px;
+            border: 1px solid #000
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution h2 {
+                padding-left: 0;
+                font-weight: bold;
+                padding: 0
+            }
+        }
+
+        .dc-solution .dc {
+            margin-bottom: 1em !important
+        }
+
+        .dc-solution .dc.header-banner {
+            height: 55.6vw;
+            background: #333 url(https://www.anviz.com/file/files/3976) no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.header-banner {
+                min-height: 680px;
+                background-position: 60%
+            }
+        }
+
+        @media(max-width: 1250px) {
+            .details_nav_bar .navbar-default .nav_bar .nav-item {
+                padding: 0 10px;
+            }
+        }
+
+        .dc-solution .dc.header-banner .circle-mark {
+            width: 1200px;
+            height: 1200px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 400vmax #0068b7;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.header-banner .circle-mark {
+                display: none
+            }
+        }
+
+        .dc-solution .dc.header-banner .info {
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -50%);
+            z-index: 11;
+            width: 40%
+        }
+
+        @media(max-width: 950px) {
+            .dc-solution .dc.header-banner .info {
+                width: 100%;
+                padding: 0 15px
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.header-banner .info {
+                top: 80%
+            }
+        }
+
+        .dc-solution .dc.header-banner .info h1 {
+            color: #fff;
+            text-align: center;
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.header-banner .info h1 {}
+        }
+
+        .dc-solution .dc.header-banner .info h3 {
+            color: #fff;
+            text-align: center;
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.header-banner .info h3 {
+                font-size: 18px
+            }
+        }
+
+        .dc-solution .dc.header-banner .info img {
+            max-width: 50%;
+            margin: auto
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.header-banner .info img {
+                margin-bottom: 1em
+            }
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.header-banner .info img {
+                max-width: 80%;
+                margin-bottom: 2em
+            }
+        }
+
+        .dc-solution .dc.products {
+            padding-bottom: 2%
+        }
+
+        .dc-solution .dc.products img {
+            max-width: 70%;
+            margin: auto
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.products img {
+                max-width: 100%
+            }
+        }
+
+        .dc-solution .dc.products h3 {
+            max-width: 80%;
+            margin: auto;
+            line-height: 1.5;
+            margin-bottom: 2rem
+        }
+
+        .dc-solution .dc.products h3:last-child {
+            margin-bottom: 0
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.products h3 {
+                max-width: 80%;
+                margin-bottom: 3rem;
+                text-align: center
+            }
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.products h3 {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.ip {
+            width: 100%;
+            height: 616px;
+            background: #eee url(https://www.anviz.com/file/files/3239/ip-bg.jpg) no-repeat;
+            background-position: center;
+            background-size: cover
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.ip {
+                height: auto
+            }
+        }
+
+        .dc-solution .dc.ip .warp {
+            height: 100%;
+            max-width: 80%;
+            margin: auto;
+            padding: 4em 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.ip .warp {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.ip .warp h2,
+        .dc-solution .dc.ip .warp p {
+            color: #fff;
+            text-align: center
+        }
+
+        .dc-solution .dc.ip .warp p {
+            margin: auto
+        }
+
+        .dc-solution .dc.ip .warp ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.ip .warp ul {
+                flex-direction: column
+            }
+        }
+
+        .dc-solution .dc.ip .warp ul .item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.ip .warp ul .item {
+                align-items: center
+            }
+        }
+
+        .dc-solution .dc.ip .warp ul .item span {
+            width: 126px;
+            height: 126px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.ip .warp ul .item span {
+                width: 76px;
+                height: 76px;
+                margin-top: 2em
+            }
+        }
+
+        .dc-solution .dc.ip .warp ul .item span::before {
+            color: #fff;
+            font-size: 70px
+        }
+
+        .dc-solution .dc.ip .warp ul .item p {
+            margin-top: 1em
+        }
+
+        .dc-solution .dc.modern {
+            width: 100%;
+            height: 44.3vw;
+            background: #eee url(https://www.anviz.com/file/files/3240/modern-bg.jpg) no-repeat;
+            background-position: center;
+            background-size: cover
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.modern {
+                height: auto
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.modern {
+                height: auto;
+                background-position: 30%
+            }
+        }
+
+        .dc-solution .dc.modern .warp {
+            height: 100%;
+            max-width: 80%;
+            margin: auto;
+            padding: 4em 0;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.modern .warp {
+                max-width: 100%;
+                padding: 4em 0;
+                flex-direction: column
+            }
+        }
+
+        .dc-solution .dc.modern .warp .info,
+        .dc-solution .dc.modern .warp .icons {
+            flex: 1
+        }
+
+        .dc-solution .dc.modern .warp .info {
+            max-width: 40%;
+            margin: auto;
+            text-align: center
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.modern .warp .info {
+                max-width: 100%
+            }
+        }
+
+        .dc-solution .dc.modern .warp .info img {
+            margin: 15px auto
+        }
+
+        .dc-solution .dc.modern .warp .info h2 {
+            color: #0ea58a
+        }
+
+        .dc-solution .dc.modern .warp .info .btn {
+            margin: 2em auto
+        }
+
+        .dc-solution .dc.modern .warp .info .btn:hover {
+            color: #fff;
+            background-color: #0ea58a;
+            border-color: #0ea58a;
+            transition: all .3s ease-in-out
+        }
+
+        .dc-solution .dc.modern .warp .icons {
+            max-width: 40%
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.modern .warp .icons {
+                max-width: 80%
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.modern .warp .icons {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.modern .warp .icons h3 {
+            color: #0ea58a;
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.modern .warp .icons h3 {
+                text-align: center;
+                font-size: 20px
+            }
+        }
+
+        .dc-solution .dc.modern .warp .icons .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em
+        }
+
+        .dc-solution .dc.modern .warp .icons .item .icon {
+            font-size: 60px;
+            margin-right: 20px
+        }
+
+        .dc-solution .dc.modern .warp .icons .item p {
+            line-height: 1.5;
+            margin-bottom: 0
+        }
+
+        .dc-solution .dc.optimize {
+            width: 100%;
+            height: 44.3vw;
+            background: #eee url(https://www.anviz.com/file/files/3242/optimize-bg.jpg) no-repeat;
+            background-position: center;
+            background-size: cover
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.optimize {
+                height: auto
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.optimize {
+                height: auto;
+                overflow: hidden
+            }
+        }
+
+        .dc-solution .dc.optimize .warp {
+            height: 100%;
+            max-width: 80%;
+            margin: auto;
+            padding: 4em 0;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.optimize .warp {
+                max-width: 90%;
+                flex-direction: column
+            }
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.optimize .warp {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.optimize .warp .info,
+        .dc-solution .dc.optimize .warp .icons {
+            flex: 1
+        }
+
+        .dc-solution .dc.optimize .warp .info {
+            max-width: 40%;
+            margin: auto;
+            text-align: center
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.optimize .warp .info {
+                max-width: 100%
+            }
+        }
+
+        .dc-solution .dc.optimize .warp .info img {
+            margin: 15px auto
+        }
+
+        .dc-solution .dc.optimize .warp .info h2 {
+            color: #0ea58a
+        }
+
+        .dc-solution .dc.optimize .warp .info .btn {
+            margin: 2em auto
+        }
+
+        .dc-solution .dc.optimize .warp .info .btn:hover {
+            color: #fff;
+            background-color: #0ea58a;
+            border-color: #0ea58a;
+            transition: all .3s ease-in-out
+        }
+
+        .dc-solution .dc.optimize .warp .icons {
+            max-width: 40%
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.optimize .warp .icons {
+                max-width: 80%
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.optimize .warp .icons {
+                max-width: 90%;
+                margin: auto
+            }
+        }
+
+        .dc-solution .dc.optimize .warp .icons h3 {
+            color: #0ea58a;
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.optimize .warp .icons h3 {
+                text-align: center;
+                font-size: 20px
+            }
+        }
+
+        .dc-solution .dc.optimize .warp .icons .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em
+        }
+
+        .dc-solution .dc.optimize .warp .icons .item .icon {
+            font-size: 60px;
+            margin-right: 20px
+        }
+
+        .dc-solution .dc.optimize .warp .icons .item p {
+            line-height: 1.5;
+            margin-bottom: 0
+        }
+
+        .dc-solution .dc.system {
+            width: 100%;
+            height: 44.3vw;
+            background: #eee url(https://www.anviz.com/file/files/3244/system-bg.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.system {
+                height: auto
+            }
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.system {
+                height: auto;
+                min-height: 700px
+            }
+        }
+
+        .dc-solution .dc.system .warp {
+            height: 100%;
+            max-width: 80%;
+            margin: auto;
+            padding: 4em 0;
+            display: flex;
+            justify-content: center
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.system .warp {
+                max-width: 90%;
+                flex-direction: column;
+                padding-bottom: 0
+            }
+        }
+
+        .dc-solution .dc.system .warp h2,
+        .dc-solution .dc.system .warp p {
+            text-align: left
+        }
+
+        @media(max-width: 850px) {
+
+            .dc-solution .dc.system .warp h2,
+            .dc-solution .dc.system .warp p {
+                text-align: center
+            }
+        }
+
+        .dc-solution .dc.system .warp .mobile-grouop,
+        .dc-solution .dc.system .warp .info {
+            flex: 1
+        }
+
+        .dc-solution .dc.system .warp .mobile-grouop img {
+            margin: auto
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.system .warp .mobile-grouop img {
+                max-width: 70%
+            }
+        }
+
+        .dc-solution .dc.system .warp .info {
+            margin-left: 4%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.system .warp .info {
+                margin-left: 0
+            }
+        }
+
+        .dc-solution .dc.system .warp .info .title {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 2em
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.system .warp .info .title {
+                margin: 2em 0;
+                display: flex;
+                justify-content: center
+            }
+        }
+
+        .dc-solution .dc.system .warp .info .title .mobile-cc {
+            margin-right: 1em;
+            height: 90px
+        }
+
+        .dc-solution .dc.system .warp .info .title h3 {
+            color: #0ea58a;
+            font-size: 24px
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.system .warp .info .title h3 {
+                text-align: center;
+                margin: 0
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.system .warp .info h3 {
+                text-align: center
+            }
+        }
+
+        .dc-solution .dc.system .warp .info .media {
+            max-width: 0%;
+            margin: 2em 0
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.system .warp .info .media {
+                max-width: 100%;
+                margin: 2em auto
+            }
+        }
+
+        .dc-solution .dc.various {
+            width: 100%;
+            height: 640px;
+            background: #eee url(https://www.anviz.com/file/files/3248/various-bg.jpg) no-repeat;
+            background-position: center;
+            background-size: cover
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.various {
+                height: auto
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.various {
+                height: auto;
+                background-position: right
+            }
+        }
+
+        .dc-solution .dc.various .warp {
+            height: 100%;
+            max-width: 80%;
+            margin: auto;
+            padding: 4em 0
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.various .warp {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.various .warp h2,
+        .dc-solution .dc.various .warp p {
+            text-align: center;
+            color: #fff;
+        }
+
+        .dc-solution .dc.various .warp h2 {
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .dc-solution .dc.various .warp .icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding-top: 8%
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.various .warp .icons {
+                flex-direction: column
+            }
+        }
+
+        .dc-solution .dc.various .warp .icons .item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center
+        }
+
+        .dc-solution .dc.various .warp .icons .item .icon-warp .iconname {
+            color: #114b79;
+        }
+
+        .dc-solution .dc.various .warp .icons .item .icon-warp {
+            width: 126px;
+            height: 126px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        .dc-solution .dc.various .warp .icons .item span {
+            font-size: 70px;
+            color: #114b78
+        }
+
+        .dc-solution .dc.various .warp .icons .item .icon-name {
+            color: #114b78;
+            margin-bottom: 0;
+            font-weight: bold
+        }
+
+        .dc-solution .dc.various .warp .icons .item .detais {
+            max-width: 70%;
+            margin: 1em auto
+        }
+
+        .dc-solution .dc.various .warp .info {
+            width: 100%;
+            position: relative
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.various .warp .info {
+                flex-direction: column
+            }
+        }
+
+        .dc-solution .dc.customers {
+            width: 100%;
+            height: 44.3vw;
+            background: #eee url(https://www.anviz.com/file/files/3249/customers-bg.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.customers {
+                height: auto
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.customers {
+                height: auto
+            }
+        }
+
+        .dc-solution .dc.customers .warp {
+            height: 100%;
+            max-width: 80%;
+            margin: auto;
+            padding: 4em 0
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.customers .warp {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.customers .warp h2,
+        .dc-solution .dc.customers .warp p {
+            text-align: center;
+            color: #000
+        }
+
+        .dc-solution .dc.customers .warp strong {
+            color: #0068b7
+        }
+
+        .dc-solution .dc.customers .warp h2 {
+            margin-bottom: 2rem
+        }
+
+        .dc-solution .dc.customers .warp .info {
+            margin: auto
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.customers .warp .info {
+                min-height: 600px
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.customers .warp .info {
+                min-height: inherit
+            }
+        }
+
+        .dc-solution .dc.customers .warp .info .title {
+            font-size: 40px
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.customers .warp .info .title {
+                font-size: 30px
+            }
+        }
+
+        .dc-solution .dc.customers .warp .build-list {
+            width: 70%;
+            max-width: 100%;
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, -30%);
+            display: flex;
+            justify-content: space-between
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.customers .warp .build-list {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                position: relative;
+                transform: translate(0);
+                left: 0
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.customers .warp .build-list {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                bottom: 2%;
+                border-top: 0;
+                position: relative;
+                transform: translate(0);
+                left: 0
+            }
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.customers .warp .build-list {
+                bottom: -1%
+            }
+        }
+
+        .dc-solution .dc.customers .warp .build-list .item {
+            display: block;
+            flex: 1;
+            position: relative
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.customers .warp .build-list .item {
+                flex-basis: 50%;
+                width: 50%;
+                flex: none
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.customers .warp .build-list .item {
+                flex-basis: 33.33%;
+                width: 33.33%;
+                flex: none
+            }
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.customers .warp .build-list .item {
+                flex-basis: 50%;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center
+            }
+        }
+
+        .dc-solution .dc.customers .warp .build-list img {
+            max-width: 50%;
+            margin: auto;
+            margin-bottom: 1em;
+            margin-top: 2em;
+            position: relative
+        }
+
+        @media(max-width: 1260px) {
+            .dc-solution .dc.customers .warp .build-list img {
+                max-width: 20%
+            }
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.customers .warp .build-list img {
+                max-width: 30%
+            }
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.customers .warp .build-list img {
+                margin-bottom: 0
+            }
+        }
+
+        .dc-solution .dc.customers .warp .build-list p {
+            text-align: center;
+            color: #0068b7;
+            font-weight: bold
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.customers .warp .build-list p {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.enterprise {
+            width: 100%;
+            height: 640px;
+            background: #eee url(https://www.anviz.com/file/files/3112) no-repeat;
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+            position: relative
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.enterprise {
+                height: auto
+            }
+        }
+
+        .dc-solution .dc.enterprise .warp {
+            height: 100%;
+            max-width: 80%;
+            margin: auto;
+            padding: 4em 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.enterprise .warp {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.enterprise .warp h2,
+        .dc-solution .dc.enterprise .warp p,
+        .dc-solution .dc.enterprise .warp strong {
+            text-align: center
+        }
+
+        .dc-solution .dc.enterprise .warp h2 {
+            margin-bottom: 2rem;
+            color: #262626;
+            max-width: 80%;
+            margin: auto
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.enterprise .warp h2 {
+                max-width: 100%
+            }
+        }
+
+        .dc-solution .dc.enterprise .warp .btn {
+            width: auto;
+            background-color: #0068b7;
+            border-radius: 50px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 40px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            display: table;
+            margin: 2em auto;
+            max-width: initial;
+            transition: all .3s ease-in
+        }
+
+        @media(max-width: 720px) {
+            .dc-solution .dc.enterprise .warp .btn {
+                max-width: 90%
+            }
+        }
+
+        .dc-solution .dc.enterprise .warp .btn:hover {
+            opacity: .8;
+            transition: all .3s ease-in
+        }
+
+        .dc-solution .dc.enterprise .warp .sub-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center
+        }
+
+        .dc-solution .dc.enterprise .warp .sub-info .img-list {
+            display: flex;
+            justify-content: center
+        }
+
+        .dc-solution .dc.enterprise .warp .sub-info .img-list img {
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin-right: 1em
+        }
+
+        .dc-solution .dc.enterprise .warp .sub-info .img-list img:last-child {
+            margin-right: 0
+        }
+
+        .dc-solution .dc.enterprise .warp .sub-info p {
+            max-width: 80%;
+            margin: auto;
+            color: #0068b7
+        }
+
+        @media(max-width: 850px) {
+            .dc-solution .dc.enterprise .warp .sub-info p {
+                max-width: 100%
+            }
+        }
+
+        .dc-solution .dc.qote {
+            width: 100%;
+            background: #fff;
+            position: relative
+        }
+
+        .dc-solution .dc.qote .warp {
+            height: 100%;
+            max-width: 80%;
+            margin: auto;
+            padding: 4em 0;
+            display: flex
+        }
+
+        .dc-solution .dc.qote .warp .btn {
+            max-width: 100%;
+            background-color: #0068b7;
+            border-radius: 50px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 40px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin: 2em auto;
+            transition: all .3s ease-in
+        }
+
+        .dc-solution .dc.qote .warp .btn:hover {
+            opacity: .8;
+            transition: all .3s ease-in
+        }
+
+        .cur-btn {
+            margin: 2em auto;
+            display: table;
+        }
+
+        @media (max-width:1440px) {
+            .dc-solution .dc.optimize {
+                height: 54.3vw;
+            }
+        }
+
+        /* 导航样式 */
+        .template .details_nav_bar {
+            width: 100%;
+            margin-top: 0 !important;
+            border-top: 0 !important;
+            border-bottom: 2px solid #00a0e8;
+            backdrop-filter: saturate(180%) blur(20px);
+            -moz-backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            -o-backdrop-filter: saturate(180%) blur(20px);
+            -ms-backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(241, 241, 241, 0.87);
+        }
+
+        .navbar-default {
+            background: none;
+        }
+
+        .nav_bar {
+            align-items: center;
+            line-height: normal;
+            width: auto;
+            display: flex;
+            white-space: nowrap;
+            margin: 10px 0;
+        }
+
+        .space-item {
+            flex: 1;
+        }
+
+        .navbar_tab .nav-item {
+            width: auto;
+            height: auto;
+            padding: 0 20px;
+            font-size: 16px;
+            align-items: center;
+
+
+        }
+
+        .navbar_tab .nav-item:first-child a {
+            font-size: 22px;
+        }
+
+        .nav-item>a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #3e3a39;
+            font-family: "Montserrat-Regular" !important;
+            font-weight: normal;
+            text-decoration: none;
+            pointer-events: all;
+        }
+
+        .share_img {
+            display: flex !important;
+            align-items: center;
+        }
+
+        .share_img>img {
+            margin-bottom: 0 !important;
+        }
+
+        .navbar_tab {
+            border: none;
+            height: 100%;
+        }
+
+        .template .details_nav_bar .navbar-default {
+            height: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0 15px;
+            display: flex;
+        }
+
+        .v_active {
+            color: #00a0e8;
+        }
+
+        .v_active>a {
+            color: #000;
+            font-size: 18px !important;
+        }
+
+        .v_inquiry {
+            /* border: 1px solid #00A0E8; */
+            background-color: #00a0e8;
+            border-radius: 6px;
+            height: auto;
+            padding: 8px 20px;
+        }
+
+        .v_inquiry>a {
+            color: #fff;
+        }
+
+        .xq_hover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .select {
+            float: left;
+            width: 60%;
+            display: none;
+        }
+
+        .select_tit {
+            padding: 13px 0;
+        }
+
+        .select_tit>a {
+            text-decoration: none;
+        }
+
+        .share_con {
+            display: flex;
+            margin: 13px 0;
+        }
+
+        .share_con img {
+            width: 100%;
+        }
+
+        .select_box {
+            width: 70%;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .select_box>li {
+            border-bottom: 1px solid rgba(210, 210, 215, 0.5);
+            padding: 10px 0;
+        }
+
+        .icon_down {
+            float: left;
+            width: 15%;
+            padding: 15px 0;
+            display: none;
+        }
+
+        /* 导航自适应 */
+        @media screen and (max-width: 850px) {
+            .dc.products .text h5 {
+                padding: 1em 15px;
+            }
+
+            .dc-solution .dc.optimize {
+                height: auto;
+            }
+
+            .details_nav_bar .page-item .navbar-default .share_con li:last-child {
+                display: none;
+            }
+
+            .content .page-item {
+                padding: 0 0 !important;
+            }
+
+            .template .details_nav_bar .navbar-default {
+                display: block;
+                overflow: hidden;
+            }
+
+            .nav_bar {
+                display: none !important;
+            }
+
+            .select.mobile-select-nav {
+                display: flex;
+                align-items: center;
+                width: auto;
+                display: none;
+            }
+
+            .icon_down {
+                display: block;
+                width: auto;
+            }
+
+            .icon_down>img {
+                margin-bottom: 0px;
+                max-width: 80%;
+                margin-left: 3px;
+                margin-top: 2px;
+            }
+
+            .space-item {
+                display: none !important;
+            }
+
+            .share_con {
+                float: right;
+                width: auto;
+                margin: 10px 0 !important;
+            }
+
+            .share_con .nav-item .nav-link {
+                font-size: 12px !important;
+                display: unset;
+                color: #000;
+            }
+
+            .v_inquiry {
+                padding: 5px 5px;
+                font-size: 12px;
+                background-color: transparent;
+                border: 1px #000 solid;
+            }
+
+            .nav-item {
+                font-size: 16px;
+            }
+
+            .share_con .anviz-btn {
+                padding: 12px;
+                margin: 0;
+            }
+
+            .navbar_tab .nav-item {
+                width: auto;
+                height: auto;
+                padding: 4px 5px;
+                align-items: center;
+            }
+
+            .select_box {
+                flex-direction: column;
+                width: 100%;
+
+
+            }
+
+            .select_box .nav-item {
+                padding: 10px 5% !important;
+            }
+
+            .details_nav_bar .page-item .navbar-default {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .details_nav_bar .page-item .navbar-default a {
+                margin: 15px 5px 15px 0;
+            }
+        }
+    </style>
+    <div class="template dc-solution">
+        <div class="dc header-banner" id="section1">
+            <div class="circle-mark">&nbsp;</div>
+
+            <div class="info">
+                <h1>Save Time with Smarter Time Attendance Solution</h1>
+
+                <h3>The best, most dependable, secure, and flexible one for enterprises</h3>
+            </div>
+        </div>
+
+        <div class="dc products"><img alt="TA Solution " auto_mobile="true" class="lazyload" height=""
+                src="https://www.anviz.com/file/files/3238/ta-products.png" width="" />
+            <div class="text max-1440">
+                <h5 class="mb-2">Security is crucial to any office or facility, every building needs a way to keep the
+                    space safe, and most organizations also need to restrict access to certain areas. Anviz is the first
+                    access control company to make use of biometrics-based, RFID cards, mobile access technology and
+                    specialized hardware to achieve space safety goals. The powerful security features with a convenient
+                    and flexible system provide office efficiency for enterprises small and large.</h5>
+
+                <h5 class="mb-2">More and more companies are deciding to replace time sheets and time clocks with
+                    automated time recording systems- and benefit from accurate labor costs and employee satisfaction.
+                    Automated time and attendance solutions can reduce your manual &mdash; and error-prone &mdash; data
+                    entry and improve accuracy.</h5>
+
+                <h5 class="mb-2">After evaluating several systems based on a number of factors, including cost, ease of
+                    use, integration options, and valuable features, we launched Anviz CrossChex Standard and CrossChex
+                    Cloud.</h5>
+                <h5 class="mb-2">Anviz Time Attendance tracking solution provides a simple way to streamline time and
+                    attendance and a smoother way to schedule. Managers and employees both set schedules and check the
+                    time actually spent working through mobile apps or web-based software.</h5>
+            </div>
+        </div>
+        <!-- nav -->
+
+        <div class="details_nav_bar">
+            <div class="page-item">
+                <div class="navbar_tab navbar-default" id="productDetailsNav"><!-- pc -->
+                    <ul class="nav_bar">
+                        <li class="nav-item" style="padding-left: 0"><a class="nav-link">Time Attendance </a></li>
+                        <li class="nav-item v1 v_active"><a class="nav-link" href="#section1">Overview</a></li>
+                        <li class="nav-item v2"><a class="nav-link" href="#section2">How It Works</a></li>
+                        <li class="nav-item v3"><a class="nav-link" href="#section3">Features</a></li>
+                        <li class="nav-item v4"><a class="nav-link" href="#section4">Products</a></li>
+                    </ul>
+                    <div class="select mobile-select-nav">
+                        <div class="select_tit v_active v1"><a>Time Attendance</a></div>
+
+                        <div class="icon_down"><img alt="TA Solution " auto_mobile="true" class="lazyload"
+                                src="https://www.anviz.com/file/files/792" /></div>
+                    </div>
+
+                    <ul class="space-item">
+                        <li>&nbsp;</li>
+                    </ul>
+
+                    <ul class="share_con">
+                        <li><a class="anviz-primary-btn" href="/partners.html" previewlistener="true">Become a
+                                Partner</a></li>
+                        <li><a class="anviz-primary-btn" href="/form" target="_blank">Free Demo</a></li>
+                        <li class="nav-item">
+                            <div class="sharethis-inline-share-buttons">&nbsp;</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="select_box">
+                    <li class="nav-item v2"><a class="nav-link" href="#section1">Overview</a></li>
+                    <li class="nav-item v3"><a class="nav-link" href="#section2">How It Works</a></li>
+                    <li class="nav-item v4"><a class="nav-link" href="#section3">Features</a></li>
+                    <li class="nav-item v5"><a class="nav-link" href="#section4">Products</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- nav -->
+
+        <div class="dc ip" id="section2">
+            <div class="warp">
+                <div class="info">
+                    <h2>Manage Workplace with Versatile &amp; Accurate Identification Methods</h2>
+
+                    <p>Advanced BioNANO <span>&reg;</span> algorithm allows for liveness detection with the best
+                        combination of speed and accuracy. Enjoy versatile punching options including face recognition,
+                        fingerprint scanner, RFID reader and personal PIN.</p>
+                </div>
+
+                <ul class="icons">
+                    <li class="item"><span class="icon-a-3d"></span>
+
+                        <p class="iconname">Face Recognition</p>
+                    </li>
+                    <li class="item"><span class="icon-a-fingerprint"></span>
+                        <p class="iconname">Fingerprint Scanner</p>
+                    </li>
+                    <li class="item"><span class="icon-a-rf-card"></span>
+                        <p class="iconname">RFID Reader</p>
+                    </li>
+                    <li class="item"><span class="icon-a-code"></span>
+                        <p class="iconname">Personal PIN</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dc modern">
+            <div class="warp">
+                <div class="info"><img alt="TA Solution" auto_mobile="true" class="logo" height=""
+                        src="https://www.anviz.com/file/files/3241/CrossChex-Standard.svg" width="" />
+                    <h2><a href="/crosschex-desk.html" title="Crosschex Desk">CrossChex Standard</a></h2>
+                    <a aria-label="Learn" class="anviz-crosschex-btn" href="/crosschex-desk.html" rel="nofollow"
+                        taget="_blank" title="CrossChex Standard">Learn More</a>
+                </div>
+
+                <ul class="icons">
+                    <li class="item">
+                        <h3>A Comprehensive Software Designed for Time Attendance and Access Control Streamlined
+                            Management</h3>
+                    </li>
+                    <li class="item"><span class="icon icon-a-security"></span>
+                        <p class="iconname">All time &amp; attendance data will be stored locally.</p>
+                    </li>
+                    <li class="item"><span class="icon icon-a-logs"></span>
+                        <p class="iconname">Automatically download &amp; generate attendance record.</p>
+                    </li>
+                    <li class="item"><span class="icon icon-a-events"></span>
+                        <p class="iconname">A various types of reports enables you to customize your report to show
+                            information relevant to your business needs.</p>
+                    </li>
+                    <li class="item"><span class="icon icon-a-scheduling-s"></span>
+                        <p class="iconname">Smart shift scheduling makes it easier and faster to create day shift and
+                            night shift that works for everyone.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dc optimize" id="section3">
+            <div class="warp">
+                <div class="info"><img alt="TA Solution" auto_mobile="true" class="logo" height=""
+                        src="https://www.anviz.com/file/files/3243/CrossChex-Cloud.svg" width="" />
+                    <h2><a href="/cloud-based-time-and-attendance-solution-crosschex-cloud.html"
+                            title="CrossChex Cloud">CrossChex Cloud</a></h2>
+                    <a aria-label="“Learn">Learn More</a>
+                </div>
+
+                <ul class="icons">
+                    <li class="item">
+                        <h3>New Cloud-based Time &amp; Attendance Management Solution Works for Any Business</h3>
+                    </li>
+                    <li class="item"><span class="icon icon-a-map"></span>
+                        <p class="iconname">Access your time and attendance data from any internet connected device or
+                            download the mobile app for flexible deployment.</p>
+                    </li>
+                    <li class="item"><span class="icon icon-a-report-s"></span>
+                        <p class="iconname">Precisely track vacation, overtime, and make-up receive and approve time off
+                            requests while sending a notice to the employee.</p>
+                    </li>
+                    <li class="item"><span class="icon icon-a-tracking-s"></span>
+                        <p class="iconname">CrossChex Cloud App makes it easy for employees remote punch and track their
+                            own attendance records.</p>
+                    </li>
+                    <li class="item"><span class="icon icon-a-peoples"></span>
+                        <p class="iconname">Configure different levels of administration access for administrators.</p>
+                    </li>
+                    <li class="item"><span class="icon icon-a-systems"></span>
+                        <p class="iconname">Open APIs allows to synchronize data with existing systems that you use
+                            (Payroll, HR, ERP, etc.) with ease.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dc system">
+            <div class="warp">
+                <div class="mobile-grouop"><img alt="TA Solution" auto_mobile="true" class="lazyload" height=""
+                        src="https://www.anviz.com/file/files/3245/mobile-group.png" width="" /></div>
+
+                <div class="info">
+                    <div class="title"><img alt="TA Solution" auto_mobile="true" class="mobile-cc" height=""
+                            src="https://www.anviz.com/file/files/3246/crosschex-mobile.svg" width="" />
+                        <h3>CrossChex Cloud APP</h3>
+                    </div>
+
+                    <div class="details">
+                        <h3>Mobile Punching and Tracking</h3>
+
+                        <p>New work scenarios with work from home, shared desks, coworking as well as time- and
+                            location-independent work influence established structures and demand new flexible and
+                            transparent processes.</p>
+
+                        <p>Despite a - sometimes enforced - physical distance, employers must ensure digital proximity.
+                            CrossChex Cloud APP maps these new working models in a reliable and user-friendly way.</p>
+                        <img alt="TA Solution" auto_mobile="true" class="media" height=""
+                            src="https://www.anviz.com/file/files/3247/google-play&amp;stroe.png" width="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dc various">
+            <div class="warp">
+                <div class="info">
+                    <h2>Integrate Your Favorite Software with CrossChex</h2>
+
+                    <p>CrossChex integrates seamlessly with payroll, ERP, and HRM systems to save you time and provide
+                        the insights you need in one place. Any solution can be built using our open cloud API. Smarter
+                        integration that helps you run a better team by streamlining scheduling, elevating task
+                        execution, and making operations hum.</p>
+                </div>
+
+                <ul class="icons">
+                    <li class="item">
+                        <div class="icon-warp"><span class="icon-a-erp"></span>
+
+                            <p class="iconname">ERP</p>
+                        </div>
+
+                        <p class="detais">Saves you time and money + provide real-time insight into business
+                            performance.</p>
+                    </li>
+                    <li class="item">
+                        <div class="icon-warp"><span class="icon-a-hrm"></span>
+                            <p class="iconname">HRM</p>
+                        </div>
+
+                        <p class="detais">Streamline workplace operations and HR workflows.</p>
+                    </li>
+                    <li class="item">
+                        <div class="icon-warp"><span class="icon-a-payroll"></span>
+                            <p class="iconname">Payroll</p>
+                        </div>
+
+                        <p class="detais">Easily track employee hours, prep for payroll, and get control of your labor
+                            costs.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dc customers">
+            <div class="warp">
+                <div class="info">
+                    <p class="title">In 15 years, 300,000+ <strong>businesses</strong>, <strong>schools</strong> and
+                        <strong>governments teams</strong> harness the power of Hassle-Free workforce management with
+                        our Time Attendace Solution.
+                    </p>
+
+                    <ul class="build-list">
+                        <li class="item"><img alt="Business Buildings" auto_mobile="true" class="lazyload" height=""
+                                src="https://www.anviz.com/file/files/3254/build01.png" width="" />
+                            <p>Business Buildings</p>
+                        </li>
+                        <li class="item"><img alt="Manufacturing Facilities" auto_mobile="true" class="lazyload"
+                                height="" src="https://www.anviz.com/file/files/3255/build02.png" width="" />
+                            <p>Manufacturing Facilities</p>
+                        </li>
+                        <li class="item"><img alt="Education" auto_mobile="true" class="lazyload" height=""
+                                src="https://www.anviz.com/file/files/3256/build03.png" width="" />
+                            <p>Education</p>
+                        </li>
+                        <li class="item"><img alt="Medical Services" auto_mobile="true" class="lazyload" height=""
+                                src="https://www.anviz.com/file/files/3257/build04.png" width="" />
+                            <p>Medical Services</p>
+                        </li>
+                        <li class="item"><img alt="Hospitalities" auto_mobile="true" class="lazyload" height=""
+                                src="https://www.anviz.com/file/files/3258/build05.png" width="" />
+                            <p>Hospitalities</p>
+                        </li>
+                        <li class="item"><img alt="Communities" auto_mobile="true" class="lazyload" height=""
+                                src="https://www.anviz.com/file/files/3259/build06.png" width="" />
+                            <p>Communities</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="dc enterprise">
+            <div class="warp">
+                <div class="info">
+                    <h2><a href="/casestudy.html" title="Casestudy">See Why Enterprise Organizations Trust Anviz Access
+                            Control Solutions?</a></h2>
+                    <a aria-label="Read" case="" class="btn" href="/casestudy.html" more="" rel="nofollow" studies=""
+                        target="_blank">Read More</a>
+                </div>
+
+                <div class="sub-info">
+                    <div class="img-list"><img alt="TA Solution" auto_mobile="true" class="lazyload" height=""
+                            src="https://www.anviz.com/file/files/3132" width="" /> <img alt="TA Solution"
+                            auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3132"
+                            width="" /> <img alt="TA Solution" auto_mobile="true" class="lazyload" height=""
+                            src="https://www.anviz.com/file/files/3132" width="" /> <img alt="TA Solution"
+                            auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3132"
+                            width="" /> <img alt="TA Solution" auto_mobile="true" height=""
+                            src="https://www.anviz.com/file/files/3132" width="" /></div>
+
+                    <p>&ldquo;We evaluated different biometric-centric authentication solutions and selected the
+                        CrossChex because it offers a complete solution, including both adaptable software and smart
+                        face recognition hardware&ldquo;</p>
+
+                    <p>&mdash; Wilfried Diebel, Head of the D&uuml;rr IT team</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="downloadFree">&nbsp;</div>
+
+        <div class="max-1400 block">{{%inquiry_form_white%}}</div>
+
+        <div class="max-1400 block" id="section4" style="margin-bottom:2em;">{{%Ts-Products%}}</div>
+    </div>
+    <script>
+        $(function () {
+            // 导航js start
+            var juli = $(".details_nav_bar").offset().top;
+            var vf1 = $("#section1").offset().top;
+            var vf2 = $("#section2").offset().top;
+            var vf3 = $("#section3").offset().top;
+            var vf4 = $("#section4").offset().top;
+            $(window).scroll(function () {
+                var gju = $(window).scrollTop();
+                if (gju >= juli) {
+                    $('.product-nav.scroll-active.on').css('display', 'none')
+                    $(".details_nav_bar").addClass('xq_hover');
+                    $(".product-nav").addClass("on");
+                    $(".product-nav").removeClass("in");
+                } else {
+
+                    $('.product-nav.scroll-active').css('display', 'block')
+                    $(".details_nav_bar").removeClass('xq_hover');
+                    $(".product-nav").addClass("in");
+                    $(".product-nav").removeClass("on");
+                }
+                if ($(this).width() > 850) {
+                    if (gju >= juli) {
+                        $(".top-nav").addClass("on");
+                        $(".top-nav").removeClass("in");
+                    } else {
+                        $(".top-nav").addClass("in");
+                        $(".top-nav").removeClass("on");
+                    }
+                } else {
+                    if (gju >= juli) {
+                        $(".top-nav").addClass("on");
+                        $(".top-nav").removeClass("in");
+                    } else {
+                        $(".top-nav").addClass("in");
+                        $(".top-nav").removeClass("on");
+                    }
+                }
+
+                if (gju >= vf1 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v1").addClass("v_active");
+                }
+                if (gju >= vf2 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v2").addClass("v_active");
+                }
+                if (gju >= vf3 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v3").addClass("v_active");
+                }
+                if (gju >= vf4 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v4").addClass("v_active");
+                }
+            });
+
+            window.onload = function () {
+                var juli = $(".details_nav_bar").offset().top;
+                var gju = $(window).scrollTop() + 68;
+                if (gju >= juli) {
+                    $(".details_nav_bar").addClass('xq_hover');
+                    $(".product-nav").addClass("on");
+                    $(".product-nav").removeClass("in");
+                    $(".top-nav").addClass("on");
+                    $(".top-nav").removeClass("in");
+                } else {
+                    $(".details_nav_bar").removeClass('xq_hover');
+                    $(".product-nav").addClass("in");
+                    $(".product-nav").removeClass("on");
+                    $(".top-nav").addClass("in");
+                    $(".top-nav").removeClass("on");
+                }
+                if (gju >= juli) {
+                    $(".top-nav").addClass("on");
+                    $(".top-nav").removeClass("in");
+                } else {
+                    $(".top-nav").addClass("in");
+                    $(".top-nav").removeClass("on");
+                }
+                if (gju >= vf1 - 100) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v1").addClass("v_active");
+                }
+                if (gju >= vf2) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v2").addClass("v_active");
+                }
+                if (gju >= vf3) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v3").addClass("v_active");
+                }
+                if (gju >= vf4) {
+                    $(".nav-item").removeClass('v_active');
+                    $(".v4").addClass("v_active");
+                }
+            };
+
+            $(".select_box").click(function () {
+                $(".icon_down").click();
+            })
+
+
+
+
+            var flag = true
+            $(".mobile-select-nav").click(function () {
+                if (flag) {
+                    $(".select_box").fadeIn()
+                    $(".icon_down>img").attr("src", "https://www.anviz.com/file/files/821");
+                    flag = false
+                } else {
+                    $(".select_box").fadeOut()
+                    $(".icon_down>img").attr("src", "https://www.anviz.com/file/files/792");
+                    flag = true
+                }
+            });
+            // nav js end
+        })
+    </script>
+</body>
+
+</html>

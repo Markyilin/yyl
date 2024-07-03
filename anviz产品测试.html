@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Button Example</title>
+</head>
+
+<body>
+    <!-- Buy Button Container -->
+    <div id="buy-button-container"></div>
+    <div></div>
+    <!-- <div id='product-component-1719561831619'></div> -->
+    <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+    <script>
+        //         function getUserLocation(callback) {
+        //     fetch('https://api.ipgeolocation.io/ipgeo?apiKey=0f75c1b35cf6b12abc86425ddf845f03')
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             console.log(data, "data"); // move console.log here
+        //             callback(data);
+        //         });
+        // }
+        function getUserLocation(callback) {
+            // 创建一个假的地址数据
+            var fakeData = {
+                ip: "123.123.123.123",
+                continent_code: "EU",
+                country_code2: "DE",
+                country_code3: "DEU",
+                country_name: "Germany",
+                country_capital: "Berlin",
+                state_prov: "Berlin",
+                district: "Berlin",
+                city: "Berlin",
+                zipcode: "10117",
+                latitude: "52.5167",
+                longitude: "13.3833"
+            };
+            // 直接调用回调函数，将假的地址数据作为参数传递
+            callback(fakeData);
+        }
+        function loadBuyButton(countryCode) {
+            var client = ShopifyBuy.buildClient({
+                domain: 'anvizglobal.myshopify.com',
+                storefrontAccessToken: 'cb23a4a38026fde2353dc4c43badd78b'
+            });
+
+            var ui = ShopifyBuy.UI.init(client);
+
+            var marketPricing = {
+                'US': 'USD',
+                'CA': 'CAD',
+                'EU': 'EUR'
+            };
+
+            var currency = marketPricing[countryCode] || 'EUR';
+            console.log(currency, "currency");
+            ui.createComponent('product', {
+                id: '8805794906391',//YOUR_PRODUCT_ID
+                node: document.getElementById('buy-button-container'),
+                moneyFormat: '%24%7B%7Bamount%7D%7D', // Customize money format if needed
+                options: {
+                    product: {
+                        iframe: false,
+                        templates: {
+                            price: '<div class="shopify-buy__price" data-currency="' + currency + '">{{data.formattedPrice}}</div>'
+                        }
+                    }
+                }
+            });
+        }
+
+        getUserLocation(function (location) {
+            var countryCode = location.country_code2;
+            console.log(countryCode, "countryCode");
+            loadBuyButton(countryCode);
+        });
+    </script>
+
+</body>
+
+</html>

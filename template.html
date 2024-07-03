@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css?v=1680838179s">
+    <link rel="stylesheet" href="../swiper 5.4.5.css">
+    <link rel="stylesheet" href="../../fonts/anviz-font.css">
+    <link rel="stylesheet" href="../../fonts/static-page-font.css">
+</head>
+
+<style>
+    /* a全网页公共部分 */
+    .title span {
+        padding: 0.8em;
+        /* background-color: #0626d2; */
+        /* 渐变色背景 左浅右深*/
+        background: linear-gradient(to right, #2a67b1, #252c87);
+        border-radius: 0 2em 2em 0;
+        color: #fff !important;
+        font-weight: 800;
+        font-size: 20px;
+    }
+
+    @media(max-width: 720px) {
+        .title span {
+            font-size: 18px;
+        }
+    }
+
+    /* a 公共兼容 */
+    @media(max-width: 1440px) {
+        .max-1440 {
+            max-width: 1260px;
+            margin: 0 auto;
+        }
+    }
+
+
+    /* 1 banner */
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    /*2  */
+    .banner .max-1440 {
+        width: 100%;
+    }
+
+    /*2  */
+
+    .banner .max-1440 h1 {
+        text-align: center;
+    }
+
+    /*2  */
+
+    .banner .max-1440 p {
+        text-align: left;
+    }
+
+
+    /* 2 一边文字一边图片*/
+    /* 左右公共 */
+    .main-banner .main-banner-one {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    /* 2 */
+    .main-banner .main-banner-one img {
+        width: 50%;
+        height: auto;
+    }
+
+    .main-banner .main-banner-one .lt-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-banner .bnt-left {
+        align-items: self-start;
+    }
+
+    .lt-text {
+        width: 48%;
+    }
+
+    .rt-img {
+        width: 48%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* 2右图左文字 兼容*/
+    @media(max-width: 850px) {
+        .rt-img {
+            flex-direction: column;
+        }
+
+        .main-banner .main-banner-one img {
+            width: 100%;
+            height: auto;
+        }
+
+        .lt-text {
+            width: 100%;
+        }
+
+    }
+
+    .lt-img {
+        width: 100%;
+    }
+
+    .rt-text {
+        width: 98%;
+    }
+
+    .img-rt {
+        width: 50%;
+
+    }
+
+    .left-bnt {
+        align-items: center;
+    }
+
+    .main-banner .main-banner-one .img-rt img {
+        width: 100%;
+
+    }
+
+    @media(max-width: 720px) {
+        .bnt-right {
+            flex-direction: column-reverse;
+        }
+
+        .rt-img {
+            width: 100%;
+        }
+
+        .img-rt {
+            width: 100%;
+        }
+        .left-bnt {
+        flex-direction: column;
+        }
+    }
+
+    /* 2左图右文字 兼容 */
+
+
+    @media(max-width: 720px) {
+        .bnt-left {
+            flex-direction: column;
+        }
+
+        .main-banner .bnt-left {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .main-banner .bnt-left img {
+            width: 100%;
+            height: auto;
+        }
+
+        .main-banner .title {
+            margin-top: 10%;
+            margin-bottom: 7%;
+        }
+
+        .infoto {
+            padding: 10px 0 20px;
+        }
+    }
+
+    /* 3 图片排版「最少二张图」 */
+    .gridphone {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* 3 */
+    .gridphone .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        grid-auto-flow: dense;
+    }
+
+    /* 3兼容 */
+    @media (max-width: 1260px) {
+        .gridphone .list {
+            gap: 20px;
+        }
+    }
+
+    /* 3 */
+    @media (max-width: 850px) {
+        .gridphone .list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+
+    /* 3 */
+    @media (max-width: 720px) {
+        .gridphone .list {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+
+        }
+    }
+
+    /* 5 start*/
+    .fw-6 {
+        font-size: 20px;
+    }
+
+    /* 5 end*/
+
+    /* 6 图片排版「最少二张图」 */
+    .gridmap {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* 6 */
+    .gridmap .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        grid-auto-flow: dense;
+    }
+
+
+    /* 6兼容 */
+    @media (max-width: 850px) {
+        .gridmap .list {
+            gap: 20px;
+        }
+    }
+
+    /* 6 */
+    @media (max-width: 720px) {
+        .gridmap .list {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+
+        }
+    }
+
+    /* 7 */
+    .gridfour {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* 7 */
+    .gridfour .list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        grid-auto-flow: dense;
+    }
+
+
+    /* 7兼容 */
+    @media (max-width: 720px) {
+        .gridfour .list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+
+    /* 7 */
+    @media (max-width: 300px) {
+        .gridfour .list {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+
+        }
+    }
+</style>
+
+<body>
+    <!--这是一个网页模版 -->
+    <div class="template">
+        <!--1 banner -->
+        <div class="banner">
+            <!-- banner全屏图片 -->
+            <img src="https://www.anviz.com/file/files/4046" alt="" width="100%" height="anto">
+            <div class="info max-1440">
+                <h1>
+                    标题h1标题h1标题标题标题标题标题标题标题
+                </h1>
+                <p>
+                    这是文字p这是文字p这是文字p这是文字p这是文字p这是文字p这是文字p这是文字p这是文字p这是文字p这是文字p这是文字p
+                </p>
+            </div>
+        </div>
+        <!-- 2 一边文字一边图片 -->
+        <div class="main-banner max-1440 info">
+            <!-- 小标题 -->
+            <p class="title mb-3 mt-5">
+                <span>左图右文字标题</span>
+            </p>
+            <!-- 左图右文字 -->
+            <div class="main-banner-one info flex gap-20 bnt-left">
+                <div class="lt-img">
+                    <img src="	https://www.anviz.com/file/files/4010" alt="">
+                </div>
+                <div class="text rt-text">
+                    <img src="	https://www.anviz.com/file/files/4010" alt="">
+                    <p>
+                        这是第二行代码main-banner-one文字，这是第二行代码main-banner-one文字 这是第二行代码main-banner-one文字
+                        这是第二行代码main-banner-one文字
+                    </p>
+                </div>
+            </div>
+            <!-- 左图右文字 -->
+            <div class="main-banner-one info flex gap-20 left-bnt">
+                <div class="lt-img">
+                    <img src="	https://www.anviz.com/file/files/4010" alt="">
+                </div>
+                <div class="text">
+                    <p>
+                        这是第二行代码main-banner-one文字，这是第二行代码main-banner-one文字 这是第二行代码main-banner-one文字
+                        这是第二行代码main-banner-one文字
+                    </p>
+                </div>
+            </div>
+            <!-- 右图左文字 -->
+            <p class="title mb-3 mt-5">
+                <span>右图左文字小标题</span>
+            </p>
+            <div class="main-banner-one info flex gap-20 bnt-right">
+                <div class="text lt-text">
+                    <p>
+                        这是第二行代码main-banner-one文字2，这是第二行代码main-banner-one文字2 这是第二行代码main-banner-one文字2
+                        这是第二行代码main-banner-one文字2
+                    </p>
+                </div>
+                <div class="img-rt">
+                    <img src="	https://www.anviz.com/file/files/4010" alt="">
+                </div>
+            </div>
+            <!-- 右图2张左文字 -->
+            <p class="title mb-3 mt-5">
+                <span>右图2左文字小标题</span>
+            </p>
+            <div class="main-banner-one info flex gap-20 bnt-right">
+                <div class="text lt-text">
+                    <p>
+                        这是第二行代码main-banner-one文字2，这是第二行代码main-banner-one文字2 这是第二行代码main-banner-one文字2
+                        这是第二行代码main-banner-one文字2
+                    </p>
+                </div>
+                <div class="rt-img">
+                    <img src="https://www.anviz.com/file/files/4010" alt="">
+                    <img src="https://www.anviz.com/file/files/4010" alt="">
+
+                </div>
+            </div>
+        </div>
+
+        <!--3 图片排版 并列「最少三张图」 -->
+        <div class="max-1440 gridphone info mt-5 mb-3">
+            <h2>图片排版 并列「最少三张图」</h2>
+            <p>文字图片排版 并列「最少三张图 p</p>
+            <ul class="list gap-20">
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- 4  -->
+        <div class="max-1440 info four">
+            <p class="title mb-3 mt-5">
+                <span>
+                    Colaborando con Comercializadora GaMart
+                </span>
+            </p>
+            <div>
+                <!-- 小标题添加 class="fw-6" 加粗-->
+                <p class="fw-6">
+                    Colaborando con Comercializadora GaMart
+                </p>
+                <p>
+                    Colaborando con Comercializadora GaMart
+                </p>
+                <p class="fw-6">
+                    Colaborando con Comercializadora GaMart
+                </p>
+                <p>
+                    Colaborando con Comercializadora GaMart
+                </p>
+                <p>
+                    Colaborando con Comercializadora GaMart
+                </p>
+            </div>
+        </div>
+        <!-- 5  -->
+        <div class="max-1440 info five">
+            <p class="title mb-3 mt-5">
+                <span>
+                    Colaborando con Comercializadora GaMart
+                </span>
+            </p>
+            <ul>
+                <!-- 小标题添加 class="fw-6" 加粗-->
+                <li class="fw-6 mb-1">
+                    Colaborando con Comercializadora GaMart
+                </li>
+                <li class="mb-1">
+                    Colaborando con Comercializadora GaMart
+                </li>
+                <li class="fw-6 mb-1">
+                    Colaborando con Comercializadora GaMart
+                </li>
+                <li class="mb-1">
+                    Colaborando con Comercializadora GaMart
+                </li>
+
+            </ul>
+        </div>
+        <!--6 图片排版 并列「最少二张图」 -->
+        <div class="max-1440 gridmap info mt-5 mb-3">
+            <h2>图片排版 并列「最少er张图」</h2>
+            <p>文字图片排版 并列「最少二张图 p</p>
+            <ul class="list">
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        Colaborando con Comercializadora GaMart
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="max-1440 gridphone info mt-5 mb-3">
+            <h2>图片排版 并列「最少三张图」</h2>
+            <p>文字图片排版 并列「最少三张图 p</p>
+            <ul class="list gap-20">
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- 7 -->
+        <div class="max-1440 gridfour info mt-5 mb-3">
+            <h2>图片排版 并列「最少四张图」</h2>
+            <p>文字图片排版 并列「最少四张图 p</p>
+            <ul class="list gap-20">
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+                <li>
+                    <img src="https://www.anviz.com/file/files/3914/business02.jpeg" alt="PHONE">
+                    <h5>
+                        小标题h5
+                    </h5>
+                    <p>
+                        wenzi文字文字p
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

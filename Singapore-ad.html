@@ -16,8 +16,6 @@
 
 <body>
     <style type="text/css">
-       
-
         body,
         html {
             background-color: #fff !important;
@@ -147,6 +145,11 @@
         .Singapore-ad .banner .banner-info .banner-info-item .banner-item label {
             width: 80%;
             text-align: left;
+            color: #555;
+        }
+
+        .Singapore-ad .banner .banner-info .banner-info-item .banner-item .radio-box label {
+            width: 85%;
         }
 
         .Singapore-ad .banner .banner-info .banner-info-item .banner-item .minor-blue-btn {
@@ -1046,8 +1049,7 @@
         }
 
         .radio-wrap.radio_required {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 10px;
             padding: 20px 4%;
         }
 
@@ -1100,7 +1102,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 40px 0;
+            margin: 20px 0;
         }
 
         #form_submit {
@@ -1119,6 +1121,7 @@
                 width: 95%;
                 margin: 10px auto;
             }
+
         }
 
         @media (max-width: 850px) {
@@ -1309,16 +1312,15 @@
                     </div>
                     <div class="banner-center banner-item">
                         <div class="banner-center-1">
-                            <h2>Choose Your Business</h2>
-                            <label><input type="radio" name="business" value="Commercial Real Estate"
-                                    class="hidden-radio"><span class="minor-blue-btn">Commercial Real
-                                    Estate</span></label>
-                    l        <abel><input type="radio" name="business" value="Manufacturing Facilities"
-                                    class="hidden-radio"><span class="minor-blue-btn">Manufacturing
-                                    Facilities</span></abel>
-                            <label><input type="radio" name="business" value="Education" class="hidden-radio"><span
-                                    class="minor-blue-btn">Education</span></label>
-                            <label><input type="radio" name="business" value="Other" class="hidden-radio"><span
+                            <h2>I am a ...</h2>
+                            <label><input type="radio" name="custom_type_id" value="Distributor"
+                                    class="hidden-radio"><span class="minor-blue-btn">Distributor</span></label>
+                            <label><input type="radio" name="custom_type_id" value="System Integrator"
+                                    class="hidden-radio"><span class="minor-blue-btn">System Integrator
+                                </span></label>
+                            <label><input type="radio" name="custom_type_id" value="End User" class="hidden-radio"><span
+                                    class="minor-blue-btn">End User</span></label>
+                            <label><input type="radio" name="custom_type_id" value="Other" class="hidden-radio"><span
                                     class="minor-blue-btn">Other</span></label>
                             <div class="dots">
                                 <span class="dots-active"></span>
@@ -1415,6 +1417,65 @@
                                                     <label class="input-label">
                                                         Phone Number
                                                     </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="item titleRequired type0 form_component" style="display: block;">
+                                            <h3 class="title Become-title2 mt-2  mb-1"> How did you learn about Anviz
+                                                One? </h3>
+                                            <div class="item-box ">
+                                                <div class="radio-wrap radio_required">
+                                                    <div class="radio-box">
+                                                        <input id="learn_id_2" class="relation_component radio_type"
+                                                            name="learn_id" type="checkbox" data-id="2"
+                                                            value="Search Engine" \=""
+                                                            data-listener-added_155f7245="true">
+                                                        <label for="learn_id_2">
+                                                            Search Engine
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-box">
+                                                        <input id="learn_id_4" class="relation_component radio_type"
+                                                            name="learn_id" type="checkbox" data-id="4"
+                                                            value="Social Media" \="">
+                                                        <label for="learn_id_4">
+                                                            Social Media
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-box">
+                                                        <input id="learn_id_9" class="relation_component radio_type"
+                                                            name="learn_id" type="checkbox" data-id="9"
+                                                            value="Industry Media" \="">
+                                                        <label for="learn_id_9">
+                                                            Industry Media
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-box">
+                                                        <input id="learn_id_6" class="relation_component radio_type"
+                                                            name="learn_id" type="checkbox" data-id="6" value="Email"
+                                                            \="">
+                                                        <label for="learn_id_6">
+                                                            Email
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-box">
+                                                        <input id="learn_id_1" class="relation_component radio_type"
+                                                            name="learn_id" type="checkbox" data-id="1"
+                                                            value="Active Search" \="">
+                                                        <label for="learn_id_1">
+                                                            Active Search
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-box">
+                                                        <input id="learn_id_30" class="relation_component radio_type"
+                                                            name="learn_id" type="checkbox" data-id="30"
+                                                            value="Offline Activity" \=""
+                                                            data-listener-added_155f7245="true">
+                                                        <label for="learn_id_30">
+                                                            Offline Activity
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1840,13 +1901,18 @@
             })
         })
         $(document).ready(function () {
-
+            $('input[name="learn_id"]').on('change', function () {
+                // 当任何一个复选框被选中时，移除错误类
+                if ($('input[name="learn_id"]:checked').length > 0) {
+                    $('h3.Become-title2').removeClass('error');
+                }
+            });
             $("#form_submit").click(function (e) {
                 e.preventDefault();
                 // 清除之前的错误提示
                 $('.input-outline').removeClass('error');
                 // 验证项
-                var business = $('input[name="business"]:checked').val();
+                var custom_type_id = $('input[name="custom_type_id"]:checked').val();
                 var customized = $('input[name="custom_solution"]:checked').val();
                 var solution = $('input[name="solution"]:checked').val();
                 var email = $('input[name="email_from"]').val();
@@ -1855,8 +1921,12 @@
                 var jobTitle = $('input[name="function"]').val();
                 var companyName = $('input[name="partner_name"]').val();
                 var phone = $('input[name="phone"]').val();
+                var learn_about_id = $("input[name='learn_id']:checked").map(function () {
+                    return $(this).val();
+                }).get().join(',');
                 // 检查每一项是否为空，如果为空则添加错误类
                 // 检查customTypeId是否为空，如果为空则添加错误类
+                if (!learn_about_id) $('h3.Become-title2').addClass('error');
                 if (!email) $('input[name="email_from"]').addClass('error');
                 if (!firstName) $('input[name="first_name"]').addClass('error');
                 if (!lastName) $('input[name="last_name"]').addClass('error');
@@ -1866,7 +1936,8 @@
                 // 如果没有错误类，那么发送Ajax请求
                 if ($('.error').length == 0) {
                     var dataObject = {
-                        business: business,
+                        type: 'sgp',
+                        custom_type_id: custom_type_id,
                         solution: solution,
                         customized: customized,
                         email_from: email,
@@ -1875,6 +1946,7 @@
                         function: jobTitle,
                         partner_name: companyName,
                         phone: phone,
+                        learn_about_id: learn_about_id,
                     };
                     $.ajax({
                         url: "https://www.anviz.com/form/index/saveData",

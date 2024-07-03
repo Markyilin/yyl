@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ad</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper 5.4.5.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+</head>
+<script src="./jquery-3.2.1.js"></script>
+<script src="./swiper.min 5.4.5.js"></script>
+
+<body>
+    <style type="text/css">.cctv-solution {
+        width: 100%;
+        height: auto
+    }
+
+    .cctv-solution h1,
+    .cctv-solution h2,
+    .cctv-solution h3,
+    .cctv-solution h4,
+    .cctv-solution p {
+        margin-bottom: 10px
+    }
+
+    .cctv-solution p {
+        font-size: 18px
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution h2 {
+            padding-left: 0;
+            padding: 0 15px;
+        }
+    }
+
+    .cctv-solution .cctv {
+        margin-bottom: 0em !important
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv {
+            margin-bottom: 1em !important
+        }
+    }
+
+    .cctv-solution .cctv.header-banner {
+        min-height: 720px;
+        background: #333 url(https://www.anviz.com/file/files/3068) no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.header-banner {
+            min-height: 480px
+        }
+    }
+
+    .cctv-solution .cctv.header-banner .circle-mark {
+        width: 1200px;
+        height: 1200px;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: 0 0 0 400vmax #0068b7;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.header-banner .circle-mark {
+            display: none
+        }
+    }
+
+    .cctv-solution .cctv.header-banner .info {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 11;
+        width: 60%
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.header-banner .info {
+            width: 90%;
+            padding: 0 15px
+        }
+    }
+
+    .cctv-solution .cctv.header-banner .info h1 {
+        color: #fff;
+        text-align: center;
+        font-weight: bold
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.header-banner .info h1 {}
+    }
+
+    .cctv-solution .cctv.header-banner .info h3 {
+        color: #fff;
+        text-align: center;
+        font-weight: 400;
+        font-size: 24px
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.header-banner .info h3 {
+            font-size: 18px
+        }
+    }
+
+    .cctv-solution .cctv.header-banner .info img {
+        max-width: 50%;
+        margin: auto
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.header-banner .info img {
+            margin-bottom: 1em
+        }
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.header-banner .info img {
+            max-width: 80%;
+            margin-bottom: 2em
+        }
+    }
+
+    .cctv-solution .cctv.onvif img {
+        max-width: 80%;
+        margin: 2em auto
+    }
+
+    .cctv-solution .cctv.generanal-info {
+        max-width: 70%;
+        margin: 0 auto;
+        text-align: center
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.generanal-info {
+            max-width: 90%
+        }
+    }
+
+    .cctv-solution .cctv.generanal-info .icons {
+        width: 100%;
+        margin: 4em 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+
+    .cctv-solution .cctv.generanal-info .icons .item {
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.generanal-info .icons .item {
+            flex-basis: 50%
+        }
+    }
+
+    .cctv-solution .cctv.generanal-info .icons .item .icon {
+        font-size: 40px;
+        border: 1px #8e8e8e solid;
+        border-radius: 50%;
+        padding: 10px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-bottom: 7px;
+        display: block
+    }
+
+    .cctv-solution .cctv.generanal-info .icons .item .iconname {
+        max-width: 60%;
+        margin: auto;
+        margin-top: 10px;
+        font-weight: bold
+    }
+
+    .cctv-solution .cctv.edge {
+        min-height: 44.3vw;
+        background: url(https://www.anviz.com/file/files/3069) no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        margin: 0 auto;
+        padding: 4em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.edge {
+            min-height: 44.3vh
+        }
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.edge {
+            min-height: 600px;
+            background-size: cover;
+            padding: 2em
+        }
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.edge {
+            padding: 1em
+        }
+    }
+
+    .cctv-solution .cctv.edge h2 {
+        text-align: center;
+        color: #fff
+    }
+
+    .cctv-solution .cctv.edge .icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+
+    .cctv-solution .cctv.edge .icons .item {
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.edge .icons .item {
+            flex-basis: 50%
+        }
+    }
+
+    .cctv-solution .cctv.edge .icons .item .icon {
+        display: block;
+        max-width: 30%
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.edge .icons .item .icon {
+            max-width: 40%
+        }
+    }
+
+    .cctv-solution .cctv.edge .icons .item .iconname {
+        max-width: 70%;
+        margin: auto;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 20px;
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.edge .icons .item .iconname {
+            font-size: 18px
+        }
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.edge .icons .item .iconname {
+            max-width: 100%
+        }
+    }
+
+    .cctv-solution .cctv.wider {
+        width: 100%;
+        height: auto;
+        padding: 4em 0;
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.wider {
+            padding-top: 3em
+        }
+    }
+
+    .cctv-solution .cctv.wider h2 {
+        text-align: center;
+        margin-bottom: 2em
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper {
+        display: flex;
+        justify-content: space-around;
+        max-width: 80%;
+        margin: auto;
+        background: #edf8ff;
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper {
+            flex-direction: column-reverse;
+            max-width: 100%;
+            align-items: center;
+            justify-content: center
+        }
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .swiper-wrapper {
+        flex: 1;
+        flex-basis: 50%;
+        width: 720px;
+        overflow: hidden
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper .swiper-wrapper {
+            flex-basis: 100%;
+            width: 100%
+        }
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .swiper-slide {
+        height: 540px;
+        width: auto
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .swiper-slide img {
+        height: 100%;
+        width: 60%;
+        object-fit: contain;
+        margin: 0;
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper .swiper-slide img {
+            width: 100%;
+            margin: auto
+        }
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper .swiper-slide {
+            width: 100% !important;
+            height: auto;
+            display: flex;
+            justify-content: center
+        }
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination {
+        display: block;
+        position: relative;
+        height: 540px;
+        flex-basis: auto;
+        background-color: #edf8ff;
+        width: 40%;
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination {
+            flex-basis: 100%;
+            background-color: transparent;
+            flex-basis: 100%;
+            height: auto;
+            width: 100%;
+            margin-bottom: 3em
+        }
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination ul,
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination li {
+        list-style: none
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations {
+            flex-direction: row
+        }
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li {
+        flex: 1;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: transparent;
+        padding-right: 10%;
+        transition: all .3s ease-in-out
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li {
+            padding-left: 2%;
+            flex-direction: column;
+            height: auto
+        }
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li p {
+        color: #939393;
+        zoom: 1;
+        font-size: 24px;
+        text-align: left
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li p {
+            display: none
+        }
+    }
+
+    @media (max-width: 720px) {
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li {}
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li img {
+        opacity: .5;
+        zoom: 1;
+        width: 34px;
+        height: auto
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li img {
+            width: 30%
+        }
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li img {
+            width: 50%
+        }
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li img {
+            width: 80%
+        }
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li:last-child {
+        margin-bottom: 0
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li.swiper-pagination-bullet-active {
+        border-radius: 0;
+        background-color: transparent !important
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li.swiper-pagination-bullet-active p {
+        color: #000;
+        zoom: 1.2
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li.swiper-pagination-bullet-active img {
+        opacity: 1;
+        zoom: 1.4
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li img,
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li p {
+        margin-bottom: 0
+    }
+
+    .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li img {
+        margin-right: 15px
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.events {
+            padding-top: 3em
+        }
+
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li img {
+            margin: auto;
+        }
+
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination .paginations li {
+            padding-right: 0;
+        }
+
+        .cctv-solution .cctv.wider .mywiderswiper .wider-pagination {
+            margin-bottom: 0;
+        }
+
+        .cctv-solution .cctv.wider h2 {
+            padding: 0 10px;
+        }
+    }
+
+    .cctv-solution .cctv.events h2,
+    .cctv-solution .cctv.events p {
+        text-align: center
+    }
+
+    .cctv-solution .cctv.events p {
+        font-size: 18px;
+        max-width: 70%;
+        margin: 15px auto
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.events p {
+            max-width: 90%
+        }
+    }
+
+    .cctv-solution .cctv.events a {
+        color: #0068b7;
+        font-weight: 400
+    }
+
+    .cctv-solution .cctv.events .img-warp {
+        background-color: #edf8ff;
+        width: 100%;
+        margin: auto;
+        padding: 2em;
+        margin-top: 3em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 20px;
+        align-items: center;
+        justify-items: center
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.events .img-warp {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 1em 0
+        }
+    }
+
+    .cctv-solution .cctv.events .img-warp p {
+        font-weight: bold
+    }
+
+    .cctv-solution .cctv.events .img-warp img {
+        max-width: 80%;
+        margin: auto;
+        margin-bottom: 1em
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.events .img-warp img {
+            max-width: 90%
+        }
+    }
+
+    .cctv-solution .cctv.events .img-warp img.rvi {
+        justify-items: center;
+        align-items: center
+    }
+
+    .cctv-solution .cctv.scalable {
+        width: 100%;
+        height: 630px;
+        background: url(https://www.anviz.com/file/files/3070) no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 5em 0
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.scalable {
+            height: auto
+        }
+    }
+
+    .cctv-solution .cctv.scalable h2,
+    .cctv-solution .cctv.scalable li {
+        color: #fff
+    }
+
+    .cctv-solution .cctv.scalable h2 {
+        text-align: center
+    }
+
+    .cctv-solution .cctv.scalable ul {
+        max-width: 60%;
+        margin: auto;
+        margin-top: 5em
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.scalable ul {
+            max-width: 90%
+        }
+    }
+
+    .cctv-solution .cctv.scalable ul li {
+        margin-bottom: 1em;
+        padding-left: 10px;
+        position: relative;
+        font-weight: 400;
+        list-style: inside;
+        font-size: 24px
+    }
+
+    .cctv-solution .cctv.scalable ul li::before {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: -10px
+    }
+
+    .cctv-solution .cctv.security {
+        width: 100%;
+        height: 640px;
+        background: #d9e3ea url(https://www.anviz.com/file/files/3071) no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 5em 0;
+        position: relative
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.security {
+            background-size: 150% auto;
+            height: auto;
+            background-position: top
+        }
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.security {
+            background: url(https://www.anviz.com/file/files/3072) no-repeat;
+            background-position: top;
+            background-size: cover;
+            padding: 3em 0 0 0
+        }
+    }
+
+    .cctv-solution .cctv.security h2 {
+        text-align: center;
+        max-width: 60%;
+        margin: auto
+    }
+
+    @media(max-width: 950px) {
+        .cctv-solution .cctv.security h2 {
+            max-width: 90%
+        }
+    }
+
+    .cctv-solution .cctv.security .build-list {
+        max-width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -10%);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.security .build-list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            bottom: 2%;
+            border-top: 0;
+            position: relative;
+            padding-top: 300px;
+        }
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.security .build-list {
+            bottom: -1%
+        }
+    }
+
+    .cctv-solution .cctv.security .build-list .item {
+        display: block;
+        flex: 1;
+        position: relative
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.security .build-list .item {
+            flex-basis: 33.33%;
+            width: 33.33%;
+            flex: none
+        }
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.security .build-list .item {
+            flex-basis: 50%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+    }
+
+    .cctv-solution .cctv.security .build-list .item::before {
+        display: block;
+        width: 2px;
+        height: 32px;
+        background: #0068b7;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%
+    }
+
+    .cctv-solution .cctv.security .build-list img {
+        max-width: 60%;
+        margin: auto;
+        margin-bottom: 1em;
+        margin-top: 2em;
+        position: relative
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.security .build-list img {
+            max-width: 30%
+        }
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.security .build-list img {
+            margin-bottom: 0
+        }
+    }
+
+    .cctv-solution .cctv.security .build-list p {
+        text-align: center;
+        color: #0068b7;
+        font-weight: bold
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.security .build-list p {
+            max-width: 90%
+        }
+    }
+
+    .cctv-solution .cctv.applications {
+        width: 100%;
+        padding: 3em 0
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.applications {
+            padding: 2em 0
+        }
+    }
+
+    .cctv-solution .cctv.applications h2 {
+        text-align: center;
+        margin-bottom: 2em
+    }
+
+    .cctv-solution .cctv.applications .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.applications .list {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 98%;
+        }
+
+        .cctv-solution .cctv.applications .list .item {
+            flex: 1;
+            margin-right: 10px
+        }
+
+        .cctv-solution .cctv.applications .list .item:last-child {
+            margin-right: 0
+        }
+
+        @media(max-width: 850px) {
+            .cctv-solution .cctv.applications .list .item {
+                margin-right: 0
+            }
+        }
+
+        .cctv-solution .cctv.applications .list .item p {
+            text-align: center;
+            font-weight: bold
+        }
+
+        .cctv-solution .cctv.learn-more {
+            width: 100%;
+            padding: 3em 0;
+            max-width: 80%;
+            margin: auto
+        }
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.products {
+            max-width: 100%;
+            padding: 1em 0
+        }
+    }
+
+    .cctv-solution .cctv.products h2 {
+        text-align: center;
+        margin-bottom: 2em
+    }
+
+    .cctv-solution .cctv.products .list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    @media(max-width: 720px) {
+        .cctv-solution .cctv.products .list {
+            flex-direction: column-reverse
+        }
+    }
+
+    .cctv-solution .cctv.products .list .item {
+        flex: 1;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .cctv-solution .cctv.products .list .item:last-child {
+        margin-right: 0
+    }
+
+    @media(max-width: 850px) {
+        .cctv-solution .cctv.products .list .item {
+            margin-right: 0
+        }
+    }
+
+    .cctv-solution .cctv.products .list .item p {
+        text-align: center;
+        font-weight: bold
+    }
+
+    .cctv.products .list .item:hover p {
+        color: #0068B7;
+    }
+</style>
+<style type="text/css">/* 导航样式 */
+    .template .details_nav_bar {
+        width: 100%;
+        margin-top: 0 !important;
+        border-top: 0 !important;
+        border-bottom: 2px solid #00a0e8;
+        backdrop-filter: saturate(180%) blur(20px);
+        -moz-backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        -o-backdrop-filter: saturate(180%) blur(20px);
+        -ms-backdrop-filter: saturate(180%) blur(20px);
+        background: rgba(241, 241, 241, 0.87);
+    }
+
+    .navbar-default {
+        background: none;
+    }
+
+    .nav_bar {
+        align-items: center;
+        line-height: normal;
+        width: auto;
+        display: flex;
+        white-space: nowrap;
+        margin: 10px 0;
+    }
+
+    .space-item {
+        flex: 1;
+    }
+
+    .navbar_tab .nav-item {
+        width: auto;
+        height: auto;
+        padding: 0 20px;
+        font-size: 16px;
+        align-items: center;
+
+
+    }
+
+    .navbar_tab .nav-item:first-child a {
+        font-size: 22px;
+    }
+
+    .nav-item>a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #3e3a39;
+        font-family: "Montserrat-Regular" !important;
+        font-weight: normal;
+        text-decoration: none;
+        pointer-events: all;
+    }
+
+    .share_img {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .share_img>img {
+        margin-bottom: 0 !important;
+    }
+
+    .navbar_tab {
+        border: none;
+        height: 100%;
+    }
+
+    .template .details_nav_bar .navbar-default {
+        height: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0 15px;
+        display: flex;
+    }
+
+    .v_active {
+        color: #00a0e8;
+    }
+
+    .v_active>a {
+        color: #000;
+        font-size: 18px !important;
+    }
+
+    .v_inquiry {
+        /* border: 1px solid #00A0E8; */
+        background-color: #00a0e8;
+        border-radius: 6px;
+        height: auto;
+        padding: 8px 20px;
+    }
+
+    .v_inquiry>a {
+        color: #fff;
+    }
+
+    .xq_hover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+
+    .select {
+        float: left;
+        width: 60%;
+        display: none;
+    }
+
+    .select_tit {
+        padding: 13px 0;
+    }
+
+    .select_tit>a {
+        text-decoration: none;
+    }
+
+    .share_con {
+        display: flex;
+        margin: 13px 0;
+    }
+
+    .share_con img {
+        width: 100%;
+    }
+
+    .select_box {
+        width: 70%;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .select_box>li {
+        border-bottom: 1px solid rgba(210, 210, 215, 0.5);
+        padding: 10px 0;
+    }
+
+    .icon_down {
+        float: left;
+        width: 15%;
+        padding: 15px 0;
+        display: none;
+    }
+    @media screen and (max-width: 1250px) {
+        
+        .details_nav_bar .navbar-default .nav_bar .nav-item{
+            padding: 0 10px;
+        }
+    }
+    /* 导航自适应 */
+    @media screen and (max-width: 850px) {
+        .cctv-solution .cctv.applications .list .item img {
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .details_nav_bar .page-item .navbar-default .share_con li:last-child {
+            display: none;
+        }
+
+        .content .page-item {
+            padding: 0 0 !important;
+        }
+
+        .template .details_nav_bar .navbar-default {
+            display: block;
+            overflow: hidden;
+        }
+
+        .nav_bar {
+            display: none !important;
+        }
+
+        .select.mobile-select-nav {
+            display: flex;
+            align-items: center;
+            width: auto;
+            display: none;
+        }
+
+        .icon_down {
+            display: block;
+            width: auto;
+        }
+
+        .icon_down>img {
+            margin-bottom: 0px;
+            max-width: 80%;
+            margin-left: 3px;
+            margin-top: 2px;
+        }
+
+        .space-item {
+            display: none !important;
+        }
+
+        .share_con {
+            float: right;
+            width: auto;
+            margin: 10px 0 !important;
+        }
+        .share_con a{
+            margin:15px 5px 15px 0;
+        }
+        .share_con .nav-item .nav-link {
+            font-size: 12px !important;
+            display: unset;
+            color: #000;
+        }
+
+        .v_inquiry {
+            padding: 5px 5px;
+            font-size: 12px;
+            background-color: transparent;
+            border: 1px #000 solid;
+        }
+
+        .nav-item {
+            font-size: 16px;
+        }
+
+        .share_con .anviz-btn {
+            padding: 12px;
+            margin: 0;
+        }
+
+        .navbar_tab .nav-item {
+            width: auto;
+            height: auto;
+            padding: 4px 5px;
+            align-items: center;
+        }
+
+        .select_box {
+            flex-direction: column;
+            width: 100%;
+
+
+        }
+
+        .select_box .nav-item {
+            padding: 10px 5% !important;
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .details_nav_bar .page-item .navbar-default .share_con li:last-child {
+            display: none;
+        }
+
+        .details_nav_bar .page-item .navbar-default {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .cctv-solution .cctv.generanal-info .icons .item .iconname,
+        .cctv-solution .cctv.edge .icons .item .iconname {
+            font-weight: initial;
+        }
+
+        .cctv-solution .cctv.scalable ul li {
+            font-size: 18px;
+        }
+    }
+</style>
+<link href="https://www.anviz.com/static/css/common/swiper 5.4.5.css" rel="stylesheet" />
+<div class="template cctv-solution">
+<div class="cctv header-banner">
+<div class="circle-mark">&nbsp;</div>
+
+<div class="info"><img alt="Smart Surveillance, Secure World" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3073" width="" />
+<h1>Smart Surveillance, Secure World</h1>
+
+<h3>Based on AIoT &amp; Cloud technologies, provide the world with smart, scalable, secure and efficient surveillance management solutions.</h3>
+</div>
+</div>
+<!-- nav -->
+
+<div class="details_nav_bar">
+<div class="page-item">
+<div class="navbar_tab navbar-default" id="productDetailsNav"><!-- pc -->
+<ul class="nav_bar">
+<li class="nav-item" style="padding-left: 0"><a class="nav-link">Smart Surveillance</a></li>
+<li class="nav-item v1 v_active"><a class="nav-link" href="#section1">Overview</a></li>
+<li class="nav-item v2"><a class="nav-link" href="#section2">How It Works</a></li>
+<li class="nav-item v3"><a class="nav-link" href="#section3">Features</a></li>
+<li class="nav-item v4"><a class="nav-link" href="#section4">Products</a></li>
+</ul>
+<!-- mobile -->
+
+<div class="select mobile-select-nav">
+<div class="select_tit v_active v1"><a>Smart Surveillance</a></div>
+
+<div class="icon_down"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" src="https://www.anviz.com/file/files/792" /></div>
+</div>
+
+<ul class="space-item">
+<li>&nbsp;</li>
+</ul>
+
+<ul class="share_con">
+<li><a class="anviz-primary-btn" href="/partners.html" previewlistener="true">Become a Partner</a></li>
+<li><a class="anviz-primary-btn" href="/form" rel="nofollow" target="_blank">Free Demo</a></li>
+<li class="nav-item">
+<div class="sharethis-inline-share-buttons">&nbsp;</div>
+</li>
+</ul>
+</div>
+
+<ul class="select_box">
+<li class="nav-item v2"><a class="nav-link" href="#section1">Overview</a></li>
+<li class="nav-item v3"><a class="nav-link" href="#section2">How It Works</a></li>
+<li class="nav-item v4"><a class="nav-link" href="#section3">Features</a></li>
+<!-- <li class="nav-item v5"><a class="nav-link" href="#section4">Products</a></li> -->
+</ul>
+</div>
+</div>
+<!-- nav -->
+
+<div class="cctv onvif"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3980" width="" /></div>
+
+<div class="cctv generanal-info" id="section1">
+<h2>General Introduction</h2>
+
+<p>IntelliSight is a complete of intelligent video surveillance product solution based on AIoT+Cloud technologies. The system consists of <a aria-label="“”" href="/cctv-ndaa.html"><span style="color:#3498db;">NDAA&nbsp;Compliant</span></a><span style="color:RGB#1d2088;"> </span>iCam series edge AI cameras, LiveStation series intelligent NVR storage, IntelliSight VMS management system platform, mobile App services. IntelliSight is also an open integrated solutions can be widely used in government facilities, office buildings, smart business places, schools, banks and other industries need modern and secure video security services</p>
+
+<ul class="icons">
+<li class="item"><span class="icon icon-a-NPU"></span><span class="iconname">Powerful AI Engine</span></li>
+<li class="item"><span class="icon icon-a-RVI"></span><span class="iconname">Smart AI Analytics</span></li>
+<li class="item"><span class="icon icon-a-acp"></span><span class="iconname">Secure Data Communications</span></li>
+<li class="item"><span class="icon icon-a-anvizcloud"></span><span class="iconname">Scalable Cloud Infrastructures</span></li>
+<li class="item"><span class="icon icon-a-deployment"></span><span class="iconname">Easy for Deployment </span></li>
+<li class="item"><span class="icon icon-a-platform"></span><span class="iconname">Customized VMS Platform</span></li>
+<li class="item"><span class="icon icon-a-notifications"></span><span class="iconname">Smart Event Notifications</span></li>
+<li class="item"><span class="icon icon-a-person"></span><span class="iconname">Advanced Person Management</span></li>
+<li class="item"><span class="icon icon-a-vehicle"></span><span class="iconname">ANPR &amp; Vehicle Management</span></li>
+<li class="item"><span class="icon icon-a-32c"></span><span class="iconname">Widely Open Integrations</span></li>
+</ul>
+</div>
+
+<div class="cctv edge" id="section2">
+<h2>Make a Powerful Engine in Edge</h2>
+
+<ul class="icons">
+<li class="item"><img alt="Unified Quad-Core CPU, GPU, NPU in one SOC" auto_mobile="true" class="icon" height="" src="https://www.anviz.com/file/files/3075" width="" />
+<p class="iconname">Unified Quad-Core CPU, GPU, NPU in one SOC</p>
+</li>
+<li class="item"><img alt="Detect 100+ Person and Vehicle in a Second" auto_mobile="true" class="icon" height="" src="https://www.anviz.com/file/files/3076" width="" />
+<p class="iconname">Detect 100+ Person and Vehicle in a Second</p>
+</li>
+<li class="item"><img alt="Support Real 4K Imaging Pefromance" auto_mobile="true" class="icon" height="" src="https://www.anviz.com/file/files/3077" width="" />
+<p class="iconname">Support Real 4K Imaging Pefromance</p>
+</li>
+<li class="item"><img alt="10+ AI algorithms in parallel" auto_mobile="true" class="icon" height="" src="https://www.anviz.com/file/files/3078" width="" />
+<p class="iconname">10+ AI algorithms in parallel</p>
+</li>
+</ul>
+</div>
+
+<div class="cctv wider">
+<h2>See a Wider, Clearer and Customized Image</h2>
+
+<div class="swiper mywiderswiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+<div aria-live="polite" class="swiper-wrapper" id="swiper-wrapper-wider">
+<div class="swiper-slide 4k"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3154" width="" /></div>
+
+<div class="swiper-slide 120db"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3155" width="" /></div>
+
+<div class="swiper-slide light"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3081" width="" /></div>
+
+<div class="swiper-slide degree"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3082" width="" /></div>
+</div>
+
+<div class="swiper-pagination wider-pagination">
+<ul class="paginations">
+</ul>
+</div>
+</div>
+</div>
+
+<div class="cctv events hide">
+<h2>Enhanced Management by Smart Events</h2>
+
+<p>Different from the traditional monitoring system based on 24-hour full video recording management, IntelliSight adopts the excellent <a href="">RVI-Real Time Intelligence algorithm</a>, which can provide various detections such as people, vehicles, objects, intrusions, and sounds on the Edge side, and push them in real-time alarm notification to the mobile terminal. It effectively saves the system setup and labor investment of the enterprise, and also greatly improves management efficiency.</p>
+
+<div class="img-warp">
+<ul class="list">
+<li class="item"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3153" width="" />
+<p>Vehicle &amp; Person Detection</p>
+</li>
+<li class="item"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3151" width="" />
+<p>Object Left Detection</p>
+</li>
+</ul>
+
+<ul class="list">
+<li class="item"><img alt="CCTV Solution" auto_mobile="true" class="rvi" height="" src="https://www.anviz.com/file/files/3085" width="" /></li>
+</ul>
+
+<ul class="list">
+<li class="item"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3086" width="" />
+<p>License Recognition</p>
+</li>
+<li class="item"><img alt="CCTV Solution" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3152" width="" />
+<p>Regional Intrusion Detection</p>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="cctv scalable" id="section3">
+<h2>A Scalable Cloud Management Platform</h2>
+
+<ul>
+<li>Easy to build a scale system with lower investment</li>
+<li>Remote access to any video camera within seconds</li>
+<li>Get instant notifications at any place</li>
+<li>Secure Data Encyption and Communication</li>
+<li>No info delay or loss by ACP Technologies</li>
+<li>Easy to integrate by Cloud API</li>
+</ul>
+</div>
+
+<div class="cctv applications">
+<h2>We Build Multiple Smart Applications</h2>
+
+<ul class="list">
+<li class="item"><img alt="ANPR and Vehicle Access Control" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3094" width="" />
+<p>ANPR and Vehicle Access Control</p>
+</li>
+<li class="item"><img alt="Person Detection and People Counting" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3095" width="" />
+<p>Person Detection and People Counting</p>
+</li>
+<li class="item"><img alt="Facial Recognition and Access Control" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3096" width="" />
+<p>Facial Recognition and Access Control</p>
+</li>
+<li class="item"><img alt="Vehicle &amp; Person Detection" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3153" width="" />
+<p>Vehicle &amp; Person Detection</p>
+</li>
+<li class="item"><img alt="Object Left Detection" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3152" width="" />
+<p>Object Left Detection</p>
+</li>
+<li class="item"><img alt="Regional Intrusion Detection" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3151" width="" />
+<p>Regional Intrusion Detection</p>
+</li>
+</ul>
+</div>
+
+<div class="cctv security">
+<h2>We Build Smart Video Security Solutions for Multiple Industries</h2>
+
+<ul class="build-list">
+<li class="item"><img alt="Business Buildings" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3088" width="" />
+<p>Business Buildings</p>
+</li>
+<li class="item"><img alt="Manufacturing Facilities" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3089" width="" />
+<p>Manufacturing Facilities</p>
+</li>
+<li class="item"><img alt="Education" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3090" width="" />
+<p>Education</p>
+</li>
+<li class="item"><img alt="Medical Services" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3091" width="" />
+<p>Medical Services</p>
+</li>
+<li class="item"><img alt="Hospitalities" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3092" width="" />
+<p>Hospitalities</p>
+</li>
+<li class="item"><img alt="Communities" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3093" width="" />
+<p>Communities</p>
+</li>
+</ul>
+</div>
+
+<div class="cctv products" id="section4">
+<h2>About Our Products</h2>
+
+<ul class="list">
+<li attr-title="VMS" class="item"><img alt="VMS" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3097" width="" />
+<p>VMS</p>
+</li>
+<li attr-title="NVR" class="item"><img alt="iCam&amp;NVR" auto_mobile="true" class="lazyload" height="" src="https://www.anviz.com/file/files/3098" width="" />
+<p>iCam&amp;NVR</p>
+</li>
+</ul>
+</div>
+</div>
+<script src="https://www.anviz.com/static/js/swiper.min 5.4.5.js"></script><script>
+
+    var swiper = new Swiper(".mywiderswiper", {
+        autoplay: true,
+        effect: 'fade',
+        loop: true,
+        pagination: {
+            el: ".paginations",
+            clickable: true,
+            renderBullet: function (index, className) {
+                let iconName = '';
+                let icon = '';
+                switch (index) {
+                    case 0:
+                        icon = 'https://www.anviz.com/file/files/3099';
+                        iconName = 'Get a clearer image with real 4K imaging';
+                        break;
+                    case 1:
+                        icon = 'https://www.anviz.com/file/files/3100';
+                        iconName = 'WDR & Starlight';
+                        break;
+                    case 2:
+                        icon = 'https://www.anviz.com/file/files/3101';
+                        iconName = '24/7 Day & Night View';
+                        break;
+                    case 3:
+                        icon = 'https://www.anviz.com/file/files/3102';
+                        iconName = '360 Degree without blind angles';
+                        break;
+                    default:
+                        icon = 'https://www.anviz.com/file/files/3099';
+                        iconName = 'Get a clearer image with real 4K imaging';
+                }
+                return `<li class=${className}><img width="50%" height="" src=${icon} /><p>${iconName}</p></div>`
+            }
+        },
+    });
+
+    $(function () {
+        $('.products').on('click', '.item', function () {
+            var title = $(this).attr('attr-title');
+            if (title == 'VMS') {
+                window.open('https://www.anviz.com/smart-ai-surveillance-cctv-system-intellisight');
+            } else {
+                window.open('https://www.anviz.com/product.html?tag=Video%20Surveillance&extraTag[]=IPC');
+            }
+        });
+
+        // 导航js start
+        var juli = $(".details_nav_bar").offset().top;
+        var vf1 = $("#section1").offset().top;
+        var vf2 = $("#section2").offset().top;
+        var vf3 = $("#section3").offset().top;
+        var vf4 = $("#section4").offset().top;
+        $(window).scroll(function () {
+            var gju = $(window).scrollTop();
+            if (gju >= juli) {
+                $('.product-nav.scroll-active.on').css('display', 'none')
+                $(".details_nav_bar").addClass('xq_hover');
+                $(".product-nav").addClass("on");
+                $(".product-nav").removeClass("in");
+            } else {
+
+                $('.product-nav.scroll-active').css('display', 'block')
+                $(".details_nav_bar").removeClass('xq_hover');
+                $(".product-nav").addClass("in");
+                $(".product-nav").removeClass("on");
+            }
+            if ($(this).width() > 850) {
+                if (gju >= juli) {
+                    $(".top-nav").addClass("on");
+                    $(".top-nav").removeClass("in");
+                } else {
+                    $(".top-nav").addClass("in");
+                    $(".top-nav").removeClass("on");
+                }
+            } else {
+                if (gju >= juli) {
+                    $(".top-nav").addClass("on");
+                    $(".top-nav").removeClass("in");
+                } else {
+                    $(".top-nav").addClass("in");
+                    $(".top-nav").removeClass("on");
+                }
+            }
+
+            if (gju >= vf1 - 100) {
+                $(".nav-item").removeClass('v_active');
+                $(".v1").addClass("v_active");
+            }
+            if (gju >= vf2 - 100) {
+                $(".nav-item").removeClass('v_active');
+                $(".v2").addClass("v_active");
+            }
+            if (gju >= vf3 - 100) {
+                $(".nav-item").removeClass('v_active');
+                $(".v3").addClass("v_active");
+            }
+            if (gju >= vf4 - 100) {
+                $(".nav-item").removeClass('v_active');
+                $(".v4").addClass("v_active");
+            }
+        });
+
+        window.onload = function () {
+            var juli = $(".details_nav_bar").offset().top;
+            var gju = $(window).scrollTop() + 68;
+            if (gju >= juli) {
+                $(".details_nav_bar").addClass('xq_hover');
+                $(".product-nav").addClass("on");
+                $(".product-nav").removeClass("in");
+                $(".top-nav").addClass("on");
+                $(".top-nav").removeClass("in");
+            } else {
+                $(".details_nav_bar").removeClass('xq_hover');
+                $(".product-nav").addClass("in");
+                $(".product-nav").removeClass("on");
+                $(".top-nav").addClass("in");
+                $(".top-nav").removeClass("on");
+            }
+            if (gju >= juli) {
+                $(".top-nav").addClass("on");
+                $(".top-nav").removeClass("in");
+            } else {
+                $(".top-nav").addClass("in");
+                $(".top-nav").removeClass("on");
+            }
+            if (gju >= vf1 - 100) {
+                $(".nav-item").removeClass('v_active');
+                $(".v1").addClass("v_active");
+            }
+            if (gju >= vf2) {
+                $(".nav-item").removeClass('v_active');
+                $(".v2").addClass("v_active");
+            }
+            if (gju >= vf3) {
+                $(".nav-item").removeClass('v_active');
+                $(".v3").addClass("v_active");
+            }
+            if (gju >= vf4) {
+                $(".nav-item").removeClass('v_active');
+                $(".v4").addClass("v_active");
+            }
+        };
+
+        $(".select_box").click(function () {
+            $(".icon_down").click();
+        })
+
+
+
+
+        var flag = true
+        $(".mobile-select-nav").click(function () {
+            if (flag) {
+                $(".select_box").fadeIn()
+                $(".icon_down>img").attr("src", "https://www.anviz.com/file/files/821");
+                flag = false
+            } else {
+                $(".select_box").fadeOut()
+                $(".icon_down>img").attr("src", "https://www.anviz.com/file/files/792");
+                flag = true
+            }
+        });
+        // nav js end      
+
+    })
+</script>
+</body>
+
+</html>

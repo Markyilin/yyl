@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pmcase</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css?v=1680838179s">
+    <link rel="stylesheet" href="../swiper 5.4.5.css">
+    <link rel="stylesheet" href="../../fonts/anviz-font.css">
+    <link rel="stylesheet" href="../../fonts/static-page-font.css">
+</head>
+
+<body>
+    <style type="text/css">
+        /* a全网页公共部分 */
+        .title span {
+            padding: 0.8em;
+            /* background-color: #0626d2; */
+            /* 渐变色背景 左浅右深*/
+            background: linear-gradient(to right, #2a67b1, #252c87);
+            border-radius: 0 2em 2em 0;
+            color: #fff !important;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        @media(max-width: 720px) {
+            .title span {
+                font-size: 18px;
+            }
+        }
+
+        /* a 公共兼容 */
+        @media(max-width: 1440px) {
+            .max-1440 {
+                max-width: 1260px;
+                margin: 0 auto;
+            }
+        }
+
+        @media(max-width: 1260px) {
+            .max-1440 {
+                max-width: 1150px;
+                margin: 0 auto;
+            }
+        }
+
+        /* 1 banner */
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+
+        /*2  */
+        .banner .max-1440 {
+            width: 100%;
+        }
+
+        /*2  */
+
+        .banner .max-1440 h1 {
+            text-align: center;
+        }
+
+        /*2  */
+
+        .banner .max-1440 p {
+            text-align: left;
+        }
+
+
+        /* 2 一边文字一边图片*/
+        /* 左右公共 */
+        .main-banner .main-banner-one {
+            width: 100%;
+            height: auto;
+            align-items: center;
+        }
+
+        /* 2 */
+        .main-banner .main-banner-one img {
+            width: 50%;
+            height: auto;
+        }
+
+        .main-banner .main-banner-one .lt-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .lt-text {
+            width: 48%;
+            text-align: left;
+        }
+
+        .rt-img {
+            width: 48%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* 2右图左文字 兼容*/
+        @media(max-width: 850px) {
+            .rt-img {
+                flex-direction: column;
+            }
+
+            .main-banner .main-banner-one img {
+                width: 100%;
+                height: auto;
+            }
+
+            .lt-text {
+                width: 100%;
+            }
+
+        }
+
+        .lt-img {
+            width: 100%;
+        }
+
+        .rt-text {
+            width: 98%;
+        }
+
+        .img-rt {
+            width: 50%;
+
+        }
+
+        .left-bnt {
+            align-items: center;
+        }
+
+        .main-banner .main-banner-one .img-rt img {
+            width: 100%;
+
+        }
+
+        @media(max-width: 720px) {
+            .bnt-right {
+                flex-direction: column-reverse;
+            }
+
+            .rt-img {
+                width: 100%;
+            }
+
+            .img-rt {
+                width: 100%;
+            }
+
+            .left-bnt {
+                flex-direction: column;
+            }
+        }
+
+        /* 2左图右文字 兼容 */
+
+
+        @media(max-width: 720px) {
+            .bnt-left {
+                flex-direction: column;
+            }
+
+            .main-banner .bnt-left {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .main-banner .bnt-left img {
+                width: 100%;
+                height: auto;
+            }
+
+            .max-1440 .title {
+                margin-top: 10%;
+                margin-bottom: 7%;
+            }
+
+            .infoto {
+                padding: 10px 0 20px;
+            }
+        }
+
+        /* 3 图片排版「最少二张图」 */
+        .gridphone {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* 3 */
+        .gridphone .list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            grid-auto-flow: dense;
+        }
+
+        /* 3兼容 */
+        @media (max-width: 1260px) {
+            .gridphone .list {
+                gap: 20px;
+            }
+        }
+
+        /* 3 */
+        @media (max-width: 720px) {
+            .gridphone .list {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+
+            }
+        }
+
+        /* 5 start*/
+        .fw-6 {
+            font-size: 20px;
+        }
+
+        /* 5 end*/
+
+        /* 6 图片排版「最少二张图」 */
+        .gridmap {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* 6 */
+        .gridmap .list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            grid-auto-flow: dense;
+        }
+
+
+        /* 6兼容 */
+        @media (max-width: 850px) {
+            .gridmap .list {
+                gap: 20px;
+            }
+        }
+
+        /* 6 */
+        @media (max-width: 720px) {
+            .gridmap .list {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+
+            }
+        }
+
+        /* 7 */
+        .gridfour {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* 7 */
+        .gridfour .list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            grid-auto-flow: dense;
+        }
+
+
+        /* 7兼容 */
+        @media (max-width: 720px) {
+            .gridfour .list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        /* 7 */
+        @media (max-width: 300px) {
+            .gridfour .list {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+
+            }
+        }
+    </style>
+    <!--这是一个网页模版 -->
+    <div class="template"><!--1 banner -->
+        <div class="banner"><!-- banner全屏图片 --><img alt="" auto_mobile="true" height="anto"
+                src="https://www.anviz.com/file/files/4491" width="100%" />
+            <div class="info max-1440"><!-- <h1 class="mb-5">
+                    Anviz Transforms Traditional Property Management Into A Smart Reality, Making Digitization More Than
+                    Just Talk
+                </h1> -->
+                <p>The Middle East has recently expanded its real estate market as the region&#39;s economy grows and
+                    urbanization accelerates. This trend has led to an increasing demand for smart security, and the
+                    pace of digital intelligence change is gradually increasing. The security industry in the Middle
+                    East is rapidly growing, driven by the government&#39;s strong emphasis on national security and
+                    terrorism prevention. Significant attention and investment have been directed toward this sector,
+                    estimated to grow at about 10% annually. There is no doubt that the Middle East has become one of
+                    the most important and fastest-growing security markets in the world.</p>
+
+                <p>While traditional real estate management requires a location-based approach, the digital
+                    transformation of the marketplace means that centralized systems management will replace the
+                    traditional approach, and that&#39;s exactly what Provis is starting to think about.</p>
+            </div>
+        </div>
+        <!-- 2 一边文字一边图片 -->
+
+        <div class="main-banner max-1440 info"><!-- 小标题 -->
+            <p class="title mb-3 mt-5"><span>THE CUSTOMER</span></p>
+            <!-- 左图右文字 -->
+
+            <div class="main-banner-one info flex gap-20 bnt-left">
+                <div class="lt-img"><img alt="" auto_mobile="true" src="	https://www.anviz.com/file/files/4492" /></div>
+
+                <div class="text rt-text"><img alt="" auto_mobile="true" src="	https://www.anviz.com/file/files/4497" />
+                    <p>Provis is a property management company based in the UAE. With over 25,000 units under property
+                        management, over 28,000 units under Owners&rsquo; Association management, and thousands of
+                        properties sold and leased.&nbsp;Based on their accumulated in-depth industry knowledge, and
+                        technical expertise, it is their commitment to provide sustainable value-added services through
+                        the assets of their clients. To provide integrated service solutions based on international
+                        standards, allowing clients to focus on their core business with peace of mind, thereby setting
+                        a new benchmark for integrated real estate service solutions globally.</p>
+
+                    <p>For its owners to centrally manage their users and deliver smarter, easier real estate solutions
+                        to their customers,&nbsp;Provis turned to Anviz&#39;s integrator partners, PROGRESS SECURITY
+                        &amp; SAFETY SYSTEMS and MEDC, for assistance.</p>
+                </div>
+            </div>
+        </div>
+        <div class="max-1440 info four">
+            <p class="title mb-3 mt-5"><span> THE CHALLENGE </span></p>
+
+            <div>
+                <p>Traditional property management in the UAE local area is inefficient and intensive, property managers
+                    need to spend a lot of time and energy to deal with those complicated and repetitive work manually.
+                    Conventional management is unable to effectively analyze a large amount of data, making it difficult
+                    to provide a basis for decision-making. The delay and errors of manual processing are drawbacks that
+                    can be precisely removed in information management.</p>
+
+                <p>Moreover, as the company&#39;s business continues to grow and expand across various regions of the
+                    country, the practice of processing information in a decentralized manner by location not only tends
+                    to create information silos, making it difficult to integrate and share data but also leads to
+                    delays in customer service due to lack of information exchange, thereby affecting user experience
+                    and the corporate image.</p>
+            </div>
+        </div>
+        <!-- 5  -->
+
+        <div class="max-1440 info five">
+            <p class="title mb-3 mt-5"><span> THE SOLUTION </span></p>
+
+            <div><!-- 小标题添加 class="fw-6" 加粗-->
+                <p class="fw-6 mb-1">Thinking about the cut-and-dry and providing a heartfelt service</p>
+
+                <p class="mb-1">No matter whether in the youthful campus or orderly government and other places, there
+                    will be the movement of people. Quickly and accurately checking people is a basic requirement for
+                    front-end devices, and our Face Deep 3 maximizes this need. It supports up to 10,000 dynamic face
+                    databases and quickly identifies users within 2 meters (6.5 feet) in less than 0.3 seconds, with
+                    customized alerts and various reports.</p>
+            </div>
+        </div>
+
+        <div class="max-1440 gridphone info mt-5 mb-3">
+            <div class="list gap-20">
+                <div><img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4500" /></div>
+
+                <div><img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4494" /></div>
+
+                <div><img alt="PHONE" auto_mobile="true" src="https://www.anviz.com/file/files/4501" /></div>
+            </div>
+
+            <p style="text-align: left;">The account manager of Provis said, &quot;In the past, we always struggled with
+                the data integration of multi-point control. Having used terminal devices and software that were not
+                part of a single system, we found that it had no linkage effect and could not solve the problem of event
+                recording and data sharing. And location-based time and attendance solutions were ineffective in
+                centralizing user management.&quot;</p>
+
+            <div class="main-banner-one info flex gap-20 bnt-right">
+                <div class="text lt-text">
+                    <p>Based on the scenario of property management, the personnel are scanned and inspected by Face
+                        Deep 3 and then redirected to the management department through the CrossChex application and
+                        CrossChex Cloud Web software to achieve data sharing and transfer. Thus, the workflow of the
+                        property personnel is streamlined and standardized.&nbsp;From the perspective of the CrossChex
+                        system, it integrates the property work content in an all-round and multi-dimensional way, which
+                        makes property management more scientific and orderly, improves management efficiency, and
+                        reduces cost.</p>
+
+                    <p>Meanwhile, the CrossChex system adopts a centralized management approach to gather all the
+                        information resources on a single platform. It also supports integration with ERP solutions to
+                        facilitate integrated management, which can reduce manpower and improve efficiency.</p>
+                </div>
+
+                <div class="img-rt"><img alt="" auto_mobile="true" src="	https://www.anviz.com/file/files/4496" /></div>
+            </div>
+        </div>
+        <!-- 5  -->
+
+        <div class="max-1440 info five">
+            <p class="title mb-3 mt-5"><span> THE SOLUTION </span></p>
+
+            <div><!-- 小标题添加 class="fw-6" 加粗-->
+                <p class="fw-6 mb-1">Precision Management, Digital Intelligence Service</p>
+
+                <p class="mb-1">CrossChex Cloud, as a software platform with customized functions based on customer
+                    scenarios, combined with Face Deep 3, which is embedded with the most updated technological
+                    algorithms, seamlessly handles the data of people&#39;s movements and promptly processes the event
+                    records to form multi-form visualization reports. Additionally, it supports business customization
+                    and expansion to meet different business needs. It provides safe and reliable data encryption and
+                    rights management to protect user information security.</p>
+            </div>
+        </div>
+        <!-- 5  -->
+
+        <div class="max-1440 info five">
+            <p class="title mb-3 mt-5"><span> Client&rsquo;s Quote </span></p>
+
+            <div>
+                <p class="mb-1">Provis&#39; project manager said, &quot;Choosing to use Anviz&#39;s time attendance
+                    devices and cloud-based platform,&nbsp;allowed us to solve 89% of the repetitive steps for our
+                    owners&#39; property management matters, making our brand image more visible.&quot;</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossChex Web</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper 5.4.5.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+</head>
+
+<body class="width-1440">
+    <style type="text/css">
+        .facepass7 {
+            scroll-behavior: smooth
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 {
+                overflow-x: hidden;
+                overflow-y: scroll
+            }
+        }
+
+        .facepass7 h2 {
+            margin-bottom: 10px
+        }
+
+        .facepass7 .banner {
+            width: 100%;
+            height: 56.25vw;
+            position: relative;
+            background-size: cover;
+            background-position: bottom center;
+            background-repeat: no-repeat
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner .container {
+                padding: 0;
+                width: 100%
+            }
+        }
+
+        .facepass7 .banner.fullscreen {
+            background-image: url(https://www.anviz.com/file/files/3226/facepass7-pro-banner-bg.jpg)
+        }
+
+        .facepass7 .banner.fullscreen .mobile-banner {
+            display: none
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen {
+                height: auto;
+                background-image: none;
+                position: relative
+            }
+
+            .facepass7 .banner.fullscreen .container {
+                padding: 0
+            }
+
+            .facepass7 .banner.fullscreen .mobile-banner {
+                display: block
+            }
+        }
+
+        .facepass7 .banner.fullscreen .banner-info {
+            max-width: 33%;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-10%, -50%);
+            z-index: 2;
+            background: rgba(255, 255, 255, .2);
+            padding: 2em
+        }
+
+        @media(max-width: 1024px) {
+            .facepass7 .banner.fullscreen .banner-info {
+                max-width: 48%
+            }
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen .banner-info {
+                position: relative;
+                top: 100%;
+                max-width: 100%;
+                transform: inherit;
+                left: 0;
+                padding: 1em
+            }
+
+            .facepass7 .banner.fullscreen .banner-info p,
+            .facepass7 .banner.fullscreen .banner-info h2 {
+                color: #000
+            }
+        }
+
+        .facepass7 .banner.fullscreen .banner-info img {
+            padding-bottom: 1em;
+            border-bottom: 2px solid #b81805
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen .banner-info img {
+                max-width: 50%
+            }
+        }
+
+        .facepass7 .banner.fullscreen .banner-info p {
+            color: #111;
+            font-size: 24px
+        }
+
+        .facepass7 .banner.fullscreen .banner-info h1 {
+            color: #b81805;
+            position: relative
+        }
+
+        .facepass7 .banner.fullscreen .banner-info h1.irt::after {
+            content: "IRT";
+            display: block;
+            padding: 10px;
+            background: #b81805;
+            color: #fff;
+            position: absolute;
+            right: 5%;
+            top: 20%;
+            transform: translate(-50%, -20%);
+            font-size: 18px;
+            border-radius: 6px
+        }
+
+        .facepass7 .banner.fullscreen-2 {
+            background-image: url(https://www.anviz.com/file/files/3224/facepass7-banner2-bg.jpg)
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-2 {
+                height: 56.25vw;
+                background-size: 100% auto;
+                margin-bottom: 10px
+            }
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-2 {
+                height: auto;
+                margin-bottom: 300px
+            }
+        }
+
+        .facepass7 .banner.fullscreen-2 .banner-info {
+            max-width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 58%;
+            transform: translate(-50%, -50%);
+            z-index: 2
+        }
+
+        .facepass7 .banner.fullscreen-2 .banner-info p,
+        .facepass7 .banner.fullscreen-2 .banner-info h2 {
+            color: #fff
+        }
+
+        @media(max-width: 850px) {
+
+            .facepass7 .banner.fullscreen-2 .banner-info p,
+            .facepass7 .banner.fullscreen-2 .banner-info h2 {
+                color: #fff
+            }
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-2 .banner-info {
+                position: relative;
+                top: 260px;
+                max-width: 100%;
+                left: auto;
+                transform: inherit;
+                padding: 0 1em
+            }
+
+            .facepass7 .banner.fullscreen-2 .banner-info h2 {
+                padding-left: 0;
+                margin-bottom: 10px
+            }
+
+            .facepass7 .banner.fullscreen-2 .banner-info p,
+            .facepass7 .banner.fullscreen-2 .banner-info h2 {
+                color: #000
+            }
+        }
+
+        .facepass7 .banner.fullscreen-3 {
+            background-image: url(https://www.anviz.com/file/files/3225/facepass7-banner3-bg.jpg)
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-3 {
+                height: 56.25vw;
+                margin-bottom: 10px
+            }
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-3 {
+                height: auto;
+                margin-bottom: 10px;
+                background-position: left
+            }
+        }
+
+        .facepass7 .banner.fullscreen-3 .banner-info {
+            width: 70%;
+            max-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2
+        }
+
+        @media(max-width: 1024px) {
+            .facepass7 .banner.fullscreen-3 .banner-info {
+                width: 80%
+            }
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-3 .banner-info {
+                width: 90%;
+                padding: 1em 0
+            }
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-3 .banner-info {
+                padding: 1em 2em
+            }
+        }
+
+        .facepass7 .banner.fullscreen-3 .banner-info p,
+        .facepass7 .banner.fullscreen-3 .banner-info h2,
+        .facepass7 .banner.fullscreen-3 .banner-info span {
+            color: #fff
+        }
+
+        @media(max-width: 850px) {
+
+            .facepass7 .banner.fullscreen-3 .banner-info p,
+            .facepass7 .banner.fullscreen-3 .banner-info h2,
+            .facepass7 .banner.fullscreen-3 .banner-info span {
+                padding-left: 0
+            }
+        }
+
+        .facepass7 .banner.fullscreen-3 .banner-info .list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-3 .banner-info .list {
+                flex-direction: column
+            }
+        }
+
+        .facepass7 .banner.fullscreen-3 .banner-info .list .item:first-child {
+            flex-basis: 55%
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-3 .banner-info .list .item:first-child {
+                margin-top: 1em
+            }
+        }
+
+        @media(max-width: 1024px) {
+            .facepass7 .banner.fullscreen-3 .banner-info .list .item:last-child img {
+                max-width: 80%;
+                margin: auto
+            }
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-3 .banner-info .list .item:last-child img {
+                max-width: 80%;
+                margin: 3em auto
+            }
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-3 .banner-info .list .item:last-child img {
+                max-width: 60%;
+                margin: 2em 0 4em
+            }
+        }
+
+        .facepass7 .banner.fullscreen-3 .banner-info .list .icon-list {
+            margin-top: 2em
+        }
+
+        .facepass7 .banner.fullscreen-3 .banner-info .list .icon-list .icon-item {
+            display: flex;
+            align-items: center
+        }
+
+        .facepass7 .banner.fullscreen-3 .banner-info .list .icon-list .icon-item img {
+            margin-right: 15px;
+            margin-bottom: 0
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-3 .banner-info {
+                position: relative;
+                top: 2em;
+                width: 100%;
+                max-width: 100%;
+                left: auto;
+                transform: inherit
+            }
+
+            .facepass7 .banner.fullscreen-3 .banner-info p,
+            .facepass7 .banner.fullscreen-3 .banner-info h2 {
+                color: #fff
+            }
+
+            .facepass7 .banner.fullscreen-3 .banner-info h2 {
+                padding-left: 0;
+                margin-bottom: 10px
+            }
+        }
+
+        .facepass7 .banner.fullscreen-4 {
+            height: auto;
+            background-color: #353535
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-4 {
+                margin-bottom: 10px
+            }
+        }
+
+        .facepass7 .banner.fullscreen-4 p,
+        .facepass7 .banner.fullscreen-4 h2 {
+            color: #fff
+        }
+
+        @media(max-width: 850px) {
+
+            .facepass7 .banner.fullscreen-4 p,
+            .facepass7 .banner.fullscreen-4 h2 {
+                padding-left: 0
+            }
+        }
+
+        @media(max-width: 1024px) {
+            .facepass7 .banner.fullscreen-4 .container {
+                width: 100%;
+                padding: 0
+            }
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-4 .container {
+                padding: 0
+            }
+        }
+
+        .facepass7 .banner.fullscreen-4 .list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 1em
+        }
+
+        @media(max-width: 1024px) {
+            .facepass7 .banner.fullscreen-4 .list {
+                margin: 0 auto
+            }
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-4 .list {
+                flex-direction: column;
+                margin: 0
+            }
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item {
+            flex: 1;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item:first-child {
+            justify-content: flex-end
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item:last-child .info {
+            padding-top: 12%
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item:last-child h2 {
+            margin-bottom: 2em
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item:last-child h3,
+        .facepass7 .banner.fullscreen-4 .list .item:last-child p {
+            color: #fff
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item:last-child h3 {
+            font-size: 24px
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item:last-child .sub {
+            margin-bottom: 2em
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item .info {
+            padding: 2em
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-4 .list .item .info {
+                padding: 2em
+            }
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-4 .list .item .info {
+                padding: 2em 1em
+            }
+        }
+
+        .facepass7 .banner.fullscreen-4 .list .item video {
+            width: 100%;
+            height: auto
+        }
+
+        .facepass7 .banner.fullscreen-5 {
+            background-color: #000;
+            height: auto
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-5 {
+                margin-bottom: 10px
+            }
+        }
+
+        .facepass7 .banner.fullscreen-5 .info {
+            padding: 2em
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-5 .info {
+                padding: 2em 1em
+            }
+        }
+
+        .facepass7 .banner.fullscreen-5 .info p,
+        .facepass7 .banner.fullscreen-5 .info h2 {
+            color: #fff;
+            text-align: center
+        }
+
+        @media(max-width: 850px) {
+
+            .facepass7 .banner.fullscreen-5 .info p,
+            .facepass7 .banner.fullscreen-5 .info h2 {
+                text-align: left;
+                padding-left: 0
+            }
+        }
+
+        .facepass7 .banner.fullscreen-5 .info p {
+            max-width: 80%;
+            margin: auto
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-5 .info p {
+                max-width: 100%
+            }
+        }
+
+        .facepass7 .banner.fullscreen-5 .video-box {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            justify-content: center
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-5 .video-box {
+                padding-bottom: 240px
+            }
+        }
+
+        .facepass7 .banner.fullscreen-5 .video-box video {
+            width: 100%
+        }
+
+        .facepass7 .banner.fullscreen-5 .video-box .box {
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            transform: translate(-50%, -50%)
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-5 .video-box .box {
+                width: 100%;
+                left: 1em;
+                right: 1em;
+                transform: inherit;
+                top: 236px
+            }
+        }
+
+        .facepass7 .banner.fullscreen-5 .video-box .box h3,
+        .facepass7 .banner.fullscreen-5 .video-box .box p {
+            color: #000
+        }
+
+        @media(max-width: 720px) {
+
+            .facepass7 .banner.fullscreen-5 .video-box .box h3,
+            .facepass7 .banner.fullscreen-5 .video-box .box p {
+                color: #fff
+            }
+        }
+
+        .facepass7 .banner.fullscreen-5 .video-box .box p {
+            margin-bottom: 1em
+        }
+
+        .facepass7 .banner.fullscreen-5 .video-box .box h3 {
+            font-size: 30px;
+            font-weight: 500
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-5 .video-box .box h3 {
+                font-size: 24px;
+                margin-bottom: 0
+            }
+        }
+
+        .facepass7 .banner.fullscreen-6 {
+            width: 100%;
+            height: auto;
+            background-color: #353535
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-6 {
+                margin-bottom: 10px
+            }
+
+            .facepass7 .banner.fullscreen-6 .container {
+                padding: 0
+            }
+        }
+
+        .facepass7 .banner.fullscreen-6 .info {
+            padding: 2em
+        }
+
+        @media(max-width: 720px) {
+            .facepass7 .banner.fullscreen-6 .info {
+                padding: 2em 1em 0
+            }
+        }
+
+        .facepass7 .banner.fullscreen-6 img {
+            max-width: 100%;
+            margin: 2em auto;
+            display: block
+        }
+
+        .facepass7 .banner.fullscreen-6 p,
+        .facepass7 .banner.fullscreen-6 h2 {
+            color: #fff;
+            text-align: center
+        }
+
+        @media(max-width: 850px) {
+
+            .facepass7 .banner.fullscreen-6 p,
+            .facepass7 .banner.fullscreen-6 h2 {
+                text-align: left
+            }
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-6 h2 {
+                padding-left: 0
+            }
+        }
+
+        .facepass7 .banner.fullscreen-7 {
+            width: 100%;
+            height: auto;
+            background-color: #000;
+            padding: 2em 0
+        }
+
+        .facepass7 .banner.fullscreen-7 p,
+        .facepass7 .banner.fullscreen-7 h2 {
+            color: #fff;
+            text-align: center
+        }
+
+        @media(max-width: 850px) {
+
+            .facepass7 .banner.fullscreen-7 p,
+            .facepass7 .banner.fullscreen-7 h2 {
+                padding-left: 2em
+            }
+        }
+
+        @media(max-width: 720px) {
+
+            .facepass7 .banner.fullscreen-7 p,
+            .facepass7 .banner.fullscreen-7 h2 {
+                text-align: left;
+                padding-left: 15px
+            }
+        }
+
+        .facepass7 .banner.fullscreen-7 .new-table {
+            margin: 2em 0
+        }
+
+        .facepass7 .banner.fullscreen-7 .new-table td {
+            color: #fff;
+            border-bottom: 1px solid #484848
+        }
+
+        .facepass7 .banner.fullscreen-7 .new-table thead tr th {
+            color: #fff;
+            font-weight: 400;
+            background: rgba(0, 0, 0, 0);
+            border-bottom: 1px solid #4b4b4b !important
+        }
+
+        .facepass7 .banner.fullscreen-7 .new-table tbody tr td:first-child {
+            text-align: center;
+            width: 200px;
+            background: #545454;
+            font-weight: 400;
+            border-bottom: 1px solid #1f1f1f
+        }
+
+        .facepass7 .banner.fullscreen-8 {
+            width: 100%;
+            height: auto;
+            background-color: #000;
+            padding-bottom: 2em
+        }
+
+        .facepass7 .banner.fullscreen-8 .info {
+            padding: 2em 0
+        }
+
+        .facepass7 .banner.fullscreen-8 .info p,
+        .facepass7 .banner.fullscreen-8 .info h2 {
+            color: #fff;
+            text-align: center
+        }
+
+        .facepass7 .banner.fullscreen-8 .product-list .article-tags article {
+            background: rgba(0, 0, 0, 0)
+        }
+
+        .facepass7 .banner.fullscreen-8 .product-list .article-tags article a {
+            color: #fff
+        }
+
+        .facepass7 .banner.fullscreen-9 {
+            width: 100%;
+            background-image: url(https://www.anviz.com/file/files/1374)
+        }
+
+        @media(min-width: 1440px) {
+            .facepass7 .banner.fullscreen-9 {
+                height: 37.25vw
+            }
+        }
+
+        @media(max-width: 1024px) {
+            .facepass7 .banner.fullscreen-9 {
+                height: 54.5vw
+            }
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 {
+                height: auto
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 p,
+        .facepass7 .banner.fullscreen-9 h2,
+        .facepass7 .banner.fullscreen-9 h3,
+        .facepass7 .banner.fullscreen-9 h4 {
+            color: #fff
+        }
+
+        .facepass7 .banner.fullscreen-9 .list {
+            padding: 2em 0;
+            display: flex
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list {
+                flex-direction: column
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item {
+            flex: 1;
+            position: relative
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child {
+            display: flex;
+            flex-direction: column
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .nums {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .nums span {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #b81805;
+            color: #fff;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list .item:first-child .nums span {
+                display: none
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .nums span.four {
+            right: 1%;
+            top: 19%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .nums span.five {
+            right: 1%;
+            top: 51%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .nums span.six {
+            right: 1%;
+            bottom: 16%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top {
+            display: flex
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list .item:first-child .top {
+                flex-direction: column
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top .left {
+            flex-basis: 60%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top .left h2 {
+            font-size: 30px
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list .item:first-child .top .left p {
+                padding: 0 15px;
+                margin-bottom: 2em
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top .right {
+            flex-basis: 40%;
+            padding-left: 10px
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top .right h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top .right h4:first-child {
+            margin-top: 0
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top .right .media-img {
+            display: flex;
+            background: rgba(255, 255, 255, .3);
+            margin-bottom: 2em
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top .right .media-img img {
+            max-width: 30%;
+            margin-right: 10px;
+            margin-bottom: 0
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .top .right .media-img p {
+            line-height: 1.5
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down {
+            padding: 10px 1em;
+            background-color: #801104;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list .item:first-child .down {
+                flex-direction: column;
+                align-items: flex-start
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info {
+            display: flex;
+            align-items: center
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info:first-child {
+            flex-basis: 40%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info:first-child h3 {
+            max-width: 50%
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info:first-child {
+                flex-direction: column;
+                align-items: flex-start;
+                flex-basis: 100%;
+                width: 100%
+            }
+
+            .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info:first-child h3 {
+                width: 100%;
+                max-width: 100%;
+                text-align: left;
+                flex-basis: 100%;
+                font-weight: bold
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info:last-child {
+            flex-basis: 60%
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info:last-child {
+                flex-basis: 100%;
+                width: 100%
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info h3,
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info img {
+            flex: 1
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info img {
+            max-width: 30%;
+            margin: 0 auto
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info img {
+                margin-left: 0;
+                max-width: 100%
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info .sub {
+            padding: 10px
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info .sub:first-child {
+            flex-basis: 60%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:first-child .down .info .sub h3 {
+            font-weight: 600;
+            margin-bottom: 0
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:last-child {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-9 .list .item:last-child {
+                padding-top: 10%
+            }
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:last-child img {
+            max-width: 50%;
+            position: relative
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:last-child .nums {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:last-child .nums span {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #b81805;
+            color: #fff;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:last-child .nums span.one {
+            left: 36%;
+            top: 50%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:last-child .nums span.two {
+            left: 50%;
+            top: 54%
+        }
+
+        .facepass7 .banner.fullscreen-9 .list .item:last-child .nums span.three {
+            left: 44%;
+            bottom: 13%
+        }
+
+        .facepass7 .banner.fullscreen-10 {
+            width: 100%;
+            height: auto;
+            background-color: #000;
+            padding-bottom: 2em
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-10 {
+                overflow-x: scroll
+            }
+        }
+
+        .facepass7 .banner.fullscreen-10 table {
+            width: 100%;
+            margin: 2em 0
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .banner.fullscreen-10 table {
+                width: 200%
+            }
+        }
+
+        .facepass7 .banner.fullscreen-10 table td {
+            color: #fff;
+            border-bottom: 1px solid #484848
+        }
+
+        .facepass7 .banner.fullscreen-10 table thead tr:nth-child(1) td {
+            border-bottom: 1px solid #000
+        }
+
+        .facepass7 .banner.fullscreen-10 table thead tr:nth-child(1) td img {
+            margin: auto
+        }
+
+        .facepass7 .banner.fullscreen-10 table thead tr:nth-child(2) td {
+            text-align: center;
+            font-weight: bold;
+            height: 60px
+        }
+
+        .facepass7 .banner.fullscreen-10 table tbody tr:first-child td {
+            border-bottom: 1px solid #000
+        }
+
+        .facepass7 .banner.fullscreen-10 table tbody tr td {
+            text-align: center;
+            width: 200px;
+            height: 60px;
+            padding: 0 10px
+        }
+
+        .facepass7 .banner.fullscreen-10 table tbody tr td:first-child {
+            background: #545454;
+            font-weight: 400
+        }
+
+        .facepass7 .banner.fullscreen-10 table tbody tr td:nth-child(4) {
+            background-color: #801104
+        }
+
+        .facepass7 .nav-bar {
+            width: 100%;
+            height: 66px;
+            border-bottom: 2px solid #00a0e8;
+            background-color: #eee
+        }
+
+        .facepass7 .nav-bar.xq_hover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(241, 241, 241, .87)
+        }
+
+        .facepass7 .nav-bar .nav {
+            height: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative
+        }
+
+        .facepass7 .nav-bar .nav .item:first-child {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 15px;
+        }
+
+        .facepass7 .nav-bar .nav .item:first-child .links {
+            display: flex
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .nav-bar .nav .item:first-child .links {
+                display: none;
+                height: 0;
+                position: absolute;
+                transition: all .3s ease-in-out
+            }
+        }
+
+        .facepass7 .nav-bar .nav .item:first-child .links.active {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            width: 100%;
+            top: 64px;
+            left: 0;
+            right: 0;
+            height: auto;
+            color: #fff;
+            border-bottom: 2px solid #00a0e8;
+            backdrop-filter: saturate(180%) blur(20px);
+            -moz-backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            -o-backdrop-filter: saturate(180%) blur(20px);
+            -ms-backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(241, 241, 241, .87);
+            transition: all .3s ease-in-out
+        }
+
+        .facepass7 .nav-bar .nav .item:last-child {
+            flex-basis: 30%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center
+        }
+
+        .facepass7 .nav-bar .nav .item:last-child .anviz-btn {
+            color: #fff;
+            background-color: #00a0e8;
+            border-color: #00a0e8
+        }
+
+        .facepass7 .nav-bar .nav .item a {
+            width: auto;
+            display: block;
+            padding: 12px 12px;
+            margin: 0
+        }
+
+        .facepass7 .nav-bar .nav .item a.share_img img {
+            margin-bottom: 0
+        }
+
+        .facepass7 .nav-bar .nav .item .product-title {
+            font-size: 22px;
+            margin-right: 1em;
+            position: relative
+        }
+
+        @media(max-width: 850px) {
+            .facepass7 .nav-bar .nav .item .product-title::before {
+                font-family: "anviz";
+                content: "▾";
+                color: #00a0e8;
+                position: absolute;
+                right: -30px;
+                top: 50%;
+                font-size: 30px;
+                transform: translateY(-50%)
+            }
+        }
+
+        .facepass7 .nav-bar.xq_hover .flex {
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+    <div class="content facepass7 template">
+        <div class="banner fullscreen">
+            <div class="container"><img alt="facepass7-irt" auto_mobile="true" class="mobile-banner"
+                    src="https://www.anviz.com/file/files/3227/facepass-pro-mobile.jpg" />
+                <div class="banner-info"><img alt="facepass7-irt" auto_mobile="true" class="lazyload"
+                        src="https://www.anviz.com/file/files/1338" />
+                    <p>Touchless and Infrared Thermal Temperature Screening Face Recognition Terminal</p>
+
+                    <h1 class="irt">FACEPASS 7</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-bar" id="productDetailsNav">
+            <div class="container flex"><a aria-label="“ get" class="anviz-primary-btn" free="" href="/form.html"
+                    quote="">Free Demo</a>
+
+                <ul class="nav">
+                    <li class="item">
+                        <div class="product-title">FacePass7 IRT</div>
+
+                        <div class="links"><a aria-label="“Features”" class="title" href="#Features">Features</a> <a
+                                aria-label="“Convenient”" class="title" href="#Convenient">Convenient</a> <a
+                                aria-label="“specification”" class="title" href="#Specifications">Specifications</a> <a
+                                aria-label="“products”" class="title" href="#Product">Product</a></div>
+                    </li>
+                    <li>&nbsp;</li>
+                </ul>
+
+                <div class="sharethis-inline-share-buttons">&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-2">
+            <div class="container">
+                <div class="banner-info">
+                    <p>FacePass 7 IRT</p>
+                    <h2>Touchless for Securer Identification</h2>
+                    <p>Equipped with new AI deep learning architecture and infrared live detection technology, FacePass
+                        7 IRT provides 24/7 accurate identification and effectively prevents fake faces such as photos
+                        or videos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-3" id="Features">
+            <div class="container">
+                <div class="banner-info">
+                    <ul class="list">
+                        <li class="item">
+                            <h2>Secure Identification in Various Environment and Conditions</h2>
+
+                            <p>With the verification of over one million faces around the world, FacePass 7 IRT has
+                                become one of the most accurate face recognition terminals suitable for various
+                                environment and conditions.</p>
+
+                            <div class="icon-list">
+                                <div class="icon-item"><img alt="Makeup" auto_mobile="true" class="lazyload"
+                                        src="https://www.anviz.com/file/files/1260" /><span
+                                        class="icon-title">Makeup</span></div>
+
+                                <div class="icon-item"><img alt="Hairstyle and Beard" auto_mobile="true"
+                                        class="lazyload" src="https://www.anviz.com/file/files/1261" /><span
+                                        class="icon-title">Hairstyle and Beard</span></div>
+
+                                <div class="icon-item"><img alt="Expression Changes" auto_mobile="true" class="lazyload"
+                                        src="https://www.anviz.com/file/files/1262" /><span
+                                        class="icon-title">Expression Changes</span></div>
+
+                                <div class="icon-item"><img alt="Glasses" auto_mobile="true" class="lazyload"
+                                        src="https://www.anviz.com/file/files/1263" /><span
+                                        class="icon-title">Glasses</span></div>
+
+                                <div class="icon-item"><img alt="facepass7-irt" auto_mobile="true" class="lazyload"
+                                        src="https://www.anviz.com/file/files/1264" /><span
+                                        class="icon-title">Hat</span></div>
+                            </div>
+                        </li>
+                        <li class="item"><img alt="facepass7-irt" auto_mobile="true" class="lazyload"
+                                src="https://www.anviz.com/file/files/1265" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-4">
+            <div class="container">
+                <ul class="list">
+                    <li class="item">
+                        <video autoplay="" class="video" loop="" webkit-playsinline="">
+                            <source src="https://anviz.s3.amazonaws.com/facepass7+without+mask+willy+2.mp4"
+                                type="video/mp4" />
+                        </video>
+                    </li>
+                    <li class="item">
+                        <div class="info">
+                            <h2>Quick and Accurate Body Temperature Detection</h2>
+
+                            <div class="sub">
+                                <h3>Deviation</h3>
+
+                                <p>Within &plusmn;0.3℃</p>
+                            </div>
+
+                            <div class="sub">
+                                <h3>Flexibility</h3>
+
+                                <p>Support side face &plusmn;20&deg;, head down &plusmn;20&deg;</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-5">
+            <div class="container">
+                <div class="info">
+                    <h2>Simply Look and Go</h2>
+
+                    <p>FacePass 7 is equipped with a new Linux CPU, implementing a face-capturing of less than 1 second,
+                        and a recognition time within 0.5 seconds.</p>
+                </div>
+
+                <div class="video-box">
+                    <video autoplay="" class="video" loop="" webkit-playsinline="">
+                        <source src="https://www.anviz.com/file/video/1826/facepass.webm" type="video/webm" />
+                        <source src="https://anviz.s3.amazonaws.com/facepass7-without-mask-.mp4" type="video/mp4" />
+                    </video>
+
+                    <div class="box">
+                        <h3>&lt; 0.5s</h3>
+
+                        <p>Identification time</p>
+
+                        <h3>&lt; 1s</h3>
+
+                        <p>Registration time</p>
+
+                        <h3>BioNANO&reg;</h3>
+
+                        <p>Facial Algorithm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-9">
+            <div class="container">
+                <ul class="list">
+                    <li class="item">
+                        <div class="top">
+                            <div class="left">
+                                <h2>Most Secure-by Infrared Light Imaging Technology</h2>
+
+                                <p>Facepass 7 IRT is equipped with an Infrared live face detection camera and an
+                                    Infrared thermal temperature detection camera to keep security of your business.</p>
+                            </div>
+
+                            <div class="right">
+                                <div class="example-item">
+                                    <h4>1. Infrared Camera</h4>
+
+                                    <div class="media-img"><img alt="facepass7-irt" auto_mobile="true" class="lazyload"
+                                            src="https://www.anviz.com/file/files/1381" />
+                                        <p>Black and white image for recognition</p>
+                                    </div>
+                                </div>
+
+                                <div class="example-item">
+                                    <h4>2. Visible Light Camera</h4>
+
+                                    <div class="media-img"><img alt="facepass7-irt" auto_mobile="true" class="lazyload"
+                                            src="https://www.anviz.com/file/files/1382" />
+                                        <p>Color image for preview</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="down">
+                            <div class="info">
+                                <h3>3. IR Thermal Cameras</h3>
+                                <img alt="facepass7-irt" auto_mobile="true" class="lazyload"
+                                    src="https://www.anviz.com/file/files/1375" />
+                            </div>
+
+                            <div class="info">
+                                <div class="sub">
+                                    <p>Temperature Range</p>
+
+                                    <h3>10&deg;C～50&deg;C</h3>
+                                </div>
+
+                                <div class="sub">
+                                    <p>Deviation</p>
+
+                                    <h3>&lt; &plusmn;0.3&deg;C</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nums"><span class="four">1</span> <span class="five">2</span> <span
+                                class="six">3</span></div>
+                    </li>
+                    <li class="item"><img alt="facepass7-irt" auto_mobile="true" class="lazyload"
+                            src="https://www.anviz.com/file/files/1383" />
+                        <div class="nums"><span class="one">1</span> <span class="two">2</span> <span
+                                class="three">3</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-10">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><img alt="Forehead thermometer" auto_mobile="true" class="lazyload"
+                                    src="https://www.anviz.com/file/files/1385" /></td>
+                            <td><img alt="Forehead thermometer" auto_mobile="true" class="lazyload"
+                                    src="https://www.anviz.com/file/files/1386" /></td>
+                            <td><img alt="FacePass 7 IRT IR Thermal Detector" auto_mobile="true" class="lazyload"
+                                    src="https://www.anviz.com/file/files/1388" /></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Ear Thermometer</td>
+                            <td>Forehead Thermometer</td>
+                            <td>IR Thermal Detector</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Touchless</td>
+                            <td>Touch</td>
+                            <td>Touchless</td>
+                            <td>Touchless</td>
+                        </tr>
+                        <tr>
+                            <td>Technology</td>
+                            <td>Single Point Detection</td>
+                            <td>Single Point Detection</td>
+                            <td>32*32 pixels surface detection</td>
+                        </tr>
+                        <tr>
+                            <td>Detection Distance</td>
+                            <td>0</td>
+                            <td>1-3 cm</td>
+                            <td>Maximum 50 cm</td>
+                        </tr>
+                        <tr>
+                            <td>Detection Way</td>
+                            <td>Manually</td>
+                            <td>Manually</td>
+                            <td>Automatic Detection</td>
+                        </tr>
+                        <tr>
+                            <td>Detetion Speed</td>
+                            <td>12 People/ Minute</td>
+                            <td>12 People/ Minute</td>
+                            <td>500 People/ Minute <span class="meta">*Only for temperature detection</span></td>
+                        </tr>
+                        <tr>
+                            <td>Deviation</td>
+                            <td>&plusmn; 1 &deg;C</td>
+                            <td>&plusmn; 1 &deg;C</td>
+                            <td>&plusmn; 0.3 &deg;C</td>
+                        </tr>
+                        <tr>
+                            <td>Applications</td>
+                            <td>Home/ Small Public Places Office/ Clinic/ Retail Store</td>
+                            <td>Home/ Small Public Places Office/ Clinic/ Retail Store</td>
+                            <td>Medium to Large Public Places (Hospital/ Shopping Malls/ Enterprises)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-6" id="Convenient">
+            <div class="container">
+                <div class="info">
+                    <h2>More Convenient than Ever</h2>
+
+                    <p>Flexible communication for WiFi, 4G or Lan. Convenient management for Web-server and PC software.
+                    </p>
+                    <img alt="facepass7-irt" auto_mobile="true" class="lazyload"
+                        src="https://www.anviz.com/file/files/1356" />
+                </div>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-7" id="Specifications">
+            <div class="container">
+                <h2>Technical Specifications</h2>
+
+                <div class="table-responsive new-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>&nbsp;</th>
+                                <th>FacePass 7 IRT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Capacity</td>
+                                <td>User Capacity</td>
+                                <td>3.000</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Card Capacity</td>
+                                <td>3.000</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Log Capacity</td>
+                                <td>100.000</td>
+                            </tr>
+                            <tr>
+                                <td>Interface</td>
+                                <td>Communication</td>
+                                <td>TCP/IP, RS485, USB Host, WiFi, Optional 4G</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>I/O</td>
+                                <td>Relay Output, Wiegand Output, Door Sensor, Switch, Doorbell</td>
+                            </tr>
+                            <tr>
+                                <td>Feature</td>
+                                <td>Identification</td>
+                                <td>Face, Card, ID+Password</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Verify Speed</td>
+                                <td>&lt;1s</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Image Display</td>
+                                <td>Support</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Self-defined Status</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Record Self-check</td>
+                                <td>Support</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Embedded Webserver</td>
+                                <td>Support</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Doorbell</td>
+                                <td>Support</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Multi-languages Support</td>
+                                <td>Support</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Software</td>
+                                <td>Crosschex Standard</td>
+                            </tr>
+                            <tr>
+                                <td>Hardware</td>
+                                <td>CPU</td>
+                                <td>Dual-core 1.0GHz</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Infrared Thermal Temperature Detection Module</td>
+                                <td>10-50&deg;C Detection Range<br />
+                                    Detect Distance 0.3-0.5 m (11.8 -19.7 inch)<br />
+                                    Accuracy &plusmn;0.3 &deg;C (0.54 &deg;F)</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Face Detection Camera</td>
+                                <td>Dual Camera</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>LCD</td>
+                                <td>3.2&quot; HD TFT Touch Screen</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Sound</td>
+                                <td>Support</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Angle Range</td>
+                                <td>Horizontal: &plusmn;20&deg;, Vertical: &plusmn;20&deg;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Verify Distance</td>
+                                <td>0.3-0.8 m (11.8-31.5 inch)</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>RFID Card</td>
+                                <td>Standard EM, Optional Mifare</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Tamper Alarm</td>
+                                <td>Support</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Operating Temperature</td>
+                                <td>-20 &deg;C (-4 &deg;F)- 60 &deg;C (140 &deg;F)</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Dimensions{W x H x D)</td>
+                                <td>124*155*92 mm (4.9*6.1*3.6 inch)</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Operating Voltage</td>
+                                <td>DC 12V</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner fullscreen-8" id="Product" style="display:none;">
+            <div class="container">
+                <div class="info">
+                    <h2>Productos Relativos</h2>
+                </div>
+
+                <div class="product-list">
+                    <div class="article-tags tag-hidden">
+                        <article class="status">
+                            <div class="tag-item"><a class="tag-img" data-id="72"
+                                    href="facedeep-3-smart-face-recognition-terminal-facedeep-3-irt-with-body-temperature-detection.html"
+                                    title="facedeep 3 art"><img alt="facedeep 3 art" auto_mobile="true" class="lazyload"
+                                        data-src="https://www.anviz.com/file/files/1980"
+                                        src="https://www.anviz.com/file/files/1980" /> </a>
+
+                                <div class="tag-body">
+                                    <div class="tag-header"><a class="tags-title two-row-ellipsis fs-7 mb-2"
+                                            href="facedeep-3-smart-face-recognition-terminal-facedeep-3-irt-with-body-temperature-detection.html">Facedeep
+                                            3 IRT</a></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="article-tags tag-hidden">
+                        <article class="status">
+                            <div class="tag-item"><a class="tag-img" data-id="72"
+                                    href="facedeep-3-smart-face-recognition-terminal.html" title="facedeep 3"><img
+                                        alt="facedeep 3" auto_mobile="true"
+                                        src="https://www.anviz.com/file/files/1979" /> </a>
+
+                                <div class="tag-body">
+                                    <div class="tag-header"><a class="tags-title two-row-ellipsis fs-7 mb-2"
+                                            href="facedeep-3-smart-face-recognition-terminal.html">Facedeep 3</a></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="article-tags tag-hidden">
+                        <article class="status">
+                            <div class="tag-item"><a aria-label="“”" class="tag-img" data-id="72"
+                                    href="/product/s2000-iris-recognition.html"
+                                    title="UltraMatch S2000 - Iris Recognition System"><img alt="UltraMatch S2000"
+                                        auto_mobile="true"
+                                        src="https://www.anviz.com/file/files/3451/600_600/UltraMatch%20S2000.png" />
+                                </a>
+
+                                <div class="tag-body">
+                                    <div class="tag-header"><a aria-label="“”"
+                                            class="tags-title two-row-ellipsis fs-7 mb-2"
+                                            href="/product/s2000-iris-recognition.html">UltraMatch S2000</a></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="article-tags tag-hidden">
+                        <article class="status">
+                            <div class="tag-item"><a aria-label="“”" class="tag-img" data-id="98"
+                                    href="facepass7-touchless-face-recognition.html"
+                                    title="FacePass 7 - Touchless Smart Face Recognition System"><img alt="FacePass 7"
+                                        auto_mobile="true"
+                                        src="https://www.anviz.com/file/files/3406/600_600/FacePass7_thumb.png" /> </a>
+
+                                <div class="tag-body">
+                                    <div class="tag-header"><a aria-label="“”"
+                                            class="tags-title two-row-ellipsis fs-7 mb-2"
+                                            href="facepass7-touchless-face-recognition.html">FacePass 7</a></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="article-tags tag-hidden">
+                        <article class="status">
+                            <div class="tag-item"><a aria-label="“”" class="tag-img" data-id="132"
+                                    href="facepass7-irt-face-recognition-and-infrared-thermal-temperature-detection-terminal.html"
+                                    title="FacePass 7 IRT - Face Recognition with Thermal Temperature Detection Terminal"><img
+                                        alt="FacePass 7 IRT" auto_mobile="true"
+                                        src="https://www.anviz.com/file/files/3501/600_600/FacePass7-IRT.png" /> </a>
+
+                                <div class="tag-body">
+                                    <div class="tag-header"><a aria-label="“”"
+                                            class="tags-title two-row-ellipsis fs-7 mb-2"
+                                            href="facepass7-irt-face-recognition-and-infrared-thermal-temperature-detection-terminal.html">FacePass
+                                            7 IRT</a></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="article-tags tag-hidden">
+                        <article class="status">
+                            <div class="tag-item"><a aria-label="“”" class="tag-img" data-id="134"
+                                    href="facedeep5-ai-based-face-recognition-terminal.html"
+                                    title="FaceDeep 5 - AI Based Smart Face Recognition and  RFIDTerminal"><img
+                                        alt="FaceDeep 5" auto_mobile="true"
+                                        src="https://www.anviz.com/file/files/3572/600_600/facedeep5_thumb" /> </a>
+
+                                <div class="tag-body">
+                                    <div class="tag-header"><a aria-label="“”"
+                                            class="tags-title two-row-ellipsis fs-7 mb-2"
+                                            href="facedeep5-ai-based-face-recognition-terminal.html">FaceDeep 5</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="article-tags tag-hidden">
+                        <article class="status">
+                            <div class="tag-item"><a aria-label="“”" class="tag-img" data-id="135"
+                                    href="facedeep-5-irt-ai-based-smart-face-recognition-terminal-with-temperature-screening.html"
+                                    title="FaceDeep 5 IRT - AI Based Smart Face Recognition Terminal with RFID and  Temperature Screening Function"><img
+                                        alt="FaceDeep 5 IRT" auto_mobile="true"
+                                        src="https://www.anviz.com/file/files/3587/600_600/facedeep5irt" /> </a>
+
+                                <div class="tag-body">
+                                    <div class="tag-header"><a aria-label="“”"
+                                            class="tags-title two-row-ellipsis fs-7 mb-2"
+                                            href="facedeep-5-irt-ai-based-smart-face-recognition-terminal-with-temperature-screening.html">FaceDeep
+                                            5 IRT</a></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var juli = $("#productDetailsNav").offset().top;
+        window.addEventListener('scroll', function () {
+            var gju = $(window).scrollTop();
+            console.log('aaaa  ' + gju)
+            if (gju >= juli) {
+                $("#productDetailsNav").addClass('xq_hover');
+            } else {
+                $("#productDetailsNav").removeClass('xq_hover');
+            }
+
+            if ($(this).width() < 850) {
+                $("#productDetailsNav .product-title").addClass('icon icon-down')
+            }
+
+
+
+            var flag = true
+            $("#productDetailsNav .icon-down").click(function () {
+                if (flag) {
+                    $('.links').addClass('active');
+                    flag = false
+                } else {
+                    $(".links").removeClass('active')
+                    flag = true
+                }
+
+            });
+            $('.links a').on('click', function () {
+                $('.links').removeClass('active')
+            })
+        })
+    </script>
+    <script src="./jquery-3.2.1.js"></script>
+    <script src="./swiper.min 5.4.5.js"></script>
+</body>
+
+</html>
