@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .spacer {
+            height: 100vh;
+        }
+
+        video {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spacer">Scroll down to the video...</div>
+    <div class="spacer">Scroll down to the video...</div>
+
+    <div class="spacer">Scroll down to the video...</div>
+    <div class="spacer">Scroll down to the video...</div>
+    <div class="spacer">Scroll down to the video...</div>
+
+    <video id="myVideo" src="https://cdn.shopify.com/videos/c/o/v/8df415d5e1cc471199baf5a5d5e8c3e3.mp4" muted></video>
+    <div class="spacer">Keep scrolling...</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $video = $('#myVideo');
+            var observer;
+            var scrollCount = 0;  // 记录滚动次数
+            var loadedTime = 0;  // 记录已加载的视频时间
+            var lastScrollTop = 0;  // 记录上一次滚动的位置
+            var lastLoadedTime = 0; // 记录上次加载的视频时间
+
+            var scrollHandler = function () {
+                var currentScrollTop = $(window).scrollTop();
+                if (currentScrollTop > lastScrollTop) {  // 如果是上滑
+                    scrollCount += 1;
+                    if (scrollCount % 2 === 0) {  // 每滚动两次，加载一秒视频
+                        if (loadedTime < $video[0].duration) {
+                            loadedTime += 1;
+                            $video[0].currentTime = loadedTime;
+                            lastLoadedTime = loadedTime;
+                        }
+                    }
+                } else {  // 如果是下滑
+                    if (lastLoadedTime > 0) {
+                        lastLoadedTime -= 1;
+                        $video[0].currentTime = lastLoadedTime;
+                        loadedTime = lastLoadedTime;
+                    }
+                }
+                lastScrollTop = currentScrollTop;
+            };
+
+            observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting && entry.intersectionRatio === 1) {  // 当视频完全进入视口时
+                        // 开始监听滚动事件
+                        $(window).on('scroll', scrollHandler);
+                    } else {
+                        // 停止监听滚动事件
+                        $(window).off('scroll', scrollHandler);
+                    }
+                });
+            }, {threshold: 1});  // 通过设置threshold为1，确保视频完全进入视口时才触发
+
+            observer.observe($video[0]);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+    <!-- <script>
+    var video = document.getElementById('myVideo');
+    var observer;
+
+    var scrollHandler = function() {
+      // 计算滚动的百分比
+      var scrollpercent = ((window.scrollY - video.offsetTop) / (video.offsetHeight - window.innerHeight)) * 100;
+
+      // 根据滚动的百分比设置视频的播放进度
+      var maxduration = video.duration;
+      var currenttime = maxduration * (scrollpercent / 100);
+      video.currentTime = currenttime;
+    };
+
+    observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          // 开始监听滚动事件
+          window.addEventListener('scroll', scrollHandler);
+        } else {
+          // 停止监听滚动事件
+          window.removeEventListener('scroll', scrollHandler);
+        }
+      });
+    });
+
+    observer.observe(video);
+  </script> -->

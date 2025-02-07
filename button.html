@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    </div>
+    <div class="nav-buttons">
+        <span id="buybtn" style="display:none;">
+            <a class="anviz-buy-button" href="#">Buy</a>
+        </span>
+        <a class="anviz-free-button" href="/form.html">Free Demo</a>
+        <div class="sharethis-inline-share-buttons">&nbsp;</div>
+    </div>
+    </div>
+    </nav>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .static_navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            background-color: #fff;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .static_navbar.fixed {
+            position: fixed;
+            top: 55px;
+            left: 0;
+            z-index: 1000;
+            backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(241, 241, 241, 0.87);
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            margin-left: 0rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .anviz-free-button {
+            padding: 1px 28px;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 28px;
+            background-color: transparent;
+            color: black;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .anviz-free-button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .anviz-buy-button {
+            padding: 1px 28px;
+            font-size: 16px;
+            border: none;
+            border-radius: 28px;
+            background-color: #0068B7;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .anviz-buy-button:hover {
+            background-color: #1072da;
+            color: white;
+        }
+
+        /* 添加内容包装器样式 */
+        .static_navbar-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .static_navbar.fixed .static_navbar-container {
+            border-bottom: none;
+        }
+
+        .icon-down {
+            display: none;
+        }
+
+        /* 移动端样式 */
+        @media (max-width: 1068px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .static_navbar.fixed {
+
+                top: 60px;
+
+            }
+
+            .icon-down {
+                display: block;
+            }
+
+            .nav-buttons {
+                gap: 3px;
+            }
+
+            .anviz-free-button {
+                font-size: 12px;
+                padding: 4px 15px;
+            }
+
+            .anviz-buy-button {
+                font-size: 12px;
+                padding: 4px 15px;
+                border:1px solid #0068B7;
+            }
+
+            .static_navbar h1 {
+                font-size: 14px;
+            }
+
+            .nav-left {
+                flex-grow: 1;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #fff;
+                flex-direction: column;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                margin-left: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.5rem 0;
+                width: 100%;
+            }
+
+            .nav-buttons {
+                margin-left: auto;
+            }
+
+            .nav-links {
+                left: 0;
+                right: 0;
+                width: 100%;
+            }
+        }
+
+        /* 移动端样式 */
+        .static_navbar .nav-links a:hover {
+            color: #23527c;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            $(".nav-links li").click(function (e) {
+                e.preventDefault();
+
+                if (window.innerWidth >= 1068) { // 768px 可以根据需要调整
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    $('.nav-links').slideToggle(300).toggleClass('active');
+                    $(this).parent().removeClass("active").hide();
+                }
+
+
+                // Get the target section's position
+                const targetId = $(this).find('a').attr("href");
+                const targetPosition = $(targetId).offset().top;
+
+                // Smooth scroll to the specified section
+                $("html, body").animate(
+                    {
+                        scrollTop: targetPosition - 100 // Adjust this offset value as needed
+                    },
+                    500 // Animation speed in milliseconds
+                );
+            });
+
+
+            $('.nav-brand').click(function () {
+
+
+                // 检查是否为手机端
+                if (window.innerWidth >= 1068) { // 768px 可以根据需要调整
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    $('.nav-links').slideToggle(300).toggleClass('active');
+                }
+            });
+            // 当屏幕宽度变化时，重置导航栏状态
+            $(window).resize(function () {
+                if ($(window).width() > 1068) {
+                    $('.nav-links').removeAttr('style').removeClass('active');
+                }
+            });
+            // 获取导航栏的初始位置
+            const navbar = $('.static_navbar');
+            const navbarPosition = navbar.offset().top;
+            // 添加滚动监听
+            $(window).scroll(function () {
+                let scrollTop = $(this).scrollTop();
+                // 当滚动位置超过导航栏初始位置时添加固定样式
+                if (scrollTop >= navbarPosition) {
+                    navbar.addClass('fixed');
+                } else {
+                    navbar.removeClass('fixed');
+                }
+            });
+            // 窗口大小改变时重新计算导航栏位置
+            $(window).resize(function () {
+                navbarPosition = navbar.offset().top;
+            });
+        });
+    </script>
+</body>
+
+</html>

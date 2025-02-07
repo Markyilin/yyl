@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>w-s</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./swiper 5.4.5.css">
     <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
     <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
     <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
-    <!-- <link rel="stylesheet" href="./FaceSeries-Series.css"> -->
+    <!-- <link rel="stylesheet" href="./anvizone-Series.css"> -->
     <!-- <link rel="stylesheet" href="./w3/index.css"> -->
 
 </head>
@@ -22,6 +22,16 @@
         body,
         html {
             background-color: #fff !important;
+        }
+
+        .Related a {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.88;
+        }
+
+        .text-title a {
+            font-weight: 700;
         }
 
         .swiper-horizontal>.swiper-pagination-bullets,
@@ -65,6 +75,7 @@
         @media (max-width: 850px) {
             .FaceSeries .banner .mobile-banner {
                 display: block;
+                width: 100%;
             }
         }
 
@@ -130,7 +141,7 @@
 
             .FaceSeries .banner .banner-info h1,
             .FaceSeries .banner .banner-info h3 {
-                color: #fff;
+                color: #000;
                 margin: 0 auto;
             }
 
@@ -156,11 +167,13 @@
 
         .FaceSeries .nav-bar .share_con {
             justify-content: flex-end;
-            width: 30%;
+            /* width: 30%; */
+            width: unset;
         }
 
         .FaceSeries .nav-bar .nav {
-            width: 90%;
+            /* width: 90%; */
+            flex: 1;
         }
 
         .FaceSeries .nav-bar ul li {
@@ -194,10 +207,62 @@
             background: rgba(241, 241, 241, 0.87);
         }
 
+        .FaceSeries .nav-bar .nav-bar-item .share_con #buybtn {
+            display: none;
+        }
+
+        .FaceSeries .nav-bar .anviz-primary-btn {
+            padding: 10px 40px;
+        }
+
+        @media (min-width: 720px) {
+            .FaceSeries .nav-bar ul li .product_title {
+                display: none;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .FaceSeries .nav-bar .nav-bar-item {
+                position: relative;
+            }
+
+            .FaceSeries .nav-bar ul li {
+                position: unset;
+                width: 100%;
+            }
+
+            .FaceSeries .nav-bar .links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .FaceSeries .nav-bar ul li .product_title {
+                display: flex;
+                /* justify-content: space-between; */
+            }
+
+            .FaceSeries .nav-bar ul li .product-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                background: #fff;
+                left: 0;
+                right: 0;
+            }
+
+            .FaceSeries .nav-bar ul li .product-links a {
+                display: block;
+                font-size: 16px;
+                line-height: 40px;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
         @media (max-width: 720px) {
             .FaceSeries .nav-bar {
                 /* display: none; */
             }
+
 
             .FaceSeries .nav-bar ul li .links a {
                 padding: 0 5px;
@@ -208,7 +273,18 @@
             }
 
             .FaceSeries .nav-bar .share_con {
-                display: none;
+                /* display: none; */
+                padding: 0;
+            }
+
+            .FaceSeries .nav-bar .anviz-primary-btn {
+                padding: 10px 20px;
+                font-size: 12px;
+                margin: 6px 4px;
+            }
+
+            .FaceSeries .nav-bar ul li .sharethis-inline-share-buttons {
+                margin: 6px 4px;
             }
 
             .FaceSeries h2,
@@ -540,10 +616,6 @@
             margin-top: 0em;
         }
 
-        .FaceSeries .nav-bar .anviz-primary-btn {
-            padding: 10px 40px;
-        }
-
         .FaceSeries .loop h2,
         .FaceSeries .loop p {
             color: #000;
@@ -577,6 +649,9 @@
             position: absolute;
             bottom: 5%;
             padding: 0 3%;
+            left: 0;
+            right: 0;
+            text-align: center;
         }
 
         .FaceSeries .Related .Related-center .text {
@@ -615,7 +690,7 @@
 
 
         .FaceSeries .Related .main-center .ptimg {
-            width: 100%;
+            width: 50%;
             left: 0;
             right: 0;
             margin: 0 auto;
@@ -703,11 +778,12 @@
                 display: flex;
                 align-items: center;
                 padding: 20px 0;
+                width: 100%;
             }
 
             .FaceSeries .Related .Relatedmain .text {
                 position: initial;
-                width: 60%;
+                width: 50%;
             }
 
             .FaceSeries .Related .Relatedmain .text p {
@@ -770,16 +846,21 @@
         }
 
         .FaceSeries .swiper-container-horizontal>.swiper-pagination-bullets {
-            bottom: 73%;
+            bottom: 75%;
+        }
+
+        .Related a.Related-center-left {
+            flex: 1;
         }
     </style>
     <div class="content FaceSeries w3 template">
         <div class="banner fullscreen"><img alt="" auto_mobile="true" class="mobile-banner"
-                src="https://www.anviz.com/file/files/4504" /> <img alt="" auto_mobile="true" class="pc-banner"
-                src="https://www.anviz.com/file/files/4503" />
+                src="https://www.anviz.com/file/files/4622" /> <img alt="" auto_mobile="true" class="pc-banner"
+                src="https://www.anviz.com/file/files/4621" />
             <div class="banner-info">
-                <h1 class="mb-2">Face Recognition Series</h1>
-                <h3 class="mt-2">Your Face is the key to the touchless access experience.</h3>
+                <h1 class="mb-2">OSDP Access Control</h1>
+
+                <h3 class="mt-2">Reinvent your security system</h3>
             </div>
         </div>
 
@@ -788,103 +869,111 @@
                 <ul class="nav">
                     <li class="item">
                         <div class="links">
-                            <a class="title" href="#Overview">Overview</a>
-                            <a class="title" href="#Benefits">Benefits</a>
-                            <a class="title" href="#Manage">Ways to Manage</a>
-                            <a class="title" href="#Products">Products</a>
+                            <div class="product_title"><span>What is OSDP ?</span><i class="icon icon-down"></i></div>
+
+                            <div class="product-links"><a class="title" href="#Overview">What is OSDP?</a> <a
+                                    class="title" href="#Benefits">Advantages</a> <a class="title" href="#Manage">Smart
+                                    Management</a> <a class="title" href="#Products">Products</a></div>
                         </div>
-                    </li>
-                    <li class="item">
-                        <div class="sharethis-inline-reaction-buttons">&nbsp;</div>
                     </li>
                 </ul>
 
                 <ul class="share_con">
-                    <!-- <li><a aria-label="“inquiry”" class="anviz-primary-btn" href="/form.html" rel="nofollow">Buy</a> -->
+                    <li>
+                        <div id="buybtn"><a aria-label="“inquiry”" class="anviz-primary-btn" href="/form.html"
+                                rel="nofollow">Buy</a></div>
                     </li>
+                    <li><a aria-label="“inquiry”" class="anviz-primary-btn" href="/form.html"
+                            rel="nofollow">Download</a></li>
                     <li class="nav-item">
                         <div class="sharethis-inline-share-buttons">&nbsp;</div>
                     </li>
                 </ul>
             </div>
         </div>
+        <script>
+            $(function () {
+                if (window.innerWidth < 720) {
+                    $('.FaceSeries .nav-bar .nav').on('click', function () {
+                        $(this).find('.product-links').slideToggle()
+                    })
+
+                    $(document).on('click', function (event) {
+                        if (!$(event.target).closest('.FaceSeries .nav-bar .nav').length) {
+                            $('.FaceSeries .nav-bar .nav').find('.product-links').slideUp()
+                        }
+                    });
+                }
+            })
+        </script>
 
         <div class="overviews" id="Overview">
             <div class="container">
-                <h3 class="mb-2 mt-5">
-                    Overview
-                </h3>
-                <p class="mb-1">Face is the best credential to verify the difference between individuals. Face
-                    recognition devices
-                    authenticate people based on their facial information, which is consistent with consistent
-                    resolution habits, friendly and non-intrusive, and does not repel people. The Anviz face recognition
-                    technology provides users with a convenient, efficient, and intuitive access experience with
-                    unlimited scalability possibilities.</p>
+                <h3 class="mb-2 mt-5">What is OSDP?</h3>
+
+                <p class="mb-1">Open Supervised Device Protocol (OSDP) is a communication protocol that provides a
+                    secure channel between access control devices and security systems. OSDP was developed by the
+                    Security Industry Association (SIA) to improve interoperability between different access control
+                    devices and systems. OSDP also offers enhanced security using RS-485 protocols with AES-128
+                    encryption that fully protects communication paths from the reader to the server.</p>
             </div>
         </div>
 
         <section class="box box-swiper"><!-- 轮播容器 -->
-            <div class=" FaceSeriesswiper swiper-container"><!-- 轮播内容 -->
+            <div class="FaceSeriesswiper swiper-container"><!-- 轮播内容 -->
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img alt="" auto_mobile="true" class="img-one" src="https://www.anviz.com/file/files/4530" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img alt="" auto_mobile="true" class="img-one" src="https://www.anviz.com/file/files/4531" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img alt="" auto_mobile="true" class="img-one" src="https://www.anviz.com/file/files/4532" />
-                    </div>
+                    <div class="swiper-slide"><img alt="" auto_mobile="true" class="img-one"
+                            src="https://www.anviz.com/file/files/4607" /></div>
+
+                    <div class="swiper-slide"><img alt="" auto_mobile="true" class="img-one"
+                            src="https://www.anviz.com/file/files/4608" /></div>
+
+                    <div class="swiper-slide"><img alt="" auto_mobile="true" class="img-one"
+                            src="https://www.anviz.com/file/files/4609" /></div>
                 </div>
+
                 <div class="swiper-pagination">&nbsp;</div>
             </div>
         </section>
 
         <section class="box" id="Benefits">
             <div class="container">
-                <h2>Enhanced Security, Simplified Access</h2>
-                <p class="tac">Find out exactly how the Face Series can solve your live problems.</p>
+                <h2>Mitigating Security Threats, Defining Multiple Access</h2>
+
+                <p class="tac">The OSDP protocol provides greater flexibility, security, and operational efficiency, now
+                    and in the future.</p>
+
                 <ul class="list">
                     <li class="item text">
-                        <h3>Even with access control, can get through seamlessly</h3>
-                        <p>Up to 50 fast passes per minute.</p>
+                        <h3>Filling your security gaps</h3>
+
+                        <p>With OSDP-enabled encryption, more secure and reliable connections can be established to
+                            protect sensitive information and credentials.</p>
                     </li>
-                    <li class="item img">
-                        <video autoplay loop muted playsinline preload="none"
-                            src="https://anviz.s3.amazonaws.com/video/0625f9385e9a42af489de92680d5f7d4.mov">
-                            <source src="https://anviz.s3.amazonaws.com/video/0625f9385e9a42af489de92680d5f7d4.mov"
-                                type="video/mp4">
-                        </video>
+                    <li class="item img"><img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4612" />
                     </li>
                 </ul>
 
                 <ul class="list">
-                    <li class="item img img-left">
-                        <video autoplay loop muted playsinline preload="none"
-                            src="https://anviz.s3.amazonaws.com/video/bd86da8a13c957e66769e0329f0fbd5c.mov">
-                            <source src="https://anviz.s3.amazonaws.com/video/bd86da8a13c957e66769e0329f0fbd5c.mov"
-                                type="video/mp4">
-                        </video>
-                    </li>
+                    <li class="item img img-left"><img alt="" auto_mobile="true"
+                            src="https://www.anviz.com/file/files/4613" /></li>
                     <li class="item text">
-                        <h3>Perfect to prevent all fake faces from spoofing</h3>
-                        <p>Live face detection is based on smart IR technology and visible light.</p>
+                        <h3>Less concern for more operating costs</h3>
+
+                        <p>Using fewer wires expands connections to more field devices, reduces wiring costs, and
+                            improves overall device management.</p>
                     </li>
                 </ul>
+
                 <ul class="list">
                     <li class="item text">
-                        <h3>Accurately recognizes faces regardless of changes</h3>
-                        <p>Anviz Facial Biometric Technology offers accurate and reliable recognition, even
-                            if someone is wearing a mask, sunglasses, and a baseball cap.</p>
-                        <img src="https://www.anviz.com/file/files/4523" alt="" class="ptimg">
+                        <h3>Openness to possible future</h3>
 
+                        <p>Different needs can be catered for and allow for more equipment to be added in the future. It
+                            ensures that businesses are always using the latest access control standards.</p>
+                        <!-- <img alt="" auto_mobile="true" class="ptimg" src="https://www.anviz.com/file/files/4523" /> -->
                     </li>
-                    <li class="item img">
-                        <video autoplay loop muted playsinline preload="none"
-                            src="https://anviz.s3.amazonaws.com/video/f5cc23298e9ef881fa5162d54adf1fe8.mov">
-                            <source src="https://anviz.s3.amazonaws.com/video/f5cc23298e9ef881fa5162d54adf1fe8.mov"
-                                type="video/mp4">
-                        </video>
+                    <li class="item img"><img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4670" />
                     </li>
                 </ul>
             </div>
@@ -893,82 +982,49 @@
         <section class="box box-smb" id="Manage">
             <div class="text">
                 <h2 class="mt-5 mb-2">Manage at scale and get insights at a glance</h2>
-                <p>Each of our Face Recognition products is intuitive and powerful in its own right and connected
-                    together on the <a href="/crosschex-desk.html">CrossChex</a> platform,
-                    they provide best-in-class capabilities
-                    to manage people and
-                    places.</p>
+
+                <p>OSDP devices connect to the <a href="/crosschex-desk.html">CrossChex</a> open platform to remotely
+                    centralize devices. Meanwhile, you can choose the access control devices and systems that best meet
+                    your needs, making integration easy.</p>
             </div>
-            <img class="img-pc" alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4511" />
-            <img class="img-mb" alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4529" />
+            <img alt="" auto_mobile="true" class="img-pc" src="https://www.anviz.com/file/files/4651"
+                style="width: 1920px; height: 879px;object-fit: contain;" /> <img alt="" auto_mobile="true"
+                class="img-mb" src="https://www.anviz.com/file/files/4652.png" />
         </section>
+
         <section class="box" id="Products">
             <div class="container">
                 <h2 class="mb-2">Related Products</h2>
-                <div class="Related">
-                    <div class="Related-left">
-                        <a href="/facedeep5-ai-based-face-recognition-terminal.html">
-                            <div class="Relatedmain main-top">
-                                <img src="https://www.anviz.com/file/files/4513" alt="" class="bgimg">
-                                <img src="https://www.anviz.com/file/files/4518" alt="" class="ptimg">
-                                <div class="text">
-                                    <p class="text-title">FaceDeep 5 >></p>
-                                    <p>AI-Based Smart Face Recognition and RFID Terminal</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a
-                            href="/facedeep-5-irt-ai-based-smart-face-recognition-terminal-with-temperature-screening.html">
-                            <div class="Relatedmain main-btm">
-                                <img src="https://www.anviz.com/file/files/4514" alt="" class="bgimg">
-                                <img src="https://www.anviz.com/file/files/4519" alt="" class="ptimg">
-                                <div class="text">
-                                    <p class="text-title">FaceDeep
-                                        5 IRT >></p>
-                                    <p>AI-Based Smart Face Recognition Terminal with RFID and Temperature Screening
-                                        Function
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <a href="/facedeep-3-smart-face-recognition-terminal.html" class="Related-center">
-                        <div class="Relatedmain main-center">
-                            <img src="https://www.anviz.com/file/files/4515" alt="" class="bgimg">
-                            <img src="https://www.anviz.com/file/files/4520" alt="" class="ptimg">
-                            <div class="text">
-                                <p class="text-title">FaceDeep 3 >></p>
-                                <p>Smart Face Recognition and RFID Terminal
-                                </p>
-                            </div>
-                        </div>
 
-                    </a>
-                    <div class="Related-right">
-                        <a href="/facepass7pro-smart-face-recognition-terminal.html">
-                            <div class="Relatedmain main-top">
-                                <img src="https://www.anviz.com/file/files/4516" alt="" class="bgimg">
-                                <img src="https://www.anviz.com/file/files/4521" alt="" class="ptimg">
-                                <div class="text">
-                                    <p class="text-title">FacePass 7 Pro >></p>
-                                    <p>All-In-One Touchless Smart Face Recognition Terminal
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="/facedeep-3-smart-face-recognition-terminal-facedeep-3-irt-with-body-temperature-detection.html">
-                            <div class=" Relatedmain main-btm">
-                                <img src="https://www.anviz.com/file/files/4517" alt="" class="bgimg">
-                                <img src="https://www.anviz.com/file/files/4522" alt="" class="ptimg">
-                                <div class="text">
-                                    <p class="text-title">FaceDeep
-                                        3 IRT >></p>
-                                    <p>
-                                        Smart Face Recognition Terminal with Body Temperature Detection
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
+                <div class="Related">
+                    <div class="Relatedmain main-center"><a class="Related-center Related-center-left"
+                            href="/product/standard-access-controller.html"><img alt="" auto_mobile="true" class="bgimg"
+                                src="https://www.anviz.com/file/files/4618" /> <img alt="" auto_mobile="true"
+                                class="ptimg" src="https://www.anviz.com/file/files/4672" /> </a>
+
+                        <div class="text">
+                            <p class="text-title"><a class="Related-center"
+                                    href="/product/standard-access-controller.html">SAC921 &gt;&gt;</a></p>
+
+                            <p><a class="Related-center" href="/product/standard-access-controller.html">Single-Door
+                                    Access Controller</a></p>
+                        </div>
+                    </div>
+
+                    <div class="Relatedmain main-center"><a class="Related-center Related-center-left"
+                            href="/product/osdp-outdoor-rfid-access-control-reader.html"><img alt="" auto_mobile="true"
+                                class="bgimg" src="https://www.anviz.com/file/files/4620" /> <img alt=""
+                                auto_mobile="true" class="ptimg" src="https://www.anviz.com/file/files/4624" /> </a>
+
+                        <div class="text">
+                            <p class="text-title"><a class="Related-center"
+                                    href="https://www.anviz.com/product/osdp-outdoor-rfid-access-control-reader.html">C2KA
+                                    &gt;&gt;</a></p>
+
+                            <p><a class="Related-center"
+                                    href="https://www.anviz.com/product/osdp-outdoor-rfid-access-control-reader.html">RFID
+                                    ODSP Reader</a></p>
+                        </div>
                     </div>
                 </div>
             </div>

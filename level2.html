@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="video-container" id="video-container">
+        <video id="video" muted src="https://cdn.shopify.com/videos/c/o/v/8df415d5e1cc471199baf5a5d5e8c3e3.mp4" playsinline preload="auto" type="video/webm/mp4"></video>
+        <!-- 视频未加载完成时候的加载图标 -->
+        <div id="loading-icon" class="loading-icon">
+            <img src="https://wimg.588ku.com/gif620/21/03/20/dd927f59d06392c3cc56cb2354f00934.gif" alt="Loading">
+        </div>
+    </div>
+    <style>
+        .video-container #video {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-container {
+            position: relative;
+        }
+
+        .video-container .loading-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        .video-container .loading-icon img {
+            width: 8%;
+            display: flex;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        // 获取视频元素
+        const videoElementBanner = document.querySelector(".video-container #video");
+        let gsapPart = ""; // GSAP 动画部分
+
+        // 阻止滚动
+        function disableScroll() {
+            document.body.style.overflow = "hidden"; // 隐藏垂直滚动条
+        }
+        disableScroll();
+
+        // 启用滚动
+        function enableScroll() {
+            document.body.style.overflowY = "auto"; // 启用垂直滚动条
+            document.body.style.overflowX = "clip"; // 水平滚动条保持不变
+        }
+
+        // 当视频元数据加载完成后执行以下操作
+        videoElementBanner.addEventListener("loadedmetadata", () => {
+            // 启用滚动
+            enableScroll();
+
+            // 隐藏加载图标
+            const loadingIcon = document.getElementById("loading-icon");
+            loadingIcon.style.display = "none";
+
+            const videoDuration = videoElementBanner.duration; // 视频总时长
+            const pixelsPerFrame = 20; // 每滚动20像素切换一帧视频
+            const frameCount = videoDuration * 60; // 视频的总帧数
+
+            // 计算总的滚动距离
+            const totalScrollDistance = (frameCount - 1) * pixelsPerFrame;
+
+            // 创建 ScrollTrigger 动画
+            gsapPart = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#video-container", // 触发器元素
+                    start: "top top", // 触发滚动的位置
+                    end: () => `+=${totalScrollDistance}`, // 触发器结束位置
+                    scrub: true, // 启用滚动擦除效果
+                    pin: true, // 固定滚动元素
+                    onUpdate: (self) => {
+                        // 获取当前滚动位置
+                        const scrollY = self.progress * totalScrollDistance;
+
+                        // 计算当前帧的索引
+                        let targetFrame = Math.floor(scrollY / pixelsPerFrame);
+
+                        // 限制 targetFrame 在合法范围内
+                        targetFrame = Math.min(frameCount - 1, Math.max(0, targetFrame));
+
+                        // 计算当前帧对应的时间
+                        const targetTime = (targetFrame / frameCount) * videoDuration;
+
+                        // 更新视频的当前时间
+                        if (!isNaN(targetTime) && isFinite(targetTime)) {
+                            videoElementBanner.currentTime = targetTime;
+                        }
+                    },
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>

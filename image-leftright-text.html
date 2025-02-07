@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="images-leftRight-text">
+            <div class="images-leftRight-text__content-list">
+                <div class="images-scrolling__content {% unless forloop.first %}opacity-0{% endunless %}">
+                    <img src="https://dyu19h-dn.myshopify.com/cdn/shop/files/amazon_alexa.jpg?v=1735375959&width=800"
+                        alt="" width="120px">
+                    <div class="prose">
+                        <p class="h1">
+                            h1h1h1h
+                        </p>
+                        block.settings.content
+                    </div>
+                </div>
+            </div>
+
+            <div class="images-leftRight-text__media-wrapper">
+                <div class="images-scrolling-desktop__media">
+                    <div class="images-scrolling-desktop__media-inner">
+                        <div class="images-scrolling-desktop__media-inner__image">
+                            <img src="https://dyu19h-dn.myshopify.com/cdn/shop/files/amazon_alexa.jpg?v=1735375959&width=800"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .images-leftRight-text {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .images-leftRight-text__content-list {
+        padding: 20px 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .images-leftRight-text__media-wrapper img {
+        width: 100%;
+    }
+</style>
+
+</html>

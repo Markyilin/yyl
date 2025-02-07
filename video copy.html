@@ -1,0 +1,218 @@
+<section style="margin: 50px 0px !important;" class="o_colored_level">
+    <div class="container">
+        <div class="video-nav">
+            <div class="left">
+                <video class="videoname" style="padding:0;" loop="" muted="" playsinline="" preload="metadata"
+                    src="https://cooklife.s3.us-east-1.amazonaws.com/7899c52695aac5c036cd9220d1d24d89.mp4"
+                    poster="https://cooklife.us/web/image/7321-512c475b/%E6%88%AA%E5%B1%8F2024-12-09%20%E4%B8%8A%E5%8D%8810.42.57%201.jpg">
+                </video>
+                <p>
+                    Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna ipsum dolor sit amet
+                </p>
+                <a href="" class="f-a">
+                    <img src="http://localhost:8069/theme_clarico_vega/static/src/img/header_icons/cart.svg" class="img"
+                        alt="" loading="lazy" />
+                </a>
+                <button class="f-btn">
+                    <img src="http://localhost:8069/theme_clarico_vega/static/src/img/header_icons/cart.svg" class="img"
+                        alt="" loading="lazy" />
+                    Play Video
+                </button>
+            </div>
+            <div class="right">
+                <p><br /></p>
+                <section class="s_website_related_products o_colored_level" data-snippet="s_website_related_products"
+                    data-name="Related Products" style="background-image: none;">
+                    <div class="containertem">
+                        <div class="related_products">
+                            <div class="products-img">
+                                <img src="https://cooklife.us/web/image/product.product/3/image_1920"
+                                    class="img img-fluid mx-auto" alt="" loading="lazy" />
+                            </div>
+                            <div class="products-title">
+                                <p class="title o_default_snippet_text">
+                                    12inch Pre-Seasoned Griddle &amp;gt;&amp;gt;
+                                </p>
+                                <div class="btm">
+                                    <div class="price">
+                                        <span class="C-price o_default_snippet_text">
+                                            $39.99
+                                        </span>
+                                        <span class="O-price o_default_snippet_text">
+                                            $59.99
+                                        </span>
+                                    </div>
+                                    <div class="shop">
+                                        <img src="http://localhost:8069/theme_clarico_vega/static/src/img/header_icons/cart.svg"
+                                            class="img" alt="" loading="lazy" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <style>
+        .modal-dialog {
+            width: 80% !important;
+        }
+
+        .modalVideo {
+            width: 100%;
+        }
+
+        .video-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            width: 100%;
+            gap: 30px;
+            position: relative;
+            margin-bottom: 50px;
+
+        }
+
+        .video-nav .left {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+            border-radius: 20px;
+            justify-content: space-around;
+            padding-bottom: 50px;
+        }
+
+        .video-nav .left .videoname {
+            width: 100%;
+        }
+
+        .video-nav .left p {
+            padding: 20px;
+        }
+
+        .video-nav .right {
+            flex: 1;
+            padding-left: 30px;
+
+        }
+
+        .f-a {
+            cursor: pointer;
+
+        }
+
+        .f-a img {
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+        }
+
+        .f-btn {
+            background-color: #59949a;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: -20px;
+        }
+
+        .f-btn img {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .video-nav .related_products {
+            flex-direction: column;
+        }
+
+        .video-nav .related_products .products-img {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .video-nav .related_products .products-title {
+            padding: 30px 0;
+        }
+
+        .video-nav .containertem {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .video-nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .video-nav .left {
+                width: 100%;
+            }
+
+            .video-nav .right {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+    </style>
+    <script>
+        function createModal() {
+            var modalHTML = `
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <div class="modal-body">
+                <video class="modalVideo" style="padding:0;" loop="" muted="" playsinline="" preload="metadata"
+                    src="https://cooklife.s3.us-east-1.amazonaws.com/7899c52695aac5c036cd9220d1d24d89.mp4"
+                    poster="https://cooklife.us/web/image/7321-512c475b/%E6%88%AA%E5%B1%8F2024-12-09%20%E4%B8%8A%E5%8D%8810.42.57%201.jpg">
+                </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+            $('body').append(modalHTML);
+        }
+
+        $(document).ready(function () {
+            createModal();  // Create modal on document ready
+
+            $('.f-btn').click(function () {
+                var videoSrc = $('.videoname').attr('src');
+                var posterSrc = $('.videoname').attr('poster');
+                $('#modalVideo').attr('src', videoSrc);
+                $('#modalVideo').attr('poster', posterSrc);
+                $('#videoModal').modal('show');
+            });
+
+            $('#videoModal').on('hidden.bs.modal', function (e) {
+                $('#modalVideo').attr('src', ''); // remove src to stop video
+            });
+
+            $('.videoname').hover(function () {
+                $(this).get(0).play(); // start video when mouse over
+            }, function () {
+                $(this).get(0).pause(); // pause video when mouse out
+                $(this).get(0).currentTime = 0; // reset video to start
+            });
+        });
+
+    </script>
+
+</section>
