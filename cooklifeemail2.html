@@ -1,0 +1,45 @@
+<div style="margin: 0 auto;;max-width: 800px; width: 100%;height: auto;">
+    <img src="https://cooklife.us/web/image/9876-b53138fe/%E5%BC%83%E8%B4%AD.jpg" alt=""
+        style="width: 100%; height: auto; object-fit: contain;">
+    <div style="margin-top: -195%;;width: 100%;height: auto;">
+        <div style="color: #fff;margin: 0;padding: 0; width: 100%;">
+            <div style="width: 100%;margin: 0 auto;text-align: center;margin-top:5%;">
+                <img src="https://cooklife.us/web/image/9875-c7958137/Cooklife%202024%20%E7%AE%80%E5%8C%96logo-White.png"
+                    alt="" style="margin: 0 auto;width: 30%;">
+            </div>
+            <div style="width: 70%; padding: 0 8%;">
+                <h1 style="color: #fff;font-size: 6vw;font-size: clamp(26px, 6vw, 50px) ;margin: 3% 0;">
+                    Something Left in <br>the Cart...
+                </h1>
+                <div style="font-size: clamp(16px, 3vw, 24px);font-weight:300;">
+                    <p style="margin:10px 0 5vw;">
+                        Would you like to complete the purchase?
+                    </p>
+                </div>
+                <div>
+                    <a t-attf-href="{{ object.get_base_url() }}/shop/cart?access_token={{ object.access_token }}"
+                        target="_blank"
+                        style=" text-align: center;margin:0;color: #000;padding: 10px 30px; background-color: #FFCA00; border-radius: 24px;text-decoration: none;">
+                        Resume Order</a>
+
+                </div>
+                <t t-set="company" t-value="object.company_id or object.user_id.company_id or user.company_id"></t>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 32%;text-align: center;">
+        <h1 style="color: #000;font-size: 6vw;font-size: clamp(26px, 6vw, 50px) ;margin:3% 16%;">
+            See Our Most <br> Beloved Products
+        </h1>
+        <img src="https://cooklife.us/web/image/9861-e4f970d0/Group%203089.jpg" alt=""
+            style="width: 90%;height: auto;">
+
+        <p
+            style="font-weight:400;font-size: clamp(16px, 3.4vw, 24px);color: #000; margin: 0 auto;width: 90%;margin-bottom: 20px;">
+            You deserved a return to the ease and beauty of your life.
+        </p>
+        <a href="https://cooklife.us/shop"
+            style="display: inline-block;margin: 0 auto;width: 30%;color: #000 !important;padding: 10px 30px; background-color: #FFCA00; border-radius: 24px;text-decoration: none;">Shop
+            Now</a>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div style="margin: 0 auto;max-width: 800px; width: 100%;">
+    <img src="https://cooklife.us/web/image/9858-672b3e21/fkcg.jpg" alt="" style="width: 100%;height: auto;object-fit: contain; ">
+    <div style="margin-top:-125%">
+        <div style="color: #fff;margin: 0;padding: 0; width: 100%;">
+            <div style="width: 100%;margin: 0 auto;text-align: center;margin-top:5%;">
+                <img src="https://cooklife.us/web/image/9875-c7958137/Cooklife%202024%20%E7%AE%80%E5%8C%96logo-White.png?height=256"
+                    alt="" style="margin: 0 auto;width: 30%;height: auto;">
+            </div>
+            <div style="width: 70%; padding: 0 8%;">
+                <h1 style="color: #fff;font-size: clamp(26px, 6vw, 50px) ;margin: 3% 0;">Appreciate Your
+                    <br> Order
+                </h1>
+                <div style="font-size: clamp(16px, 3vw, 24px);font-weight:300;">
+                    <p style="margin:10px 0;">
+                        our order
+                        <span style="font-weight:bold;color: #FFCA00;" t-out="object.name or ''">
+                            S00049
+                        </span>
+                    </p>
+                    <p style="margin:10px 0;">
+                        amounting to
+                        <span style="font-weight:bold;color: #FFCA00;"
+                            t-out="format_amount(object.amount_total, object.currency_id) or ''">
+                            $10.00
+                        </span>
+                    </p>
+                    <p style="margin:10px 0;">has been confirmed.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;margin-top: 32%;">
+        <p style="font-weight:400;font-size: clamp(16px, 3.4vw, 28px);color: #000; margin: 0 auto;width: 90%;">
+            We are doing our best to prepare your goods, and please be patient. If you have any questions, please don't
+            hesitate to contact us.
+        </p>
+        <a href="https://cooklife.us/my/orders"
+            style="font-size: clamp(16px, 3vw, 20px);display: inline-block;margin: 4% auto 0;max-width: 60%;padding: 10px 30px; background-color: #FFCA00; border-radius: 24px;text-decoration: none; color: #000 !important;">
+            view the Order Ticket
+        </a>
+        <p style="margin: 0; font-size:  clamp(10px, 2.2vw, 14px)">
+            * Please know that delivery time may be delayed during special holidays.
+        </p>
+    </div>
+</div>

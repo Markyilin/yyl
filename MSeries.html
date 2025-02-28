@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSeries</title>
+    <link rel="stylesheet" href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./swiper 5.4.5.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/anviz-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/common/static-page-font.css">
+    <link rel="stylesheet" href="https://www.anviz.com/static/css/anviz/anviz.min.css">
+    <!-- <link rel="stylesheet" href="./MSeries-Series.css"> -->
+    <!-- <link rel="stylesheet" href="./w3/index.css"> -->
+
+</head>
+<script src="./jquery-3.2.1.js"></script>
+<script src="./swiper.min 5.4.5.js"></script>
+
+<body>
+    <style type="text/css">
+        body,
+        html {
+            background-color: #fff !important;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: 30px !important;
+        }
+
+        .tac {
+            text-align: center;
+        }
+
+        .anviz-buy-button {
+            padding: 1px 28px;
+            font-size: 16px;
+            border: none;
+            border-radius: 28px;
+            background-color: #0068B7;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .anviz-buy-button:hover {
+            background-color: #1072da;
+            color: white;
+        }
+
+        /* 添加内容包装器样式 */
+        .static_navbar-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .static_navbar.fixed .static_navbar-container {
+            border-bottom: none;
+        }
+
+        .anviz-free-button {
+            padding: 1px 28px;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 28px;
+            background-color: transparent;
+            color: black;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .anviz-free-button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        @media (min-width: 1260px) {
+            .MSeries .container {
+                width: 1260px;
+            }
+        }
+
+        .MSeries h2 {
+            text-align: center;
+        }
+
+        .MSeries .banner {
+            height: 42.7vw;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries .banner {
+                height: auto;
+            }
+        }
+
+        .MSeries .banner .mobile-banner {
+            display: none;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries .banner .mobile-banner {
+                display: block;
+            }
+        }
+
+        .MSeries .banner .pc-banner {
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries .banner .pc-banner {
+                display: none;
+            }
+        }
+
+        .MSeries .banner .banner-info {
+            width: 40vw;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: calc((100% - 1260px)/2);
+            transform: translateY(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .MSeries .banner .banner-info h1,
+        .MSeries .banner .banner-info h3 {
+            color: #fff;
+        }
+
+        @media (min-width: 1920px) {
+            .MSeries .banner .banner-info {
+                max-width: 30%;
+            }
+        }
+
+        @media (max-width: 1350px) {
+            .MSeries .banner .banner-info {
+                left: 10%;
+            }
+
+        }
+
+        @media (max-width: 1024px) {
+            .MSeries .banner .banner-info h1 {
+                font-size: 35px;
+                margin: 0 auto;
+            }
+
+            .MSeries .banner .banner-info h3 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .MSeries .banner .banner-info {
+                top: 72%;
+                width: 100%;
+                padding: 0 1em;
+                text-align: center;
+                left: 0;
+                right: 0;
+                color: #fff;
+                height: auto;
+            }
+
+
+            .MSeries .banner .banner-info h1,
+            .MSeries .banner .banner-info h3 {
+                color: #000;
+                margin: 0 auto;
+            }
+
+        }
+
+        .MSeries .nav-bar .nav-bar-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .MSeries .nav-bar .nav-bar-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .MSeries .nav-bar ul {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .MSeries .nav-bar .share_con {
+            justify-content: flex-end;
+            width: 30%;
+            gap: 0.5rem;
+        }
+
+        .MSeries .nav-bar .nav {
+            width: 90%;
+        }
+
+        .MSeries .nav-bar ul li {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .MSeries .nav-bar ul li .product-title {
+            margin-right: 1em;
+            font-weight: 500;
+        }
+
+        .MSeries .nav-bar .links {
+            display: flex;
+        }
+
+        .MSeries .nav-bar ul li .links a {
+            padding: 0 15px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .MSeries .nav-bar.xq_hover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(241, 241, 241, 0.87);
+        }
+
+
+        @media (max-width: 720px) {
+            .MSeries .nav-bar {
+                /* display: none; */
+            }
+
+            .MSeries .nav-bar ul li .links a {
+                padding: 0 5px;
+            }
+
+            .MSeries .nav-bar .nav-bar-item {
+                padding: 0 8px;
+            }
+
+            .MSeries .nav-bar .share_con {
+                display: none;
+            }
+
+            .MSeries h2,
+            .MSeries p,
+            .MSeries h6 {
+                text-align: center !important;
+            }
+        }
+
+        .MSeries .overviews h3 {
+            text-align: center;
+        }
+
+        .overviews p {
+            text-align: center;
+            padding: 0 15%;
+        }
+
+        .MSeries .overviews h6 {
+            margin: 0;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries .overviews {
+                padding: 2em 0;
+            }
+        }
+
+        .MSeries section {
+            padding: 2em 0;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries section {
+                padding: 2em 0;
+            }
+
+        }
+
+        .MSeries section.box.gray {
+            background-color: #F9F9F9;
+        }
+
+
+
+        .MSeries section .img-mb {
+            display: none;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries section .img-pc {
+                display: none;
+            }
+
+            .MSeries section .img-mb {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .MSeries section.box .list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries section.box .list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .MSeries p,
+            .MSeries li {
+                line-height: 1.4;
+            }
+
+            .MSeries section.box .list:nth-child(odd) {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .overviews p {
+                padding: 0;
+            }
+        }
+
+        .MSeries section.box .list h2 {
+            text-align: left;
+        }
+
+        .MSeries section.box .list .text {
+            padding: 2em;
+        }
+
+        .MSeries section.box .list .text img {
+            width: 50%;
+            margin: 0;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries section.box .list .text {
+                padding: 0 0 20px;
+                text-align: center;
+            }
+
+            .MSeries section.box .list .text h2 {
+                padding-left: 0;
+            }
+        }
+
+        .MSeries section .item {
+            padding: 0;
+        }
+
+        .MSeries section .item.img {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .MSeries section .item.img img {
+            width: 100%;
+            margin: 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .MSeries section .item.img-left img {
+            border-radius: 15px 0 0 15px;
+
+        }
+
+
+        .MSeries .box-shadow-1 {
+            -webkit-box-shadow: 3px 3px 3px;
+            -moz-box-shadow: 3px 3px 3px;
+            box-shadow: 3px 3px 3px;
+        }
+
+        /* 7 */
+        .MSeries .gridfour {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .MSeries .box-shadow-1 {
+            -webkit-box-shadow: 3px 3px 3px;
+            -moz-box-shadow: 3px 3px 3px;
+            box-shadow: 3px 3px 3px;
+        }
+
+        /*  */
+        .MSeries .r-w-b {
+            background: -webkit-linear-gradient(left, red, white, blue);
+            /* Safari 5.1-6, Chrome 10-25 */
+            background: linear-gradient(to right, red, white, blue);
+            /* 标准的线性渐变语法 */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .MSeries .box-smb {
+            width: 100%;
+            position: relative;
+        }
+
+        .MSeries .box-smb img {
+            width: 100%;
+        }
+
+        .MSeries .box-smb .text {
+            position: absolute;
+            top: 5%;
+            left: 0;
+            right: 0;
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .MSeries .box-smb .text h2,
+        .MSeries .box-smb .text p {
+            color: #fff;
+
+        }
+
+        .MSeries .box-smb .text p a {
+            color: #0EA58A;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .MSeries .box-smb .text p a:hover {
+            color: #13bfa0;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries section.box .list h2 {
+                text-align: center;
+            }
+
+            .MSeries .box-smb .text {
+                width: 90%;
+                top: 3%;
+            }
+
+            .MSeries section .item.img img,
+            .MSeries section .item.img-left img {
+                border-radius: 0;
+
+            }
+        }
+
+
+        .MSeries .box-swiper {
+            display: flex;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            padding: 0;
+        }
+
+
+        .MSeries .swiper {
+            flex: 0 0 100%;
+            display: none;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .MSeries .swiper-pagination-bullets .swiper-pagination-bullet {
+            background: rgba(140, 140, 140, 0.39);
+            width: 8px;
+            height: 8px;
+        }
+
+        /* 控制按钮样式 */
+
+        .MSeries .controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* 控制按钮样式 */
+
+        .MSeries .dot-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+
+        .MSeries .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .MSeries .dot.active {
+            background-color: #007BFF;
+        }
+
+        /* 鼠标悬停时的按钮样式 */
+        .MSeries .dot:hover {
+            background-color: #0056b3;
+        }
+
+        .MSeries .swiper-wrapper {
+            height: auto;
+            align-items: center;
+        }
+
+        .MSeries .swiper-slide {
+            text-align: center;
+            padding: 0 4%;
+        }
+
+        .MSeries .swiper-slide.swiper-slide-active {
+            padding: 0;
+        }
+
+        .MSeries .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 850px) {
+            .MSeries .swiper-slide {
+                padding: 0 3%;
+            }
+
+            .MSeries .img-two {
+                display: block;
+            }
+
+            .MSeries.box-swiper {
+                padding: 0 !important;
+            }
+        }
+
+
+        .loop .title {
+            margin-top: 0em;
+        }
+
+        .MSeries .nav-bar .anviz-primary-btn {
+            padding: 10px 40px;
+        }
+
+        .MSeries .loop h2,
+        .MSeries .loop p {
+            color: #000;
+        }
+
+        .loop .partnerSwiper {
+            display: block;
+        }
+
+        .MSeries .Related {
+            display: flex;
+            gap: 10px;
+        }
+
+        .MSeries .Related-right,
+        .MSeries .Related-left {
+            aspect-ratio: 1/1;
+            flex: 1;
+        }
+
+        .MSeries .Related .Relatedmain {
+            display: block;
+            position: relative;
+            background-color: #f6f6f6;
+        }
+
+        .MSeries .Related .Relatedmain.main-center {
+            aspect-ratio: 1/1;
+            width: calc(50% - 10px)
+        }
+
+        .MSeries .Related .Relatedmain .text {
+            position: absolute;
+            padding: 0 3%;
+        }
+
+        .MSeries .Related .Related-center .text {
+            left: 0;
+            right: 0;
+            bottom: 5%;
+            text-align: center;
+        }
+
+        .MSeries .Related .Relatedmain .text p {
+            color: #000;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .MSeries .Related .Relatedmain .text .text-title {
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .MSeries .Related .Relatedmain .ptimg {
+            position: absolute;
+            top: 5%;
+            width: 50%;
+
+        }
+
+        .MSeries .Related .main-top {
+            margin-bottom: 12px;
+        }
+
+        .MSeries .Related .main-top .ptimg {
+            width: 40%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+
+
+        .MSeries .Related .main-center .ptimg {
+            width: 70%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .MSeries .Related-left .main-top {
+            width: 100%;
+        }
+
+        /* .MSeries .Related-right .main-btm .text,
+        .MSeries .Related-left .main-btm .text {
+            width: 60%;
+            bottom: 5%;
+        } */
+
+        .MSeries .Related .bgimg {
+            opacity: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .MSeries .Related .Related-right .ptimg {
+            width: 30%;
+            left: 5%;
+            right: auto;
+            margin: 0 auto;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+
+        .MSeries .Related-right .text {
+            width: 60%;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .MSeries .Related-right .Relatedmain {
+            height: calc(50% - 6px);
+        }
+
+        @media (min-width: 850px) {
+
+            .MSeries .Related .Relatedmain:hover .bgimg {
+                opacity: 1;
+                transition: opacity 0.6s;
+            }
+
+            .MSeries .Related .Relatedmain:hover .ptimg {
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            .MSeries .Related .Relatedmain:hover .text a,
+            .MSeries .Related .Relatedmain:hover .text p {
+                color: #fff;
+            }
+        }
+
+        @media (max-width: 850px) {
+
+            .MSeries .Related-right,
+            .MSeries .Related-left,
+            .MSeries .Related .Relatedmain.main-center {
+                aspect-ratio: auto;
+                width: 100%;
+            }
+
+            .MSeries .Related .Relatedmain .Related-a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .partner-list .loop .partnerSwiper,
+            .loop .partnerSwiper {
+                padding: 0 1em;
+                padding-right: 0 !important;
+            }
+
+            .MSeries .Related {
+                flex-direction: column;
+            }
+
+            .MSeries .Related .bgimg {
+                display: none;
+            }
+
+            .MSeries .Related .Relatedmain {
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            .MSeries .Related .Relatedmain .text {
+                position: initial;
+                width: auto;
+            }
+
+            .MSeries .Related .Relatedmain .text p {
+                text-align: left !important;
+
+            }
+
+            .MSeries .Related .Relatedmain .ptimg {
+                position: initial;
+                width: 30%;
+                transform: none;
+            }
+
+            .MSeries .Related-right .text {
+                transform: none;
+
+            }
+
+            .MSeries section.box .list .text img {
+                text-align: center;
+                margin: 0 auto 30px;
+                width: 80%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        @keyframes widthChange {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 30px;
+            }
+        }
+
+        .MSeries .swiper-pagination-bullets .swiper-pagination-bullet {
+            background-color: #ffffff63 !important;
+        }
+
+        .MSeries .swiper-pagination-bullets .swiper-pagination-bullet-active {
+            position: relative;
+            width: 30px;
+            height: 8px;
+            border-radius: 30px;
+            background-color: #ffffff63 !important;
+        }
+
+        .MSeries .swiper-pagination-bullets .swiper-pagination-bullet-active::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 8px;
+            left: 0;
+            top: 0;
+            z-index: 222;
+            border-radius: 30px;
+            background-color: #fff !important;
+            animation: widthChange 5s linear forwards;
+            animation: widthChange 5s linear forwards;
+        }
+
+        .MSeries .swiper-container-horizontal>.swiper-pagination-bullets {
+            bottom: 73%;
+        }
+    </style>
+    <div class="content MSeries w3 template">
+        <div class="banner fullscreen"><img alt="" auto_mobile="true" class="mobile-banner"
+                src="https://www.anviz.com/file/files/4684" /> <img alt="" auto_mobile="true" class="pc-banner"
+                src="https://www.anviz.com/file/files/4683" />
+            <div class="banner-info">
+                <h1 class="mb-2">M Series</h1>
+
+                <h3 class="mt-2">Powerful On-site Security and Reduced Operational Risk</h3>
+            </div>
+        </div>
+        {{%static_header_1%}}M Series{{%static_header_2%}}
+        <ul class="nav-links">
+            <li><a href="#Overview">Overview</a></li>
+            <li><a href="#Benefits">Benefits</a></li>
+            <li><a href="#Manage">Manage</a></li>
+            <li><a href="#Products">Products</a></li>
+        </ul>
+        {{%static_header_3%}}
+
+        <div class="overviews" id="Overview">
+            <div class="container">
+                <h3 class="mb-2 mt-5">Overview</h3>
+
+                <p class="mb-1">As outdoor environments pose a greater risk of intrusion and vandalism, stronger access
+                    control solutions are needed to protect personnel safety and site resources. M Series is a
+                    local-based outdoor access control solution tailored for medium to large organizations that fit
+                    seamlessly into any environment. It tightly controls the flow of staff and protects your work site.
+                </p>
+            </div>
+        </div>
+
+        <section class="box box-swiper"><!-- 轮播容器 -->
+            <div class="MSeriesswiper swiper-container"><!-- 轮播内容 -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img alt="" auto_mobile="true" class="img-one"
+                            src="https://www.anviz.com/file/files/4685" /></div>
+
+                    <div class="swiper-slide"><img alt="" auto_mobile="true" class="img-one"
+                            src="https://www.anviz.com/file/files/4686" /></div>
+
+                    <div class="swiper-slide"><img alt="" auto_mobile="true" class="img-one"
+                            src="https://www.anviz.com/file/files/4687" /></div>
+
+                    <div class="swiper-slide"><img alt="" auto_mobile="true" class="img-one"
+                            src="https://www.anviz.com/file/files/4708" /></div>
+                </div>
+
+                <div class="swiper-pagination">&nbsp;</div>
+            </div>
+        </section>
+
+        <section class="box" id="Benefits">
+            <div class="container">
+                <h2>Unlock Flexible Access Experience, Depending on Your Needs</h2>
+
+                <p class="tac">Future-proofing your organization with next-generation security technology and business
+                    protection.</p>
+
+                <ul class="list">
+                    <li class="item text">
+                        <h3>Select the Modern Access Ways You Need</h3>
+
+                        <p>Whether the latest palm vein recognition and traditional card identification provide
+                            efficient matching speeds for your staff flow.</p>
+                    </li>
+                    <li class="item img"><img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4709" />
+                    </li>
+                </ul>
+
+                <ul class="list">
+                    <li class="item img img-left"><img alt="" auto_mobile="true"
+                            src="https://www.anviz.com/file/files/4690" /></li>
+                    <li class="item text">
+                        <h3>Reliable All-weather Operation</h3>
+
+                        <p>Even in extreme weather, the IP65 dust &amp; water proof design can accurately realize
+                            personnel access control.</p>
+                    </li>
+                </ul>
+
+                <ul class="list">
+                    <li class="item text">
+                        <h3>Ward Off the External Threats You Fear</h3>
+
+                        <p>Featuring a rugged IK10 vandal-resistant metal housing, it can withstand high-intensity
+                            impacts from any outdoor conditions.</p>
+                    </li>
+                    <li class="item img"><img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4691" />
+                    </li>
+                </ul>
+
+                <ul class="list">
+                    <li class="item img img-left"><img alt="" auto_mobile="true"
+                            src="https://www.anviz.com/file/files/4692" /></li>
+                    <li class="item text">
+                        <h3>Highly Adaptable to the Work Site</h3>
+
+                        <p>Especially for outdoor, the compact, narrow vertical body can be seamlessly installed in any
+                            door frame you desire.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="box box-smb" id="Manage">
+            <div class="text">
+                <h2 class="mt-5 mb-2">Manage at scale and get insights at a glance</h2>
+
+                <p>M Series connects to the <a href="/crosschex-desk.html">CrossChex Standard</a> open platform to
+                    remotely centralize devices. Enhance the
+                    security of your business through centralized management to improve efficiency and productivity.</p>
+            </div>
+            <img alt="" auto_mobile="true" class="img-pc" src="https://www.anviz.com/file/files/4710" /> <img alt=""
+                auto_mobile="true" class="img-mb" src="https://www.anviz.com/file/files/4711" />
+        </section>
+
+        <section class="box" id="Products">
+            <div class="container">
+                <h2 class="mb-2">Related Products</h2>
+
+                <div class="Related">
+                    <div class="Relatedmain main-center">
+                        <div class="Related-center Related-a">
+                            <img alt="" auto_mobile="true" class="bgimg" src="https://www.anviz.com/file/files/4705" />
+                            <img alt="" auto_mobile="true" class="ptimg" src="https://www.anviz.com/file/files/4702" />
+                            <a href="/m7-palm.html">
+                                <div class="text">
+                                    <p class="text-title">M7 Palm &gt;&gt;</p>
+                                    <p>PoE Professional Outdoor RFID Access Control Terminal</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="Related-right">
+                        <div class="Related-a">
+                            <div class="Relatedmain main-top">
+                                <img alt="" auto_mobile="true" class="bgimg"
+                                    src="https://www.anviz.com/file/files/4706" />
+                                <img alt="" auto_mobile="true" class="ptimg"
+                                    src="https://www.anviz.com/file/files/4703" />
+                                <a href="/product/m5plus-access-control.html">
+                                    <div class="text">
+                                        <p class="text-title">M5 Plus &gt;&gt;</p>
+                                        <p>Outdoor Fingerprint and RFID Access Control Device</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="Relatedmain main-btm">
+                            <div class="Related-a">
+                                <img alt="" auto_mobile="true" class="bgimg"
+                                    src="https://www.anviz.com/file/files/4707" />
+                                <img alt="" auto_mobile="true" class="ptimg"
+                                    src="https://www.anviz.com/file/files/4704" />
+                                <a href="/product/m3pro-access-control.html">
+                                    <div class="text">
+                                        <p class="text-title">M3 Pro &gt;&gt;</p>
+                                        <p>Professional Outdoor RFID Access Control Terminal</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <script>
+        var slidesPerViewValue;
+
+        if (window.innerWidth <= 850) {
+            slidesPerViewValue = 1.2;
+        } else {
+            slidesPerViewValue = 1.6; // 或者你想要的任何其他值
+        }
+        // 初始化Swiper
+        var mySwiper = new Swiper('.MSeriesswiper', {
+            loop: true,
+            slidesPerView: slidesPerViewValue,
+            centeredSlides: true,
+            // 自动轮播
+            autoplay: {
+                delay: 5000, // 5秒切换一次
+                disableOnInteraction: false, // 用户操作后继续自动轮播
+            },
+
+            // 圆点导航
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // 允许点击圆点切换
+            }
+        });
+    </script>
+</body>
+
+</html>
