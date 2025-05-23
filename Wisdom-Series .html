@@ -1304,40 +1304,6 @@
         </section> -->
     </div>
     <script>
-        var juli = $("#productDetailsNav").offset().top;
-        window.addEventListener('scroll', function () {
-            var gju = $(window).scrollTop();
-            var productNav = $(".product-nav");
-            console.log('aaaa  ' + gju)
-            if (gju >= juli) {
-                $("#productDetailsNav").addClass('xq_hover');
-                productNav.hide();
-            } else {
-                $("#productDetailsNav").removeClass('xq_hover');
-                productNav.show();
-            }
-
-            if ($(this).width() < 850) {
-                $("#productDetailsNav .product-title").addClass('icon icon-down')
-            }
-
-
-
-            var flag = true
-            $("#productDetailsNav .icon-down").click(function () {
-                if (flag) {
-                    $('.links').addClass('active');
-                    flag = false
-                } else {
-                    $(".links").removeClass('active')
-                    flag = true
-                }
-
-            });
-            $('.links a').on('click', function () {
-                $('.links').removeClass('active')
-            })
-        })
         // 初始化Swiper
         var mySwiper = new Swiper('.swiper-container', {
             // 自动轮播

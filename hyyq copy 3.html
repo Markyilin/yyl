@@ -1,0 +1,115 @@
+<div>
+    <t t-set="colors" t-value="{'needsAction': 'grey', 'accepted': 'green', 'tentative': '#FFFF00', 'declined': 'red'}">
+    </t>
+    <t t-set="is_online" t-value="'appointment_type_id' in object.event_id and object.event_id.appointment_type_id"></t>
+    <t t-set="customer" t-value=" object.event_id.find_partner_customer()"></t>
+    <t t-set="target_responsible" t-value="object.partner_id == object.event_id.partner_id"></t>
+    <t t-set="target_customer" t-value="object.partner_id == customer"></t>
+    <t t-set="recurrent" t-value="object.recurrence_id and not ctx.get('calendar_template_ignore_recurrence')"></t>
+
+    <div style="background-color: #e6f7ff; padding: 20px 15px; text-align: center; margin-bottom: 20px; border-radius: 5px;">
+        <h1 style="color:#212529;box-sizing:border-box;line-height:1.2;font-family:'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 26px; margin: 0; font-weight: 600; letter-spacing: 1px;">
+            Calendar Reminder
+        </h1>
+    </div>
+
+    <div style="font-size: 30px;font-weight: bold;padding-top: 0;">
+        <t t-out="object.event_id.name or ''">Follow-up for Project proposal</t>
+    </div>
+    <div style="font-size: 20px;font-weight: 400;margin-top: 10px;" v-if="object.event_id.description">
+        <t t-out="object.event_id.description"></t>
+    </div>
+    <div style="font-size: 16px;margin-top: 25px;">
+        Hello <t t-out="object.common_name or ''">Wood Corner</t>,
+    </div>
+    <div style="font-size: 16px;margin-top: 5px;">
+        <t t-out="object.create_uid.name">Leo</t> invited you for the <strong t-out="object.event_id.name or ''" style="box-sizing:border-box;font-weight:bolder;">Follow-up
+            for Project proposal</strong> meeting.
+    </div>
+    <div style="background-color:#efefef;border-radius: 9px;padding: 20px;margin-top: 15px;">
+        <div style="display: flex;align-items: center;gap: 15px;margin-top:0;">
+            <div style="margin: auto 15px auto 0;">
+                <img width="20" height="20" src="https://xup.xthings.com/web/image/1363-f3f635c9/clock.png" style="box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;">
+            </div>
+            <div>
+                <div style="font-size: 16px;">
+                    <t t-out="format_datetime(dt=object.event_id.start, tz=object.mail_tz, dt_format='EEEE, dd MMMM yyyy', lang_code=object.env.lang) or ''">
+                        Monday, 23 September 2024</t>
+                </div>
+                <div style="font-size: 16px;">
+                    <t t-out="format_datetime(dt=object.event_id.start, tz=object.mail_tz, dt_format='h:mma', lang_code=object.env.lang) or ''">
+                        5:30PM</t>-<t t-out="format_datetime(dt=object.event_id.stop, tz=object.mail_tz, dt_format='h:mma', lang_code=object.env.lang) or ''">
+                        6:00PM</t>
+                </div>
+                <t t-if="not object.event_id.allday">
+                    <t t-if="object.mail_tz">
+                         <div style="font-size: 16px;">
+                                <t t-out="object.mail_tz or ''">Europe/Brussels</t>
+                         </div>
+                    </t>
+                </t>
+            </div>
+           
+        </div>
+
+
+        <div t-if="object.event_id.location" style="display: flex;align-items: center;gap: 15px;margin-top:10px;">
+            <div style="margin-right:15px">
+                <img width="20" height="20" src="https://xup.xthings.com/web/image/1362-4f1ba6b0/map-pin%20(1).png" style="box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;">         </div>
+            <div style="font-size: 16px;">
+                <t t-out="object.event_id.location or ''">Bruxelles</t>
+            </div>
+        </div>
+
+        <div style="display: flex;align-items: center;gap: 15px;margin-top:10px;">
+            <div style="margin-right:15px">
+                <img width="20" height="20" src="https://xup.xthings.com/web/image/1361-e366cb2c/Group%202974.png" style="box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;"> 
+                        </div>
+            <div style="font-size: 16px;">
+                <t t-foreach="object.event_id.attendee_ids" t-as="attendee">
+                    
+                        <t t-out="attendee.common_name or ''"></t>
+                        <t t-if="not attendee_last">, </t>
+                    
+                </t>
+            </div>
+        </div>
+        <div t-if="object.event_id.videocall_location" style="display: flex;align-items: center;gap: 15px;margin-top:10px;">
+            <div style="margin-right:15px">
+                <img width="20" height="20" src="https://xup.xthings.com/web/image/1360-964d7e14/Group%202975%20(1).png?height=256" style="box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;">
+            </div>
+            <div style="font-size: 16px;max-width: 350px;word-wrap: break-word;overflow: hidden;">
+                <a t-att-href="object.event_id.videocall_location" style="text-decoration:none;box-sizing:border-box;overflow-wrap:break-word;color:#008f8c;word-break: break-all;max-width: 200px;word-wrap: break-word;" target="_blank">
+                    Join the videocall
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div style="text-align: center; padding: 16px 0;">
+    <t t-if="not is_online or object.state != 'accepted'">
+        
+        <a t-attf-href="/calendar/meeting/accept?token={{object.access_token}}&amp;id={{object.event_id.id}}" style="border-style:solid;margin:0 10px 0 0;box-sizing:border-box;border-left-color:#00c265;border-bottom-color:#00c265;border-right-color:#00c265;border-top-color:#00c265;border-left-width:1px;border-bottom-width:1px;border-right-width:1px;border-top-width:1px;border: 1px solid #00C265; padding: 5px 5px; color: #FFFFFF; 
+                  text-decoration: none; background-color: #00C265; border-radius: 3px; 
+                  display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">
+            <img width="20" height="20" src="https://xup.xthings.com/web/image/1359-7f2ac46d/Group%202978.png" style="margin: 0px 5px 0px 0px; box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;"> Accept
+        </a>
+        
+        <a t-attf-href="/calendar/meeting/decline?token={{object.access_token}}&amp;id={{object.event_id.id}}" style="border-style:solid;margin:0 10px 0 0;box-sizing:border-box;border-left-color:#875a7b;border-bottom-color:#875a7b;border-right-color:#875a7b;border-top-color:#875a7b;border-left-width:1px;border-bottom-width:1px;border-right-width:1px;border-top-width:1px;border: 1px solid #875A7B; padding: 5px 5px; color: #FFFFFF; 
+                  text-decoration: none; background-color: #dc3545; border-radius: 3px; 
+                  display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">
+            <img width="20" height="20" src="https://xup.xthings.com/web/image/1357-0216f830/Group%202979.png" style="margin: 0px 5px 0px 0px; box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;"> Decline
+        </a>
+    </t>
+    
+    <a t-attf-href="/calendar/meeting/view?token={{object.access_token}}&amp;id={{object.event_id.id}}" style="border-style:solid;box-sizing:border-box;border-left-color:#0068b7;border-bottom-color:#0068b7;border-right-color:#0068b7;border-top-color:#0068b7;border-left-width:1px;border-bottom-width:1px;border-right-width:1px;border-top-width:1px;border: 1px solid #0068B7; padding: 5px 5px; color: #FFFFFF; 
+              text-decoration: none; background-color: #0068B7; border-radius: 3px; 
+              display: inline-flex; align-items: center; justify-content: center;">
+        <img width="20" height="20" src="https://xup.xthings.com/web/image/1358-051dd4f4/eye.png" style="margin: 0px 5px 0px 0px; box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;">
+        <t t-out="'Reschedule' if is_online and target_customer else 'View'"></t>
+    </a>
+</div>
+
+

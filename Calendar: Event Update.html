@@ -1,0 +1,96 @@
+<div>
+    <t t-set="colors" t-value="{'needsAction': 'grey', 'accepted': 'green', 'tentative': '#FFFF00', 'declined': 'red'}">
+    </t>
+    <t t-set="is_online" t-value="'appointment_type_id' in object and object.appointment_type_id"></t>
+    <t t-set="customer" t-value=" object.find_partner_customer()"></t>
+    <t t-set="target_responsible" t-value="object.partner_id == object.partner_id"></t>
+    <t t-set="target_customer" t-value="object.partner_id == customer"></t>
+    <t t-set="mail_tz" t-value="object._get_mail_tz() or ctx.get('mail_tz')"></t>
+    <t t-set="recurrent" t-value="object.recurrence_id and not ctx.get('calendar_template_ignore_recurrence')"></t>
+    <div
+        style="background-color: #e6f7ff; padding: 20px 15px; text-align: center; margin-bottom: 20px; border-radius: 5px;">
+        <h1
+            style="color:#212529;box-sizing:border-box;line-height:1.2;font-family:'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';font-size: 26px; margin: 0; font-weight: 600; letter-spacing: 1px;">
+            日程更新
+        </h1>
+    </div>
+    <p>中文版</p>
+
+    <div style="font-size: 30px;font-weight: bold;padding-top: 0;">
+        <t t-out="object.name or ''">项目提案跟进</t>
+    </div>
+    <div style="font-size: 20px;font-weight: 400;margin-top: 10px;" t-if="not is_html_empty(object.description)">
+        <t t-out="object.description"></t>
+    </div>
+
+    <div style="background-color:#efefef;border-radius: 9px;padding: 20px;margin-top: 15px;">
+        <div style="display: flex;align-items: center;gap: 15px;margin-top:0;">
+            <div style="margin: auto 15px auto 0;">
+                <img width="20" height="20" src="https://xup.xthings.com/web/image/1363-f3f635c9/clock.png"
+                    style="box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;">
+            </div>
+            <div>
+                <div style="font-size: 16px;">
+                    <t
+                        t-out="format_datetime(dt=object.start, tz=mail_tz, dt_format='yyyy年MM月dd日 EEEE', lang_code='zh_CN') or ''">
+                        2024年9月23日 星期一</t>
+                </div>
+                <div style="font-size: 16px;">
+                    <t t-out="format_datetime(dt=object.start, tz=mail_tz, dt_format='HH:mm', lang_code='zh_CN') or ''">
+                        14:28</t>-<t
+                        t-out="format_datetime(dt=object.stop, tz=mail_tz, dt_format='HH:mm', lang_code='zh_CN') or ''">
+                        14:58</t>
+                </div>
+                <t t-if="not object.allday">
+                    <t t-if="mail_tz">
+                        <div style="font-size: 16px;">
+                            <t t-out="mail_tz or ''">欧洲/布鲁塞尔</t>
+                        </div>
+                    </t>
+                </t>
+            </div>
+
+        </div>
+
+
+        <div t-if="object.location" style="display: flex;align-items: center;gap: 15px;margin-top:10px;">
+            <div style="margin-right:15px">
+                <img width="20" height="20" src="https://xup.xthings.com/web/image/1362-4f1ba6b0/map-pin%20(1).png"
+                    style="box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;">
+            </div>
+            <div style="font-size: 16px;">
+                <t t-out="object.location or ''">Bruxelles</t>
+            </div>
+        </div>
+
+        <div style="display: flex;align-items: center;gap: 15px;margin-top:10px;">
+            <div style="margin-right:15px">
+                <img width="20" height="20" src="https://xup.xthings.com/web/image/1361-e366cb2c/Group%202974.png"
+                    style="box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;">
+            </div>
+            <div style="font-size: 16px;">
+                <t t-foreach="object.attendee_ids" t-as="attendee">
+
+                    <t t-out="attendee.common_name or ''"></t>
+                    <t t-if="not attendee_last">, </t>
+
+                </t>
+            </div>
+        </div>
+        <div t-if="object.videocall_location" style="display: flex;align-items: center;gap: 15px;margin-top:10px;">
+            <div style="margin-right:15px">
+                <img width="20" height="20"
+                    src="https://xup.xthings.com/web/image/1360-964d7e14/Group%202975%20(1).png?height=256"
+                    style="box-sizing: border-box; vertical-align: middle; width: 20px; height: 20px;">
+            </div>
+            <div style="font-size: 16px;max-width: 350px;word-wrap: break-word;overflow: hidden;">
+                <a t-att-href="object.videocall_location"
+                    style="text-decoration:none;box-sizing:border-box;overflow-wrap:break-word;color:#008f8c;word-break: break-all;max-width: 200px;word-wrap: break-word;"
+                    target="_blank">
+                    加入视频会议
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

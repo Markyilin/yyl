@@ -1,47 +1,64 @@
 <div style="margin: 0 auto;max-width: 800px; width: 100%;">
-    <img src="https://cooklife.us/web/image/9858-672b3e21/fkcg.jpg" alt="" style="width: 100%;height: auto;object-fit: contain; ">
-    <div style="margin-top:-125%">
-        <div style="color: #fff;margin: 0;padding: 0; width: 100%;">
-            <div style="width: 100%;margin: 0 auto;text-align: center;margin-top:5%;">
-                <img src="https://cooklife.us/web/image/9875-c7958137/Cooklife%202024%20%E7%AE%80%E5%8C%96logo-White.png?height=256"
-                    alt="" style="margin: 0 auto;width: 30%;height: auto;">
-            </div>
-            <div style="width: 70%; padding: 0 8%;">
-                <h1 style="color: #fff;font-size: clamp(26px, 6vw, 50px) ;margin: 3% 0;">Appreciate Your
-                    <br> Order
-                </h1>
-                <div style="font-size: clamp(16px, 3vw, 24px);font-weight:300;">
-                    <p style="margin:10px 0;">
-                        our order
-                        <span style="font-weight:bold;color: #FFCA00;" t-out="object.name or ''">
-                            S00049
-                        </span>
-                    </p>
-                    <p style="margin:10px 0;">
-                        amounting to
-                        <span style="font-weight:bold;color: #FFCA00;"
-                            t-out="format_amount(object.amount_total, object.currency_id) or ''">
-                            $10.00
-                        </span>
-                    </p>
-                    <p style="margin:10px 0;">has been confirmed.</p>
+    <div style="width: 100%; padding:5% 8%;background-color: #022f56;color: #fff;box-sizing: border-box;">
+        <div style="font-weight:400;font-size: 1.4rem;">
+            <p style="margin:10px 0;">
+                Your order
+                <span style="font-weight:bold;color: #FFCA00;word-wrap: break-word;word-break: break-all;" t-out="object.name or ''">
+                    S00049
+                </span>
+            </p>
+            <p style="margin:10px 0;">
+                amounting to <span style="font-weight:bold;color: #FFCA00;">
+                US
+            </span>
+                <span style="font-weight:bold;color: #FFCA00;"
+                    t-out="format_amount(object.amount_total, object.currency_id) or ''">
+                    $10.00
+                </span>
+            </p>
+            <p style="margin:10px 0;">has been confirmed.</p>
 
-                </div>
-
-            </div>
         </div>
+
     </div>
-    <div style="text-align: center;margin-top: 32%;">
-        <p style="font-weight:400;font-size: clamp(16px, 3.4vw, 28px);color: #000; margin: 0 auto;width: 90%;">
-            We are doing our best to prepare your goods, and please be patient. If you have any questions, please don't
-            hesitate to contact us.
+    <a href="https://cooklife.us/my/orders" style="margin-top: -15px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    padding: 0;">
+        <img src="https://cooklife.us/web/image/9881-8eaa1ad9/Group%203288.png" alt=""
+            style="margin: 0 auto;width: 100%;height: auto;object-fit: contain;">
+    </a>
+    <img src="https://cooklife.us/web/image/9882-061b9852/Slice%203.png" alt=""
+        style="margin: 0 auto;width: 100%;height: auto;object-fit: contain;">
+    <div style="margin: 0 auto;text-align: center;background-color: #F8F8F8;padding: 20px 0;">
+        <img src="https://cooklife.us/web/image/9883-3169b07e/Group%203036.png" alt=""
+            style="margin: 0 auto;width: 30%;height: auto;object-fit: contain;">
+        <div style="margin: 0 auto; width: 100%; padding: 15px 0;">
+            <a href="https://www.tiktok.com/@cooklifeusa" target="_blank" style="text-decoration: none;">
+                <img src="https://cooklife.us/web/image/9884-b0cf06a3/Group-1.png" alt=""
+                    style="margin:0 10px ;width: 20px;height: auto;object-fit: contain;">
+            </a>
+            <a href="https://cooklife.us/website/social/instagram" target="_blank" style="text-decoration: none;">
+                <img src="https://cooklife.us/web/image/9885-c09c14fe/Group-2.png" alt=""
+                    style="margin: 0 10px  ;width: 20px;height: auto;object-fit: contain;">
+            </a>
+            <a href="https://cooklife.us/website/social/youtube" target="_blank" style="text-decoration: none;">
+                <img src="https://cooklife.us/web/image/9886-e0d6deb9/Group-3.png" alt=""
+                    style="margin: 0 10px  ;width: 20px;height: auto;object-fit: contain;">
+            </a>
+            <a href="https://cooklife.us/website/social/facebook" target="_blank" style="text-decoration: none;">
+                <img src="https://cooklife.us/web/image/9887-53d33492/Group.png" alt=""
+                    style="margin: 0 10px  ;width: 20px;height: auto;object-fit: contain;">
+            </a>
+        </div>
+        <p style="color: 838383;font-size: 10px; margin: 15px auto;">© 2024 Smart Life Labs Inc. All rights reserved.
         </p>
-        <a href="https://cooklife.us/my/orders"
-            style="font-size: clamp(16px, 3vw, 20px);display: inline-block;margin: 4% auto 0;max-width: 60%;padding: 10px 30px; background-color: #FFCA00; border-radius: 24px;text-decoration: none; color: #000 !important;">
-            view the Order Ticket
-        </a>
-        <p style="margin: 0; font-size:  clamp(10px, 2.2vw, 14px)">
-            * Please know that delivery time may be delayed during special holidays.
-        </p>
+        <p style="color: 838383;font-size: 10px; margin: 0 auto;">Cooklife and Cooklife logo are trademarks of Smart
+            Life Labs Inc. registered in the U.S. and other countries
+            and regions.</p>
+        <p style="color: 838383;font-size: 10px; margin: 0 auto;">All other trademarks are the property of their
+            respective owners.</p>
     </div>
 </div>

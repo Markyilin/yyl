@@ -1,0 +1,154 @@
+<link href="https://www.anviz.com/static/browser_components/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/swiper@5.4.5/css/swiper.min.css" rel="stylesheet" />
+<link href="https://www.anviz.com/static/css/common/anviz-font.css" rel="stylesheet" />
+<link href="https://www.anviz.com/static/css/common/static-page-font.css" rel="stylesheet" />
+<link href="https://www.anviz.com/static/css/anviz/anviz.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://unpkg.com/swiper@5.4.5/js/swiper.min.js"></script>
+<div class="adx">
+    <section class="box box-swiper"><!-- 轮播容器 -->
+        <div class="adxswiper swiper-container"><!-- 轮播内容 -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4754" />
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4755" />
+                </div>
+                <div class="swiper-slide">
+                    <a href=" https://www.amazon.com/dp/B0B2JSD2XG" target="_blank">
+                        <img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4756" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=" https://www.anviz.com/cloud-based-time-and-attendance-solution-crosschex-cloud.html" target="_blank">
+                        <img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4757" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <img alt="" auto_mobile="true" src="https://www.anviz.com/file/files/4758" />
+                </div>
+            </div>
+
+            <div class="swiper-pagination">&nbsp;</div>
+        </div>
+    </section>
+</div>
+<style type="text/css">
+    .adx {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .pin {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box-swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .adxswiper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-slide a {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        margin: 0;
+    }
+
+    .swiper-slide .pin img {
+        height: auto;
+    }
+
+    @keyframes widthChange {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 30px;
+        }
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+        background-color: #585858 !important;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+        margin: 0 10px;
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet-active {
+        position: relative;
+        width: 30px;
+        height: 10px;
+        border-radius: 30px;
+        background-color: #585858 !important;
+        overflow: hidden;
+
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet-active::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 10px;
+        left: 0;
+        top: 0;
+        z-index: 222;
+        border-radius: 30px;
+        background-color: #dcdcdc !important;
+        animation: widthChange 5s linear forwards;
+        overflow: hidden;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 30px;
+    }
+</style>
+<script>
+    var mySwiper = new Swiper('.adxswiper', {
+        loop: true,
+        slidesPerView: 1,
+        // 自动轮播
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        // 圆点导航
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+</script>
